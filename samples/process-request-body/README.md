@@ -1,0 +1,1 @@
+In this directory are listed four different ways to process the request body: as a blob, as form data, as a stream and as text.
