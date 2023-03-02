@@ -4,7 +4,7 @@ async function firewallHandler(event){
 
     // Do some logic here
     // In this example, if the request comes from Brazil, we add a header to the response
-    if (countryCode ==="BR"){
+    if (countryCode === "BR"){
         event.addResponseHeader("test", "true");
     }
 
