@@ -4,7 +4,7 @@ async function firewallHandler(event){
 
     // Do some logic here
     // In this example, we are blocking access from Brazil
-    if (countryCode ==="BR"){
+    if (countryCode === "BR"){
         event.deny();
     }
 
