@@ -13,7 +13,7 @@ With Edge Functions, you can perform serverless functions in response to events 
 
 ## Edge functions on Edge Firewall
 
-Through the [edge functions on Edge Firewall](https://www.azion.com/en/documentation/products/edge-firewall/edge-functions/firewall/) you can write your own security source code in JavaScript and deploy it to run at the edge of the network, as well as:
+Through the [edge functions on Edge Firewall](https://www.azion.com/en/documentation/products/edge-firewall/edge-functions/firewall/), you can write your own security source code in JavaScript and deploy it to run at the edge of the network, as well as:
 
 - Boost your protection.
 - Have more dynamism.
