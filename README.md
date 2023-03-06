@@ -1,6 +1,6 @@
 # azion-samples
 
-This repository presents a variety of **code samples** in JavaScript to help developers to get familiar with coding edge functions and have them running at the edge, using Azion Edge Platform.
+This repository presents a variety of **code samples** in JavaScript to help developers get familiar with coding edge functions and have them running at the edge with the Azion Edge Platform.
 
 The functions are written in JavaScript and represent the approach to be taken to run them through the [Azion Edge Runtime](https://www.azion.com/en/documentation/products/edge-application/edge-functions/runtime/overview/).
 
