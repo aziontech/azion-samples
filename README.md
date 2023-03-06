@@ -6,7 +6,7 @@ The functions are written in JavaScript and represent the approach to be taken t
 
 ## Edge functions 
 
-[Azion Edge Functions](https://www.azion.com/en/documentation/products/edge-application/edge-functions/) allows you to create event-driven, serverless applications, at the edge of the network, closer to users.
+[Azion Edge Functions](https://www.azion.com/en/documentation/products/edge-application/edge-functions/) allow you to create event-driven, serverless applications, at the edge of the network, closer to users.
 
 With Edge Functions, you can perform serverless functions in response to events on the edge nodes of Azion's network with no need of having or managing servers.
 
