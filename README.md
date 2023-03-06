@@ -19,7 +19,7 @@ Through the [edge functions on Edge Firewall](https://www.azion.com/en/documenta
 - Apply the logic that your business requires.
 - Use APIs that provide request and response headers manipulation.
 
-## About the samples
+## About the code samples
 
 The functions in this directory were created as examples to be followed. Based on them, you can apply the logic your application requires.
 
