@@ -1,0 +1,26 @@
+{
+  "name": "edge-upstash-geolocation",
+  "version": "1.0.0",
+  "description": "Template Edge Application with Azion and Upstash Redis",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node main.js"
+  },
+  "keywords": [
+    "edge",
+    "edge computing",
+    "azion",
+    "upstash",
+    "redis"
+  ],
+  "author": "jcbsfilho",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^2.8.1"
+  },
+  "dependencies": {
+    "@upstash/redis": "^1.18.4",
+    "dotenv": "^16.3.1"
+  }
+}
