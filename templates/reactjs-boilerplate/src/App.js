@@ -22,13 +22,13 @@ function App() {
             <p>Instantly deploy your Next.js site to a shareable URL with Azion.</p>
           </div>
         </a>
-        <a href="https://manager.azion.com/build-application/build/choose-template" target="_blank">
+        <a href="https://twitter.com/aziontech" target="_blank">
           <div>
             <h1>X (formerly Twitter)</h1>
             <p>Explore our features in-depth and find out what's new on our platform.</p>
           </div>
         </a>
-        <a href="https://manager.azion.com/build-application/build/choose-template" target="_blank">
+        <a href="https://discord.gg/ccJrdap4" target="_blank">
           <div>
             <h1>Discord</h1>
             <p>A space for developers to connect, get involved and collaborate.</p>
