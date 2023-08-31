@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# React Boilerplate
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Azion React Boilerplate is designed to simplify and enhance the deployment process for React.js applications directly on the edge of the network.
 
-## Available Scripts
+This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template via Azion Real-Time Manager (RTM), check the [How to deploy edge applications with the React Boilerplate](https://www.azion.com/en/documentation/products/guides/react-boilerplate/) guide.
 
-In the project directory, you can run:
+This template uses React version 18.2.0.
 
-### `npm start`
+## Usage Information
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To start using this template, you need to: 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Access [Azion Real-Time Manager (RTM)](https://manager.azion.com/).
+  - If you don’t have an account yet, create a new one [by visiting the sign-up page](https://manager.azion.com/signup/).
+2. On the homepage, select the **Start with a template** option.
+3. Find the **React boilerplate** card and select it.
+4. Click the **Settings tab** to configure the template.
 
-### `npm test`
+## Settings
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To successfully deploy this template, you must provide the information to configure your Azion application and others. Fields identified with an asterisk are mandatory.
 
-### `npm run build`
+  * **Application Name***: the name of your edge application on Azion.
+  * **GitHub Personal Token***: your GitHub personal token.
+    * GitHub tokens are linked with the scope of the accounts and, in the case of corporate accounts, organization owners can restrict access. While generating your personal token, consider your scope and the level of access (classic or fine-grain) you're providing. Read the [Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic) documentation for more information.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+After filling out the form, click the **Next** button to start the deployment process.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Once the template is deployed, you can edit and update your args and code. However, you'll need to declare secrets on your project's GitHub repository first to complete the second build with these changes. When the second build is completed, you can manage your project with a continuous deployment workflow.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+For a more detailed step-by-step on declaring your secrets and using this template, check the [How to deploy edge applications with the React Boilerplate](https://www.azion.com/en/documentation/products/guides/react-boilerplate/) guide for more details.
 
-### `npm run eject`
+## Important
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To guarantee the optimal performance of this template, it's necessary to activate the following Azion products:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* [Application Acceleration](https://www.azion.com/en/documentation/products/edge-application/application-acceleration/)
+* [Edge Functions](https://www.azion.com/en/documentation/products/edge-application/edge-functions/#edge-functions-management)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+You need to activate the products separately via RTM. Review the [Azion documentation](https://www.azion.com/en/documentation/products/guides/react-boilerplate/) to do so.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If these products are activated, the execution of this template could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information. 

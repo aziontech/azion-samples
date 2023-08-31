@@ -28,7 +28,7 @@ function App() {
             <p>Explore our features in-depth and find out what's new on our platform.</p>
           </div>
         </a>
-        <a href="https://discord.gg/ccJrdap4" target="_blank">
+        <a href="https://discord.gg/Yp9N7RMVZy" target="_blank">
           <div>
             <h1>Discord</h1>
             <p>A space for developers to connect, get involved and collaborate.</p>
