@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "GitHub Repositories Search",
+  "name_for_model": "github_repositories_search",
+  "description_for_human": "GitHub Repositories Search plugin for ChatGPT.",
+  "description_for_model": "GitHub Repositories Search plugin for ChatGPT.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "/openapi.json"
+  },
+  "logo_url": "https://www.azion.com/static/images/logo/azion-600x600.png",
+  "contact_email": "support@example.com",
+  "legal_info_url": "http://www.example.com/legal"
+}

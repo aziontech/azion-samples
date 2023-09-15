@@ -11,39 +11,43 @@ jobs:
   deploy:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
-
+    
     permissions:
       contents: write
-
+    
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Use Node.js 18.x
+      - name: Use Node.js 16.x
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 16
 
       - name: Install dependencies
         run: yarn
+
+      - name: Build Code
+        run: yarn build
 
       - name: Create args file
         # "create the arguments at runtime because of the secrets"
         run: |
           cat > ./args.json << EOF
-            { "my_arg_by_action": true }
+            {}
           EOF
 
-      - name: edge-computing-deploy
+      - name: edge-computing-actions
         id: azion_edge
         uses: aziontech/edge-computing-actions@v0.0.1
         with:
           azionPersonalToken: ${{ secrets.AZION_PERSONAL_TOKEN }}
+          commitConfig: true
+          functionFilePath: "worker/function.js"
           functionArgsFilePath: "args.json"
-          buildPreset: "angular"
-          buildMode: "deliver"
+          configFilePath: "azion/azion.json"
+          applicationAcceleration: true
 
       - name: Get the output Azion Edge Deploy
         run: |
           echo "Application ID-= ${{ steps.azion_edge.outputs.applicationId }}"
-          echo "Domain-= ${{ steps.azion_edge.outputs.domainUrl }}"
