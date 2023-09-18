@@ -1,8 +1,7 @@
-import { OpenAIRouter, CustomRequest, OpenAIRouterOptions, OpenAIRouterExtras } from "../lib/openai-router";
+import { OpenAIRouter } from "../lib/openai-router";
 
-export interface Args extends OpenAIRouterOptions {}
 
-async function handleRequest(request: CustomRequest, args?: Args) {
+async function handleRequest(request, args) {
   const router = OpenAIRouter();
 
   /**
@@ -23,7 +22,7 @@ async function handleRequest(request: CustomRequest, args?: Args) {
  * @param args
  * @returns
  */
-const getRepos = async (request: CustomRequest, extras: OpenAIRouterExtras) => {
+const getRepos = async (request, extras) => {
   const { q } = request.query;
   const search = q || "azion cli";
   const url = `https://api.github.com/search/repositories?q=${search}`;
@@ -41,7 +40,7 @@ const getRepos = async (request: CustomRequest, extras: OpenAIRouterExtras) => {
 
   const json = await resp.json();
 
-  const repos = json.items.map((item: any) => ({
+  const repos = json.items.map((item) => ({
     name: item.name,
     description: item.description,
     stars: item.stargazers_count,
