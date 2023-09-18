@@ -14,7 +14,7 @@
     "upstash",
     "redis"
   ],
-  "author": "jcbsfilho",
+  "author": "azion",
   "license": "MIT",
   "devDependencies": {
     "prettier": "^2.8.1"
