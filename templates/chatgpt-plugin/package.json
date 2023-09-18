@@ -1,5 +1,5 @@
 {
-  "name": "edge-gpt-plugin",
+  "name": "chatgpt-plugin",
   "version": "1.0.0",
   "description": "Template Edge Application ChatGPT Plugin on Azion",
   "main": "index.js",
@@ -14,7 +14,7 @@
     "gpt",
     "plugin"
   ],
-  "author": "jcbsfilho",
+  "author": "aziontech",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^18.11.17",

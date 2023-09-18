@@ -37,17 +37,16 @@ jobs:
             {}
           EOF
 
-      - name: edge-computing-actions
+      - name: edge-computing-deploy
         id: azion_edge
         uses: aziontech/edge-computing-actions@v0.0.1
         with:
           azionPersonalToken: ${{ secrets.AZION_PERSONAL_TOKEN }}
-          commitConfig: true
-          functionFilePath: "worker/function.js"
           functionArgsFilePath: "args.json"
-          configFilePath: "azion/azion.json"
-          applicationAcceleration: true
+          buildPreset: "javascript"
+          buildMode: "compute"
 
       - name: Get the output Azion Edge Deploy
         run: |
           echo "Application ID-= ${{ steps.azion_edge.outputs.applicationId }}"
+          echo "Domain-= ${{ steps.azion_edge.outputs.domainUrl }}"

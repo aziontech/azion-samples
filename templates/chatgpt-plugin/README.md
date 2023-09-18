@@ -85,7 +85,7 @@ Ex:
 
 ✅ edge-computing-actions
 
-Run jcbsfilho/edge-computing-deploy@v3.1.0
+Run aziontech/edge-computing-deploy@vx
 ⚡️ info      Create config file
 ⚡️ info      Starting Create New Application!
 ⚡️ info      Edge Application created!
