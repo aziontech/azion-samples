@@ -34,16 +34,16 @@ jobs:
             { "my_arg_by_action": true }
           EOF
 
-      - name: edge-computing-deploy
+      - name: Azion Action Deploy
         id: azion_edge
         uses: aziontech/edge-computing-actions@v0.0.1
         with:
           azionPersonalToken: ${{ secrets.AZION_PERSONAL_TOKEN }}
           functionArgsFilePath: "args.json"
-          buildPreset: "angular"
+          buildPreset: "vue"
           buildMode: "deliver"
 
-      - name: Get the output Azion Edge Deploy
+      - name: Get the output Azion Action Deploy
         run: |
           echo "Application ID-= ${{ steps.azion_edge.outputs.applicationId }}"
           echo "Domain-= ${{ steps.azion_edge.outputs.domainUrl }}"
