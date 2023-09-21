@@ -6,6 +6,8 @@ This repository is an example of the new GitHub repository created during the de
 
 This template uses React version `18.2.0`.
 
+---
+
 ## Usage Information
 
 To start using this template, you need to: 
@@ -15,6 +17,8 @@ To start using this template, you need to:
 2. On the homepage, select the **Start with a template** option.
 3. Find the **React boilerplate** card and select it.
 4. Click the **Settings tab** to configure the template.
+
+---
 
 ## Settings
 
@@ -32,6 +36,8 @@ Once the template is deployed, you can edit and update your args and code. Howev
 
 For a more detailed step-by-step on declaring your secrets and using this template, check the [How to deploy edge applications with the React Boilerplate](https://www.azion.com/en/documentation/products/guides/react-boilerplate/) guide for more details.
 
+---
+
 ## Important
 
 To guarantee the optimal performance of this template, it's necessary to activate the following Azion products:
@@ -41,6 +47,9 @@ To guarantee the optimal performance of this template, it's necessary to activat
 You need to activate the products separately via RTM. Review the [Azion documentation](https://www.azion.com/en/documentation/products/guides/react-boilerplate/) to do so.
 
 If these products are activated, the execution of this template could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information. 
+
+
+---
 
 ## Continuous deployment
 
@@ -71,6 +80,8 @@ To do so, open your repository in GitHub. Then, go to **Settings** > **Secrets a
 3. Open a pull request to merge the changes to the main branch and start the automatic deployment.
 
 Now your project is ready to work with a continuous deployment workflow, updating instantly any changes in the application or the repository. 
+
+---
 
 ## Management
 
