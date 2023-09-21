@@ -1,7 +1,8 @@
 import { Redis } from "@upstash/redis/nodejs";
 import { Ratelimit } from "@upstash/ratelimit/dist";
 
-
+// defining process.env because the upstash lib is for Node.js.
+globalThis.process = { env: { UPSTASH_DISABLE_TELEMETRY: 1 } };
 
 export async function redisRateLimit(limitConfig, config) {
   try {
