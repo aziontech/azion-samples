@@ -13,8 +13,9 @@ Before using this template, you need to:
 1. Create an [Upstash account](https://console.upstash.com/login).
 2. Create a Global Database for the best available edge latency in the [Upstash Console](https://console.upstash.com/).
 3. Generate your GitHub personal token.
+* While generating your personal token, grant that your scope has the permissions to authorize an OAuth app or a personal token to access to public and private repositories, including read and write access to code.You must also enable the workflow option to allow adding and updating GitHub Actions workflow files.
 
-While generating your personal token, grant that your scope has the permissions to authorize an OAuth app or a personal token to access to public and private repositories, including read and write access to code.You must also enable the workflow option to allow adding and updating GitHub Actions workflow files. Note that permissions can be scoped either to a user or an organization or to a repository. Read the Creating a personal access token documentation for more information.
+Note that permissions can be scoped either to a user or an organization or to a repository. Read the [Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic) documentation for more information.
 
 ---
 
@@ -97,7 +98,7 @@ Once the template is deployed, you can edit and update your args and code in the
 To do so, open your **Upstash GeoLocation EdgeDeploy** repository on GitHub. Then, go to **Settings** > **Secrets and variables** > **Action to add your variables**, following these instructions:
 
 1. Add the Azion personal token to the *secrets*:
-- Read [how to generate an Azion Personal Token](/en/documentation/products/accounts/personal-tokens/) in the documentation.
+- Read [how to generate an Azion personal token](https://www.azion.com/en/documentation/products/accounts/personal-tokens/) in the documentation.
 
 ```bash
     AZION_PERSONAL_TOKEN=<value>
