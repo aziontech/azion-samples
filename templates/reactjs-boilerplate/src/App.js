@@ -1,6 +1,6 @@
-import './assets/main.css';
-import azionLogo from  './assets/azion.svg';
-import reactLogo  from './assets/react.svg';
+import "./assets/main.css";
+import azionLogo from "./assets/azion.svg";
+import reactLogo from "./assets/react.svg";
 
 function App() {
   return (
@@ -14,12 +14,16 @@ function App() {
       <div class="footer">
         <a href="https://www.azion.com/en/documentation/" target="_blank">
           <h1>Docs</h1>
-          <p>Besides providing structure, it allows interactions to occur with the surface of the element, thus enabling it to have states.</p>
+          <p>
+            Besides providing structure, it allows interactions to occur with the surface of the element, thus enabling it to have states.
+          </p>
         </a>
-        <a href="https://manager.azion.com/import-an-existing-project" target="_blank">
+        <a href="https://medium.com/aziontech" target="_blank">
           <div>
-            <h1>Deploy</h1>
-            <p>Instantly deploy your Next.js site to a shareable URL with Azion.</p>
+            <h1>Medium</h1>
+            <p>
+              Dive deep into our platform's use cases on Medium and join a community where developers connect, collaborate, and innovate.
+            </p>
           </div>
         </a>
         <a href="https://twitter.com/aziontech" target="_blank">
