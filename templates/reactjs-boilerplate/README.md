@@ -40,7 +40,7 @@ For a more detailed step-by-step on declaring your secrets and using this templa
 
 ## Important
 
-To guarantee the optimal performance of this template, it's necessary to activate the following Azion products:
+To guarantee the optimal performance of this template, it's necessary to activate the following Azion product:
 
 * [Edge Functions](https://www.azion.com/en/documentation/products/edge-application/edge-functions/#edge-functions-management)
 
