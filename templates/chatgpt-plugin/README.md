@@ -149,7 +149,7 @@ Your OpenAI account must be eligible to develop plugins to register a new one.
 
 ---
 
-## Managing your project on Azion
+## Management
 
 Considering that this initial setup may not be optimal for your specific edge application, all settings can be customized any time you need by using [Azion Real-Time Manager (RTM)](https://manager.azion.com/).
 
