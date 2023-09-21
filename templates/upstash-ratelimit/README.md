@@ -28,7 +28,7 @@ To start using the **Upstash Rate Limit** template, proceed as follows:
 1. Access [Real-Time Manager (RTM)](https://manager.azion.com/).
 - If you don’t have an account yet, create a new one [by visiting the sign-up page](https://manager.azion.com/signup/).
 2. On the homepage, select the **Start with a template** option.
-3. Find the **Upstash Rate Limit** card and select it.
+3. Find the **Upstash Rate Limiting** card and select it.
 4. Click the **Settings** tab to open the configuration section. 
 
 —--
@@ -59,7 +59,7 @@ In this function, the upstash/redis and upstash/ratelimit libraries are integrat
 
 ## Important 
 
-To guarantee the optimal performance of this template, the following Azion products must be activated in your account:
+To guarantee the optimal performance of this template, the following Azion product must be activated in your account:
 
 - [Edge Functions](https://www.azion.com/en/documentation/products/edge-application/edge-functions/)
 
@@ -82,7 +82,7 @@ The template args can also be updated and it's possible to implement a continuou
 To do so, open your **Upstash Rate Limit** repository on GitHub. Then, go to **Settings** > **Secrets and variables** > **Action** to [add your variables](https://docs.github.com/en/actions/security-guides/encrypted-secrets), following these instructions:
 
 1. Add the Azion personal token to the *secrets*:
-- Read [how to generate an Azion Personal Token](/en/documentation/products/accounts/personal-tokens/) in the documentation.
+- Read [how to generate an Azion Personal Token](https://www.azion.com/en/documentation/products/accounts/personal-tokens/) in the documentation.
 
 ```bash
     AZION_PERSONAL_TOKEN=<value>
@@ -110,7 +110,6 @@ To do so, open your **Upstash Rate Limit** repository on GitHub. Then, go to **S
 - **UPSTASH_LIMIT**: the maximum number of requests. Example: `6`.
 - **UPSTASH_LIMIT_WINDOW**: the time window for new requests. Example: `10 s`. (can be used: "ms" | "s" | "m" | "h" | "d").
 
-MarianaAguilera marked this conversation as resolved.
 ```bash
     UPSTASH_REDIS_REST_URL=<value>
     UPSTASH_REDIS_REST_TOKEN=<value>
