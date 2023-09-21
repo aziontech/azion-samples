@@ -1,64 +1,222 @@
-# Edge Application ChatGPT Plugin
-
-Template Edge Application ChatGPT Plugin on Azion
-
-## Prerequisites
-
-Before use template, ensure that you have the following prerequisites:
-
-- Azion account [visit the sing-up page](https://manager.azion.com/signup/)
-- OpenAI Account [visit the sing-up](https://platform.openai.com/signup?launch)
-- Consult the [documentation](https://openai.com/blog/chatgpt-plugins) for publishing your plugin
+# How to create a custom plugin with ChatGPT Plugin template
 
 
-> 1. [Create an Azion account](#Create-an-Azion-account)
-> 2. [Azion Personal token](#Azion-Personal-token)
-> 3. [Add Secrets Github](#Add-Secrets-Github)
-> 4. [Deploy on Azion](#Deploy-on-Azion)
-> 5. [Get URL and Install Plugin ](#Get-URL-and-Install-Plugin)
+**ChatGPT Plugin** is a template designed by Azion to enable a quick and simple creation of ChatGPT plugins that run directly on the edge. With this template, you can implement the default setup, which completes a search within the [GitHub](https://github.com) repositories of a given account, or customize new plugins according to your needs. 
 
+---
 
-## Create an Azion account
+## Requirements
 
-To create an Azion account, just [visit the sing-up page](https://manager.azion.com/signup/) at [Azion's homepage](https://www.azion.com/en/).
+Before using this template, you need to:
 
+1. Create a [Chat OpenAI account](https://chat.openai.com/).
+  - It must be eligible to develop plugins.
+2. Generate your GitHub personal token.
 
-### Azion Personal token
+While generating your GitHub personal token, grant that your scope has the permissions to authorize an OAuth app or a personal token to access to public and private repositories, including read and write access to code.You must also enable the workflow option to allow adding and updating GitHub Actions workflow files. Note that permissions can be scoped either to a user or an organization or to a repository. Read the Creating a personal access token documentation for more information.
 
-Create your Azion personal token by visiting the [Personal Token creating page](https://manager.azion.com/iam/personal-tokens)
+---
 
+## Getting the template
 
-### Add Secrets Github
+To start using the **ChatGPT Plugin** template, follow the steps:
 
-Accessing your secrets [Add Secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets)
+1. Access [Real-Time Manager (RTM)](https://manager.azion.com/).
+  - If you don’t have an account yet, create a new one [by visiting the sign-up page](https://manager.azion.com/signup/).
+2. On the homepage, select the **Start with a template** option.
+3. Find the **ChatGPT Plugin** card and select it.
+4. Click the **Settings** tab to open the configuration form. 
 
-Add the Personal Token to the `secrets`:
+---
+
+## Setting up the template
+
+In the configuration form, you must provide the information to configure your Azion application. Fill in the presented fields. 
+
+Fields identified with an asterisk are mandatory.
+
+- **Application Name** *: the name of your edge application. It's used to identify and manage your application within Azion's platform.
+  - Use a unique and easy-to-remember name. If the name has already been used, the platform returns an error message.
+- **Name for Human**: the human-readable name for your plugin, up to `20 characters`.
+  - For example: *Repositories Search*.
+- **GitHub Personal Token** *: your GitHub personal token.
+
+After completing all the information, click the **Next** button, located in the bottom-right corner. This will start the deployment process.
+
+---
+
+## Deploying your project to the edge
+
+During the deployment, you'll be able to follow the process through a window showing off the logs. When it's complete, the *deployment* page appears, confirming the edge application for your project has been successfully created.
+
+This page shows you the following sections:
+
+   - **Access your Edge Application** section includes the link to visit and explore your edge application.
+   - **Build Summary** contains the application's name and function.
+   - The **Developer details** tab can be opened to access the logs related to the deployment. 
+   - **What do you want to do next?** provides recommendations regarding advanced options to enhance your edge application: **Customize Domain**, **Manage Edge Application**, **View Edge Application Metrics**, **View Edge Application Logs**, and the **Back to Home** button.
+
+The link to the edge application allows you to see how it looks on the browser. However, ​​it takes a certain time to propagate and configure the application in Azion’s edge locations. It may be necessary to wait a few minutes for the URL to be activated and for the application page to be effectively displayed in the browser.
+
+### Key configurations
+
+This template creates a new Azion edge application and its domain. It also creates an edge function to provide the arguments for the template, including routes to the plugin and OpenAPI settings, and a new repository in your GitHub account based on a [public template](https://github.com/aziontech/).
+
+To know more on how to edit and customize your project's settings, go to the [Managing your project on Azion](#managing-your-project-on-azion) section.
+
+Additionally, to guarantee the optimal performance of this template, it's necessary to activate the following Azion product:
+
+[Edge Functions](/en/documentation/products/edge-application/edge-functions/)
+
+You must activate this product separately via RTM. To do so:
+
+1. [Access RTM](https://manager.azion.com/).
+2. On the upper-left corner, select the three horizontal lines to open the **Products menu**.
+3. In the **BUILD** section, select **Edge Application**.
+4. You'll be redirected to the **Edge Application** page.
+- It lists all the edge applications you've created. 
+5. Find the edge application related to your template and select it. 
+6. In the **Main Settings** tab, find the **Edge Application Modules** section and active the switch for the product you want to enable.
+
+If this product is activated, the execution of this template could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information.
+
+---
+
+## Customizing the plugin
+
+The default setup of this template completes a search within the GitHub repositories of a given account. If you want to maintain this configuration, skip to the [Registering your plugin](#registering-your-plugin) section.
+
+To customize your plugin with another use case, you'll need to do it through the new GitHub repository created during the deployment.
+
+To customize your ChatGPT plugin, proceed as follows:
+
+1. Access your **ChatGPT Plugin** repository on GitHub.
+2. In the **function** folder, open the **index.ts** file and add your API routes for the plugin. It must looks similar to this:
+
+```ts
+{your-domain}/well-known/api-plugin.json // your plugin configuration.
+{your-domain}/openapi.json // your OpenApi specification.
+{your-domain}/search // to search repositories on GitHub.
+```
+
+3. In the **schemas** folder, change the **openapi.json** file with the new schema of your API. Follow this example:
+
+```json
+  "components": {
+    "schemas": {
+      "getAllReposResponse": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "stars": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+```
+
+4. Still in the **schemas** folder, change your plugin data in the **api-plugin.json** file. It must looks similar to this:
+
+```json
+{
+  "schema_version": "v1",
+  "name_for_human": "GitHub Repositories Search",
+  "name_for_model": "github_repositories_search",
+  "description_for_human": "GitHub Repositories Search plugin for ChatGPT.",
+  "description_for_model": "GitHub Repositories Search plugin for ChatGPT.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "/openapi.json"
+  },
+  "logo_url": "http://www.example.com/static/images/logo/my-logo-600x600.png",
+  "contact_email": "support@example.com",
+  "legal_info_url": "http://www.example.com/legal"
+}
+```
+
+5. Add your **Azion personal token** to the repository's *Secrets*. Read more about [getting an Azion personal token](/en/documentation/products/accounts/personal-tokens/).
+  - Do it following this format: `AZION_PERSONAL_TOKEN=<value>`
+
+6. Create a pull request for the main branch to implement the changes.
+
+This template also includes an automation for [continuous deployment](#continuous-deployment) in the **github/workflows/main.yml** file.
+
+---
+
+## Registering your plugin
+
+The last step is registering your plugin on the *ChatGPT Plugin Store*.
+
+To do so:
+
+1. Log in to [ChatGPT User Interface](https://chat.openai.com/).
+2. In the Plugin Store, select the **Develop your own plugin** option to register your new plugin.
+3. Complete the information in the registration step.
+
+Done. Your plugin is now ready for use.
+
+Your OpenAI account must be eligible to develop plugins to register a new one.
+
+## Managing your project on Azion
+
+Considering that this initial setup may not be optimal for your specific edge application, all settings can be customized any time you need by using Azion Real-Time Manager (RTM).
+
+To manage and edit your edge application's settings, follow these steps:
+
+1. [Access RTM](https://manager.azion.com/).
+2. On the upper-left corner, select the three horizontal lines to open the **Products menu**.
+3. In the **BUILD** section, select **Edge Application**.
+4. You'll be redirected to the **Edge Application** page.
+  - It lists all the edge applications you've created. 
+5. Find the edge application related to your WordPress website and select it. 
+  - The list is organized alphabetically. You can also use the **search bar** located in the upper-left corner of the list; currently, it filters only by **Application Name**.
+
+After selecting the edge application you’ll work on, you’re directed to a page containing all the settings you can configure.
+
+Additionally, once the template is deployed, you also have full control over customizing your website's design, content, and functionality using the WordPress admin panel.
+
+Read the documentation about [managing edge applications](/en/documentation/products/getting-started/#settings-app) for more details. For specific ChatGPT-related questions, check the [OpenAI documentation](https://platform.openai.com/docs/introduction).
+
+### Continuous deployment
+
+Once the template is deployed, you can edit and update your args and code, as well as implement a continuous deployment workflow. However, you'll need first to *declare secrets on your project's GitHub repository* to complete the second build with the changes. When the second build is completed, you'll be able to manage your project with a continuous deployment workflow and edit the args as desired.
+
+To do so, open your **ChatGPT Plugin** repository in GitHub. Then, go to **Settings** > **Secrets and variables** > **Action** to [add your variables](https://docs.github.com/en/actions/security-guides/encrypted-secrets), following these instructions:
+
+1. Add the Azion Personal Token to the *secrets*:
+- Read [how to generate an Azion Personal Token](/en/documentation/products/accounts/personal-tokens/) in the documentation.
 
 ```bash
     AZION_PERSONAL_TOKEN=<value>
 ```
 
-### Deploy on Azion
+2. Add the environments for use in the action workflow in the **main.yml** file, included in the **.github/workflows** folder of your repository:
 
-For automatic deployment, create a pull request to the **main** branch.
+```yml
+  - name: edge-...
+    id: azion_edge
+    ...
+    with:
+        ....
+        azionPersonalToken: ${{ secrets.AZION_PERSONAL_TOKEN }}
+        ....
 
-#### Routes
+```
 
-- `{your-domain}/.well-known/ai-plugin.json` Plugin config
-- `{your-domain}/openapi.json` OpenApi specification
-- `{your-domain}/search` Search repositories on Github
-
-
-### Get URL and Install Plugin
-
-Retrieve your domain url created in Azion and insert it in your plugin installation
-
-Folder config
-
-After deploy access [azion/azion.json](./azion/azion.json)
-> This file will be automatically created on your first deploy (pull request to main branch)
-
-Ex:
+3. Access the file **azion/azion.json** to add the ChatGPT Plugin details. This file will be automatically created on your first deploy.
 
 ```json
 {
@@ -74,25 +232,13 @@ Ex:
     "file": "worker/function.js"
   }
 }
-
 ```
 
-On Actions
+4. Open a pull request to merge the changes to the main branch and start the automatic deployment.
 
-Ex:
+Now, your project is ready to work with a continuous deployment workflow, updating instantly any changes in the application or the repository. 
 
-```bash
 
-✅ edge-computing-actions
+### Adding a custom domain
 
-Run aziontech/edge-computing-deploy@vx
-⚡️ info      Create config file
-⚡️ info      Starting Create New Application!
-⚡️ info      Edge Application created!
-⚡️ info      Edge Function created!
-⚡️ info      Edge Domain created!
-⚡️ info      Commit configuration 'azion/azion.json'!
-⚡️ info      Domain url: https://123445.map.azionedge.net
-✔  success   Done!
-
-```
+The edge application created during the deployment has an assigned Azion domain to make it accessible through the browser. The domain has the following format: `xxxxxxxxxx.map.azionedge.net`. However, you can add a custom domain for users to access your edge application through it.

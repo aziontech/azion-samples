@@ -104,12 +104,12 @@ Read the documentation about managing edge applications for more details. For sp
 
 ## Continuous deployment
 
-The template args can also be updated, and it's possible to implement a continuous deployment workflow. However, you'll need first to declare secrets on your project's GitHub repository to successfully complete the second build with the changes. Once this second build is completed, you'll be able to manage your project with a continuous deployment workflow and edit the args as desired.
+Once the template is deployed, you can edit and update your args and code, as well as implement a continuous deployment workflow. However, you'll need first to *declare secrets on your project's GitHub repository* to complete the second build with the changes. When the second build is completed, you'll be able to manage your project with a continuous deployment workflow and edit the args as desired.
 
-To do so, open your Upstash Rate Limit repository on GitHub. Then, go to Settings > Secrets and variables > Action to add your variables, following these instructions:
+To do so, open your repository in GitHub. Then, go to **Settings** > **Secrets and variables** > **Action** to [add your variables](https://docs.github.com/en/actions/security-guides/encrypted-secrets), following these instructions:
 
 1. Add the Azion Personal Token to the *secrets*:
-- Read [how to generate an Azion Personal Token](https://www.azion.com/en/documentation/products/accounts/personal-tokens/) in the documentation.
+- Read [how to generate an Azion Personal Token](/en/documentation/products/accounts/personal-tokens/) in the documentation.
 
 ```bash
     AZION_PERSONAL_TOKEN=<value>

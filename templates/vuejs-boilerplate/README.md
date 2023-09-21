@@ -34,9 +34,43 @@ For a more detailed step-by-step on declaring your secrets and using this templa
 
 To guarantee the optimal performance of this template, it's necessary to activate the following Azion products:
 
-* [Application Acceleration](https://www.azion.com/en/documentation/products/edge-application/application-acceleration/)
 * [Edge Functions](https://www.azion.com/en/documentation/products/edge-application/edge-functions/#edge-functions-management)
 
 You need to activate the products separately via RTM. Review the [Azion documentation](https://www.azion.com/en/documentation/products/guides/vue-boilerplate/) to do so.
 
-If these products are activated, the execution of this template could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information. 
+If these products are activated, the execution of this template could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information.
+
+
+## Continuous deployment
+
+Once the template is deployed, you can edit and update your args and code, as well as implement a continuous deployment workflow. However, you'll need first to *declare secrets on your project's GitHub repository* to complete the second build with the changes. When the second build is completed, you'll be able to manage your project with a continuous deployment workflow and edit the args as desired.
+
+To do so, open your repository in GitHub. Then, go to **Settings** > **Secrets and variables** > **Action** to [add your variables](https://docs.github.com/en/actions/security-guides/encrypted-secrets), following these instructions:
+
+1. Add the Azion Personal Token to the *secrets*:
+- Read [how to generate an Azion Personal Token](/en/documentation/products/accounts/personal-tokens/) in the documentation.
+
+```bash
+    AZION_PERSONAL_TOKEN=<value>
+```
+
+Environments for use in the action workflow:
+
+```yml
+  - name: edge-...
+    id: azion_edge
+    ...
+    with:
+        ....
+        azionPersonalToken: ${{ secrets.AZION_PERSONAL_TOKEN }}
+        ....
+
+```
+
+2. Open a pull request to merge the changes to the main branch and start the automatic deployment.
+
+Now your project is ready to work with a continuous deployment workflow, updating instantly any changes in the application or the repository. 
+
+### Adding a custom domain
+
+The edge application created during the deployment has an assigned Azion domain to make it accessible through the browser. The domain has the following format: `xxxxxxxxxx.map.azionedge.net`. However, you can add a custom domain for users to access your edge application through it.
