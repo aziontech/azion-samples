@@ -1,0 +1,22 @@
+{
+  "name": "upstash-ratelimit",
+  "version": "1.0.0",
+  "description": "Template Edge Application with Azion and Upstash Redis Ratelimit",
+  "keywords": [
+    "edge",
+    "edge computing",
+    "azion",
+    "upstash",
+    "redis",
+    "rate limit"
+  ],
+  "author": "aziontech",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^2.8.1"
+  },
+  "dependencies": {
+    "@upstash/ratelimit": "^0.4.0",
+    "@upstash/redis": "^1.18.4"
+  }
+}
