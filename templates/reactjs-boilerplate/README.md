@@ -48,7 +48,6 @@ You need to activate the products separately via RTM. Review the [Azion document
 
 If these products are activated, the execution of this template could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information. 
 
-
 ---
 
 ## Continuous deployment
