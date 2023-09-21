@@ -16,7 +16,7 @@
     "prettier": "^2.8.1"
   },
   "dependencies": {
-    "@upstash/ratelimit": "^0.4.0",
-    "@upstash/redis": "^1.18.4"
+    "@upstash/ratelimit": "0.3.2",
+    "@upstash/redis": "^1.22.0"
   }
 }

@@ -1,5 +1,5 @@
 import { Redis } from "@upstash/redis/nodejs";
-import { Ratelimit } from "@upstash/ratelimit";
+import { Ratelimit } from "@upstash/ratelimit/dist";
 
 
 
