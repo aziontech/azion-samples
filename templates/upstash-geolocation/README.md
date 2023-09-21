@@ -1,7 +1,8 @@
-# How to deploy the Upstash GeoLocation template through Azion
-
+# Upstash GeoLocation template
 
 The **Upstash GeoLocation** template is an automation designed to deploy a database directly on the edge while enabling the configuration of custom messages that will be delivered according to the user's geographical location.
+
+This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template via Azion Real-Time Manager (RTM), check the [How to use the Upstash GeoLocation EdgeDeploy template through Azion](https://www.azion.com/en/documentation/products/guides/upstash-geolocation-edgedeploy/) guide.
 
 ---
 
@@ -15,7 +16,9 @@ Before using this template, you need to:
 
 While generating your personal token, grant that your scope has the permissions to authorize an OAuth app or a personal token to access to public and private repositories, including read and write access to code.You must also enable the workflow option to allow adding and updating GitHub Actions workflow files. Note that permissions can be scoped either to a user or an organization or to a repository. Read the Creating a personal access token documentation for more information.
 
-## Getting the template
+---
+
+## Usage information
 
 To start using the **Upstash GeoLocation** template, proceed as follows:
 
@@ -23,9 +26,11 @@ To start using the **Upstash GeoLocation** template, proceed as follows:
 - If you don’t have an account yet, create a new one [by visiting the sign-up page](https://manager.azion.com/signup/).
 2. On the homepage, select the **Start with a template** option.
 3. Find the Upstash GeoLocation card and select it.
-4. Click the **Settings** tab to open the configuration section. 
+4. Click the **Settings** tab to open the configuration section.
 
-## Setting up the template
+---
+
+## Settings
 
 In the configuration form, you must provide the information to configure your Azion application. Fill in the presented fields. 
 
@@ -41,22 +46,7 @@ Fields identified with an asterisk are mandatory.
 
 After completing all the information, click the **Next** button, located in the bottom-right corner. This will start the deployment process.
 
-## Deploying the template
-
-During the deployment, you'll be able to follow the process through a window showing off the logs. When it's complete, the *deployment* page appears, confirming the edge application for your project has been successfully created.
-
-This page shows you the following sections:
-
-   - **Access your Edge Application** section includes the link to visit and explore your edge application.
-   - **Build Summary** contains the application's name and function.
-   - The **Developer details** tab can be opened to access the logs related to the deployment. 
-   - **What do you want to do next?** provides recommendations regarding advanced options to enhance your edge application: **Customize Domain**, **Manage Edge Application**, **View Edge Application Metrics**, **View Edge Application Logs**, and the **Back to Home** button.
-
-The link to the edge application allows you to see it on the browser. However, ​​it takes a certain time to propagate and configure the application in Azion’s edge locations. It may be necessary to wait a few minutes for the URL to be activated and for the application page to be effectively displayed in the browser.
-
-### Key configurations
-
-Upstash GeoLocation creates a new Azion edge application and its domain. It also creates an edge function to provide the arguments for the geolocation, and a new repository in your GitHub account based on a [public template](https://github.com/aziontech/).
+Upstash GeoLocation creates a new Azion edge application and its domain. It also creates an edge function to provide the arguments for the geolocation, and a new repository in your GitHub account based on a [public template](https://github.com/aziontech/azion-samples/tree/dev/templates/upstash-geolocation).
 
 In this function, the `upstash/redis` library is integrated, connecting to your Upstash Global Database and retrieving the message based on the user's location. This location is taken from the metadata `["geoip_country_code"]`.
 
@@ -74,61 +64,46 @@ OK
 set IN "Namaste"
 OK
 ```
-
 You can customize these greetings on your Upstash database to attent your necessities.
 
-To know more on how to edit and customize your project's settings, go to the [Managing your project on Azion](#managing-your-project-on-azion) section.
+To know more on how to edit and customize your project's settings, go to the [Management](#management) section.
 
-Additionally, to guarantee the optimal performance of this template, it's necessary to activate the following Azion product:
+---
 
-[Edge Functions](/en/documentation/products/edge-application/edge-functions/)
+##Important
 
-You must activate this product separately via RTM. To do so:
+To guarantee the optimal performance of this template, it's necessary to activate the following Azion product:
 
-1. [Access RTM](https://manager.azion.com/).
-2. On the upper-left corner, select the three horizontal lines to open the **Products menu**.
-3. In the **BUILD** section, select **Edge Application**.
-4. You'll be redirected to the **Edge Application** page.
-- It lists all the edge applications you've created. 
-5. Find the edge application related to your template and select it. 
-6. In the **Main Settings** tab, find the **Edge Application Modules** section and active the switch for the product you want to enable.
+* [Edge Functions](/en/documentation/products/edge-application/edge-functions/)
+
+You must activate this product separately via RTM. To do so, review the [Azion documentation](https://www.azion.com/en/documentation/products/guides/chatgpt-plugin/).
 
 If this product is activated, the execution of this template could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information.
 
 Any cost generated by Upstash usage will be processed and billed separately on the Upstash platform. Visit the [Upstash documentation](https://docs.upstash.com/redis/features/globaldatabase#pricing) for more details. 
 
-## Managing your project
+---
+
+## Management
 
 Considering that this initial setup may not be optimal for your specific edge application, all settings can be customized any time you need by using Azion Real-Time Manager (RTM). Once the template is deployed, you also have full control over customizing your Upstash account and database.
 
-To manage and edit your edge application's settings, follow these steps:
-
-1. [Access RTM](https://manager.azion.com/).
-2. On the upper-left corner, select the three horizontal lines to open the **Products menu**.
-3. In the **BUILD** section, select **Edge Application**.
-4. You'll be redirected to the **Edge Application** page.
-  - It lists all the edge applications you've created. 
-5. Find the edge application related to the QStash template and select it. 
-  - The list is organized alphabetically. You can also use the **search bar** located in the upper-left corner of the list; currently, it filters only by **Application Name**.
-
-After selecting the edge application you’ll work on, you’ll be directed to a page containing all the settings you can configure.
-
-Read the documentation about [managing edge applications](/en/documentation/products/getting-started/#settings-app) for more details. For specific Upstash-related questions, check the [Upstash documentation](https://docs.upstash.com/).
+To manage and edit your edge application’s settings, read the documentation about [managing edge applications](https://www.azion.com/en/documentation/products/edge-application/first-steps/) for more details. For specific Upstash-related questions, check the [Upstash documentation](https://docs.upstash.com/).
 
 ### Continuous deployment
 
-Once the template is deployed, you can edit and update your args and code, as well as implement a continuous deployment workflow. However, you'll need first to *declare secrets on your project's GitHub repository* to complete the second build with the changes. When the second build is completed, you'll be able to manage your project with a continuous deployment workflow and edit the args as desired.
+Once the template is deployed, you can edit and update your args and code in the edge function, as well as implement a continuous deployment workflow. However, you'll need first to *declare secrets on your project's GitHub repository* to complete the second build with the changes. When the second build is finished, you'll be able to manage your project with a continuous deployment workflow and edit the args as desired.
 
-To do so, open your repository in GitHub. Then, go to **Settings** > **Secrets and variables** > **Action** to [add your variables](https://docs.github.com/en/actions/security-guides/encrypted-secrets), following these instructions:
+To do so, open your **Upstash GeoLocation EdgeDeploy** repository on GitHub. Then, go to **Settings** > **Secrets and variables** > **Action to add your variables**, following these instructions:
 
-1. Add the Azion Personal Token to the *secrets*:
+1. Add the Azion personal token to the *secrets*:
 - Read [how to generate an Azion Personal Token](/en/documentation/products/accounts/personal-tokens/) in the documentation.
 
 ```bash
     AZION_PERSONAL_TOKEN=<value>
 ```
 
-Environments for use in the action workflow:
+2. Add the environments for use in the action workflow in the **main.yml** file, included in the **.github/workflows** folder of your repository:
 
 ```yml
   - name: edge-...
@@ -141,7 +116,7 @@ Environments for use in the action workflow:
 
 ```
 
-2. Add the Redis Database access credentials to the *secrets*, being:
+3. Add the Redis Database access credentials to the *secrets*, being:
 
 - **UPSTASH_REDIS_REST_URL**: the URL to access your Upstash database using REST.
   - Go to your Upstash Console and copy the `UPSTASH_REDIS_REST_URL` in your database page.
@@ -153,7 +128,7 @@ Environments for use in the action workflow:
     UPSTASH_REDIS_REST_TOKEN=<value>;
 ```
 
-Environments for use in the action workflow:
+4. Add the environments for use in the action workflow in the **main.yml** file, included in the **.github/workflows** folder of your repository:
 
 ```yml
  - name: Create args file
@@ -164,11 +139,10 @@ Environments for use in the action workflow:
         ...
 ```
 
-3. Open a pull request to merge the changes to the main branch and start the automatic deployment.
+5. Open a pull request to merge the changes to the main branch and start the automatic deployment.
 
 Now your project is ready to work with a continuous deployment workflow, updating instantly any changes in the application or the repository. 
 
-### Adding a custom domain
+### Custom domain
 
-The edge application created during the deployment has an assigned Azion domain to make it accessible through the browser. The domain has the following format: `xxxxxxxxxx.map.azionedge.net`. However, you can add a custom domain for users to access your edge application through it.
-
+The edge application created during the deployment has an assigned Azion domain to make it accessible through the browser. The domain has the following format: `xxxxxxxxxx.map.azionedge.net`. However, you can add a custom domain for users to access your edge application through it. Go to the [Domains](https://www.azion.com/en/documentation/products/edge-application/domains/) documentation to read more about it.
