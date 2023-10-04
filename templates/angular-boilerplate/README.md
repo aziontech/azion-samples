@@ -34,13 +34,13 @@ For a more detailed step-by-step on declaring your secrets and using this templa
 
 ## Important
 
-To guarantee the optimal performance of this template, it's necessary to activate the following Azion products:
+To guarantee the optimal performance of this template, it's necessary to activate the following Azion product:
 
 * [Edge Functions](https://www.azion.com/en/documentation/products/edge-application/edge-functions/#edge-functions-management)
 
-You need to activate the products separately via RTM. Review the [Azion documentation](https://www.azion.com/en/documentation/products/guides/angular-boilerplate/) to do so.
+You need to activate the product separately via RTM. Review the [Azion documentation](https://www.azion.com/en/documentation/products/guides/angular-boilerplate/) to do so.
 
-If these products are activated, the execution of this template could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information. 
+If this product is activated, the execution of this template could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information. 
 
 ## Continuous deployment
 
@@ -81,3 +81,4 @@ To manage and edit your edge application’s settings, read the documentation ab
 ### Custom domain
 
 The edge application created during the deployment has an assigned Azion domain to make it accessible through the browser. The domain has the following format: `xxxxxxxxxx.map.azionedge.net`. However, you can add a custom domain for users to access your edge application through it. Go to the [Domains](https://www.azion.com/en/documentation/products/edge-application/domains/) documentation to read more about it.
+

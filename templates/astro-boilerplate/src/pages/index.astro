@@ -1,0 +1,78 @@
+---
+import Layout from '../layouts/Layout.astro';
+import azionLogo from "../assets/azion.svg";
+import '../assets/main.css';
+---
+
+<Layout title="Welcome to Astro.">
+	<section>
+		<div class="header">
+			<img src={azionLogo} width="100" height="24" />
+		</div>
+		<div class="content">
+			<h1 class="text-gradient">Astro</h1>
+			<h1>Welcome to Astro</h1>
+			<p class="instructions">
+				To get started, open the directory <code>src/pages</code> in your project.<br /><br />
+				<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+			</p>
+		</div>
+		<div class="footer">
+			<a href="https://www.azion.com/en/documentation/" target="_blank">
+			<h1>Docs</h1>
+			<p>
+				Besides providing structure, it allows interactions to occur with the surface of the element, thus enabling it to have states.
+			</p>
+			</a>
+			<a href="https://medium.com/aziontech" target="_blank">
+			<div>
+				<h1>Medium</h1>
+				<p>
+				Dive deep into our platform's use cases on Medium and join a community where developers connect, collaborate, and innovate.
+				</p>
+			</div>
+			</a>
+			<a href="https://twitter.com/aziontech" target="_blank">
+			<div>
+				<h1>X (formerly Twitter)</h1>
+				<p>Explore our features in-depth and find out what's new on our platform.</p>
+			</div>
+			</a>
+			<a href="https://discord.gg/Yp9N7RMVZy" target="_blank">
+			<div>
+				<h1>Discord</h1>
+				<p>A space for developers to connect, get involved and collaborate.</p>
+			</div>
+			</a>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+		font-size: 50pt;
+	}
+	.instructions {
+		line-height: 17pt;
+		margin: 1rem 0;
+		font-size: 15pt;
+		padding: 0px 20px;
+		min-width: 80%;
+    	text-align: center;
+	}
+	.instructions code {
+		font-size: 0.875em;
+		font-weight: bold;
+		color: #fff;
+		border-radius: 4px;
+		padding: 0.3em 0.45em;
+	}
+	.instructions strong {
+		color: #fff;
+	}
+</style>
