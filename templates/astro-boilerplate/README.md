@@ -1,10 +1,10 @@
-# Vue Boilerplate
+# Astro Boilerplate
 
-The Azion **Vue Boilerplate** is designed to simplify and enhance the deployment process for Vue.js applications directly on the edge of the network.
+The Azion **Astro Boilerplate** is designed to simplify and enhance the deployment process for Astro applications directly on the edge of the network.
 
-This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template via Azion Real-Time Manager (RTM), check the [How to deploy edge applications with the Vue Boilerplate](https://www.azion.com/en/documentation/products/guides/vue-boilerplate/) guide.
+This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template via Azion Real-Time Manager (RTM), check the [How to deploy edge applications with the Astro Boilerplate](https://www.azion.com/en/documentation/products/guides/astro-boilerplate/) guide.
 
-This template uses Vue version `3.3.4`.
+This template uses Astro version `2.6.4`.
 
 ## Usage Information
 
@@ -13,7 +13,7 @@ To start using this template, you need to:
 1. Access [Azion Real-Time Manager (RTM)](https://manager.azion.com/).
   - If you don’t have an account yet, create a new one [by visiting the sign-up page](https://manager.azion.com/signup/).
 2. On the homepage, select the **Start with a template** option.
-3. Find the **Vue boilerplate** card and select it.
+3. Find the **Astro boilerplate** card and select it.
 4. Click the **Settings tab** to configure the template.
 
 ## Settings
@@ -30,7 +30,7 @@ After filling out the form, click the **Next** button to start the deployment pr
 
 Once the template is deployed, you can edit and update your args and code. However, you'll need to declare secrets on your project's GitHub repository first to complete the second build with these changes. When the second build is completed, you can manage your project with a [continuous deployment workflow](#continuous-deployment).
 
-For a more detailed step-by-step on declaring your secrets and using this template, check the [How to deploy edge applications with the Vue Boilerplate](https://www.azion.com/en/documentation/products/guides/vue-boilerplate/) guide for more details.
+For a more detailed step-by-step on declaring your secrets and using this template, check the [How to deploy edge applications with the Astro Boilerplate](https://www.azion.com/en/documentation/products/guides/astro-boilerplate/) guide for more details.
 
 ## Important
 
@@ -38,10 +38,9 @@ To guarantee the optimal performance of this template, it's necessary to activat
 
 * [Edge Functions](https://www.azion.com/en/documentation/products/edge-application/edge-functions/#edge-functions-management)
 
-You need to activate the product separately via RTM. Review the [Azion documentation](https://www.azion.com/en/documentation/products/guides/vue-boilerplate/) to do so.
+You need to activate the product separately via RTM. Review the [Azion documentation](https://www.azion.com/en/documentation/products/guides/astro-boilerplate/) to do so.
 
-
-If this product is activated, the execution of this template could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information.
+If this product is activated, the execution of this template could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information. 
 
 ## Continuous deployment
 
@@ -71,7 +70,7 @@ To do so, open your repository in GitHub. Then, go to **Settings** > **Secrets a
 
 3. Open a pull request to merge the changes to the main branch and start the automatic deployment.
 
-Now your project is ready to work with a continuous deployment workflow, updating instantly any changes in the application or the repository.
+Now your project is ready to work with a continuous deployment workflow, updating instantly any changes in the application or the repository. 
 
 ## Management
 
@@ -82,3 +81,4 @@ To manage and edit your edge application’s settings, read the documentation ab
 ### Custom domain
 
 The edge application created during the deployment has an assigned Azion domain to make it accessible through the browser. The domain has the following format: `xxxxxxxxxx.map.azionedge.net`. However, you can add a custom domain for users to access your edge application through it. Go to the [Domains](https://www.azion.com/en/documentation/products/edge-application/domains/) documentation to read more about it.
+
