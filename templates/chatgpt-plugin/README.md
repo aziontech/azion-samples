@@ -145,7 +145,7 @@ To do so:
 
 Done. Your plugin is now ready for use.
 
-Your OpenAI account must be eligible to develop plugins to register a new one.
+**Important**: your OpenAI account must be eligible to develop plugins to register a new one.
 
 ---
 
