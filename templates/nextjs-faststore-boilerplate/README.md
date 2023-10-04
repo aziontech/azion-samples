@@ -1,10 +1,10 @@
-# Angular Boilerplate
+# Next.js Faststore Boilerplate
 
-The Azion Angular Boilerplate is designed to simplify and enhance the deployment process for Angular.js applications directly on the edge of the network.
+The Azion Next.js Faststore Boilerplate is designed to simplify and enhance the deployment process for Next.js Faststore applications directly on the edge of the network.
 
-This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template via Azion Real-Time Manager (RTM), check the [How to deploy edge applications with the Angular Boilerplate](https://www.azion.com/en/documentation/products/guides/angular-boilerplate/) guide.
+This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template via Azion Real-Time Manager (RTM), check the [How to deploy edge applications with the Next.js Faststore Boilerplate](https://www.azion.com/en/documentation/products/guides/nextjs-faststore-boilerplate/) guide.
 
-This template uses Angular CLI version 16.1.3.
+This template uses Next.js Faststore version 12.3.1 and Faststore Core version 2.1.96.
 
 ## Usage Information
 
@@ -13,7 +13,7 @@ To start using this template, you need to:
 1. Access [Azion Real-Time Manager (RTM)](https://manager.azion.com/).
   - If you don’t have an account yet, create a new one [by visiting the sign-up page](https://manager.azion.com/signup/).
 2. On the homepage, select the **Start with a template** option.
-3. Find the **Angular boilerplate** card and select it.
+3. Find the **Next.js Faststore boilerplate** card and select it.
 4. Click the **Settings tab** to configure the template.
 
 ## Settings
@@ -28,17 +28,17 @@ After filling out the form, click the **Next** button to start the deployment pr
 
 Once the template is deployed, you can edit and update your args and code. However, you'll need to declare secrets on your project's GitHub repository first to complete the second build with these changes. When the second build is completed, you can manage your project with a continuous deployment workflow.
 
-For a more detailed step-by-step on declaring your secrets and using this template, check the [How to deploy edge applications with the Angular Boilerplate](https://www.azion.com/en/documentation/products/guides/angular-boilerplate/) guide for more details.
+For a more detailed step-by-step on declaring your secrets and using this template, check the [How to deploy edge applications with the Next.js Faststore Boilerplate](https://www.azion.com/en/documentation/products/guides/Next.js Faststore-boilerplate/) guide for more details.
 
 ## Important
 
-To guarantee the optimal performance of this template, it's necessary to activate the following Azion product:
+To guarantee the optimal performance of this template, it's necessary to activate the following Azion products:
 
 * [Edge Functions](https://www.azion.com/en/documentation/products/edge-application/edge-functions/#edge-functions-management)
 
-You need to activate the product separately via RTM. Review the [Azion documentation](https://www.azion.com/en/documentation/products/guides/angular-boilerplate/) to do so.
+You need to activate the products separately via RTM. Review the [Azion documentation](https://www.azion.com/en/documentation/products/guides/Next.js Faststore-boilerplate/) to do so.
 
-If this product is activated, the execution of this template could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information. 
+If these products are activated, the execution of this template could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information. 
 
 ## Continuous deployment
 
@@ -73,3 +73,8 @@ Now your project is ready to work with a continuous deployment workflow, updatin
 ### Adding a custom domain
 
 The edge application created during the deployment has an assigned Azion domain to make it accessible through the browser. The domain has the following format: `xxxxxxxxxx.map.azionedge.net`. However, you can add a custom domain for users to access your edge application through it.
+
+
+### starter.store
+
+A starter powered by FastStore.
