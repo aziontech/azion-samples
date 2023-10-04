@@ -197,7 +197,7 @@ Once the template is deployed, you can edit and update your args and code, as we
 To do so, open your **ChatGPT Plugin** repository in GitHub. Then, go to **Settings** > **Secrets and variables** > **Action** to [add your variables](https://docs.github.com/en/actions/security-guides/encrypted-secrets), following these instructions:
 
 1. Add the Azion Personal Token to the *secrets*:
-- Read [how to generate an Azion Personal Token](/en/documentation/products/accounts/personal-tokens/) in the documentation.
+- Read [how to generate an Azion Personal Token](https://www.azion.com/en/documentation/products/accounts/personal-tokens/) in the documentation.
 
 ```bash
     AZION_PERSONAL_TOKEN=<value>
