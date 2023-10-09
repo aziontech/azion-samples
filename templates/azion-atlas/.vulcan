@@ -1,0 +1,4 @@
+entry=main.ts
+preset=typescript
+mode=compute
+useNodePolyfills=true
