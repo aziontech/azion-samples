@@ -10,14 +10,23 @@ export const UserFindHandler = async (request: any, extras: any) => {
     collection,
   });
 
-  const data = await repository.find();
+  try {
+    const data = await repository.find();
+    return new Response(data, {
+      headers: {
+        'content-type': 'application/json;charset=UTF-8',
+      },
+      status: 200,
+    });
+  } catch (err) {
+    return new Response(JSON.stringify(err), {
+      headers: {
+        'content-type': 'application/json;charset=UTF-8',
+      },
+      status: 500,
+    });
+  }
 
-  return new Response(data, {
-    headers: {
-      'content-type': 'application/json;charset=UTF-8',
-    },
-    status: 200,
-  });
 };
 
 export const UserCreateHandler = async (request: any, extras: any) => {
