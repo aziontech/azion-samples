@@ -2,7 +2,7 @@ import { Repository } from './repository';
 
 export const UserFindHandler = async (request: any, extras: any) => {
   const { args } = extras;
-  const { token, url, database, dataSource, collection } = args?.API_TOKEN;
+  const { token, url, database, dataSource, collection } = args;
 
   const repository = new Repository(token, url, {
     database,
@@ -22,7 +22,7 @@ export const UserFindHandler = async (request: any, extras: any) => {
 
 export const UserCreateHandler = async (request: any, extras: any) => {
   const { args } = extras;
-  const { token, url, database, dataSource, collection } = args?.API_TOKEN;
+  const { token, url, database, dataSource, collection } = args;
   const repository = new Repository(token, url, {
     database,
     dataSource,
@@ -55,7 +55,7 @@ export const UserCreateHandler = async (request: any, extras: any) => {
 
 export const UserUpdateHandler = async (request: any, extras: any) => {
   const { args } = extras;
-  const { token, url, database, dataSource, collection } = args?.API_TOKEN;
+  const { token, url, database, dataSource, collection } = args;
   const repository = new Repository(token, url, {
     database,
     dataSource,
@@ -87,7 +87,7 @@ export const UserUpdateHandler = async (request: any, extras: any) => {
 
 export const UserDeleteHandler = async (request: any, extras: any) => {
   const { args } = extras;
-  const { token, url, database, dataSource, collection } = args?.API_TOKEN;
+  const { token, url, database, dataSource, collection } = args;
   const repository = new Repository(token, url, {
     database,
     dataSource,
