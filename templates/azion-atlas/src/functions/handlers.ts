@@ -26,7 +26,6 @@ export const UserFindHandler = async (request: any, extras: any) => {
       status: 500,
     });
   }
-
 };
 
 export const UserCreateHandler = async (request: any, extras: any) => {

@@ -1,5 +1,9 @@
-node_modules
+node_modules/
 dist
 .env*
 worker
 args.json
+.edge/
+yarn.lock
+pnpm-lock.yaml
+package-lock.json
