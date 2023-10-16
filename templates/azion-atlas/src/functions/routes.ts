@@ -5,9 +5,12 @@ import {
   UserFindHandler,
   UserUpdateHandler,
 } from './handlers';
+import { AppPageHandler } from './app';
 
 async function routes(request: any, args: any) {
   const router = Router();
+
+  router.get('/', AppPageHandler);
 
   router
     .get('/api', UserFindHandler)
