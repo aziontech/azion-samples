@@ -1,0 +1,19 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "Template Hello world",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node main.js"
+  },
+  "keywords": [
+    "edge",
+    "edge computing",
+    "azion"
+  ],
+  "author": "azion",
+  "license": "MIT",
+  "dependencies": {
+  }
+}

@@ -1,0 +1,52 @@
+name: Main Edge Deploy
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - "main"
+
+jobs:
+  deploy:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Use Node.js 18.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Create args file
+        # "create the arguments at runtime because of the secrets"
+        run: |
+          cat > ./args.json << EOF
+            {
+              "my_var": "test"
+            }
+          EOF
+
+      - name: Azion Action Deploy
+        id: azion_edge
+        uses: aziontech/edge-computing-actions@v0
+        with:
+          azionPersonalToken: ${{ secrets.AZION_PERSONAL_TOKEN }}
+          functionArgsFilePath: "args.json"
+          buildPreset: "javascript"
+          buildMode: "compute"
+          buildEntry: "./main.js"
+
+      - name: Get the output Azion Edge Deploy
+        run: |
+          echo "Application ID-= ${{ steps.azion_edge.outputs.applicationId }}"
+          echo "Domain-= ${{ steps.azion_edge.outputs.domainUrl }}"
