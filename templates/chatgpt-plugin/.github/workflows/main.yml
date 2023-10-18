@@ -43,7 +43,7 @@ jobs:
 
       - name: Azion Action Deploy
         id: azion_edge
-        uses: aziontech/edge-computing-actions@v0.0.1
+        uses: aziontech/edge-computing-actions@v0
         with:
           azionPersonalToken: ${{ secrets.AZION_PERSONAL_TOKEN }}
           functionArgsFilePath: "args.json"
