@@ -1,4 +1,4 @@
-# Upstash GeoLocation template
+# Upstash GeoLocation
 
 The **Upstash GeoLocation** template is an automation designed to deploy a database directly on the edge while enabling the configuration of custom messages that will be delivered according to the user's geographical location.
 
@@ -76,6 +76,7 @@ To know more on how to edit and customize your project's settings, go to the [Ma
 To guarantee the optimal performance of this template, it's necessary to activate the following Azion product:
 
 * [Edge Functions](/en/documentation/products/edge-application/edge-functions/)
+* [Application Acceleration](https://www.azion.com/en/documentation/products/edge-application/application-acceleration/)
 
 You must activate this product separately via RTM. To do so, review the [Azion documentation](https://www.azion.com/en/documentation/products/guides/chatgpt-plugin/).
 
