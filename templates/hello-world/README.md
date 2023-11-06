@@ -1,28 +1,27 @@
 # Hello World
 
-Azion **Hello World** is a template that allows you to deploy edge functions integrated with Github Actions directly on the edge of the network.
+**Hello World** is a popular resource used to demonstrate the basic syntax and structure of a programming language or development environment. The Azion Hello World template deploys an edge application that prints the text "Hello, World!" in your browser and you can use it as a starting point to become familiar with Azion Edge Platform and edge computing capabilities.
 
-By using this template, you just need to create your edge function with an edge application, and the continuous deployment is done through GitHub Actions. It accelerates your workflows and guarantees keeping your project up to date.
+This repository is an example of the new GitHub repository created during the deployment. For a detailed step-by-step to deploy this template via Azion Real-Time Manager (RTM), check the [How to deploy the Hello World template](https://www.azion.com/en/documentation/products/guides/hello-world-template/) guide.
+
 
 ---
 
-## Getting the template
+## Usage Information
 
-To start using the **Hello World** template, proceed as follows:
+To start using this template, you need to:
 
 1. Access [Real-Time Manager (RTM)](https://manager.azion.com/).
-- If you don’t have an account yet, create a new one [by visiting the sign-up page](https://manager.azion.com/signup/).
+    - If you don’t have an account yet, create a new one [by visiting the sign-up page](https://manager.azion.com/signup/).
 2. On the homepage, select the **Start with a template** option.
 3. Find the **Hello World** card and select it.
 4. Click the **Settings** tab to open the configuration form. 
 
 ---
 
-## Setting up the template
+## Settings
 
-In the configuration form, you must provide the information to configure your new application, which will include the edge function. Fill in the presented fields. 
-
-Fields identified with an asterisk are mandatory.
+To successfully deploy this template, you must provide the information to configure your Azion application. Fields identified with an asterisk are mandatory.
 
 - **Application Name** *: the name of your edge application. It's used to identify and manage your application within Azion's platform.
   - Use a unique and easy-to-remember name. If the name has already been used, the platform returns an error message.
@@ -34,73 +33,34 @@ Note that permissions can be scoped either to a user or an organization or to a 
 
 After completing all the information, click the **Next** button, located in the bottom-right corner. This will start the deployment process.
 
+
+Once the template is deployed, you can edit and update your args and code. However, you'll need to declare secrets on your project's GitHub repository first to complete the second build with these changes. When the second build is completed, you can manage your project with a continuous deployment workflow.
+
+For a detailed step-by-step on declaring your secrets and using this template, check the [How to deploy the Hello World template](https://www.azion.com/en/documentation/products/guides/hello-world-template/) guide for more details.
+
 ---
 
-## Deploying the template
+### Important
 
-You'll be able to follow the deployment process through a window showing off the logs. When it's complete, the *deployment* page appears, confirming the edge application has been successfully created.
-
-This page shows you the following sections:
-
-   - **Access your Edge Application** section includes the link to visit and explore your edge application.
-   - **Build Summary** contains the application's name and function.
-   - The **Deployment details** tab can be opened to access the logs related to the deployment.
-   - **What do you want to do next?** provides recommendations regarding advanced options to enhance your edge application: **Customize Domain**, **Manage Edge Application**, **View Edge Application Metrics**, **View Edge Application Logs**, and the **Back to Home** button.
-
-The link to the edge application allows you to see it on the browser. However, ​​it takes a certain time to propagate and configure the application in Azion’s edge locations. It may be necessary to wait a few minutes for the URL to be activated and for the application page to be effectively displayed in the browser.
-
-### Key configurations
-
-The application undergoes an optimized build process, emphasizing optimal performance and efficiency, employing **Azion Edge Platform** resources.
-
-Afeter the deployment, it creates a [GitHub repository](https://github.com/aziontech/azion-samples/tree/dev/templates/hello-world) to manage the source code and then it installs all required dependencies and multiple configurations to set up the edge application, the domain to host your project, and an edge function for custom logic.
-
-The script also commits deployment details to the user's GitHub repository, including information related to the version deployed and the timestamp of the deployment.
-
-If you want to know more on how to edit and customize your project's settings, go to the [Managing the template](#managing-the-template) section.
-
-Additionally, to guarantee the optimal performance of this template, you must activate the following Azion product:
+To guarantee the optimal performance of this template, it's necessary to activate:
 
 [Edge Functions](https://www.azion.com/en/documentation/products/edge-application/edge-functions/)
 
-You must activate this product separately via RTM. To do so:
+You need to activate this product separately via Real-Time Manager (RTM). Review the [Azion documentation](https://www.azion.com/en/documentation/products/guides/hello-world-template/) to do so.
 
-1. [Access RTM](https://manager.azion.com/).
-2. On the upper-left corner, select the three horizontal lines to open the **Products menu**.
-3. In the **BUILD** section, select **Edge Application**.
-4. You'll be redirected to the **Edge Application** page.
-- It lists all the edge applications you've created. 
-5. Find the edge application related to your template and select it. 
-6. In the **Main Settings** tab, find the **Edge Application Modules** section and active the switch for **Edge Functions**.
+If this product is activated, executing this template could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information.
 
-If this product is activated, the execution of this template could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information. 
 
 ---
 
-## Managing the template
-
-To manage and edit your edge application's settings via Real-Time Manager (RTM), follow these steps:
-
-1. [Access RTM](https://manager.azion.com/).
-2. On the upper-left corner, select the three horizontal lines to open the **Products menu**.
-3. In the **BUILD** section, select **Edge Application**.
-4. You'll be redirected to the **Edge Application** page.
-- It lists all the edge applications you've created. 
-5. Find the edge application related to the **Hello World** template and select it. 
-- The list is organized alphabetically. You can also use the **search bar** located in the upper-left corner of the list; currently, it filters only by **Application Name**.
-
-After selecting the edge application you’ll work on, you’ll be directed to a page containing all the settings you can configure.
-
-Read the documentation about [managing edge applications](https://www.azion.com/en/documentation/products/edge-application/first-steps/) for more details.
-
 ### Continuous deployment
 
-Once the template is deployed, you can also edit and update your args and code, as well as implement a continuous deployment workflow. However, you'll need first to declare secrets on your project's GitHub repository to complete the second build with the changes. When the second build is completed, you'll be able to manage your project with a continuous deployment workflow and edit the args as desired.
+Once the template is deployed, you can edit and update your args and code, as well as implement a continuous deployment workflow. However, you'll need first to *declare secrets on your project's GitHub repository* to complete the second build with the changes. When the second build is completed, you'll be able to manage your project with a continuous deployment workflow and edit the args as desired.
 
 To do so, open your new **Hello World** repository on GitHub. Then, go to **Settings** > **Secrets and variables** > **Action** to [add your variables](https://docs.github.com/en/actions/security-guides/encrypted-secrets), following these instructions:
 
 1. Add the Azion personal token to the *secrets*:
-- Read [how to generate an Azion personal token](https://www.azion.com/en/documentation/products/accounts/personal-tokens/) in the documentation.
+    - Read [how to generate an Azion personal token](https://www.azion.com/en/documentation/products/accounts/personal-tokens/) in the documentation.
 
 ```bash
     AZION_PERSONAL_TOKEN=<value>
@@ -123,6 +83,14 @@ To do so, open your new **Hello World** repository on GitHub. Then, go to **Sett
 3. Open a pull request to merge the changes to the main branch and start the automatic deployment.
 
 Now, your project is ready to work with a continuous deployment workflow, updating instantly any changes in the application or the repository. 
+
+## Management
+
+Considering that this initial setup may not be optimal for your specific edge application, all settings can be customized any time you need by using [Azion Real-Time Manager (RTM)](https://manager.azion.com/).
+
+To manage and edit your edge application’s settings, read the documentation about [managing edge applications](https://www.azion.com/en/documentation/products/edge-application/first-steps/) for more details.
+
+
 
 ### Adding a custom domain
 
