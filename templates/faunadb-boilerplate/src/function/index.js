@@ -1,9 +1,8 @@
-import { MainRouter } from "../lib/main-router";
-import { PageRouter } from "../lib/page-router";
-import { ApiRouter } from "../lib/api-router";
+import { MainRouter } from "../lib/routers/main-router.js";
+import { PageRouter } from "../lib/routers/page-router.js";
+import { ApiRouter } from "../lib/routers/api-router.js";
 
 async function handleRequest(request, args) {
-
   // to add or change a route check the route files
   const mainRouter = MainRouter();
   const apiRouter = ApiRouter();
@@ -16,7 +15,7 @@ async function handleRequest(request, args) {
 
   //  other path (404 page)
   mainRouter.all("*", () => {
-    return new Response(`Welcome Upstash Geolocation Template`, { status: 200 });
+    return new Response(`You are trying something incorrect.`, { status: 200 });
   });
 
   return mainRouter.handle(request, { args });

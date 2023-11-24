@@ -32,12 +32,11 @@ jobs:
         run: |
           cat > ./args.json << EOF
             {
-              "UPSTASH_REDIS_REST_URL": "${{ secrets.UPSTASH_REDIS_REST_URL }}",
-              "UPSTASH_REDIS_REST_TOKEN": "${{ secrets.UPSTASH_REDIS_REST_TOKEN }}"
+              "my_var": "test"
             }
           EOF
 
-      - name: edge-computing-deploy
+      - name: Azion Action Deploy
         id: azion_edge
         uses: aziontech/edge-computing-actions@v0
         with:
