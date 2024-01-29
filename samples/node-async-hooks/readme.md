@@ -10,10 +10,10 @@ The AsyncLocalStorage instance, requestId, is used to store and retrieve a reque
 
 Here's a brief description of the functions:
 
-- logAsyncContext(state): Logs the current request ID and a state message to the console.
-- doSomething(): Simulates an asynchronous operation and logs its context.
-- doSomethingElse(): Simulates another asynchronous operation and logs its context.
-- handleRequest(request): Handles an incoming request, retrieves the request ID from the headers, and runs a series of asynchronous operations within the context of this request ID.
+- logAsyncContext(state): logs the current request ID and a state message to the console.
+- doSomething(): simulates an asynchronous operation and logs its context.
+- doSomethingElse(): simulates another asynchronous operation and logs its context.
+- handleRequest(request): handles an incoming request, retrieves the request ID from the headers, and runs a series of asynchronous operations within the context of this request ID.
 
 The handleRequest function is registered as an event listener for fetch events, meaning it will be invoked for every incoming request.
 
