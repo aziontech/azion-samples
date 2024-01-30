@@ -1,0 +1,6 @@
+preset=javascript
+builder=webpack
+entry=main.js
+mode=compute
+useNodePolyfills=true
+useOwnWorker=false

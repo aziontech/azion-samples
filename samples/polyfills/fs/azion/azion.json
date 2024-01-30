@@ -1,0 +1,32 @@
+{
+  "name": "resilient-wisdom",
+  "bucket": "",
+  "template": "javascript",
+  "mode": "compute",
+  "env": "production",
+  "prefix": "20240130093817",
+  "project-root": "/Users/gabriel.franca/screencasts/polyfills/fs/resilient-wisdom",
+  "function": {
+    "id": 0,
+    "name": "__DEFAULT__",
+    "file": "./out/worker.js",
+    "args": "./azion/args.json"
+  },
+  "application": {
+    "id": 0,
+    "name": "__DEFAULT__"
+  },
+  "domain": {
+    "id": 0,
+    "name": "__DEFAULT__"
+  },
+  "rt-purge": {
+    "purge_on_publish": true
+  },
+  "origin": {
+    "single-origin-id": 0,
+    "storage-origin-id": 0,
+    "name": "__DEFAULT__",
+    "address": null
+  }
+}

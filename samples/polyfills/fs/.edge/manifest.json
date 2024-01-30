@@ -1,0 +1,11 @@
+{
+  "routes": [
+    {
+      "from": "/",
+      "to": ".edge/worker.js",
+      "priority": 1,
+      "type": "compute"
+    }
+  ],
+  "fs": []
+}
