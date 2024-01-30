@@ -19,4 +19,4 @@ The handleRequest function is registered as an event listener for fetch events, 
 
 ## Usage
 
-This code is designed to be run on Azion Edge Runtime. It demonstrates how to use AsyncLocalStorage to maintain context across asynchronous operations, which can be particularly useful in scenarios such as request handling in a web server, where you might need to keep track of request-specific data across multiple asynchronous operations.
+This code is designed to run on **Azion Edge Runtime** and demonstrates how to use AsyncLocalStorage to maintain context across asynchronous operations. It can be particularly useful in scenarios such as request handling in a web server, where you might need to keep track of request-specific data across multiple asynchronous operations.
