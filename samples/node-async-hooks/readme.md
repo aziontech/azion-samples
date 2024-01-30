@@ -4,7 +4,7 @@ This is an example of using **Node.js Async Hooks**, specifically the **AsyncLoc
 
 ## Code Overview
 
-The code consists of several asynchronous functions (doSomething, doSomethingElse, handleRequest) that simulate different parts of a request handling process.
+The code consists of several asynchronous functions (**doSomething**, **doSomethingElse**, **handleRequest**) that simulate different parts of a request-handling process.
 
 The AsyncLocalStorage instance, requestId, is used to store and retrieve a request-specific value (in this case, a request ID from headers) across these asynchronous operations.
 
