@@ -15,7 +15,7 @@ Here's a brief description of the functions:
 - doSomethingElse(): simulates another asynchronous operation and logs its context.
 - handleRequest(request): handles an incoming request, retrieves the request ID from the headers, and runs a series of asynchronous operations within the context of this request ID.
 
-The handleRequest function is registered as an event listener for fetch events, meaning it will be invoked for every incoming request.
+The handleRequest function is registered as an event listener for fetch events, meaning it'll be invoked for every incoming request.
 
 ## Usage
 
