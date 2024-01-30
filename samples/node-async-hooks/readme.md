@@ -1,6 +1,6 @@
 # Node.js Async Hooks and Edge Functions
 
-This is a simple example of using Node.js Async Hooks, specifically the AsyncLocalStorage API, to manage context within asynchronous operations inside an edge function.
+This is an example of using **Node.js Async Hooks**, specifically the **AsyncLocalStorage API**, to manage context within asynchronous operations inside an edge function.
 
 ## Code Overview
 
