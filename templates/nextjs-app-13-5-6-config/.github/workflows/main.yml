@@ -1,0 +1,37 @@
+name: Main Edge Deploy
+
+on:
+  pull_request:
+    types:
+      - created
+
+jobs:
+  deploy:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Use Node.js 18.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install NPM dependencies
+        run: npm i
+        
+      - name: Install Azion CLI
+        run: |
+          wget https://downloads.azion.com/linux/x86_64/azion-1.14.0
+          sudo mv azion-1.14.0 /usr/bin/azion
+          sudo chmod u+x /usr/bin/azion
+
+      - name: Azion Action Deploy
+        run: |
+          azion -t ${{ secrets.AZION_PERSONAL_TOKEN }}
+          azion deploy
