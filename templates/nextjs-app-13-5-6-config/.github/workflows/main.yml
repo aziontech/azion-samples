@@ -27,8 +27,8 @@ jobs:
         
       - name: Install Azion CLI
         run: |
-          wget https://downloads.azion.com/linux/x86_64/azion-1.14.0
-          sudo mv azion-1.14.0 /usr/bin/azion
+          curl -o azionlinux https://downloads.azion.com/linux/x86_64/azion
+          sudo mv azionlinux /usr/bin/azion
           sudo chmod u+x /usr/bin/azion
 
       - name: Azion Action Deploy
