@@ -3,7 +3,9 @@ name: Main Edge Deploy
 on:
   pull_request:
     types:
-      - created
+      - closed
+    branches:
+      - "main"
 
 jobs:
   deploy:
@@ -22,16 +24,26 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install NPM dependencies
-        run: npm i
-        
-      - name: Install Azion CLI
+      - name: Install dependencies
+        run: yarn
+
+      - name: Create args file
+        # "create the arguments at runtime because of the secrets"
         run: |
-          curl -o azionlinux https://downloads.azion.com/linux/x86_64/azion
-          sudo mv azionlinux /usr/bin/azion
-          sudo chmod u+x /usr/bin/azion
+          cat > ./args.json << EOF
+            { "my_arg_by_action": true }
+          EOF
 
       - name: Azion Action Deploy
+        id: azion_edge
+        uses: aziontech/edge-computing-actions@v0
+        with:
+          azionPersonalToken: ${{ secrets.AZION_PERSONAL_TOKEN }}
+          functionArgsFilePath: "args.json"
+          buildPreset: "next"
+          buildMode: "compute"
+
+      - name: Get the output Azion Action Deploy
         run: |
-          azion -t ${{ secrets.AZION_PERSONAL_TOKEN }}
-          azion deploy
+          echo "Application ID-= ${{ steps.azion_edge.outputs.applicationId }}"
+          echo "Domain-= ${{ steps.azion_edge.outputs.domainUrl }}"
