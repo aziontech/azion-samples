@@ -160,6 +160,7 @@ export const indexHTML = () => {
               posts.innerHTML = \`<li><div class=\"list-content\"><textarea oninput="onChangeInputTextArea(event)" placeholder=\"Enter your new post...\" type=\"text\" id=\"text-new-post\"></textarea><div class=\"actions\"><button id=\"btn-post-save-\${id}\" onclick=\"saveNewPost()\"><i class=\"icons\" data-lucide="save"></i></button><button onclick=\"cancelNewPost(this)\"><i class=\"icons\" data-lucide="x-circle"></i></button></div></div></li>\${items}\`
               lucide.createIcons();
               document.getElementById("btn-new-post").setAttribute('disabled', true);
+              document.getElementById("text-new-post").focus();
           }
   
   
