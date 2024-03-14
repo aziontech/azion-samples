@@ -28,8 +28,8 @@ const apiGetAllPostsHandler = async (request, extras) => {
   const { args } = extras;
   
   const client = createClient({
-    url: args.url,
-    authToken: args.token,
+    url: args.url || Azion.env.get("TURSO_URL"),
+    authToken: args.token || Azion.env.get("TURSO_TOKEN"),
   });
 
   const data = await client.execute("SELECT * FROM posts");
@@ -62,8 +62,8 @@ const apiCreatePostHandler = async (request, extras) => {
     }
 
     const client = createClient({
-      url: args.url,
-      authToken: args.token,
+      url: args.url || Azion.env.get("TURSO_URL"),
+      authToken: args.token || Azion.env.get("TURSO_TOKEN"),
     });
 
     await await client.execute({
@@ -99,8 +99,8 @@ const apiDeletePostPostsHandler = async (request, extras) => {
 
   try {
     const client = createClient({
-      url: args.url,
-      authToken: args.token,
+      url: args.url || Azion.env.get("TURSO_URL"),
+      authToken: args.token || Azion.env.get("TURSO_TOKEN"),
     });
 
     await await client.execute({
@@ -151,8 +151,8 @@ const apiUpdatePostPostsHandler = async (request, extras) => {
     }
 
     const client = createClient({
-      url: args.url,
-      authToken: args.token,
+      url: args.url || Azion.env.get("TURSO_URL"),
+      authToken: args.token || Azion.env.get("TURSO_TOKEN"),
     });
 
     await await client.execute({
