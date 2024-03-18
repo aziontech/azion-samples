@@ -3,18 +3,16 @@ name: Main Edge Deploy
 on:
   pull_request:
     types:
-      - closed
-    branches:
-      - "main"
+      - created
 
 jobs:
   deploy:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
-    
+
     permissions:
       contents: write
-    
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -24,30 +22,16 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install dependencies
-        run: yarn
-
-      - name: Create args file
-        # "create the arguments at runtime because of the secrets"
+      - name: Install NPM dependencies
+        run: npm i
+        
+      - name: Install Azion CLI
         run: |
-          cat > ./args.json << EOF
-            {
-              "url": "${{ secrets.TURSO_URL }}",
-              "token": "${{ secrets.TURSO_TOKEN }}"
-            }
-          EOF
+          curl -o azionlinux https://downloads.azion.com/linux/x86_64/azion
+          sudo mv azionlinux /usr/bin/azion
+          sudo chmod u+x /usr/bin/azion
 
-      - name: edge-computing-deploy
-        id: azion_edge
-        uses: aziontech/edge-computing-actions@v0
-        with:
-          azionPersonalToken: ${{ secrets.AZION_PERSONAL_TOKEN }}
-          functionArgsFilePath: "args.json"
-          buildPreset: "javascript"
-          buildMode: "compute"
-          buildEntry: "./main.js"
-
-      - name: Get the output Azion Edge Deploy
+      - name: Azion Action Deploy
         run: |
-          echo "Application ID-= ${{ steps.azion_edge.outputs.applicationId }}"
-          echo "Domain-= ${{ steps.azion_edge.outputs.domainUrl }}"
+          azion -t ${{ secrets.AZION_PERSONAL_TOKEN }}
+          azion deploy
