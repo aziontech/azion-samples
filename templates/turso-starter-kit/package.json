@@ -1,0 +1,23 @@
+{
+  "name": "turso-starter-kit",
+  "version": "1.0.0",
+  "description": "A Starter Kit template to use Turso DB in Azion",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node main.js"
+  },
+  "keywords": [
+    "edge",
+    "edge computing",
+    "azion",
+    "turso",
+    "db"
+  ],
+  "author": "azion",
+  "license": "MIT",
+  "dependencies": {
+    "@libsql/client": "^0.5.3",
+    "dotenv": "^16.3.1",
+    "itty-router": "4.0.23"
+  }
+}
