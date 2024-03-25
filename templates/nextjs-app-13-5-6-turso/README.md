@@ -26,7 +26,6 @@ For a more detailed step-by-step on using this template and requirements, check 
 - Generate your [GitHub personal token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic).
 - Enable [Edge Functions and Application Accelerator](https://www.azion.com/en/documentation/products/guides/billing-and-subscriptions/) in your Azion account.
 
-
 ---
 
 ## Continuous deployment
