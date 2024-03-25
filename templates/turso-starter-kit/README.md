@@ -10,7 +10,7 @@ This template uses LibSQL `0.5.3`.
 
 ## Usage information
 
-To use this template, you must [sign in on Azion Cosole](https://console.azion.com/login).
+To use this template, you must [sign in on Azion Console](https://console.azion.com/login).
 
 > If you haven't an account, go to the [signup page](https://console.azion.com/signup) to complete the registration.
 
