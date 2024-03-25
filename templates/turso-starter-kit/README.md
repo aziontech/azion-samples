@@ -22,7 +22,7 @@ For a more detailed step-by-step on using this template and requirements, check 
 
 - Create a [Turso account](https://accounts.turso.tech/sign-up).
 - Install the [Turso CLI](https://docs.turso.tech/cli/introduction).
-- Create a [database](https://docs.turso.tech/quickstart) with a table called posts, and the fields id and message, as explained in the next section.
+- Create a [database](https://docs.turso.tech/quickstart) with a table called `posts`, and the fields `id` and `message`.
 - Generate your [GitHub personal token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic).
 - Enable [Edge Functions and Application Accelerator](https://www.azion.com/en/documentation/products/guides/billing-and-subscriptions/) in your Azion account.
 
