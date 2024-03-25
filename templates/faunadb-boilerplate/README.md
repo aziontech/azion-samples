@@ -1,83 +1,33 @@
 # Fauna DB Boilerplate
 
-The **Fauna DB Boilerplate** template is an automation designed to deploy a database directly on the edge while enabling the configuration of creating, retrieving, updating and deleting items in a Fauna DB collection called Posts.
+The **Fauna DB Boilerplate** template is an automation designed to deploy a database directly on the edge while enabling the configuration of creating, retrieving, updating, and deleting items in a Fauna DB collection called `Posts`.
 
-This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template via Azion Real-Time Manager (RTM), check the [How to use the Fauna DB Boilerplate EdgeDeploy template through Azion](https://www.azion.com/en/documentation/products/guides/faunadb-boilerplate/) guide.
-
----
-
-## Requirements
-
-Before using this template, you need to:
-
-1. Go to [Fauna DB Register](https://dashboard.fauna.com/register) enter your Email and Password, and click the SIGN UP button.
-2. Create a database and populate it with demo data in the [Fauna Dashboard](https://dashboard.fauna.com/resources/home).
-  - On the Home page, click the CREATE DATABASE button.
-3. Enter a collection name `Posts` that is being used in this example.
-4. Generate your GitHub personal token.
-* While generating your personal token, grant that your scope has the permissions to authorize an OAuth app or a personal token to access to public and private repositories, including read and write access to code.You must also enable the workflow option to allow adding and updating GitHub Actions workflow files.
-
-Note that permissions can be scoped either to a user or an organization or to a repository. Read the [Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic) documentation for more information.
+This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [How to use the Fauna DB Boilerplate template through Azion](https://www.azion.com/en/documentation/products/guides/faunadb-boilerplate/) guide.
 
 ---
 
 ## Usage information
 
-To start using the **Fauna DB Boilerplate** template, proceed as follows:
+To use this template, you must [sign in on Azion Console](https://console.azion.com/login).
 
-1. Access [Real-Time Manager (RTM)](https://manager.azion.com/).
-- If you don’t have an account yet, create a new one [by visiting the sign-up page](https://manager.azion.com/signup/).
-2. On the homepage, select the **Start with a template** option.
-3. Find the Fauna DB Boilerplate card and select it.
-4. Click the **Settings** tab to open the configuration section.
+> If you haven't created an account, go to the [signup page](https://console.azion.com/signup) to complete the registration.
 
----
+To successfully deploy this template, you need to provide the information to configure your Azion application, as requested in the **Settings** tab on the template's page.
 
-## Settings
+For a more detailed step-by-step on using this template and requirements, check the [How to use the Fauna DB Boilerplate template through Azion](https://www.azion.com/en/documentation/products/guides/faunadb-boilerplate/) guide.
 
-In the configuration form, you must provide the information to configure your Azion application. Fill in the presented fields. 
+### Requirements
 
-Fields identified with an asterisk are mandatory.
-
-- **Application Name** *: the name of your edge application. It's used to identify and manage your application within Azion's platform.
-  - Use a unique and easy-to-remember name. If the name has already been used, the platform returns an error message.
-- **Fauna DB Secret** *: the key to access your Fauna DB database using REST.
-  - In the Databases list on the Home page, select your database. This takes you to the Explorer page with your database highlighted.
-  - Hover over the database name to reveal the Keys icon. Click the key icon.
-  - In the Keys dialog, click CREATE KEY.
-  - The Database name is already populated. Choose Admin or Server Role and enter an optional Key Name.
-  - Click the SAVE button.
-  - Copy the KEY’S SECRET. `FAUNA_SECRET`
-- **GitHub Personal Token** *: your GitHub personal token.
-
-After completing all the information, click the **Next** button, located in the bottom-right corner. This will start the deployment process.
-
-Fauna DB Boilerplate creates a new Azion edge application and its domain. It also creates an edge function to provide the arguments for the geolocation, and a new repository in your GitHub account based on a [public template](https://github.com/aziontech/azion-samples/tree/dev/templates/faunadb-boilerplate).
+- Create a [Fauna account](https://dashboard.fauna.com/register).
+- Create a database in the [Fauna Dashboard](https://docs.fauna.com/fauna/current/get_started/dashboard) and populate it with `demo data`, selecting this option while creating.
+- Create a new [collection](https://docs.fauna.com/fauna/current/cookbook/data_model/collections) named `Posts` within your database to use with this template.
+- Generate a [Fauna secret key](https://docs.fauna.com/fauna/v4/security/keys?lang=shell) for your database.
+- Generate your [GitHub personal token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic).
+- Enable [Edge Functions and Application Accelerator](https://www.azion.com/en/documentation/products/guides/billing-and-subscriptions/) in your Azion account.
 
 ---
 
-##Important
-
-To guarantee the optimal performance of this template, it's necessary to activate the following Azion product:
-
-* [Edge Functions](https://www.azion.com/en/documentation/products/edge-application/edge-functions/)
-* [Application Acceleration](https://www.azion.com/en/documentation/products/edge-application/application-acceleration/)
-
-You must activate this product separately via RTM. To do so, review the [Azion documentation](https://www.azion.com/en/documentation/products/guides/chatgpt-plugin/).
-
-If this product is activated, the execution of this template could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information.
-
-Any cost generated by Fauna DB usage will be processed and billed separately on the Fauna DB platform. Visit the [Fauna DB Price](https://docs.fauna.com/fauna/current/plan_billing/) for more details. 
-
----
-
-## Management
-
-Considering that this initial setup may not be optimal for your specific edge application, all settings can be customized any time you need by using Azion Real-Time Manager (RTM). Once the template is deployed, you also have full control over customizing your FaunaDB account and database.
-
-To manage and edit your edge application’s settings, read the documentation about [managing edge applications](https://www.azion.com/en/documentation/products/edge-application/first-steps/) for more details. For specific FaunaDB-related questions, check the [Fauna Docs](https://docs.fauna.com/fauna/current/).
-
-### Continuous deployment
+## Continuous deployment
 
 Once the template is deployed, you can edit and update your args and code in the edge function, as well as implement a continuous deployment workflow. However, you'll need first to *declare secrets on your project's GitHub repository* to complete the second build with the changes. When the second build is finished, you'll be able to manage your project with a continuous deployment workflow and edit the args as desired.
 
@@ -132,6 +82,14 @@ To do so, open your **Fauna DB Boilerplate EdgeDeploy** repository on GitHub. Th
 
 Now your project is ready to work with a continuous deployment workflow, updating instantly any changes in the application or the repository. 
 
+--- 
+
+## Management
+
+Considering that this initial setup may not be optimal for your specific edge application, all settings can be customized any time you need by using [Azion Console)](https://console.azion.com/).
+
+To manage and edit your edge application’s settings, read the documentation about [managing edge applications](https://www.azion.com/en/documentation/products/edge-application/first-steps/) for more details.
+
 ### Custom domain
 
-The edge application created during the deployment has an assigned Azion domain to make it accessible through the browser. The domain has the following format: `xxxxxxxxxx.map.azionedge.net`. However, you can add a custom domain for users to access your edge application through it. Go to the [Domains](https://www.azion.com/en/documentation/products/edge-application/domains/) documentation to read more about it.
+The edge application created during the deployment has an assigned Azion domain to make it accessible through the browser. The domain has the following format: `xxxxxxxxxx.map.azionedge.net`. However, you can add a custom domain for users to access your edge application through it. Go to the [Domains](https://www.azion.com/en/documentation/products/guides/configure-a-domain/) documentation to read more about it.
