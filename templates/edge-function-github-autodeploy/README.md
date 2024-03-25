@@ -4,43 +4,24 @@ Azion **Edge Function GitHub AutoDeploy** simplifies the deployment of edge func
 
 By using this template, you only need to code your edge function, and the deployment is done through GitHub Actions. It accelerates your workflow and guarantees a continuous deployment to keep your project up to date.
 
-This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template via Azion Real-Time Manager (RTM), check the [How to deploy edge functions with Edge Function GitHub AutoDeploy](https://www.azion.com/en/documentation/products/guides/edge-function-github-autodeploy/) guide.
+This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [How to deploy edge functions with Edge Function GitHub AutoDeploy](https://www.azion.com/en/documentation/products/guides/edge-function-github-autodeploy/) guide.
 
 ---
 
 ## Usage information
 
-To start using this template, you need to: 
+To use this template, you must [sign in on Azion Console](https://console.azion.com/login).
 
-1. Access [Real-Time Manager (RTM)](https://manager.azion.com/).
-- If you don’t have an account yet, create a new one [by visiting the sign-up page](https://manager.azion.com/signup/).
-2. On the homepage, select the **Start with a template** option.
-3. Find the **Edge Function GitHub AutoDeploy** card and select it.
-4. Click the **Settings** tab to configure the template. 
+> If you haven't an account, go to the [signup page](https://console.azion.com/signup) to complete the registration.
 
-### Settings
+To successfully deploy this template, you need to provide the information to configure your Azion application, as requested in the **Settings** tab on the template's page.
 
-To successfully deploy this template, you must provide the information to configure your application. Fields identified with an asterisk are mandatory.
+For a more detailed step-by-step on using this template and requirements, check the [How to deploy edge functions with Edge Function GitHub AutoDeploy](https://www.azion.com/en/documentation/products/guides/edge-function-github-autodeploy/) guide.
 
-- **Application Name** *: the name of your edge application. It's used to identify and manage your application within Azion's platform.
-  - Use a unique and easy-to-remember name. If the name has already been used, the platform returns an error message.
-- **GitHub Personal Token** *: your GitHub personal token.
+### Requirements
 
-While generating your GitHub personal token, grant that your **scope** has the permissions to authorize an OAuth app or a personal token to access public and private repositories, including read and write access to code. You must also enable the **workflow** option to add and update GitHub Actions workflow files.
-
-Note that permissions can be scoped either to a user or an organization or to a repository. Read the [Creating a personal access token documentation](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic) for more information.
-
-After completing all the information, click the **Next** button, located in the bottom-right corner. This will start the deployment process.
-
-For a more detailed step-by-step on declaring your secrets and using this template, check the [How to deploy edge functions with Edge Function GitHub AutoDeploy](https://www.azion.com/en/documentation/products/guides/edge-function-github-autodeploy/) guide.
-
-### Important
-
-To guarantee the optimal performance of this template, you must activate the following Azion product:
-
-[Edge Functions](https://www.azion.com/en/documentation/products/edge-application/edge-functions/)
-
-You need to activate this product separately via Real-Time Manager (RTM). Review the [Azion documentation](https://www.azion.com/en/documentation/products/guides/edge-function-github-autodeploy/) to do so. If this product is activated, the execution of this template could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information. 
+- Generate your [GitHub personal token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic).
+- Enable [Edge Functions](https://www.azion.com/en/documentation/products/guides/billing-and-subscriptions/) in your Azion account.
 
 ---
 
@@ -51,7 +32,7 @@ Once the template is deployed, you can also edit and update your args and code, 
 To do so, open your new **Edge Function GitHub AutoDeploy** repository on GitHub. Then, go to **Settings** > **Secrets and variables** > **Action** to [add your variables](https://docs.github.com/en/actions/security-guides/encrypted-secrets), following these instructions:
 
 1. Add the Azion personal token to the *secrets*:
-- Read [how to generate an Azion personal token](https://www.azion.com/en/documentation/products/accounts/personal-tokens/) in the documentation.
+- Read [how to generate an Azion personal token](https://www.azion.com/en/documentation/products/guides/personal-tokens/) in the documentation.
 
 ```bash
     AZION_PERSONAL_TOKEN=<value>
@@ -75,6 +56,14 @@ To do so, open your new **Edge Function GitHub AutoDeploy** repository on GitHub
 
 Now, your project is ready to work with a continuous deployment workflow, updating instantly any changes in the application or the repository. 
 
-### Adding a custom domain
+---
 
-The new edge application has an assigned Azion domain to make it accessible through the browser, with the following format: `xxxxxxxxxx.map.azionedge.net`. However, you can add a custom domain for users to access your edge application through it.
+## Management
+
+Considering that this initial setup may not be optimal for your specific edge application, all settings can be customized any time you need by using [Azion Console)](https://console.azion.com/).
+
+To manage and edit your edge application’s settings, read the documentation about [managing edge applications](https://www.azion.com/en/documentation/products/edge-application/first-steps/) for more details.
+
+### Custom domain
+
+The edge application created during the deployment has an assigned Azion domain to make it accessible through the browser. The domain has the following format: `xxxxxxxxxx.map.azionedge.net`. However, you can add a custom domain for users to access your edge application through it. Go to the [Domains](https://www.azion.com/en/documentation/products/guides/configure-a-domain/) documentation to read more about it.
