@@ -12,7 +12,7 @@ This template uses Astro version `4.2.6`.
 
 To use this template, you must [sign in on Azion Console](https://console.azion.com/login).
 
-> If you haven't an account, go to the [signup page](https://console.azion.com/signup) to complete the registration.
+> If you haven't created an account, go to the [signup page](https://console.azion.com/signup) to complete the registration.
 
 To successfully deploy this template, you need to provide the information to configure your Azion application, as requested in the **Settings** tab on the template's page.
 
