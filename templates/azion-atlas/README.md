@@ -16,6 +16,16 @@ To successfully deploy this template, you need to provide the information to con
 
 For a more detailed step-by-step on using this template and requirements, check the [How to deploy the MongoDB Atlas Boilerplate](https://www.azion.com/en/documentation/products/guides/mongodb-atlas/) guide.
 
+### Requirements
+
+- Create a [MongoDB account](https://www.mongodb.com/cloud/atlas/register).
+- Create a [cluster](https://www.mongodb.com/docs/atlas/create-database-deployment/) and add a new database.
+- Create a collection to be used with this template.
+- Active the service [Atlas Data API](https://www.mongodb.com/docs/atlas/app-services/data-api/).
+Generate API key in [Atlas Service](https://www.mongodb.com/docs/atlas/app-services/authentication/api-key/#std-label-api-key-authentication).
+- Generate your [GitHub personal token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic).
+- Enable [Edge Functions and Application Accelerator](https://www.azion.com/en/documentation/products/guides/billing-and-subscriptions/) in your Azion account.
+
 ---
 
 ## Continuous deployment
