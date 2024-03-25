@@ -8,7 +8,7 @@ This template uses Next.js version `13.5.6` and LibSQL `0.5.3`.
 
 ---
 
-## Usage Information
+## Usage information
 
 To use this template, you must [sign in on Azion Cosole](https://console.azion.com/login).
 
