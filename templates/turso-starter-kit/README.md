@@ -14,7 +14,7 @@ To use this template, you must [sign in on Azion Cosole](https://console.azion.c
 
 > If you haven't an account, go to the [signup page](https://console.azion.com/signup) to complete the registration.
 
-To successfully deploy this template, you need to provide the information to configure your Azion application, as shown in the **Settings** tab on the template's page.
+To successfully deploy this template, you need to provide the information to configure your Azion application, as requested in the **Settings** tab on the template's page.
 
 For a more detailed step-by-step on using this template and requirements, check the [How to integrate a Turso database with Azion using a template](https://www.azion.com/en/documentation/products/guides/turso-starter-kit/) guide.
 
