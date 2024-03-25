@@ -1,68 +1,63 @@
-# Astro Starter Kit: Blog
+# Astro Blog Starter Kit
 
-```sh
-npm create astro@latest -- --template blog
+**Astro Blog Starter Kit** contains the configurations to create a new blog page based on the Astro framework. After the deployment, you can interact with the default posts and interface that already exist in this template and customize them.
+
+This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [How to deploy an Astro blog using a template](https://www.azion.com/en/documentation/products/guides/astro-blog-starter-kit/) guide.
+
+This template uses Astro version `4.2.6`.
+
+---
+
+## Usage Information
+
+To use this template, you must [sign in on Azion Cosole](https://console.azion.com/login).
+
+> If you haven't an account, go to the [signup page](https://console.azion.com/signup) to complete the registration.
+
+To successfully deploy this template, you need to provide the information to configure your Azion application, as shown in the **Settings** tab on the template's page.
+
+For a more detailed step-by-step on using this template and requirements, check the [How to deploy an Astro blog using a template](https://www.azion.com/en/documentation/products/guides/astro-blog-starter-kit/) guide.
+
+---
+
+## Continuous deployment
+
+Once the template is deployed, you can edit and update your args and code, as well as implement a continuous deployment workflow. However, you'll need first to *declare secrets on your project's GitHub repository* to complete the second build with the changes. When the second build is completed, you'll be able to manage your project with a continuous deployment workflow and edit the args as desired.
+
+To do so, open your repository in GitHub. Then, go to **Settings** > **Secrets and variables** > **Action** to [add your variables](https://docs.github.com/en/actions/security-guides/encrypted-secrets), following these instructions:
+
+1. Add the Azion personal token to the *secrets*:
+- Read [how to generate an Azion personal token](https://www.azion.com/en/documentation/products/guides/personal-tokens/) in the documentation.
+
+```bash
+    AZION_PERSONAL_TOKEN=<value>
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/blog)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/blog/devcontainer.json)
+2. Add the environments for use in the action workflow in the **main.yml** file, included in the **.github/workflows** folder of your repository:
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+```yml
+  - name: edge-...
+    id: azion_edge
+    ...
+    with:
+        ....
+        azionPersonalToken: ${{ secrets.AZION_PERSONAL_TOKEN }}
+        ....
 
-![blog](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
-
-Features:
-
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-├── public/
-├── src/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+3. Open a pull request to merge the changes to the main branch and start the automatic deployment.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Now your project is ready to work with a continuous deployment workflow, updating instantly any changes in the application or the repository. 
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+---
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Management
 
-## 🧞 Commands
+Considering that this initial setup may not be optimal for your specific edge application, all settings can be customized any time you need by using [Azion Console)](https://console.azion.com/).
 
-All commands are run from the root of the project, from a terminal:
+To manage and edit your edge application’s settings, read the documentation about [managing edge applications](https://www.azion.com/en/documentation/products/edge-application/first-steps/) for more details.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### Custom domain
 
-## 👀 Want to learn more?
-
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+The edge application created during the deployment has an assigned Azion domain to make it accessible through the browser. The domain has the following format: `xxxxxxxxxx.map.azionedge.net`. However, you can add a custom domain for users to access your edge application through it. Go to the [Domains](https://www.azion.com/en/documentation/products/guides/configure-a-domain/) documentation to read more about it.
