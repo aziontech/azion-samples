@@ -18,6 +18,11 @@ To successfully deploy this template, you need to provide the information to con
 
 For a more detailed step-by-step on using this template and requirements, check the [How to deploy an Astro blog using a template](https://www.azion.com/en/documentation/products/guides/astro-blog-starter-kit/) guide.
 
+### Requirements
+
+- Generate your [GitHub personal token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic).
+- Enable [Edge Functions and Image Processor](https://www.azion.com/en/documentation/products/guides/billing-and-subscriptions/) in your Azion account.
+
 ---
 
 ## Continuous deployment
