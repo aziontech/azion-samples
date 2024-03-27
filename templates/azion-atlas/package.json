@@ -34,7 +34,7 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "axios": "^1.4.0",
+    "axios": "^1.6.0",
     "dotenv": "^16.0.3",
     "edge-functions": "^1.7.0",
     "itty-router": "^4.0.23"
