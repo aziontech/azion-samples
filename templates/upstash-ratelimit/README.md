@@ -2,78 +2,32 @@
 
 The **Upstash Rate Limiting** template helps you to implement rate limiting in a serverless environment, without requiring extensive manual setup. This template includes configurations for limiting requests and window limit.
 
-It works in conjunction with Azion **Edge Function**s, being possible to adjust the initial setup based on the args. Additionally, this template creates a new GitHub repository that allows a continuous deployment workflow. This way, you're able to further configure and customize further the setup to attend to your needs, obtaining easy management and delivery of your personalized content.
+It works in conjunction with Azion **Edge Functions**, being possible to adjust the initial setup based on the args. Additionally, this template creates a new GitHub repository that allows a continuous deployment workflow. This way, you're able to further configure and customize further the setup to attend to your needs, obtaining easy management and delivery of your personalized content.
 
 This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template via Azion Real-Time Manager (RTM), check the [How to deploy the Upstash Rate Limiting template through Azion](https://www.azion.com/en/documentation/products/guides/upstash-rate-limiting/) guide.
 
 ---
 
-## Requirements
+## Usage information
+
+To use this template, you must [sign in on Azion Console](https://console.azion.com/login).
+
+> If you haven't created an account, go to the [signup page](https://console.azion.com/signup) to complete the registration.
+
+To successfully deploy this template, you need to provide the information to configure your Azion application, as requested in the **Settings** tab on the template's page.
+
+For a more detailed step-by-step on using this template and requirements, check the [How to deploy the Upstash Rate Limiting template through Azion](https://www.azion.com/en/documentation/products/guides/upstash-rate-limiting/) guide.
+
+### Requirements
 
 To start using this template, you need to: 
 
 1. Create an [Upstash account](https://console.upstash.com/login).
 2. Create a Global Database for the best available edge latency in the [Upstash Console](https://console.upstash.com/).
-3. Generate your GitHub personal token.
-- While generating your GitHub personal token, grant that your scope has the permissions to authorize an OAuth app or a personal token to access to public and private repositories, including read and write access to code. You must also enable the workflow option to allow adding and updating GitHub Actions workflow files.
-
-Note that permissions can be scoped either to a user or an organization or to a repository. Read the [Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic) documentation for more information.
-
-—--
-
-## Usage information
-
-To start using the **Upstash Rate Limit** template, proceed as follows:
-
-1. Access [Real-Time Manager (RTM)](https://manager.azion.com/).
-- If you don’t have an account yet, create a new one [by visiting the sign-up page](https://manager.azion.com/signup/).
-2. On the homepage, select the **Start with a template** option.
-3. Find the **Upstash Rate Limiting** card and select it.
-4. Click the **Settings** tab to open the configuration section. 
-
-—--
-
-## Settings
-
-In the configuration form, you must provide the information to configure your Azion application. Fill in the presented fields. 
-
-Fields identified with an asterisk are mandatory.
-
-- **Application Name** *: the name of your edge application. It's used to identify and manage your application within Azion's platform.
-    - Use a unique and easy-to-remember name. If the name has already been used, the platform returns an error message.
-- **Upstash Redis Rest URL** *: the URL to access your Upstash database using REST.
-    - Go to your Upstash Console and copy the UPSTASH_REDIS_REST_URL in your database page.
-- **Upstash Redis Rest Token** *: the token to authorize access to your Upstash database using REST. 
-    - Go to your Upstash Console and copy the UPSTASH_REDIS_REST_TOKEN in your database page.
-- **Limit Request**: the maximum number of requests. Example: 6.
-- **Window Limit**: the time window for new requests. Example: 10 s ("ms" | "s" | "m" | "h" | "d").
-- **GitHub Personal Token** *: your GitHub Personal Token.
-
-After completing all the information, click the **Next** button, located in the bottom-right corner. This will start the deployment process.
-
-The Upstash Rate Limiting template creates a new Azion edge application and its domain. It also creates an edge function to provide the arguments for the rate limiting, and a new repository in your GitHub account based on a [public template](https://github.com/aziontech/azion-samples/tree/dev/templates).
-
-In this function, the upstash/redis and upstash/ratelimit libraries are integrated, connecting to your Upstash Global Database and checking in the /login route if it's within the configured Window and Limit. The key for limits is metadata ["remote_addr"].
+3. Generate your [GitHub personal token]((https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic)).
+4. Enable [Edge Functions](https://www.azion.com/en/documentation/products/guides/billing-and-subscriptions/) in your Azion account.
 
 ---
-
-## Important 
-
-To guarantee the optimal performance of this template, the following Azion product must be activated in your account:
-
-- [Edge Functions](https://www.azion.com/en/documentation/products/edge-application/edge-functions/)
-
-You must activate this product separately via RTM. To do so, review the [Azion documentation]([https://www.azion.com/en/documentation/products/guides/chatgpt-plugin/](https://www.azion.com/en/documentation/products/guides/upstash-rate-limiting/).
-
-If this product is activated, the execution of this template could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information.
-
----
-
-## Management
-
-Considering the initial setup may not be optimal for your specific web application, all settings can be customized any time you need using Azion Real-Time Manager (RTM). Once the template is deployed, you also have full control over customizing your Upstash account and database.
-
-To manage and edit your edge application’s settings, read the documentation about [managing edge applications](https://www.azion.com/en/documentation/products/edge-application/first-steps/) for more details.
 
 ### Continuous deployment
 
@@ -132,8 +86,16 @@ To do so, open your **Upstash Rate Limit** repository on GitHub. Then, go to **S
 
 5. Open a pull request with the changes to the main branch and start the automatic deployment.
 
-Now, your project is ready to work with a continuous deployment workflow, updating instantly any changes in the application or the repository.  
+Now, your project is ready to work with a continuous deployment workflow, updating instantly any changes in the application or the repository. 
 
-## Custom domain
+---
+
+## Management
+
+Considering the initial setup may not be optimal for your specific web application, all settings can be customized any time you need using Azion Real-Time Manager (RTM). Once the template is deployed, you also have full control over customizing your Upstash account and database.
+
+To manage and edit your edge application’s settings, read the documentation about [managing edge applications](https://www.azion.com/en/documentation/products/edge-application/first-steps/) for more details. 
+
+### Custom domain
 
 The edge application created during the deployment has an assigned Azion domain to make it accessible through the browser. The domain has the following format: `xxxxxxxxxx.map.azionedge.net`. However, you can add a custom domain for users to access your edge application through it. Go to the [Domains](https://www.azion.com/en/documentation/products/edge-application/domains/) documentation to read more about it.
