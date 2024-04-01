@@ -1,5 +1,5 @@
 {
-  "name": "@example/framework-alpine",
+  "name": "@example/framework-svelte",
   "type": "module",
   "version": "0.0.1",
   "private": true,
@@ -11,9 +11,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/alpinejs": "^0.4.0",
-    "@types/alpinejs": "^3.13.5",
-    "alpinejs": "^3.13.3",
-    "astro": "^4.5.12"
+    "@astrojs/svelte": "^5.2.0",
+    "astro": "^4.5.12",
+    "svelte": "^4.2.5"
   }
 }

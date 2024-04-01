@@ -1,5 +1,5 @@
 {
-  "name": "@example/framework-alpine",
+  "name": "@example/with-markdown-shiki",
   "type": "module",
   "version": "0.0.1",
   "private": true,
@@ -11,9 +11,6 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/alpinejs": "^0.4.0",
-    "@types/alpinejs": "^3.13.5",
-    "alpinejs": "^3.13.3",
     "astro": "^4.5.12"
   }
 }
