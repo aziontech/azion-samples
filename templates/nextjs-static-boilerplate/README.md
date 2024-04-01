@@ -2,7 +2,7 @@
 
 The **Next.js Static Boilerplate** is designed to simplify and enhance the deployment process for Next.js Static.js applications directly on the edge of the network.
 
-This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template via Azion Real-Time Manager (RTM), check the [How to deploy edge applications with the Next.js Static Boilerplate](https://www.azion.com/en/documentation/products/guides/nextjs-static-boilerplate/) guide.
+This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template, check the [How to deploy edge applications with the Next.js Static Boilerplate](https://www.azion.com/en/documentation/products/guides/nextjs-static-boilerplate/) guide.
 
 This template uses Next.js version `13.5.3`.
 
