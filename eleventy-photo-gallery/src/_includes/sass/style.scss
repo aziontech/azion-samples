@@ -1,0 +1,369 @@
+@use "mixins" as *;
+@use "vars" as *;
+@use "partials" as *;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.sr-only {
+    @include visually-hidden();
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: $page-background;
+    font-family: $system-font;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+p {
+    font-size: 1rem;
+    font-size: clamp(1rem, 3vw, 1.0625rem);
+    line-height: 1.5;
+    font-family: $system-font;
+}
+
+a {
+    color: $link-blue-accessible;
+    text-decoration: none;
+    font-family: $system-font;
+
+    &:hover, &:focus {
+        text-decoration: underline;
+        color: $link-blue-accessible-hover;
+    }
+}
+
+main {
+    p {
+        margin-bottom: 24px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 24px;
+    }
+
+    .gallery {
+        margin: 3rem auto;
+        max-width: 1100px;
+        padding: 0 1.5rem;
+    }
+
+    .gallery-header {
+        max-width: 1100px;
+        padding: 0 1.5rem;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+        font-size: 30px;
+    }
+}
+
+.skip-link {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateY(-10rem);
+    transition: transform .3s ease-in-out;
+    padding: .5rem;
+    background: rgb(255, 255, 255);
+    color: #222;
+    z-index: 999;
+
+    &:focus {
+        transform: translateY(0);
+    }
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: $system-font;
+    color: #212121;
+}
+
+h1, .h1 {
+    $min-size: 2.75rem;
+    $pref-size: 8vw;
+    $max-size: 3.25rem;
+    font-size: clamp(2.75rem, 8vw, 3.25rem);
+}
+
+h2, .h2 {
+    $min-size: 1.5rem;
+    $pref-size: 5vw;
+    $max-size: 1.8rem;
+    font-size: clamp(1.5rem, 5vw, 1.8rem);
+}
+
+#main {
+    margin-top: 3rem;
+}
+
+.about-page {
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column;
+}
+
+.about-v {
+    margin-top: auto;
+}
+
+.image-description {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 1.5rem auto 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    h1 {
+        margin-bottom: .8rem;
+        text-align: center;
+    }
+}
+
+.page-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto 1em auto;
+    max-width: 1100px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    color: #212141;
+
+    p {
+        font-size: 1rem;
+        font-size: clamp(1.0625rem, 3vw, 1.2rem);
+    }
+
+    h1 {
+        margin-bottom: .75rem;
+    }
+}
+
+.about-me-content {
+    .about-socials {
+        padding-left: 30px;
+        margin-bottom: 24px;
+    }
+}
+
+.about-socials {
+    li {
+        margin: .75rem auto;
+        list-style: disc;
+    }
+}
+
+.about-me-content {
+    max-width: 80ch;
+    margin: 3rem auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.gt {
+    margin-left: 3px;
+}
+
+.lt {
+    margin-right: 3px;
+}
+
+.main-container {
+    margin: 3rem auto 2rem auto;
+}
+
+/* Media Queries */
+@media screen and (max-width: 897px) {
+    .gallery-item {
+        border-bottom: 1px solid lightgray;
+        padding-bottom: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 875px) {
+    footer {
+        .footer-content {
+            p {
+                margin-top: 1.25rem;
+                margin-bottom: 24px;
+            }
+            .footer-info {
+                &.home {
+                    flex-direction: column;
+                }
+                &.featured {
+                    flex-direction: column;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .gallery-item {
+        a {
+            .gallery-photo {
+                height: 90vh;
+            }
+        }
+    }
+
+    header .nav-main .nav-list li {
+        margin: 0 .75rem;
+    }
+}
+ 
+ @media screen and (max-width: 650px) {
+    .gallery-item {
+        a {
+            .gallery-photo {
+                height: 70vh;
+                max-height: 400px;
+            }
+        }
+    }
+    
+    .featured-img {
+        .showcase-img {
+            height: 65vh;
+        }
+    }
+ }
+ 
+ @media screen and (max-width: 565px) {
+    .page-banner {
+        h1 {
+            text-align: left;
+        }
+    }
+
+    .main-gallery {
+        h1 {
+            padding: 0 1rem;
+        }
+    }
+ }
+ 
+@media screen and (max-width: 450px) {
+    header {
+        .nav-main {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            .nav-list {
+                li {
+                    margin: 0 .5rem;
+                }
+            }
+        }
+    }
+
+    .gallery {
+        .gallery-list {
+            grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+        }
+    }
+
+    footer {
+        .footer-content {
+            .footer-info {
+                &.home {
+                    justify-content: flex-start;
+                    align-items: center;
+                }
+                &.featured {
+                    flex-direction: column;
+                    justify-content: center;   
+                }
+            }
+        }
+    }
+    footer .footer-content .footer-info.home {
+        justify-content: flex-start;
+        align-items: center;
+    }
+    footer .footer-content .footer-info.featured {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+ 
+ @media screen and (max-width: 415px) {
+    .main-container {
+        margin-top: 2rem;
+    }
+
+    .gallery {
+        .gallery-list {
+            grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+        }
+    }
+
+    header .nav-main .nav-list .link {
+        padding: 10px;
+    }
+ }
+ 
+/* Moto G4 width width=360px which Lighthouse runs audit on */
+@media screen and (max-width: 375px) {
+    header {
+        .nav-main {
+            .nav-list {
+                .link {
+                    padding: .7rem 3px;
+                }
+            }
+        }
+    }
+    
+    .featured-img {
+        margin: 0;
+        padding: 0;
+        align-items: center;
+
+        .prev-next {
+            padding: 0 1.5rem;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 0 auto 1em auto;
+        }
+    }
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+        gap: 3px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    header {
+        .nav-main {
+            .nav-list {
+                .link {
+                    padding: .6rem 2px;
+                }
+            }
+        }
+    }
+}

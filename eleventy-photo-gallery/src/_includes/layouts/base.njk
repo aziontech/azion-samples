@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+    <head>
+        {% metagen 
+            title=title,
+            desc=meta_desc,
+            url=url,
+            img=url + img,
+            img_alt=alt,
+            twitter_card_type=cardType,
+            twitter_handle=site.author.twitterHandle,
+            name=site.author.firstName + " " + site.author.lastName,
+            comments=true
+        %}
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon_data/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon_data/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon_data/favicon-16x16.png">
+        <link rel="manifest" href="/favicon_data/site.webmanifest">
+        {% set css %}
+            {% include "css/style.css" %}
+            {% include "css/reset.css" %}
+        {% endset %}
+        <style>
+            {{ css | cssmin | safe }}
+        </style>
+    </head>
+    <body>
+        <a href="#main" class="skip-link">Skip to main content</a>
+        {% include "partials/nav.njk" %}
+
+        {{ content | safe }}
+
+        {% include "partials/footer.njk" %}
+    </body>
+</html>
