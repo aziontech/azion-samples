@@ -1,0 +1,15 @@
+# Eleventy site output
+_site
+
+# Node modules
+node_modules
+
+# DS Store
+.DS_store
+
+# Eleventy cached API results
+.cache
+
+# azion
+.edge
+.vulcan

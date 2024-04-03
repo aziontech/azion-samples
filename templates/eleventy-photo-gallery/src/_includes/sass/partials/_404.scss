@@ -1,0 +1,19 @@
+/* 404 page styles */
+.four-oh-four {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 90ch;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    overflow: hidden;
+    background: inherit;
+    min-height: 100vh;
+
+    ul {
+        padding-left: 0;
+        li {
+            padding: 12px 14px;
+            margin: 10px auto;
+        }
+    }
+}
