@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Logs
+logs
+*.log
+
+# Dependency directories
+node_modules/
+
+# Build
+_site
+
+# environment variables file
+.env
+
+# azion
+.edge
+.vulcan
