@@ -1,0 +1,7 @@
+<ion-col>
+<div><ion-card color="dark"><ion-card-header><ion-card-title><h3>Page</h3></ion-card-title></ion-card-header>
+{%- for entry in collections.all | eleventyNavigation %}
+<ion-item href="{{ entry.url }}" class="ion-activated"><ion-icon name="heart-circle-outline"></ion-icon>&nbsp;
+<ion-label><p>{{ entry.title }}</p></ion-label></ion-item>
+{%- endfor %}
+</ion-card></div></ion-col>
