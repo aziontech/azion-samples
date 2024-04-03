@@ -1,0 +1,32 @@
+{
+  "name": "mobile11ty",
+  "version": "2.1.2",
+  "description": "Build all in one website or mobile web with android app using mobile11ty",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "bench": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
+    "watch": "npx @11ty/eleventy --watch",
+    "serve": "npx @11ty/eleventy --serve",
+    "start": "npx @11ty/eleventy --serve",
+    "debug": "DEBUG=* npx @11ty/eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://www.fiverr.com/creativitas/design-your-modern-website-using-jekyll"
+  },
+  "author": {
+    "name": "Axcora",
+    "email": "axcora@gmail.com",
+    "url": "https:/axcora.com/"
+  },
+  "homepage": "https://eleventy.web.app/",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.0-canary.14",
+    "@11ty/eleventy-navigation": "^0.3.3",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
+    "luxon": "^3.0.1",
+    "markdown-it": "^12.0.4",
+    "markdown-it-anchor": "^8.6.4"
+  }
+}

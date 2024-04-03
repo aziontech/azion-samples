@@ -1,0 +1,46 @@
+{
+  "gsv": "WH5yK5pEky5qND2FOW3_hvm3VlPkjRtV731y81BcsTc",
+  "title": "Mobile11ty",
+  "url": "https://mobile11ty.pages.dev/",
+  "language": "en",
+  "description": "A new eleventy generation for build mobile web and android apps all in one",
+  "icon": "https://eleventy.web.app/img/webcepat.png",
+  "logo": "https://eleventy.web.app/img/webcepat.png",
+  "cover": "https://eleventy.web.app/img/webcepat.png",
+  "feed": {
+    "subtitle": "A new eleventy generation for build mobile web and android apps all in one",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://mobile11ty.pages.dev/"
+  },
+  "section": {
+    "cover": "/img/11tydev.webp",
+    "icon": "https://eleventy.web.app/img/webcepat.png",
+    "slogan": "Build all in one website and android apps",
+    "title": "Mobile11ty",
+    "content": "Mobile 11 ty is a free and open source code, you can download this project for help you build modern fast website using eleventy include full mobile view with ionic, a source code present by axcora technology."
+  },
+  "menu": {
+    "menu1": "home",
+    "menu2": "how to",
+    "menu3": "about",
+    "menu4": "contact",
+    "icon1": "desktop-outline",
+    "icon2": "book-outline",
+    "icon3": "accessibility-outline",
+    "icon4": "qr-code-outline",
+    "url1": "/",
+    "url2": "/posts/install",
+    "url3": "/about",
+    "url4": "/contact"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://mobile11ty.pages.dev/feed/feed.json"
+  },
+  "author": {
+    "name": "Eleventy web developer",
+    "email": "axcora@gmail.com",
+    "url": "https://eleventy.web.app/"
+  }
+}

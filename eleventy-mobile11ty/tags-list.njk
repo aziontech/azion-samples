@@ -1,0 +1,8 @@
+---
+permalink: /tags/
+layout: layouts/home.njk
+---
+<h1>Tags</h1>
+{% for tag in collections.tagList %}{% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+<ion-chip><ion-icon name="checkmark-circle-outline"></ion-icon></ion-icon><ion-label><a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a></ion-label></ion-chip>
+{% endfor %}
