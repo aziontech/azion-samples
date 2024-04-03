@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>{{ siteData.name }}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="{{ siteData.description }}">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://{{ processEnv.projectDomain }}.glitch.me">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ siteData.name }}">
+    <meta property="og:description" content="{{ siteData.description }}">
+    <meta property="og:image" content="{{ siteData.siteImages.icon256 }}">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ siteData.name }}">
+    <meta name="twitter:creator" content="{{ siteData.createdBy.twitter }}" />
+    <meta name="twitter:description" content="{{ siteData.name }}">
+    <meta name="twitter:image" content="{{siteData.siteImages.icon128}}">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{{siteData.siteImages.icon16}}" />
+    <link rel="stylesheet" href="/css/site.css" />
+    <script src="https://button.glitch.me/button.js"></script>
+  </head>
+  <body>
+    <div class="glitchButton"></div>
+    
+    {{ content | safe }}
+  </body>
+</html>

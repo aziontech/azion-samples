@@ -1,0 +1,24 @@
+{
+  "name": "link-tree-11ty",
+  "description": "A link-in-bio project using eleventy",
+  "engines": {
+    "node": "11.x"
+  },
+  "tags": [
+    "eleventy",
+    "11ty",
+    "ssr",
+    "static",
+    "glitch",
+    "template"
+  ],
+  "version": "1.0.0",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.9.0"
+  },
+  "license": "MIT"
+}
