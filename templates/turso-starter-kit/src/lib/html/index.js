@@ -240,7 +240,7 @@ export const indexHTML = () => {
                   return
               }
               await getMessage();
-              alert("You have successfully updated your post to your Turso DB table!")
+              alert("You've successfully updated your post in your Turso DB table!")
           }
   
       </script>
