@@ -213,7 +213,7 @@ export const indexHTML = () => {
                 console.log(responseJson);
             }
             element.parentElement.parentElement.parentElement.remove();
-            alert("You have successfully deleted your post from your Turso DB table!")
+            alert("You've successfully deleted your post from your Turso DB table!")
           }
   
           async function updateItem(id) {
