@@ -213,7 +213,7 @@ export const indexHTML = () => {
                 console.log(responseJson);
             }
             element.parentElement.parentElement.parentElement.remove();
-            alert("You have successfully deleted your post to your collection Fauna DB!")
+            alert("You've successfully deleted your post from your Turso DB table!")
           }
   
           async function updateItem(id) {
@@ -240,7 +240,7 @@ export const indexHTML = () => {
                   return
               }
               await getMessage();
-              alert("You have successfully updated your post to your collection Fauna DB!")
+              alert("You've successfully updated your post in your Turso DB table!")
           }
   
       </script>
