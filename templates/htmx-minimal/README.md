@@ -1,6 +1,6 @@
 # HTMX Minimal Example
 
-Minimal example of using HTMX in a Azion edge function.
+Minimal example of using HTMX in an Azion edge function.
 
 ## Settings
 
