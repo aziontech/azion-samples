@@ -22,9 +22,6 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install NPM dependencies
-        run: npm i
-        
       - name: Install Azion CLI
         run: |
           curl -o azionlinux https://downloads.azion.com/linux/x86_64/azion
