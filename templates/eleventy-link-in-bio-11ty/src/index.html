@@ -1,0 +1,23 @@
+---
+layout: layouts/default.njk
+---
+
+<h1>{{ siteData.name }}</h1>
+<p>
+  These are some links I like. 
+</p>
+<p>
+  See the <a href="https://glitch.com/edit/#!/link-tree-11ty?path=README.md">Readme</a> for how to make your own!
+</p>
+
+<ul class="linktree">
+  {% for item in links %}
+    <li><a href="{{item.url}}">{{item.name}}</a>
+      {% if item.description %}
+      <p>
+        {{item.description}}
+      </p>
+      {% endif %}
+  </li>
+  {% endfor %}
+</ul>

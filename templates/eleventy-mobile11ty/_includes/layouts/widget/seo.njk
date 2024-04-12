@@ -1,0 +1,13 @@
+<meta name="google-site-verification" content="{{metadata.gsv }}" />
+<title>{{ title or metadata.title }}</title>
+<meta name="description" content="{{ description or metadata.description }}">
+<meta content='summary_large_image' name='twitter:card'/>
+<meta content='{{ metadata.cover }}' name='twitter:image'/>
+<meta content='{{ description or metadata.description }}' name='twitter:description'/>
+<meta content='{{ title or metadata.title }} ' name='twitter:title'/>
+<link rel="icon" type="image/x-icon" href="{{ metadata.cover }}" />
+<meta content='{{ metadata.robots }}' name='robots'/>
+<link rel="stylesheet" href="{{ '/css/index.css' | url }}">
+<link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
+<link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
+{% include "layouts/widget/css.njk" %}

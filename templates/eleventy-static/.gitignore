@@ -1,0 +1,8 @@
+_site/
+node_modules/
+package-lock.json
+.cache
+
+# azion
+.edge
+.vulcan

@@ -1,0 +1,8 @@
+<ion-col size="12" size-sm><div>
+<ion-card color="dark" reversed class="postlist row" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
+<ion-card-header><ion-card-title><h3>Update New</h3></ion-card-title></ion-card-header>  
+{% for post in postslist | reverse %}
+<ion-item href="{{ post.url | url }}" class="ion-activated">
+<ion-icon name="logo-ionic"></ion-icon>&nbsp;  
+<ion-label><p>{{ post.data.title }}</p></ion-label>
+</ion-item> {% endfor %}</ion-card></div></ion-col>
