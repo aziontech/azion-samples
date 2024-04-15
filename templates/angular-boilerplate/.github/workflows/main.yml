@@ -27,23 +27,13 @@ jobs:
       - name: Install dependencies
         run: yarn
 
-      - name: Create args file
-        # "create the arguments at runtime because of the secrets"
+      - name: Install Azion CLI
         run: |
-          cat > ./args.json << EOF
-            { "my_arg_by_action": true }
-          EOF
+          curl -o azionlinux https://downloads.azion.com/linux/x86_64/azion
+          sudo mv azionlinux /usr/bin/azion
+          sudo chmod u+x /usr/bin/azion
 
-      - name: edge-computing-deploy
-        id: azion_edge
-        uses: aziontech/edge-computing-actions@v0
-        with:
-          azionPersonalToken: ${{ secrets.AZION_PERSONAL_TOKEN }}
-          functionArgsFilePath: "args.json"
-          buildPreset: "angular"
-          buildMode: "deliver"
-
-      - name: Get the output Azion Edge Deploy
+      - name: Azion Action Deploy
         run: |
-          echo "Application ID-= ${{ steps.azion_edge.outputs.applicationId }}"
-          echo "Domain-= ${{ steps.azion_edge.outputs.domainUrl }}"
+          azion -t ${{ secrets.AZION_PERSONAL_TOKEN }}
+          azion deploy

@@ -3,7 +3,9 @@ name: Main Edge Deploy
 on:
   pull_request:
     types:
-      - created
+      - closed
+    branches:
+      - "main"
 
 jobs:
   deploy:
@@ -32,4 +34,3 @@ jobs:
         run: |
           azion -t ${{ secrets.AZION_PERSONAL_TOKEN }}
           azion deploy
-

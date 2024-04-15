@@ -3,7 +3,9 @@ name: Main Edge Deploy
 on:
   pull_request:
     types:
-      - created
+      - closed
+    branches:
+      - "main"
 
 jobs:
   deploy:

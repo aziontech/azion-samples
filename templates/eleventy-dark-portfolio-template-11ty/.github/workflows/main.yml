@@ -3,7 +3,9 @@ name: Main Edge Deploy
 on:
   pull_request:
     types:
-      - created
+      - closed
+    branches:
+      - "main"
 
 jobs:
   deploy:
@@ -24,7 +26,7 @@ jobs:
 
       - name: Install NPM dependencies
         run: npm i
-        
+
       - name: Install Azion CLI
         run: |
           curl -o azionlinux https://downloads.azion.com/linux/x86_64/azion
