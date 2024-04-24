@@ -6,6 +6,14 @@ import { getCollection } from "astro:content";
 import ContentSection from "../../node_modules/@aziontech/azion-web-kit/src/templates/content-section-block/index.vue";
 import HeroBlockBase from "../../node_modules/@aziontech/azion-web-kit/src/templates/hero-block-base/index.vue";
 
+import CardBase from "../../node_modules/@aziontech/azion-web-kit/src/templates/card/base.vue";
+import CardTitle from "../../node_modules/@aziontech/azion-web-kit/src/fragments/text/card-title.vue";
+import Overline from "../../node_modules/@aziontech/azion-web-kit/src/fragments/text/overline.vue";
+import LinkButton from "../../node_modules/@aziontech/azion-web-kit/src/templates/button/link.vue";
+
+import Lottie from '@components/Lottie/index.vue';
+import ConfeteAnimation from "public/assets/animations/Confete.json"
+
 const dataCollection = await getCollection("braziljs");
 const lang = 'pt-br';
 const { render } = dataCollection[0];
@@ -13,16 +21,16 @@ const { Content } = await render();
 
 const title = "Challenge Deploy at the Edge BrazilJS";
 const description = "#BrazilJS";
-const ogImage = "https://www.brazilmentioned.com/assets/lp/images/og-image-primeagen.png";
+const ogImage = "";
 const i18nPages = [];
 const meta_tags = "Voce passou com sucesso pelo Nível 1 do desafio Azion Move to the Edge.";
 const buttons = [
-    {
-        link: "#Discord",
-        title: "Discord",
-        text: "Discord",
-        destak: true
-    }
+    // {
+    //     link: "#Discord",
+    //     title: "Discord",
+    //     text: "Discord",
+    //     destak: true
+    // }
 ];
 const bottomButtonsMobile = [];
 const menuData = {
@@ -43,6 +51,11 @@ const menuData = {
         bottomButtonsMobile,
     }}
 >
+
+    <div class="animation-confete absolute w-full h-full z-20 overflow-hidden t-[-100px]">
+        <Lottie animationData={ConfeteAnimation} client:load />
+    </div>
+
     <HeroBlockBase
         isCentralized={true}
         overline="PRIMEIRA FASE"
@@ -60,123 +73,19 @@ const menuData = {
     
 
     <Container>
-        <ContentSection
-            id=""
-            title="Participe da fase final do desafio e concorra a uma bolsa de estudos RocketSeat ONE no valor aproximado de R$ 2 mil"
-            overline="FASE FINAL"
-            description="Siga o passo a passo para proteger sua aplicação contra ataques DDoS e boa sorte!"
-            titleTag="h2"
-        >
-            <Fragment slot="content">
-                <div class="border surface-border rounded">
-                    <Content />
-                </div>
-            </Fragment>
-        </ContentSection>
-        
-        <!-- 
-        <ContentSection
-            id="Organizers"
-            title="The event organizers"
-            overline="About us"
-            titleTag="h2"
-            position="center"
-            isContentCentralized
-            textCenter
-        >
-            <Fragment slot="content">
-                <div class="flex flex-col gap-8">
-                    <div
-                        class="m-0 grid grid-cols-1 md:grid-cols-2 gap-8 w-full"
-                    >
-                        <CardBase grid>
-                            <Fragment slot="content">
-                                <div>
-                                    <a title="Turso Website" href="https://turso.tech/" target="_blank">
-                                        <img
-                                            alt="Turso logo"
-                                            src="/assets/lp/images/turso-logo.png"
-                                            alt="Turso Logo"
-                                            class="h-8 max-w-44"
-                                            loading="lazy"
-                                            height="32"
-                                            width="140"
-                                        />
-                                    </a>
-                                </div>
-                                <CardDescription>
-                                    Build with and integrate SQLite into your
-                                    production applications. Whether you’re
-                                    building with a single database or millions
-                                    with a per-tenant architecture for mobile,
-                                    web or desktop.
-                                </CardDescription>
-                            </Fragment>
-                            <Fragment slot="actions">
-                                <LinkButton
-                                    outlined
-                                    label="Learn more about Turso"
-                                    icon="pi pi-arrow-up-right"
-                                    iconPos="right"
-                                    link="https://turso.tech/"
-                                    target="_blank"
-                                    height="32"
-                                    width="140"
-                                />
-                            </Fragment>
-                        </CardBase>
-                        <CardBase grid>
-                            <Fragment slot="content">
-                                <div>
-                                    <a title="Turso Website" href="https://www.azion.com/en/" target="_blank">
-                                        <img
-                                            alt="Azion Logo"
-                                            src="/assets/lp/images/azion-logo.png"
-                                            alt="Azion Logo"
-                                            class="h-8 w-auto max-w-44"
-                                            loading="lazy"
-                                            height="32"
-                                            width="132"
-                                        />
-                                    </a>
-                                </div>
-                                <CardDescription>
-                                    Edge Computing platform to build, secure,
-                                    and scale applications anywhere. Easy to
-                                    use. Build once, run anywhere, with
-                                    programmable and autonomous security.
-                                </CardDescription>
-                            </Fragment>
-                            <Fragment slot="actions">
-                                <LinkButton
-                                    outlined
-                                    label="Learn more about Azion"
-                                    icon="pi pi-arrow-up-right"
-                                    iconPos="right"
-                                    link="https://www.azion.com/en/"
-                                    target="_blank"
-                                />
-                            </Fragment>
-                        </CardBase>
-                    </div>
+        <div class="m-auto">
+            <ContentSection>
+                <Fragment slot="content">
                     <CardBase grid id="Discord">
                         <Fragment slot="content-raw">
                             <div class="flex flex-col lg:flex-row">
                                 <div
-                                    class="p-5 md:pl-8 md:py-8 md:pr-0 flex flex-col gap-5 w-full lg:w-1/2"
+                                    class="p-5 md:pl-8 md:py-8 md:pr-0 flex flex-col gap-5 w-full lg:w-[480px]"
                                 >
-                                    <Overline label="Discord" />
+                                    <Overline label="DISCORD" />
                                     <CardTitle>
-                                        Connect and build together with the
-                                        Azion and Turso Discord Communities
+                                        Acesse dicas exclusivas, informações sobre os níveis do desafio e premiações. 
                                     </CardTitle>
-                                    <CardDescription>
-                                        Join our Discord communities to know
-                                        first-hand what ThePrimeagen is doing in
-                                        Brazil during his stay here. Find other
-                                        people (and some spoilers) to the event
-                                        on May 09!
-                                    </CardDescription>
                                     <div
                                         class="flex flex-col md:flex-row gap-4"
                                     >
@@ -188,26 +97,31 @@ const menuData = {
                                             link="https://discord.gg/rJsUKCAYzY"
                                             target="_blank"
                                         />
-                                        <LinkButton
-                                            outlined
-                                            label="Turso Discord"
-                                            icon="pi pi-discord"
-                                            iconPos="left"
-                                            link="https://discord.gg/turso"
-                                            target="_blank"
-                                        />
                                     </div>
                                 </div>
                                 <div
-                                    class="w-full lg:w-1/2 lg:bg-cover lg:bg-[url('/assets/lp/images/BannerDiscord.webp')] rounded"
+                                    class="w-full lg:w-[300px] lg:bg-cover lg:bg-[url('/assets/template-braziljs/discord.png')] rounded"
                                 >
                                 </div>
                             </div>
                         </Fragment>
                     </CardBase>
+                </Fragment>
+            </ContentSection>
+        </div>
+        
+
+        <ContentSection
+            title="Participe da fase final do desafio e concorra a uma bolsa de estudos RocketSeat ONE no valor aproximado de R$ 2 mil"
+            overline="FASE FINAL"
+            description="Siga o passo a passo para proteger sua aplicação contra ataques DDoS e boa sorte!"
+            titleTag="h2"
+        >
+            <Fragment slot="content">
+                <div class="border surface-border rounded">
+                    <Content />
                 </div>
             </Fragment>
         </ContentSection>
-         -->
     </Container>
 </Layout>

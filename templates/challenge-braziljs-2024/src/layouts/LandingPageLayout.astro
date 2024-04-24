@@ -1,8 +1,6 @@
 ---
 import Header from '../../node_modules/@aziontech/azion-web-kit/src/templates/header/index.vue';
-import MobileRightSidebar from '../../node_modules/@aziontech/azion-web-kit/src/templates/header/mobile.vue';
-import HeaderNavigation from '../../node_modules/@aziontech/azion-web-kit/src/templates/header/navigation-tabpanel/index.vue';
-
+import HeaderLogoAzion from '../../node_modules/@aziontech/azion-web-kit/src/templates/header/visualid/azion/index.vue';
 import Divider from 'primevue/divider';
 import SocialMediaTags from '@components/html/meta-tags/social-media.astro';
 
@@ -21,8 +19,6 @@ const {
   ogImage,
   meta_tags,
   buttons,
-  menuData,
-  bottomButtonsMobile
 } = Astro.props;
 ---
 
@@ -40,17 +36,12 @@ const {
     <SocialMediaTags ogtype="article" {title} {description} {ogImage} />
   </head>
   <body id="app" class="surface-ground">
-    <Header menuSecondary={buttons}>
-      <Fragment slot="navigation">
-        <HeaderNavigation client:load menuData={menuData} />
-      </Fragment>
-      <Fragment slot="mobile-right-sidebar">
-        <MobileRightSidebar
-          client:only="vue"
-          menuData={menuData}
-          bottomButtons={bottomButtonsMobile}
-        />
-      </Fragment>
+    <Header menuSecondary={buttons} class="flex items-center">
+      <HeaderLogoAzion
+        slot="visualid"
+        href="/"
+        hrefTitle="Home | Azion Technologies"
+        target="_self"/>
     </Header>
     
     <main>
