@@ -1,0 +1,51 @@
+/.astro/
+.edge
+# development variable directories
+
+.vs
+.pnp
+.pnp.js
+.Trash-1000
+
+dist
+out
+node_modules
+
+
+yarn.lock
+package-lock.json
+npm-shrinkwrap.json
+pnpm-lock.yaml
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+.env
+
+worker
+
+.project
+nbproject
+sftp-config.json
+
+
+# temp files
+
+~*
+._*
+*~
+
+*.swp
+*.swo
+
+.DS_Store
+./**/*/.DS_Store
+
+*.pem
+
+
+# azion
+.edge
+.vulcan
