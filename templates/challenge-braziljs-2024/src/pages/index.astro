@@ -52,7 +52,7 @@ const menuData = {
     }}
 >
 
-    <div class="animation-confete absolute w-full h-full z-20 overflow-hidden t-[-100px]">
+    <div class="animation-confete absolute w-full h-[100vh] top-[-100px] z-20 overflow-hidden">
         <Lottie animationData={ConfeteAnimation} client:load />
     </div>
 
@@ -109,7 +109,6 @@ const menuData = {
                 </Fragment>
             </ContentSection>
         </div>
-        
 
         <ContentSection
             title="Participe da fase final do desafio e concorra a uma bolsa de estudos RocketSeat ONE no valor aproximado de R$ 2 mil"
@@ -120,6 +119,16 @@ const menuData = {
             <Fragment slot="content">
                 <div class="border surface-border rounded">
                     <Content />
+                </div>
+
+                <div class="flex flex-col justify-center items-center">
+                    <LinkButton
+                      outlined
+                      label="Feedback. Nos ajude a melhorar a experiência"
+                      icon="pi pi-thumbs-up"
+                      iconPos="right"
+                      link="https://aziontech.typeform.com/braziljs"
+                    />
                 </div>
             </Fragment>
         </ContentSection>
