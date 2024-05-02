@@ -1,15 +1,15 @@
 module.exports = [
   {
-    name: "Glitch",
-    url: "https://glitch.com",
-    description: "The friendly place to build the app of your dreams"
+    name: "Azion",
+    url: "https://aziom.com/en/",
+    description: "Edge Computing platform to build, secure, and scale applications anywhere"
   },
   {
-    name: "Sims Patch Notes",
-    url: "https://sims-patch-notes.glitch.me/",
+    name: "Blog",
+    url: "https://www.azion.com/en/blog/",
   },
   {
-    name: "Soul Patch",
-    url: "https://soulpatch.glitch.me"
+    name: "Console",
+    url: "https://console.azion.com"
   }
 ];

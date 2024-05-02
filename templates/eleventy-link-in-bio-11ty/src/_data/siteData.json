@@ -6,8 +6,8 @@
     "twitter": ""
   },
   "siteImages": {
-    "icon16": "https://cdn.glitch.com/26b86411-b411-4c5f-bcf9-4d1a6f34a861%2Flink-16.png?v=1566925236132",
-    "icon128": "https://cdn.glitch.com/26b86411-b411-4c5f-bcf9-4d1a6f34a861%2Flink-128.png?v=1566925234770",
-    "icon256": "https://cdn.glitch.com/26b86411-b411-4c5f-bcf9-4d1a6f34a861%2Flink-256.png?v=1566925232179"
+    "icon16": "https://console.azion.com/favicon.ico",
+    "icon128": "https://console.azion.com/favicon.ico",
+    "icon256": "https://console.azion.com/favicon.ico"
   }
 }
