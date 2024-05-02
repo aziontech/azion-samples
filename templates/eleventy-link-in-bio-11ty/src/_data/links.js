@@ -1,7 +1,7 @@
 module.exports = [
   {
     name: "Azion",
-    url: "https://aziom.com/en/",
+    url: "https://azion.com/en/",
     description: "Edge Computing platform to build, secure, and scale applications anywhere"
   },
   {
