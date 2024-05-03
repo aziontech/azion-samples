@@ -4,7 +4,7 @@ The **Astro Boilerplate** is designed to simplify and enhance the deployment pro
 
 This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template, check the [How to deploy edge applications with the Astro Boilerplate](https://www.azion.com/en/documentation/products/guides/astro-boilerplate/) guide.
 
-This template uses Astro version `2.6.4`.
+This template uses Astro version `4.5.12`.
 
 ---
 
