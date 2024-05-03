@@ -25,7 +25,7 @@ jobs:
           node-version: 18
 
       - name: Install NPM dependencies
-        run: npm i
+        run: yarn
 
       - name: Install Azion CLI
         run: |
