@@ -2,6 +2,5 @@ node_modules
 dist
 .env*
 worker
-args.json
 .edge
 .vulcan
