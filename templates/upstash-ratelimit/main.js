@@ -4,4 +4,4 @@ async function main(event){
     return handleRequest(event?.request, event?.args);
 }
 
-export default main;                         
+export default main;
