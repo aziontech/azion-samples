@@ -50,9 +50,6 @@ export async function GET(request: NextRequest) {
                 <div class="instructions">
                     <h4>This is an example for creating, retrieving, updating and deleting items in a Turso DB table called Posts.</h4>
                 </div>
-                <div class="instructions">
-                  <p>This template requires a Turso database and table to work. Go to the <a href="https://www.azion.com/en/documentation/products/guides/nextjs-app-configurations-turso/" id="doclink">documentation</a> for more details.</p>
-              </div>
                 <div class="control">
                     <button id="btn-new-post" onclick="createItemElement()">
                             <i class="icons" data-lucide="message-square-plus"></i>
@@ -200,7 +197,7 @@ export async function GET(request: NextRequest) {
             } 
             await getMessage();
             document.getElementById("btn-new-post").removeAttribute('disabled');
-            alert("You have successfully saved your post to your collection!")
+            alert("You have successfully saved your post to your database!")
         }
 
         async function deleteItem(element, id) {
