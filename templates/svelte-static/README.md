@@ -1,38 +1,38 @@
-# create-svelte
+# Svelte Boilerplate
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+The **Svelte Boilerplate** streamlines the deployment of a static application based on the Svelte framework, directly on the edge of the network, accelerating and automating the overall process.
 
-## Creating a project
+The template deploys an edge application, a domain, and a related GitHub repository to facilitate your access and management. The repository also includes a GitHub Action to ensure a continuous deployment workflow, keeping your project up to date.
 
-If you're seeing this, you've probably already done this step. Congrats!
+This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [How to deploy edge applications with the Svelte Boilerplate](https://www.azion.com/en/documentation/products/guides/svelte-boilerplate/) guide.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+This template uses Svelte version `4.2.7` and Vite version `5.0.3`.
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+---
 
-## Developing
+## Usage information
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+To use this template, you must [sign in on Azion Console](https://console.azion.com/login).
 
-```bash
-npm run dev
+> If you haven't created an account, go to the [signup page](https://console.azion.com/signup) to complete the registration.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+To successfully deploy this template, you must provide the information to configure your Azion application, as requested in the configuration form.
 
-## Building
+For a more detailed step-by-step on using this template and requirements, check the [How to deploy edge applications with the Svelte Boilerplate](https://www.azion.com/en/documentation/products/guides/svelte-boilerplate/) guide.
 
-To create a production version of your app:
+### Requirements
 
-```bash
-npm run build
-```
+- A [GitHub account](https://github.com/signup) to connect with Azion and create your new repository.
+  - Every push will be deployed automatically to this repository to keep your project updated.
+ 
+---
 
-You can preview the production build with `npm run preview`.
+## Management
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+Considering that this initial setup may not be optimal for your specific edge application, all settings can be customized any time you need using [Azion Console](https://console.azion.com/).
+
+To manage and edit your edge application’s settings, read the documentation about [managing edge applications](https://www.azion.com/en/documentation/products/edge-application/first-steps/) for more details.
+
+### Custom domain
+
+The edge application created during the deployment has an assigned Azion domain to make it accessible through the browser. The domain has the following format: `xxxxxxxxxx.map.azionedge.net`. However, you can add a custom domain for users to access your edge application through it. Go to the [Domains](https://www.azion.com/en/documentation/products/guides/configure-a-domain/) documentation to read more about it.
