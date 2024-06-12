@@ -1,0 +1,12 @@
+{
+  "name": "rust-wasm-yew-ssr",
+  "version": "1.0.0",
+  "description": "The Azion **Rust WASM Yew SSR** is designed to simplify and enhance the deployment process for Rust WASM Yew SSR applications directly on the edge of the network.",
+  "main": "vulcan.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
