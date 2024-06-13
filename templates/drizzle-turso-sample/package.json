@@ -1,5 +1,5 @@
 {
-  "name": "turso-starter-kit",
+  "name": "drizzle-turso-sample",
   "version": "1.0.0",
   "description": "A showcase template of how to use Drizzle as ORM for Turso in an Azion Edge Function",
   "main": "main.js",
