@@ -1,0 +1,26 @@
+{
+  "name": "drizzle-turso-sample",
+  "version": "1.0.0",
+  "description": "A showcase template of how to use Drizzle as ORM for Neon Database in an Azion Edge Function",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node main.js"
+  },
+  "keywords": [
+    "edge",
+    "edge computing",
+    "azion",
+    "neon",
+    "drizzle",
+    "db",
+    "orm"
+  ],
+  "author": "azion",
+  "license": "MIT",
+  "dependencies": {
+    "@neondatabase/serverless": "^0.9.3",
+    "drizzle-orm": "^0.31.2",
+    "dotenv": "^16.3.1",
+    "itty-router": "4.0.23"
+  }
+}
