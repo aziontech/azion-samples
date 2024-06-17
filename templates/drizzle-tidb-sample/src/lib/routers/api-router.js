@@ -2,13 +2,13 @@ import { Router } from "itty-router";
 import { connect } from '@tidbcloud/serverless';
 import { drizzle } from 'drizzle-orm/tidb-serverless';
 import { desc, eq } from 'drizzle-orm';
-import { integer, text, sqliteTable } from "drizzle-orm/sqlite-core";
+import { mysqlTable, int, text } from 'drizzle-orm/mysql-core';
 
 /**
  * Setup of the TiDB Table
  */
-const posts = sqliteTable('posts', {
-  id: integer('id'),
+const posts = mysqlTable('posts', {
+  id: int('id'),
   message: text('message'),
 });
 
@@ -37,14 +37,10 @@ export const ApiRouter = () => {
  */
 const apiGetAllPostsHandler = async (request, extras) => {
   const { args } = extras;
-  
+
   try {
-    const client = connect({
-      database: args.database || Azion.env.get("DRIZZLE_TIDB_DATABASE"),
-      host: args.host || Azion.env.get("DRIZZLE_TIDB_HOST"),
-      password: args.password || Azion.env.get("DRIZZLE_TIDB_PASSWORD"),
-      port: args.port || Azion.env.get("DRIZZLE_TIDB_PORT"),
-      username: args.username || Azion.env.get("DRIZZLE_TIDB_USERNAME"),
+    const client = connect({ 
+      url: args.connection_url || Azion.env.get("DRIZZLE_TIDB_CONNECTION_URL")
     });
 
     const db = drizzle(client);
@@ -85,12 +81,8 @@ const apiCreatePostHandler = async (request, extras) => {
       return new Response("Please your post cannot be longer than 140 characters", { status: 400 });
     }
 
-    const client = connect({
-      database: args.database || Azion.env.get("DRIZZLE_TIDB_DATABASE"),
-      host: args.host || Azion.env.get("DRIZZLE_TIDB_HOST"),
-      password: args.password || Azion.env.get("DRIZZLE_TIDB_PASSWORD"),
-      port: args.port || Azion.env.get("DRIZZLE_TIDB_PORT"),
-      username: args.username || Azion.env.get("DRIZZLE_TIDB_USERNAME"),
+    const client = connect({ 
+      url: args.connection_url || Azion.env.get("DRIZZLE_TIDB_CONNECTION_URL")
     });
 
     const db = drizzle(client);
@@ -128,12 +120,8 @@ const apiDeletePostPostsHandler = async (request, extras) => {
   }
 
   try {
-    const client = connect({
-      database: args.database || Azion.env.get("DRIZZLE_TIDB_DATABASE"),
-      host: args.host || Azion.env.get("DRIZZLE_TIDB_HOST"),
-      password: args.password || Azion.env.get("DRIZZLE_TIDB_PASSWORD"),
-      port: args.port || Azion.env.get("DRIZZLE_TIDB_PORT"),
-      username: args.username || Azion.env.get("DRIZZLE_TIDB_USERNAME"),
+    const client = connect({ 
+      url: args.connection_url || Azion.env.get("DRIZZLE_TIDB_CONNECTION_URL")
     });
 
     const db = drizzle(client);
@@ -188,12 +176,8 @@ const apiUpdatePostPostsHandler = async (request, extras) => {
       return new Response("Please your post cannot be longer than 140 characters", { status: 400 });
     }
 
-    const client = connect({
-      database: args.database || Azion.env.get("DRIZZLE_TIDB_DATABASE"),
-      host: args.host || Azion.env.get("DRIZZLE_TIDB_HOST"),
-      password: args.password || Azion.env.get("DRIZZLE_TIDB_PASSWORD"),
-      port: args.port || Azion.env.get("DRIZZLE_TIDB_PORT"),
-      username: args.username || Azion.env.get("DRIZZLE_TIDB_USERNAME"),
+    const client = connect({ 
+      url: args.connection_url || Azion.env.get("DRIZZLE_TIDB_CONNECTION_URL")
     });
 
     const db = drizzle(client);
