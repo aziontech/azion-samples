@@ -20,11 +20,20 @@ CREATE TABLE posts (
 **3. Setup the TiDB connection data**
 
 It can be done by setting the following [Environment Variables](https://www.azion.com/en/documentation/products/edge-functions/environment-variables/).
-- `DRIZZLE_TIDB_CONNECTION_URL`
+- `DRIZZLE_TIDB_DATABASE`
+- `DRIZZLE_TIDB_HOST`
+- `DRIZZLE_TIDB_PASSWORD`
+- `DRIZZLE_TIDB_PORT`
+- `DRIZZLE_TIDB_USERNAME`
+- `DRIZZLE_TURSO_TOKEN`
 
 Or via JSON Args:
 ```json
 {
-  "connection_url": "mysql://user:password.region.tidbcloud.com:4000/database-name"
+  "database": "mydb",
+  "host": "gateway.region.environment.tidbcloud.com",
+  "password": "my_password",
+  "port": 1234,
+  "username": "my_user"
 }
 ```
