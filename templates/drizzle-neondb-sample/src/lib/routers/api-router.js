@@ -2,13 +2,13 @@ import { Router } from "itty-router";
 import { neon } from '@neondatabase/serverless';
 import { drizzle } from 'drizzle-orm/neon-http';
 import { desc, eq } from 'drizzle-orm';
-import { integer, text, sqliteTable } from "drizzle-orm/sqlite-core";
+import { pgTable, text, serial } from "drizzle-orm/pg-core";
 
 /**
- * Setup of the Turso Table
+ * Setup of the Neon Table
  */
-const posts = sqliteTable('posts', {
-  id: integer('id'),
+const posts = pgTable('posts', {
+  id: serial('id'),
   message: text('message'),
 });
 
