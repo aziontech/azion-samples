@@ -1,5 +1,10 @@
 import { Router } from "itty-router";
 
+import { PrismaClient } from '@prisma/client/edge'
+import { withAccelerate } from '@prisma/extension-accelerate'
+
+export const runtime = 'edge';
+
 /**
  * Api route using the itty-router library.
    For more details check out https://itty.dev/itty-router
@@ -25,29 +30,22 @@ export const ApiRouter = () => {
  */
 const apiGetAllPostsHandler = async (request, extras) => {
   const { args } = extras;
-  
-  const url = args.url || Azion.env.get("AZION_URL");
-  const token = args.token || Azion.env.get("AZION_TOKEN");
-  const body = JSON.stringify({
-    statements: [
-				"SELECT * FROM posts;"
-    ]
+
+  const prisma = new PrismaClient({
+    datasourceUrl: args.url || Azion.env.get("DATABASE_URL"),
+  }).$extends(withAccelerate())
+
+  const posts = await prisma.posts.findMany({
+    cacheStrategy: { ttl: 60 },
   });
-  const headers = {
-    'Content-Type': 'application/json',
-    'Authorization': `Token ${token}`,
-  };
-
-  const response = await fetch(url, { method: 'POST', body, headers })
   
-  const json = await response.json();
-
-  return new Response(JSON.stringify({ results: json.data[0].results?.rows || [] }), {
+  return new Response(JSON.stringify({ results: posts || [] }), {
     headers: {
       "content-type": "application/json;charset=UTF-8",
     },
     status: 200,
   });
+
 };
 
 /**
@@ -69,32 +67,24 @@ const apiCreatePostHandler = async (request, extras) => {
       return new Response("Please your post cannot be longer than 140 characters", { status: 400 });
     }
 
-    const url = args.url || Azion.env.get("AZION_URL");
-    const token = args.token || Azion.env.get("AZION_TOKEN");
-    const input = JSON.stringify({
-      statements: [
-          `INSERT INTO posts (message) VALUES ('${body?.post}');`,
-      ]
-    });
-
-    console.log(input);
-    const headers = {
-      'Content-Type': 'application/json',
-      'Authorization': `Token ${token}`,
-    };
+    const prisma = new PrismaClient({
+      datasourceUrl: args.url || Azion.env.get("DATABASE_URL"),
+    }).$extends(withAccelerate())
   
-    const response = await fetch(url, { method: 'POST', body: input, headers })
+    await prisma.posts.create({
+      data: {
+        message: body?.post,
+      },
+    });
     
-    if (!response.ok) {
-      /** do something */
-    }
-
     return new Response(JSON.stringify({ message: "success" }), {
       headers: {
         "content-type": "application/json;charset=UTF-8",
       },
       status: 200,
     });
+
+
   } catch (error) {
     console.error(error);
     return new Response("Error adding item", { status: 500 });
@@ -116,23 +106,23 @@ const apiDeletePostPostsHandler = async (request, extras) => {
   }
 
   try {
-    const url = args.url || Azion.env.get("AZION_URL");
-    const token = args.token || Azion.env.get("AZION_TOKEN");
-    const input = JSON.stringify({
-      statements: [
-          `DELETE FROM posts WHERE id = ${id}`,
-      ]
-    });
-    const headers = {
-      'Content-Type': 'application/json',
-      'Authorization': `Token ${token}`,
-    };
+    const prisma = new PrismaClient({
+      datasourceUrl: args.url || Azion.env.get("DATABASE_URL"),
+    }).$extends(withAccelerate())
   
-    const response = await fetch(url, { method: 'POST', body: input, headers })
+    await prisma.posts.delete({
+      where: {
+        id: parseInt(id),
+      },
+    });
     
-    if (!response.ok) {
-      /** do something */
-    }
+    return new Response(JSON.stringify({ message: "post deleted" }), {
+      headers: {
+        "content-type": "application/json;charset=UTF-8",
+      },
+      status: 200,
+    });
+
 
   } catch (error) {
     return new Response(JSON.stringify({ message: "not exist!" }), {
@@ -143,12 +133,6 @@ const apiDeletePostPostsHandler = async (request, extras) => {
     });
   }
 
-  return new Response(JSON.stringify({ message: "post deleted!" }), {
-    headers: {
-      "content-type": "application/json;charset=UTF-8",
-    },
-    status: 200,
-  });
 };
 
 /**
@@ -166,7 +150,7 @@ const apiUpdatePostPostsHandler = async (request, extras) => {
   }
 
   try {
-        
+    
     const body = await request.json();
 
     if (body?.post?.length < 1) {
@@ -175,30 +159,26 @@ const apiUpdatePostPostsHandler = async (request, extras) => {
       return new Response("Please your post cannot be longer than 140 characters", { status: 400 });
     }
 
-    const url = args.url || Azion.env.get("AZION_URL");
-    const token = args.token || Azion.env.get("AZION_TOKEN");
-    const input = JSON.stringify({
-      statements: [
-          `UPDATE posts SET message = '${body?.post}' WHERE id = '${id}'`,
-      ]
-    });
-    const headers = {
-      'Content-Type': 'application/json',
-      'Authorization': `Token ${token}`,
-    };
-  
-    const response = await fetch(url, { method: 'POST', body: input, headers })
-    
-    if (!response.ok) {
-      /** do something */
-    }
+    const prisma = new PrismaClient({
+      datasourceUrl: args.url || Azion.env.get("DATABASE_URL"),
+    }).$extends(withAccelerate());
 
-    return new Response(JSON.stringify({ message: `Updated item with ID ${id} in the posts` }), {
+    await prisma.posts.update({
+      where: {
+        id: parseInt(id),
+      },
+      data: {
+        message: body?.post,
+      }
+    });
+    
+    return new Response(JSON.stringify({ message: "post updated" }), {
       headers: {
         "content-type": "application/json;charset=UTF-8",
       },
       status: 200,
     });
+
   } catch (error) {
     console.log(error)
     return new Response(JSON.stringify({ message: "not exist!" }), {

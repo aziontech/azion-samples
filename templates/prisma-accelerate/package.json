@@ -1,0 +1,28 @@
+{
+  "name": "prisma-accelerate",
+  "version": "1.0.0",
+  "description": "A Starter Kit template to use Prisma accelerate in Azion",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node main.js",
+    "postinstall": "prisma generate --no-engine"
+  },
+  "keywords": [
+    "edge",
+    "edge computing",
+    "azion",
+    "prisma",
+    "db"
+  ],
+  "author": "azion",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^5.15.1",
+    "@prisma/extension-accelerate": "^1.1.0",
+    "dotenv": "^16.3.1",
+    "itty-router": "4.0.23"
+  },
+  "devDependencies": {
+    "prisma": "^5.15.1"
+  }
+}
