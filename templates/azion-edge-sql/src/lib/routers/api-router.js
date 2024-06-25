@@ -40,11 +40,6 @@ const apiGetAllPostsHandler = async (request, extras) => {
 
   const response = await fetch(url, { method: 'POST', body, headers })
   
-
-  if (!response.ok) {
-    /** do something */
-  }
-
   const json = await response.json();
 
   return new Response(JSON.stringify({ results: json.data[0].results?.rows || [] }), {
