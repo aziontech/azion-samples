@@ -1,10 +1,10 @@
-# Turso Starter Kit
+# Prisma Accelerate
 
-The **Turso Starter Kit** accelerates the integration of a Turso database, created using Turso's [LibSQL SDK](https://turso.tech/libsql), into an edge function. It also provides an interface to easily create, update, and delete items in your database.
+The **Prisma Accelerate** accelerates the integration of a database, created using [Prisma ORM Accelerate](https://www.prisma.io/docs/accelerate/getting-started), into an edge function. It also provides an interface to easily create, update, and delete items in your database.
 
-This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [How to integrate a Turso database with Azion using a template](https://www.azion.com/en/documentation/products/guides/turso-starter-kit/) guide.
+This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [How to integrate a Prisma ORM with Azion using a template](https://www.azion.com/en/documentation/products/guides/prisma-accelerate/) guide.
 
-This template uses LibSQL `0.5.3`.
+This template uses Prisma `5.15.1`.
 
 ---
 
@@ -16,14 +16,12 @@ To use this template, you must [sign in on Azion Console](https://console.azion.
 
 To successfully deploy this template, you need to provide the information to configure your Azion application, as requested in the **Settings** tab on the template's page.
 
-For a more detailed step-by-step on using this template and requirements, check the [How to integrate a Turso database with Azion using a template](https://www.azion.com/en/documentation/products/guides/turso-starter-kit/) guide.
+For a more detailed step-by-step on using this template and requirements, check the [How to integrate a Prisma ORM with Azion using a template](https://www.azion.com/en/documentation/products/guides/prisma-accelerate/) guide.
 
 ### Requirements
 
-- Create a [Turso account](https://accounts.turso.tech/sign-up).
-- Install the [Turso CLI](https://docs.turso.tech/cli/introduction).
-- Create a [database](https://docs.turso.tech/quickstart) with a table called `posts`, and the fields `id` and `message`.
-- Generate your [GitHub personal token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic).
+- Create a [Prisma account](https://console.prisma.io/login).
+- Create any SQL database with a table called `posts`, and the fields `id` and `message`.
 - Enable [Edge Functions and Application Accelerator](https://www.azion.com/en/documentation/products/guides/billing-and-subscriptions/) in your Azion account.
 
 ---

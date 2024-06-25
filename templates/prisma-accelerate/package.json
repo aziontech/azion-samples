@@ -11,14 +11,12 @@
     "edge",
     "edge computing",
     "azion",
-    "turso",
+    "prisma",
     "db"
   ],
   "author": "azion",
   "license": "MIT",
   "dependencies": {
-    "@libsql/client": "^0.6.2",
-    "@prisma/adapter-libsql": "^5.15.1",
     "@prisma/client": "^5.15.1",
     "@prisma/extension-accelerate": "^1.1.0",
     "dotenv": "^16.3.1",
