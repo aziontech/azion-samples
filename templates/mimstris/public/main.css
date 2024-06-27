@@ -1,0 +1,145 @@
+html {
+  background: #371b52;
+  /* Stop scrolling issue on short monitors */
+  overflow-y: hidden;
+}
+body {
+  color: #fff;
+  font-family: montserrat, helvetica, arial, sans-serif;
+}
+main {
+  margin: 4em auto;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 24px;
+  padding: 1rem;
+}
+
+a,
+a:link,
+a:hover,
+a:active,
+a:visited {
+  color: #11c5bf;
+  text-decoration: underline;
+}
+a:link {
+  text-decoration: none;
+}
+
+button {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font-family: montserrat, helvetica, arial, sans-serif;
+
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+button:hover {
+  background: #fff;
+  color: #371b52;
+}
+button:focus {
+  outline: 0;
+}
+.undoButton {
+  margin-bottom: 1rem;
+}
+
+.instructions {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.3);
+}
+.app {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.scoreWrapper {
+  flex: 0 1 auto;
+  order: 2;
+  margin-left: 1rem;
+}
+.scoreboardText {
+  min-width: 10rem;
+}
+
+.gameWrapper {
+  flex: 0 1 auto;
+  order: 1;
+  position: relative;
+}
+.nextPiece canvas {
+  transform-origin: top left;
+  transform: scale(0.5);
+}
+
+.configPanel {
+  font-size: 10px;
+}
+.configPanel h3 {
+  display: inline-block;
+  margin: 0 0 0.5rem 0.5rem;
+  font-size: 12px;
+  font-weight: normal;
+  cursor: pointer;
+}
+.configPanel h3:hover {
+  text-decoration: underline;
+}
+.configPanel button {
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+.configPanel ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.configPanel div {
+  margin-bottom: 0.5rem;
+}
+.configOptions {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 0.5rem;
+}
+.configPanelText label {
+  display: block;
+}
+.configPanelText input {
+  background: #00263f;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.25rem;
+}
+
+.credits {
+  font-size: 10px;
+}
+
+.modalText {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+  margin: auto 0;
+  padding: 1rem 0;
+
+  background: rgba(50, 50, 50, 0.4);
+  color: #ffffff;
+  font-size: 24px;
+  text-align: center;
+  vertical-align: middle;
+}
+.modalText .modalSubText {
+  margin-top: 12px;
+  font-size: 12px;
+}
