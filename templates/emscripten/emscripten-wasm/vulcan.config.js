@@ -1,4 +1,3 @@
-
 module.exports = {
   useNodePolyfills: false,
   useOwnWorker: false,
