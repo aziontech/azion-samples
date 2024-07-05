@@ -1,0 +1,7 @@
+{
+  "name": "Astro with Framework Alpine",
+  "message": "This example showcases Astro working with AlpineJS",
+  "preset": "astro",
+  "mode": "deliver",
+  "path": "/astro-framework-alpine"
+}

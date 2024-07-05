@@ -1,0 +1,7 @@
+{
+  "name": "Astro with Markdoc",
+  "message": "This starter showcases the experimental Markdoc integration",
+  "preset": "astro",
+  "mode": "deliver",
+  "path": "/astro-with-markdoc"
+}

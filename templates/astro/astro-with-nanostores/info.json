@@ -1,0 +1,7 @@
+{
+  "name": "Astro with Nano Stores",
+  "message": "This example showcases using nanostores to provide shared state between components of any framework",
+  "preset": "astro",
+  "mode": "deliver",
+  "path": "/astro-with-nanostores"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Next JS Static Boilerplate (14.1.4)",
+  "message": "Automate your Next.js deployment process on the edge",
+  "preset": "next",
+  "mode": "deliver",
+  "path": "/nextjs-static-boilerplate-14"
+}

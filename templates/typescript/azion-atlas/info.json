@@ -1,0 +1,7 @@
+{
+  "name": "MongoDB Atlas Boilerplate",
+  "message": "Deploy an application integrated with MongoDB Atlas on the edge and manage it via API",
+  "preset": "typescript",
+  "mode": "compute",
+  "path": "/azion-atlas"
+}

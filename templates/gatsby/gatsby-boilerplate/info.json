@@ -1,0 +1,7 @@
+{
+  "name": "Gatsby Boilerplate",
+  "message": "Deploy new Gatsby applications to run directly on the edge",
+  "preset": "gatsby",
+  "mode": "deliver",
+  "path": "/gatsby-boilerplate"
+}

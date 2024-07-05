@@ -1,0 +1,7 @@
+{
+  "name": "Astro with Framework Preact",
+  "message": "This example showcases Astro working with Preact",
+  "preset": "astro",
+  "mode": "deliver",
+  "path": "/astro-framework-preact"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Astro with Multiple Frameworks",
+  "message": "This example showcases Astro's built-in support for multiple frameworks",
+  "preset": "astro",
+  "mode": "deliver",
+  "path": "/astro-framework-multiple"
+}

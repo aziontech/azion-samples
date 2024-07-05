@@ -1,0 +1,7 @@
+{
+  "name": "HTMX Boilerplate",
+  "message": "Test how the HTMX library works on the edge",
+  "preset": "javascript",
+  "mode": "compute",
+  "path": "/htmx-minimal"
+}

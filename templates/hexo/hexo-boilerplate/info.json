@@ -1,0 +1,7 @@
+{
+  "name": "Hexo Boilerplate",
+  "message": "Deploy new Hexo applications to run directly on the edge",
+  "preset": "hexo",
+  "mode": "deliver",
+  "path": "/hexo-boilerplate"
+}

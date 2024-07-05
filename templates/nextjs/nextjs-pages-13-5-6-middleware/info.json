@@ -1,0 +1,7 @@
+{
+  "name": "Next JS Pages + Middleware",
+  "message": "Build a Next.js application including a Middleware, Pages Router, and custom configuration",
+  "preset": "next",
+  "mode": "compute",
+  "path": "/nextjs-pages-13-5-6-middleware"
+}

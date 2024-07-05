@@ -1,0 +1,7 @@
+{
+  "name": "Simple Javascript Router Node",
+  "message": "The Azion Simple Javascript Router Node is designed to simplify and enhance the deployment process for Javascript applications with Node polyfills directly on the edge of the network",
+  "preset": "javascript",
+  "mode": "compute",
+  "path": "/javascript-simple-router-node"
+}

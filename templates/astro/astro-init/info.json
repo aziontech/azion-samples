@@ -1,0 +1,7 @@
+{
+  "name": "Astro Init",
+  "message": "Astro Starter template",
+  "preset": "astro",
+  "mode": "deliver",
+  "path": "/astro-init"
+}

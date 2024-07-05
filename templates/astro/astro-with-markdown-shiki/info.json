@@ -1,0 +1,7 @@
+{
+  "name": "Astro Markdown with Shiki",
+  "message": "This example showcases Astro's built-in Markdown support",
+  "preset": "astro",
+  "mode": "deliver",
+  "path": "/astro-with-markdown-shiki"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Astro Boilerplate",
+  "message": "Automate your Astro.js deployment process on the edge",
+  "preset": "astro",
+  "mode": "deliver",
+  "path": "/astro-boilerplate"
+}

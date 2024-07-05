@@ -1,0 +1,7 @@
+{
+  "name": "Astro with MDX",
+  "message": "This example showcases using @astrojs/mdx to author content using MDX",
+  "preset": "astro",
+  "mode": "deliver",
+  "path": "/astro-with-mdx"
+}

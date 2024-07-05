@@ -1,0 +1,7 @@
+{
+  "name": "Astro Blog Starter Kit",
+  "message": "Deploy a blog page based on the Astro framework in a few steps",
+  "preset": "astro",
+  "mode": "deliver",
+  "path": "/astro-blog"
+}

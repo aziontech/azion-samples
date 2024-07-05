@@ -1,0 +1,7 @@
+{
+  "name": "Astro Basics",
+  "message": "Astro Starter Kit: Basics",
+  "preset": "astro",
+  "mode": "deliver",
+  "path": "/astro-basics"
+}

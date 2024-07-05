@@ -1,0 +1,7 @@
+{
+  "name": "Astro Starlog",
+  "message": "Release notes theme for Astro",
+  "preset": "astro",
+  "mode": "deliver",
+  "path": "/astro-starlog"
+}

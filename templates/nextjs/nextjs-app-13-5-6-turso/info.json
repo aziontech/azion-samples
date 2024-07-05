@@ -1,0 +1,7 @@
+{
+  "name": "Next JS App + Turso",
+  "message": "Deploy a Next.js application including a connection to a Turso database",
+  "preset": "next",
+  "mode": "compute",
+  "path": "/nextjs-app-13-5-6-turso"
+}

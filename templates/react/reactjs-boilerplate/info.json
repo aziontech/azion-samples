@@ -1,0 +1,7 @@
+{
+  "name": "React Boilerplate",
+  "message": "Automate your React.js deployment process on the edge",
+  "preset": "react",
+  "mode": "deliver",
+  "path": "/reactjs-boilerplate"
+}
