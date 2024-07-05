@@ -1,0 +1,7 @@
+{
+  "name": "Svelte Boilerplate",
+  "message": "Accelerate the deployment of Svelte static applications to run directly on the edge",
+  "preset": "svelte",
+  "mode": "deliver",
+  "path": "/svelte-static"
+}

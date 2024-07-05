@@ -1,0 +1,7 @@
+{
+  "name": "Astro with Framework Lit",
+  "message": "This example showcases Astro working with Lit",
+  "preset": "astro",
+  "mode": "deliver",
+  "path": "/astro-framework-lit"
+}

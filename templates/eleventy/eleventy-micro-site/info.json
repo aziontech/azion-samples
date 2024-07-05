@@ -1,0 +1,7 @@
+{
+  "name": "11ty Micro Site",
+  "message": "Opinionated micro front-end that can be used to create a one-pager",
+  "preset": "eleventy",
+  "mode": "deliver",
+  "path": "/eleventy-micro-site"
+}

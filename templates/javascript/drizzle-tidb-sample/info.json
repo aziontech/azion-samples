@@ -1,0 +1,7 @@
+{
+  "name": "Drizzle + TiDB Sample",
+  "message": "Integrate a TiDB database, using the Drizzle ORM",
+  "preset": "javascript",
+  "mode": "compute",
+  "path": "/drizzle-tidb-sample"
+}

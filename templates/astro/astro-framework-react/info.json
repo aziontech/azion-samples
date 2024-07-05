@@ -1,0 +1,7 @@
+{
+  "name": "Astro with Framework React",
+  "message": "This example showcases Astro working with React",
+  "preset": "astro",
+  "mode": "deliver",
+  "path": "/astro-framework-react"
+}

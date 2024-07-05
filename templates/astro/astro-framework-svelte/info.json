@@ -1,0 +1,7 @@
+{
+  "name": "Astro with Framework Svelte",
+  "message": "This example showcases Astro working with Svelte",
+  "preset": "astro",
+  "mode": "deliver",
+  "path": "/astro-framework-svelte"
+}

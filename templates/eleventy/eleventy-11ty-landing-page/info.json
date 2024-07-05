@@ -1,0 +1,7 @@
+{
+  "name": "11ty Landing Page",
+  "message": "A simple landing page template built with 11ty and Tailwind CSS",
+  "preset": "eleventy",
+  "mode": "deliver",
+  "path": "/eleventy-11ty-landing-page"
+}

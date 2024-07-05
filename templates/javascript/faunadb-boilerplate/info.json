@@ -1,0 +1,7 @@
+{
+  "name": "Fauna DB Boilerplate",
+  "message": "Easily deploy and manage an application integrated with Fauna on the edge",
+  "preset": "javascript",
+  "mode": "compute",
+  "path": "/faunadb-boilerplate"
+}

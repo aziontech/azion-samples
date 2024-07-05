@@ -1,0 +1,7 @@
+{
+  "name": "11ty Portfolio",
+  "message": "A starter repository showing how to build a portfolio with the 11ty static site generator",
+  "preset": "eleventy",
+  "mode": "deliver",
+  "path": "/eleventy-dark-portfolio-template-11ty"
+}

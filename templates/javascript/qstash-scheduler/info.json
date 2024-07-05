@@ -1,0 +1,7 @@
+{
+  "name": "QStash EdgeFunction Scheduler",
+  "message": "Schedule and dispatch tasks using a custom edge function and QStash.",
+  "preset": "javascript",
+  "mode": "compute",
+  "path": "/qstash-scheduler"
+}

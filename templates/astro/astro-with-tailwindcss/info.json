@@ -1,0 +1,7 @@
+{
+  "name": "Astro with Tailwind CSS",
+  "message": "This example showcases how to style your Astro project with Tailwind",
+  "preset": "astro",
+  "mode": "deliver",
+  "path": "/astro-with-tailwindcss"
+}

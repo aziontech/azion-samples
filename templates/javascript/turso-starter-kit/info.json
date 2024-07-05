@@ -1,0 +1,7 @@
+{
+  "name": "Turso Starter Kit",
+  "message": "Integrate a Turso database, created using Turso's LibSQL SDK, into an edge function",
+  "preset": "javascript",
+  "mode": "compute",
+  "path": "/turso-starter-kit"
+}

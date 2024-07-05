@@ -1,0 +1,7 @@
+{
+  "name": "11ty Photo Gallery",
+  "message": "A starter site for creating your own photo or art gallery using the Eleventy static site generator",
+  "preset": "eleventy",
+  "mode": "deliver",
+  "path": "/eleventy-photo-gallery"
+}

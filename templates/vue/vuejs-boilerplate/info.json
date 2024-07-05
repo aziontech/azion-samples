@@ -1,0 +1,7 @@
+{
+  "name": "Vue Boilerplate",
+  "message": "Automate your Vue.js deployment process on the edge",
+  "preset": "vue",
+  "mode": "deliver",
+  "path": "/vuejs-boilerplate"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Astro with Vitest",
+  "message": "This example showcases Astro working with Vitest",
+  "preset": "astro",
+  "mode": "deliver",
+  "path": "/astro-with-witest"
+}

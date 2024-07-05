@@ -1,0 +1,7 @@
+{
+  "name": "Astro Portfolio",
+  "message": "Astro portfolio example",
+  "preset": "astro",
+  "mode": "deliver",
+  "path": "/astro-portfolio"
+}

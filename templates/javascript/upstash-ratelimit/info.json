@@ -1,0 +1,7 @@
+{
+  "name": "Upstash Rate Limit",
+  "message": "Implement rate limiting in a serverless environment",
+  "preset": "javascript",
+  "mode": "compute",
+  "path": "/upstash-ratelimit"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Azion Edge SQL",
+  "message": "The Azion Edge SQL accelerates the integration of a Azion edge SQL database into an edge function. It also provides an interface to easily create, update, and delete items in your database",
+  "preset": "javascript",
+  "mode": "compute",
+  "path": "/azion-edge-sql"
+}

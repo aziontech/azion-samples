@@ -1,0 +1,7 @@
+{
+  "name": "Upstash Geolocation",
+  "message": "Provide a personalized and localized user experience on the edge",
+  "preset": "javascript",
+  "mode": "compute",
+  "path": "/upstash-geolocation"
+}

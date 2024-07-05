@@ -1,0 +1,7 @@
+{
+  "name": "Vue3/Vite Boilerplate",
+  "message": "Accelerate the deployment of Vue3/Vite applications ready to run on the edge",
+  "preset": "vue",
+  "mode": "deliver",
+  "path": "/vue3-vite-static"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Prisma Accelerate",
+  "message": "Integrate a database using the Prisma ORM Accelerate",
+  "preset": "javascript",
+  "mode": "compute",
+  "path": "/prisma-accelerate"
+}

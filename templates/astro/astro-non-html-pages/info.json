@@ -1,0 +1,7 @@
+{
+  "name": "Astro with Non-HTML Pages",
+  "message": "This example showcases Astro working with Non-HTML pages",
+  "preset": "astro",
+  "mode": "deliver",
+  "path": "/astro-non-html-pages"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "11ty Starter Kit",
+  "message": "Start your own 11ty application with this template. Powered by Vite, Tailwind CSS and Alpine.js",
+  "preset": "eleventy",
+  "mode": "deliver",
+  "path": "/eleventy-11st-starter-kit"
+}

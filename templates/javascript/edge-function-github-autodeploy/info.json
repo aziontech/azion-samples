@@ -1,0 +1,7 @@
+{
+  "name": "Edge Function GitHub AutoDeploy",
+  "message": "Automate the deployment of edge functions integrated with GitHub Actions",
+  "preset": "javascript",
+  "mode": "compute",
+  "path": "/edge-function-github-autodeploy"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Astro Markdown with Plugins",
+  "message": "This example showcases Astro's built-in Markdown support with additional, user-provided plugins",
+  "preset": "astro",
+  "mode": "deliver",
+  "path": "/astro-with-markdown-plugins"
+}

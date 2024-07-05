@@ -1,0 +1,7 @@
+{
+  "name": "Jekyll Boilerplate",
+  "message": "Simplify the deployment of a static Jekyll project on the edge.",
+  "preset": "jekyll",
+  "mode": "deliver",
+  "path": "/jekyll-blog"
+}

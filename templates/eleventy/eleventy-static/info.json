@@ -1,0 +1,7 @@
+{
+  "name": "11ty Base Blog",
+  "message": "A starter template showing how to build a blog with the Eleventy site generator",
+  "preset": "eleventy",
+  "mode": "deliver",
+  "path": "/eleventy-static"
+}

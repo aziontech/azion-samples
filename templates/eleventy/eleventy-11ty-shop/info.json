@@ -1,0 +1,7 @@
+{
+  "name": "11ty Shop",
+  "message": "Starter online shop template build with 11ty",
+  "preset": "eleventy",
+  "mode": "deliver",
+  "path": "/eleventy-11ty-shop"
+}

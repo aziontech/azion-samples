@@ -1,0 +1,7 @@
+{
+  "name": "Drizzle + Turso Sample",
+  "message": "Integrate a Turso database, using the Drizzle ORM",
+  "preset": "javascript",
+  "mode": "compute",
+  "path": "/drizzle-turso-sample"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Gatsby Blog Starter Kit",
+  "message": "Deploy a blog page based on the Gatsby framework in a few steps",
+  "preset": "gatsby",
+  "mode": "deliver",
+  "path": "/gatsby-blog"
+}

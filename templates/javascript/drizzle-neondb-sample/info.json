@@ -1,0 +1,7 @@
+{
+  "name": "Drizzle + Neon Sample",
+  "message": "Integrate a Neon database, using the Drizzle ORM",
+  "preset": "javascript",
+  "mode": "compute",
+  "path": "/drizzle-neondb-sample"
+}

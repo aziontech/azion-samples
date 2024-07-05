@@ -1,0 +1,7 @@
+{
+  "name": "Hello World",
+  "message": "Deploy a Hello World application to test edge computing capabilities",
+  "preset": "javascript",
+  "mode": "compute",
+  "path": "/hello-world"
+}

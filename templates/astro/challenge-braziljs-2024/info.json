@@ -1,0 +1,7 @@
+{
+  "name": "Deploy at the Edge",
+  "message": "Challenge BrazilJS 2024",
+  "preset": "astro",
+  "mode": "deliver",
+  "path": "/challenge-braziljs-2024"
+}

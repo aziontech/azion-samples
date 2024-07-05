@@ -1,0 +1,7 @@
+{
+  "name": "Astro with Framework Solid",
+  "message": "This example showcases Astro working with Solid",
+  "preset": "astro",
+  "mode": "deliver",
+  "path": "/astro-framework-solid"
+}

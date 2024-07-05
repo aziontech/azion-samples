@@ -1,0 +1,7 @@
+{
+  "name": "Mobile 11ty",
+  "message": "Build Generator static site and android app all in one with mobile11ty",
+  "preset": "eleventy",
+  "mode": "deliver",
+  "path": "/eleventy-mobile11ty"
+}
