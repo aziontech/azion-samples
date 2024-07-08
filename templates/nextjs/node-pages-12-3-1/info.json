@@ -1,0 +1,7 @@
+{
+  "name": "Next Node Pages",
+  "message": "Next.js v12.3.1 project example using node runtime and pages format",
+  "preset": "next",
+  "mode": "compute",
+  "path": "/node-pages-12-3-1"
+}
