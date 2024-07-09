@@ -1,0 +1,7 @@
+{
+  "name": "Docusaurus Boilerplate (JS)",
+  "message": "Deploy new Docusaurus applications to run directly on the edge",
+  "preset": "docusaurus",
+  "mode": "deliver",
+  "path": "/docusaurus-boilerplate-ts"
+}
