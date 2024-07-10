@@ -1,0 +1,139 @@
+// /**
+//  * Copyright @ by Code Lyoko Team. All rights reserved.
+//  * Author: Thành Nam Nguyễn
+//  */
+
+//
+//  Responsive
+//  --------------------------------------------------
+
+//  Desktop
+
+@media (min-width: 768px) {
+  .show-on {
+    &-desktop {
+      display: block;
+    }
+
+    &-mobile {
+      display: none;
+    }
+  }
+}
+
+//  Only Low Desktop
+@media (min-width: 992px) and (max-width: 1199px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+//  Only Tablet
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+//  Tablet
+@media screen and (max-width: 991px) {
+  //
+  //  Search navbar local
+  //  --------------------------------------------------
+
+  nav {
+    .navbar__search-input {
+      width: 14rem;
+      padding: 0 0.5rem 0 2.25rem;
+    }
+  }
+
+  //
+  //  Blog posts (Page)
+  //  --------------------------------------------------
+
+  [class^='title_'] {
+    font-size: 2rem !important;
+  }
+
+  .blog {
+    &.blog-homepage {
+      padding: 0 50px !important;
+      margin: -20px -15px;
+    }
+  }
+
+  //
+  //  Docs (Page)
+  //  --------------------------------------------------
+
+  .markdown h1:first-child {
+    --ifm-h1-font-size: 1.75rem;
+  }
+}
+
+//  Mobile (Landscape)
+@media (max-width: 767px) {
+  body {
+    font-size: 14.4px;
+  }
+
+  .show-on {
+    &-desktop {
+      display: none;
+    }
+
+    &-mobile {
+      display: block;
+    }
+  }
+
+  .section-block {
+    &__heading {
+      font-size: 25px !important;
+    }
+  }
+
+  //
+  //  Blog posts (Page)
+  //  --------------------------------------------------
+
+  .blog {
+    &.blog-homepage {
+      padding: 0 !important;
+    }
+  }
+}
+
+//  Mobile (Portrait)
+@media screen and (max-width: 575px) {
+  //
+  //  Search navbar local
+  //  --------------------------------------------------
+
+  .navbar__search-input {
+    &:not(:focus) {
+      width: 6rem !important;
+    }
+
+    &::placeholder {
+      font-size: 11px;
+    }
+  }
+
+  //
+  //  Blog posts (Page)
+  //  --------------------------------------------------
+
+  [class^='title_'] {
+    font-size: 1.5rem !important;
+  }
+
+  //
+  //  Docs (Page)
+  //  --------------------------------------------------
+
+  .markdown h1:first-child {
+    --ifm-h1-font-size: 1.6rem;
+  }
+}
