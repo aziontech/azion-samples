@@ -1,0 +1,54 @@
+// /**
+//  * Copyright @ by Code Lyoko Team. All rights reserved.
+//  * Author: Thành Nam Nguyễn
+//  */
+
+.title {
+  font-size: 3rem;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+    -90deg,
+    #adfbda 0%,
+    #7953cd 30%,
+    #00affa 50%,
+    #0190cd 70%,
+    #764ada 90%,
+    #6b39ff 100%
+  );
+
+  &::selection {
+    background-clip: initial;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+    background-image: unset;
+  }
+}
+
+/**
+  Blog post title should be smaller on smaller devices
+**/
+@media (max-width: 576px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+
+//
+//  Dark theme
+//  --------------------------------------------------
+
+html[data-theme='dark'] {
+  .title {
+    background-image: linear-gradient(
+      -90deg,
+      #adfbda 0%,
+      #35c3ff 30%,
+      #fda399 50%,
+      #76d880 70%,
+      #ebf38b 90%,
+      #adfbda 100%
+    );
+  }
+}

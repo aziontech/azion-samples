@@ -1,0 +1,7 @@
+{
+  "name": "Docusaurus with Material UI",
+  "message": "This example showcases how to style your Docusaurus project with Material UI",
+  "preset": "docusaurus",
+  "mode": "deliver",
+  "path": "/docusaurus-material-ui-template"
+}

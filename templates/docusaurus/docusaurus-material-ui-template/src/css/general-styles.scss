@@ -1,0 +1,324 @@
+// /**
+//  * Copyright @ by Code Lyoko Team. All rights reserved.
+//  * Author: Thành Nam Nguyễn
+//  */
+
+//
+//  Dark theme
+//  --------------------------------------------------
+
+html[data-theme='dark'] {
+  //
+  //  Header
+  //  --------------------------------------------------
+  .hero {
+    &__title,
+    &__subtitle {
+      color: var(--ifm-color-gray-800);
+    }
+  }
+
+  .dropdown__menu,
+  pre code,
+  .card {
+    background-color: var(--prism-background-color);
+  }
+
+  //
+  //  Footer
+  //  --------------------------------------------------
+
+  footer.footer {
+    background-color: var(--lyoko-color-footer-dark__bg);
+    color: var(--lyoko-color-footer-dark__text);
+  }
+
+  //
+  //  Blog page
+  //  --------------------------------------------------
+
+  .blog {
+    .blog-link {
+      color: var(--lyoko-color-white);
+    }
+  }
+}
+
+//
+//  Navbar
+//  --------------------------------------------------
+
+nav {
+  &.navbar--fixed-top {
+    z-index: 999;
+  }
+
+  &.navbar {
+    box-shadow: unset;
+  }
+
+  .dropdown__link {
+    padding: 0.4rem 0.5rem;
+  }
+
+  //  Search navbar (local search)
+  .navbar__search-input {
+    padding: 0 2rem 0 2.25rem;
+    width: 13.5rem;
+  }
+}
+
+//
+//  Links
+//  --------------------------------------------------
+
+a:hover {
+  color: var(--ifm-link-hover-color);
+  text-decoration: none;
+}
+
+//  Keyboard keys
+kbd {
+  &[class^='searchHint_'] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--docsearch-key-gradient);
+    border: 0;
+    border-radius: 3px;
+    box-shadow: var(--docsearch-key-shadow);
+    color: var(--docsearch-muted-color);
+    height: 20px;
+    margin-right: 0.4em;
+    padding: 0 7px 2px;
+  }
+
+  &.searchHint_btn {
+    display: inline-block;
+    align-items: unset;
+    justify-content: unset;
+    height: unset;
+    margin-left: 0.4rem;
+    padding: 4px 10px;
+  }
+}
+
+button {
+  &[class^='searchClearButton_'] {
+    z-index: 999;
+  }
+}
+
+//
+//  Blog page
+//  --------------------------------------------------
+
+[class^='title_'] {
+  font-size: 2.3rem !important;
+}
+
+#__blog-post-container img[class^='img_'] {
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+.blog {
+  &-banner-wrapper {
+    position: relative;
+  }
+
+  &-banner-bg {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+  }
+
+  &-avatar {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    box-shadow: 4px 4px 24px 0 rgba(0, 0, 0, 0.21);
+    border: 3px solid var(--lyoko-color-white);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+  }
+
+  &.blog-homepage {
+    padding: 0 80px !important;
+  }
+
+  .blog-card {
+    &__title {
+      font-size: 18px;
+      font-weight: 600;
+      padding: 16px 16px 5px !important;
+    }
+
+    &__description {
+      padding: 0 16px !important;
+    }
+
+    &__image {
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+    }
+
+    &__author-name {
+      font-weight: 500;
+    }
+
+    &__tags {
+      margin: 0 !important;
+
+      b {
+        display: none;
+      }
+    }
+  }
+
+  &-pagination {
+    ul {
+      margin: 20px 0;
+      justify-content: center !important;
+    }
+  }
+
+  .blog-link {
+    color: var(--lyoko-color-black);
+  }
+}
+
+//
+//  Footer
+//  --------------------------------------------------
+
+.footer {
+  &__title {
+    margin: var(--ifm-heading-margin-bottom) 0;
+  }
+
+  &__item {
+    padding: 4px 0;
+  }
+
+  &__links {
+    justify-content: center;
+
+    .col {
+      flex-basis: max-content;
+    }
+  }
+
+  &__logo {
+    flex-basis: unset !important;
+  }
+}
+
+//
+//  Display none
+//  --------------------------------------------------
+
+.navbar__item svg,
+.menu__link svg,
+.footer__link-item svg {
+  display: none;
+}
+
+//
+//  Docs (Page)
+//  --------------------------------------------------
+
+.markdown h1:first-child {
+  --ifm-h1-font-size: 2rem;
+}
+
+// toggle word wrap code block
+code[class^='codeBlockLines_'] {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+//  Docs content images
+div[class^='docItemContainer_'] article img {
+  display: block;
+  margin: auto;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+// menu sidebar
+
+.menu__list {
+  font-size: 14px;
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+  background-color: var(--menu-link-active);
+}
+
+//  Footer link images
+a[class^='footerLogoLink_'] {
+  opacity: 1;
+}
+
+//
+//  General styles
+//  --------------------------------------------------
+
+.section-block {
+  margin: 50px auto;
+
+  &__heading {
+    text-align: center;
+    font-size: 32px !important;
+    font-weight: 500 !important;
+    margin: 20px 0 40px !important;
+  }
+
+  &__description {
+    text-align: center;
+    margin: -20px auto 60px !important;
+  }
+}
+
+.header-github-link {
+  &::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    display: flex;
+    background-color: var(--ifm-navbar-link-color);
+    mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E");
+    transition: background-color var(--ifm-transition-fast) var(--ifm-transition-timing-default);
+  }
+
+  &:hover::before {
+    background-color: var(--ifm-navbar-link-hover-color);
+  }
+}
