@@ -1,0 +1,7 @@
+{
+  "name": "VitePress Boilerplate (JS)",
+  "message": "Deploy new VitePress applications to run directly on the edge",
+  "preset": "vitepress",
+  "mode": "deliver",
+  "path": "/vitepress-boilerplate-js"
+}
