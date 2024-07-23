@@ -1,0 +1,33 @@
+---
+title: Contact
+description: Get in touch
+permalink: /contact/
+email:
+hero: Get in touch
+map-id:
+  lat: # the page below id only an example, add your coordinates
+  long: # # Have a look at jekyll-leaflet plugin documentation (https://github.com/DavidJVitale/jekyll-leaflet)
+  address: # And also refer to Leaflet.js (https://leafletjs.com)
+  zoom:
+  popup-title:
+  popup-text: ""
+---
+{% include formcarry.html %}
+
+{% comment %}
+This is an example of how to set up a map, if you uncomment this, the map will work locally and on your own server (AWS, Netlify, etc.) but won't work with GitHub Pages.
+{% endcomment %}
+
+{% leaflet_map {"zoom" : 6 } %}
+
+    {% leaflet_marker { "latitude" : 50.825909,
+                       "longitude" : 4.3701717,
+                       "popupContent" : "Supply, made in Brussels, Belgium"} %}
+
+    {% leaflet_geojson {
+        "type": "Feature",
+        "properties": { "popupContent": "Supply",
+                        "href": "https://templates.supply" },
+         } %}
+
+{% endleaflet_map %}

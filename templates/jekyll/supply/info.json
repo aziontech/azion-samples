@@ -1,0 +1,7 @@
+{
+  "name": "Supply",
+  "message": "An e-commerce Jekyll theme with Gumroad integration.",
+  "preset": "jekyll",
+  "mode": "deliver",
+  "path": "/supply"
+}
