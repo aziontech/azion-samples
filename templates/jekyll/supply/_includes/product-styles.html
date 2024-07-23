@@ -1,0 +1,8 @@
+<section class="styles">
+	{% for product in site.product %}
+		<div class="style aspect-ratio aspect-ratio--1x1" >
+			<a class="db bg-center cover aspect-ratio--object" href="{{ product.url }}" style="background-image:url({{ product.image }});"</a>
+
+		</div>
+	{% endfor %}
+</section>
