@@ -7,7 +7,7 @@
     You can read more about it on <a href="./LICENSE" title=".LICENSE">LICENSE</a>.
 </p>
 
-Welcome to the repository for code samples and templates designed for our edge computing platform. This platform allows you to run serverless applications using edge functions, providing low latency and high performance. Here, you'll find examples and templates to help you get started with various JavaScript frameworks, including Next.js, Angular, Astro, and more.
+Welcome to the repository for code samples and templates designed for our edge computing platform. This platform allows you to run serverless applications using edge functions, providing low latency and high performance. Here, you'll find examples and templates to help you get started with various JavaScript frameworks, including Next.js, Angular, Astro, and more. These templates are used during the init of a project through [Azion CLI](https://github.com/aziontech/azion).
 
 ## Table of Contents
 - [Introduction](#introduction)
