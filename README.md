@@ -1,26 +1,57 @@
-# azion-samples
+<h1 align="center">
+  Azion Samples and Templates
+</h1>
+<p align="center">
+    We're under a <a href="https://opensource.org/license/mit/" title="MIT">MIT license</a>.
+    <br>
+    You can read more about it on <a href="./LICENSE" title=".LICENSE">LICENSE</a>.
+</p>
 
-This repository presents a variety of **code samples** in JavaScript to help developers get familiar with coding edge functions and have them running at the edge with the Azion Edge Platform.
+Welcome to the repository for code samples and templates designed for our edge computing platform. This platform allows you to run serverless applications using edge functions, providing low latency and high performance. Here, you'll find examples and templates to help you get started with various JavaScript frameworks, including Next.js, Angular, Astro, and more. These templates are used during the init of a project through [Azion CLI](https://github.com/aziontech/azion).
 
-The functions are written in JavaScript and represent the approach to be taken to run them through the [Azion Edge Runtime](https://www.azion.com/en/documentation/products/edge-application/edge-functions/runtime/overview/).
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+=  - [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-## Edge functions 
+## Introduction
 
-[Azion Edge Functions](https://www.azion.com/en/documentation/products/edge-application/edge-functions/) allow you to create event-driven, serverless applications, at the edge of the network, closer to users.
+This repository contains a collection of code samples and templates specifically designed to work with our edge computing platform. Whether you're building serverless functions or initializing applications with popular JavaScript frameworks, this repo has you covered.
 
-With Edge Functions, you can perform serverless functions in response to events on the edge nodes of Azion's network with no need of having or managing servers.
+## Features
 
-## Edge functions on Edge Firewall
+- **Edge Functions**: deploy and run serverless functions at the edge for low latency and high performance.
+- **Framework Support**: initialize applications using popular frameworks like Next.js, Angular, Astro, and more.
+- **Sample Code**: ready-to-use code samples to help you get started quickly.
+- **Templates**: boilerplate templates to streamline the application initialization process.
 
-Through the [edge functions on Edge Firewall](https://www.azion.com/en/documentation/products/edge-firewall/edge-functions/firewall/), you can write your own security source code in JavaScript and deploy it to run at the edge of the network, as well as:
+## Getting Started
 
-- Boost your protection.
-- Have more dynamism.
-- Apply the logic that your business requires.
-- Use APIs that provide request and response headers manipulation.
+### Prerequisites
 
-## About the code samples
+Before you begin, ensure you have the following installed:
 
-The functions in this directory were created as examples to be followed. Based on them, you can apply the logic your application requires.
+- [Git](https://git-scm.com/)
 
-**Move to the Edge**
+### Usage
+
+Each sample and template comes with detailed instructions on how to deploy and run the code. Follow the README within each subdirectory for specific usage information.
+
+### Others
+
+Additional samples and templates for other frameworks will be added over time. Check back regularly for updates.
+
+## Contributing
+
+We welcome contributions to this repository! If you have code samples, templates, or improvements, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Open a pull request.
