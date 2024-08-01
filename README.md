@@ -24,10 +24,11 @@ Welcome to the repository for code samples and templates designed for our edge c
 This repository contains a collection of code samples and templates specifically designed to work with our edge computing platform. Whether you're building serverless functions or initializing applications with popular JavaScript frameworks, this repo has you covered.
 
 ## Features
-- **Edge Functions**: Deploy and run serverless functions at the edge for low latency and high performance.
-- **Framework Support**: Initialize applications using popular frameworks like Next.js, Angular, Astro, and more.
-- **Sample Code**: Ready-to-use code samples to help you get started quickly.
-- **Templates**: Boilerplate templates to streamline the app initialization process.
+
+- **Edge Functions**: deploy and run serverless functions at the edge for low latency and high performance.
+- **Framework Support**: initialize applications using popular frameworks like Next.js, Angular, Astro, and more.
+- **Sample Code**: ready-to-use code samples to help you get started quickly.
+- **Templates**: boilerplate templates to streamline the application initialization process.
 
 ## Getting Started
 
