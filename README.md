@@ -2,7 +2,7 @@
   Azion Samples and Templates
 </h1>
 <p align="center">
-    We're under a <a href="https://opensource.org/license/mit/" title="MIT">MIT</a> license.
+    We're under a <a href="https://opensource.org/license/mit/" title="MIT">MIT license</a>.
     <br>
     You can read more about it on <a href="./LICENSE" title=".LICENSE">LICENSE</a>.
 </p>
