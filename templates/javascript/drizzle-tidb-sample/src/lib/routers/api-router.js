@@ -1,16 +1,5 @@
 import { Router } from "itty-router";
-import { connect } from '@tidbcloud/serverless';
-import { drizzle } from 'drizzle-orm/tidb-serverless';
 import { desc, eq } from 'drizzle-orm';
-import { mysqlTable, int, text } from 'drizzle-orm/mysql-core';
-
-/**
- * Setup of the TiDB Table
- */
-const posts = mysqlTable('posts', {
-  id: int('id'),
-  message: text('message'),
-});
 
 /**
  * Api route using the itty-router library.
@@ -31,23 +20,12 @@ export const ApiRouter = () => {
 /**
  * Get All Posts Handler
  * @param {*} request
- * @param {*} extras
- * @param {*} extras.args function args e.g
+ * @param {*} db drizzle database client
+ * @param {*} db drizzle posts table
  * @returns {{ results: any[] }}
  */
-const apiGetAllPostsHandler = async (request, extras) => {
-  const { args } = extras;
-
+const apiGetAllPostsHandler = async (request, db, posts) => {
   try {
-    const client = connect({
-      database: args.database || Azion.env.get("DRIZZLE_TIDB_DATABASE"),
-      host: args.host || Azion.env.get("DRIZZLE_TIDB_HOST"),
-      password: args.password || Azion.env.get("DRIZZLE_TIDB_PASSWORD"),
-      port: args.port || Azion.env.get("DRIZZLE_TIDB_PORT"),
-      username: args.username || Azion.env.get("DRIZZLE_TIDB_USERNAME"),
-    });
-
-    const db = drizzle(client);
     const data = await db.select().from(posts).orderBy(desc(posts.id));
 
     return new Response(JSON.stringify({ results: data || [] }), {
@@ -69,13 +47,11 @@ const apiGetAllPostsHandler = async (request, extras) => {
 /**
  * Create post Handler
  * @param {*} request
- * @param {*} extras
- * @param {*} extras.args function args e.g
+ * @param {*} db drizzle database client
+ * @param {*} db drizzle posts table
  * @returns {{ message: string }}
  */
-const apiCreatePostHandler = async (request, extras) => {
-  const { args } = extras;
-
+const apiCreatePostHandler = async (request, db, posts) => {
   try {
     let body = await request.json();
 
@@ -85,15 +61,6 @@ const apiCreatePostHandler = async (request, extras) => {
       return new Response("Please your post cannot be longer than 140 characters", { status: 400 });
     }
 
-    const client = connect({
-      database: args.database || Azion.env.get("DRIZZLE_TIDB_DATABASE"),
-      host: args.host || Azion.env.get("DRIZZLE_TIDB_HOST"),
-      password: args.password || Azion.env.get("DRIZZLE_TIDB_PASSWORD"),
-      port: args.port || Azion.env.get("DRIZZLE_TIDB_PORT"),
-      username: args.username || Azion.env.get("DRIZZLE_TIDB_USERNAME"),
-    });
-
-    const db = drizzle(client);
     const data = await db.insert(posts).values({ message: body.post });
 
     return new Response(JSON.stringify({ message: "success" }), {
@@ -115,12 +82,11 @@ const apiCreatePostHandler = async (request, extras) => {
 /**
  * Delete Post Handler
  * @param {*} request
- * @param {*} extras
- * @param {*} extras.args function args e.g
+ * @param {*} db drizzle database client
+ * @param {*} db drizzle posts table
  * @returns {{ results: any[] }}
  */
-const apiDeletePostPostsHandler = async (request, extras) => {
-  const { args } = extras;
+const apiDeletePostPostsHandler =async (request, db, posts) => {
   const { id } = request.params;
   
   if (!id) {
@@ -128,15 +94,6 @@ const apiDeletePostPostsHandler = async (request, extras) => {
   }
 
   try {
-    const client = connect({
-      database: args.database || Azion.env.get("DRIZZLE_TIDB_DATABASE"),
-      host: args.host || Azion.env.get("DRIZZLE_TIDB_HOST"),
-      password: args.password || Azion.env.get("DRIZZLE_TIDB_PASSWORD"),
-      port: args.port || Azion.env.get("DRIZZLE_TIDB_PORT"),
-      username: args.username || Azion.env.get("DRIZZLE_TIDB_USERNAME"),
-    });
-
-    const db = drizzle(client);
     const deleted = await db.delete(posts).where(eq(posts.id, id));
 
     if (deleted.rowsAffected > 0) {
@@ -167,12 +124,11 @@ const apiDeletePostPostsHandler = async (request, extras) => {
 /**
  * Update Post Handler
  * @param {*} request
- * @param {*} extras
- * @param {*} extras.args function args e.g
+ * @param {*} db drizzle database client
+ * @param {*} db drizzle posts table
  * @returns {{ results: any[] }}
  */
-const apiUpdatePostPostsHandler = async (request, extras) => {
-  const { args } = extras;
+const apiUpdatePostPostsHandler = async (request, db, posts) => {
   const { id } = request.params;
 
   if (!id) {
@@ -188,15 +144,6 @@ const apiUpdatePostPostsHandler = async (request, extras) => {
       return new Response("Please your post cannot be longer than 140 characters", { status: 400 });
     }
 
-    const client = connect({
-      database: args.database || Azion.env.get("DRIZZLE_TIDB_DATABASE"),
-      host: args.host || Azion.env.get("DRIZZLE_TIDB_HOST"),
-      password: args.password || Azion.env.get("DRIZZLE_TIDB_PASSWORD"),
-      port: args.port || Azion.env.get("DRIZZLE_TIDB_PORT"),
-      username: args.username || Azion.env.get("DRIZZLE_TIDB_USERNAME"),
-    });
-
-    const db = drizzle(client);
     const updated = await db.update(posts)
       .set({ message: body.post })
       .where(eq(posts.id, id));
