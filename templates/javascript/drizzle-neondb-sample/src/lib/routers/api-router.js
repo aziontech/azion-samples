@@ -1,16 +1,5 @@
 import { Router } from "itty-router";
-import { neon } from '@neondatabase/serverless';
-import { drizzle } from 'drizzle-orm/neon-http';
 import { desc, eq } from 'drizzle-orm';
-import { pgTable, text, serial } from "drizzle-orm/pg-core";
-
-/**
- * Setup of the Neon Table
- */
-const posts = pgTable('posts', {
-  id: serial('id'),
-  message: text('message'),
-});
 
 /**
  * Api route using the itty-router library.
@@ -31,19 +20,12 @@ export const ApiRouter = () => {
 /**
  * Get All Posts Handler
  * @param {*} request
- * @param {*} extras
- * @param {*} extras.args function args e.g
+ * @param {*} db drizzle database client
+ * @param {*} db drizzle posts table
  * @returns {{ results: any[] }}
  */
-const apiGetAllPostsHandler = async (request, extras) => {
-  const { args } = extras;
-  
+const apiGetAllPostsHandler = async (request, db, posts) => {
   try {
-    const client = neon(
-      args.connection_url ||
-      Azion.env.get("DRIZZLE_NEON_CONNECTION_URL")
-    )
-    const db = drizzle(client);
     const data = await db.select().from(posts).orderBy(desc(posts.id));
 
     return new Response(JSON.stringify({ results: data || [] }), {
@@ -65,13 +47,11 @@ const apiGetAllPostsHandler = async (request, extras) => {
 /**
  * Create post Handler
  * @param {*} request
- * @param {*} extras
- * @param {*} extras.args function args e.g
+ * @param {*} db drizzle database client
+ * @param {*} db drizzle posts table
  * @returns {{ message: string }}
  */
-const apiCreatePostHandler = async (request, extras) => {
-  const { args } = extras;
-
+const apiCreatePostHandler = async (request, db, posts) => {
   try {
     let body = await request.json();
 
@@ -81,11 +61,6 @@ const apiCreatePostHandler = async (request, extras) => {
       return new Response("Please your post cannot be longer than 140 characters", { status: 400 });
     }
 
-    const client = neon(
-      args.connection_url ||
-      Azion.env.get("DRIZZLE_NEON_CONNECTION_URL")
-    )
-    const db = drizzle(client);
     const data = await db.insert(posts).values({ message: body.post });
 
     return new Response(JSON.stringify({ message: "success" }), {
@@ -107,12 +82,11 @@ const apiCreatePostHandler = async (request, extras) => {
 /**
  * Delete Post Handler
  * @param {*} request
- * @param {*} extras
- * @param {*} extras.args function args e.g
+ * @param {*} db drizzle database client
+ * @param {*} db drizzle posts table
  * @returns {{ results: any[] }}
  */
-const apiDeletePostPostsHandler = async (request, extras) => {
-  const { args } = extras;
+const apiDeletePostPostsHandler = async (request, db, posts) => {
   const { id } = request.params;
   
   if (!id) {
@@ -120,11 +94,6 @@ const apiDeletePostPostsHandler = async (request, extras) => {
   }
 
   try {
-    const client = neon(
-      args.connection_url ||
-      Azion.env.get("DRIZZLE_NEON_CONNECTION_URL")
-    )
-    const db = drizzle(client);
     const deleted = await db.delete(posts).where(eq(posts.id, id)).returning();
     
     if (deleted.length > 0) {
@@ -155,12 +124,11 @@ const apiDeletePostPostsHandler = async (request, extras) => {
 /**
  * Update Post Handler
  * @param {*} request
- * @param {*} extras
- * @param {*} extras.args function args e.g
+ * @param {*} db drizzle database client
+ * @param {*} db drizzle posts table
  * @returns {{ results: any[] }}
  */
-const apiUpdatePostPostsHandler = async (request, extras) => {
-  const { args } = extras;
+const apiUpdatePostPostsHandler = async (request, db, posts) => {
   const { id } = request.params;
 
   if (!id) {
@@ -176,11 +144,6 @@ const apiUpdatePostPostsHandler = async (request, extras) => {
       return new Response("Please your post cannot be longer than 140 characters", { status: 400 });
     }
 
-    const client = neon(
-      args.connection_url ||
-      Azion.env.get("DRIZZLE_NEON_CONNECTION_URL")
-    )
-    const db = drizzle(client);
     const updated = await db.update(posts)
       .set({ message: body.post })
       .where(eq(posts.id, id)).returning();

@@ -1,16 +1,5 @@
 import { Router } from "itty-router";
-import { createClient } from "@libsql/client/web";
-import { drizzle } from 'drizzle-orm/libsql';
 import { desc, eq } from 'drizzle-orm';
-import { integer, text, sqliteTable } from "drizzle-orm/sqlite-core";
-
-/**
- * Setup of the Turso Table
- */
-const posts = sqliteTable('posts', {
-  id: integer('id'),
-  message: text('message'),
-});
 
 /**
  * Api route using the itty-router library.
@@ -31,19 +20,11 @@ export const ApiRouter = () => {
 /**
  * Get All Posts Handler
  * @param {*} request
- * @param {*} extras
- * @param {*} extras.args function args e.g
+ * @param {*} db drizzle database client
+ * @param {*} db drizzle posts table
  * @returns {{ results: any[] }}
  */
-const apiGetAllPostsHandler = async (request, extras) => {
-  const { args } = extras;
-  
-  const client = createClient({
-    url: args.url || Azion.env.get("DRIZZLE_TURSO_URL"),
-    authToken: args.token || Azion.env.get("DRIZZLE_TURSO_TOKEN"),
-  });
-
-  const db = drizzle(client);
+const apiGetAllPostsHandler = async (request, db, posts) => {
   const data = await db.select().from(posts).orderBy(desc(posts.id));
 
   return new Response(JSON.stringify({ results: data || [] }), {
@@ -57,13 +38,11 @@ const apiGetAllPostsHandler = async (request, extras) => {
 /**
  * Create post Handler
  * @param {*} request
- * @param {*} extras
- * @param {*} extras.args function args e.g
+ * @param {*} db drizzle database client
+ * @param {*} db drizzle posts table
  * @returns {{ message: string }}
  */
-const apiCreatePostHandler = async (request, extras) => {
-  const { args } = extras;
-
+const apiCreatePostHandler = async (request, db, posts) => {
   try {
     let body = await request.json();
 
@@ -73,12 +52,6 @@ const apiCreatePostHandler = async (request, extras) => {
       return new Response("Please your post cannot be longer than 140 characters", { status: 400 });
     }
 
-    const client = createClient({
-      url: args.url || Azion.env.get("DRIZZLE_TURSO_URL"),
-      authToken: args.token || Azion.env.get("DRIZZLE_TURSO_TOKEN"),
-    });
-
-    const db = drizzle(client);
     const data = await db.insert(posts).values({ message: body.post });
 
     return new Response(JSON.stringify({ message: "success" }), {
@@ -96,12 +69,11 @@ const apiCreatePostHandler = async (request, extras) => {
 /**
  * Delete Post Handler
  * @param {*} request
- * @param {*} extras
- * @param {*} extras.args function args e.g
+ * @param {*} db drizzle database client
+ * @param {*} db drizzle posts table
  * @returns {{ results: any[] }}
  */
-const apiDeletePostPostsHandler = async (request, extras) => {
-  const { args } = extras;
+const apiDeletePostPostsHandler = async (request, db, posts) => {
   const { id } = request.params;
   
   if (!id) {
@@ -109,12 +81,6 @@ const apiDeletePostPostsHandler = async (request, extras) => {
   }
 
   try {
-    const client = createClient({
-      url: args.url || Azion.env.get("DRIZZLE_TURSO_URL"),
-      authToken: args.token || Azion.env.get("DRIZZLE_TURSO_TOKEN"),
-    });
-
-    const db = drizzle(client);
     const deleted = await db.delete(posts).where(eq(posts.id, id)).returning();
     
     if (deleted.length > 0) {
@@ -141,12 +107,11 @@ const apiDeletePostPostsHandler = async (request, extras) => {
 /**
  * Update Post Handler
  * @param {*} request
- * @param {*} extras
- * @param {*} extras.args function args e.g
+ * @param {*} db drizzle database client
+ * @param {*} db drizzle posts table
  * @returns {{ results: any[] }}
  */
-const apiUpdatePostPostsHandler = async (request, extras) => {
-  const { args } = extras;
+const apiUpdatePostPostsHandler = async (request, db, posts) => {
   const { id } = request.params;
 
   if (!id) {
@@ -162,12 +127,6 @@ const apiUpdatePostPostsHandler = async (request, extras) => {
       return new Response("Please your post cannot be longer than 140 characters", { status: 400 });
     }
 
-    const client = createClient({
-      url: args.url || Azion.env.get("DRIZZLE_TURSO_URL"),
-      authToken: args.token || Azion.env.get("DRIZZLE_TURSO_TOKEN"),
-    });
-
-    const db = drizzle(client);
     const updated = await db.update(posts)
       .set({ message: body.post })
       .where(eq(posts.id, id))
