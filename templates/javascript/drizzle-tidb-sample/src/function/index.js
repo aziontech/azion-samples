@@ -3,7 +3,6 @@ import { PageRouter } from "../lib/routers/page-router.js";
 import { ApiRouter } from "../lib/routers/api-router.js";
 import { connect } from '@tidbcloud/serverless';
 import { drizzle } from 'drizzle-orm/tidb-serverless';
-import { desc, eq } from 'drizzle-orm';
 import { mysqlTable, int, text } from 'drizzle-orm/mysql-core';
 
 async function handleRequest(request, args) {
