@@ -14,7 +14,7 @@ Welcome to the repository for code samples and templates designed for our edge c
 - [Features](#features)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-=  - [Usage](#usage)
+  - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
