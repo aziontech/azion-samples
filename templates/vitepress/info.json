@@ -1,4 +1,4 @@
 {
-  "name": "Vitepress"
+  "name": "VitePress",
+  "preset": "vitepress"
 }
-

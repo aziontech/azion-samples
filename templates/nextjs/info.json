@@ -1,4 +1,4 @@
 {
-  "name": "Next"
+  "name": "Next.js",
+  "preset": "next"
 }
-

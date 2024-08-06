@@ -1,4 +1,4 @@
 {
-  "name": "Docusaurus"
+  "name": "Docusaurus",
+  "preset": "docusaurus"
 }
-

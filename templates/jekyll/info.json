@@ -1,4 +1,4 @@
 {
-  "name": "Jekyll"
+  "name": "Jekyll",
+  "preset": "jekyll"
 }
-

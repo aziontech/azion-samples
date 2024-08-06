@@ -1,4 +1,5 @@
 {
-  "name": "Gatsby"
+  "name": "Gatsby",
+  "preset": "gatsby"
 }
 

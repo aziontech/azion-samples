@@ -1,4 +1,4 @@
 {
-  "name": "Astro"
+  "name": "Astro",
+  "preset": "astro"
 }
-

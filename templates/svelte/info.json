@@ -1,4 +1,4 @@
 {
-  "name": "Svelte"
+  "name": "Svelte",
+  "preset": "svelte"
 }
-

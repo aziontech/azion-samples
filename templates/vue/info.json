@@ -1,4 +1,4 @@
 {
-  "name": "Vue"
+  "name": "Vue.js",
+  "preset": "vue"
 }
-

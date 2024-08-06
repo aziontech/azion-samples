@@ -1,4 +1,4 @@
 {
-  "name": "Rustwasm"
+  "name": "Rust WASM",
+  "preset": "rustwasm"
 }
-

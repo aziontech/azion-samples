@@ -1,4 +1,5 @@
 {
-  "name": "Hugo"
+  "name": "Hugo",
+  "preset": "hugo"
 }
 
