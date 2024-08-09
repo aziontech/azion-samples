@@ -1,0 +1,20 @@
+{
+  "name": "simple-ts-router",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "aziontech",
+  "license": "ISC",
+  "dependencies": {
+    "hono": "^4.5.3",
+    "itty-router": "^4.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.2"
+  }
+}
