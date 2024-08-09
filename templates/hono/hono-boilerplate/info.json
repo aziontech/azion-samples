@@ -1,0 +1,7 @@
+{
+  "name": "Hono Boilerplate",
+  "message": "Test how the Hono framework works on the edge",
+  "preset": "javascript",
+  "mode": "compute",
+  "path": "/hono-boilerplate"
+}

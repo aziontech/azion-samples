@@ -1,7 +1,7 @@
 {
-  "name": "simple-ts-router",
+  "name": "hono-boilerplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "hono boilerplate",
   "main": "src/index.ts",
   "type": "module",
   "scripts": {
@@ -11,8 +11,7 @@
   "author": "aziontech",
   "license": "ISC",
   "dependencies": {
-    "hono": "^4.5.3",
-    "itty-router": "^4.2.0"
+    "hono": "^4.5.3"
   },
   "devDependencies": {
     "typescript": "^5.4.2"
