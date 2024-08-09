@@ -1,6 +1,0 @@
-preset=typescript
-mode=compute
-builder=esbuild
-entry=src/index.ts
-useNodePolyfills=false
-useOwnWorker=true
