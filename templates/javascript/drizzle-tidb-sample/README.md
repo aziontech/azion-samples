@@ -25,7 +25,6 @@ It can be done by setting the following [Environment Variables](https://www.azio
 - `DRIZZLE_TIDB_PASSWORD`
 - `DRIZZLE_TIDB_PORT`
 - `DRIZZLE_TIDB_USERNAME`
-- `DRIZZLE_TURSO_TOKEN`
 
 Or via JSON Args:
 ```json
