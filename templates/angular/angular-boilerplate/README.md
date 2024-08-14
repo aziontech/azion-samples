@@ -8,6 +8,14 @@ This template uses Angular CLI version `16.1.3`.
 
 ---
 
+## Deploy Your Own
+
+Deploy your own Angular project with Azion.
+
+[![](/static/button.png)](https://console.azion.com/create/angular/angular-boilerplate "Deploy with Azion")
+
+---
+
 ## Usage information
 
 To use this template, you must [sign in on Azion Console](https://console.azion.com/login).
