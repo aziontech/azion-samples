@@ -1,13 +1,12 @@
-<h1 align="center">
-  Azion Samples and Templates
-</h1>
-<p align="center">
-    We're under a <a href="https://opensource.org/license/mit/" title="MIT">MIT license</a>.
-    <br>
-    You can read more about it on <a href="./LICENSE" title=".LICENSE">LICENSE</a>.
-</p>
+# Azion Samples and Templates
 
-Welcome to the repository for code samples and templates designed for our edge computing platform. This platform allows you to run serverless applications using edge functions, providing low latency and high performance. Here, you'll find examples and templates to help you get started with various JavaScript frameworks, including Next.js, Angular, Astro, and more. These templates are used during the init of a project through [Azion CLI](https://github.com/aziontech/azion).
+[![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
+Welcome to the repository for code samples and templates designed for our Edge Computing Platform.
+
+This platform allows you to run serverless applications using edge functions, providing low latency and high performance. Here, you'll find examples and templates to help you get started with various JavaScript frameworks, including Next.js, Angular, Astro, and more.
+
+These templates are used during the init of a project through [Azion CLI](https://github.com/aziontech/azion).
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -15,9 +14,9 @@ Welcome to the repository for code samples and templates designed for our edge c
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Usage](#usage)
+  - [Others](#others)
 - [Contributing](#contributing)
 - [License](#license)
-- [Contact](#contact)
 
 ## Introduction
 
@@ -55,3 +54,7 @@ We welcome contributions to this repository! If you have code samples, templates
 3. Commit your changes (`git commit -m 'Add some feature'`).
 4. Push to the branch (`git push origin feature/your-feature`).
 5. Open a pull request.
+
+## License
+
+This project is licensed under the terms of the [MIT](LICENSE) license.
