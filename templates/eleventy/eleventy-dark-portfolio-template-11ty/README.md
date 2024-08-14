@@ -5,10 +5,16 @@ Uses the W3CSS template "Dark Portfolio Template"
 
 [![Build Status](https://travis-ci.com/jmschrack/Dark-Portfolio-Template-11ty.svg?branch=dev)](https://travis-ci.org/jmschrack/dark-portfolio-template-11ty)
 
+
+##  Deploy Your Own
+
+Deploy your own 11ty project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/11ty/11ty-portfolio "Deploy with Azion")
+
 ## Demos
 
-* [GitHub Pages](https://jmschrack.github.io/Dark-Portfolio-Template-11ty/)
-
+* [Azion](https://ua0f7vcocv.map.azionedge.net)
 
 
 ## Getting Started

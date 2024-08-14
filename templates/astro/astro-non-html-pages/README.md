@@ -14,6 +14,17 @@ npm create astro@latest -- --template non-html-pages
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
+---
+
+## Deploy Your Own
+
+Deploy your own Astro project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/astro/astro-with-non-html-pages "Deploy with Azion")
+
+
+---
+
 ## 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:

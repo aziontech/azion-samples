@@ -6,6 +6,13 @@ This repository is an example of the new GitHub repository created during the de
 
 This template uses Hexo version `6.3.0`.
 
+##  Deploy Your Own
+
+Deploy your own Hexo project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/hexo/hexo-boilerplate "Deploy with Azion")
+
+
 ## Usage Information
 
 To start using this template, you need to: 

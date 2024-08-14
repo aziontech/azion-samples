@@ -2,6 +2,13 @@
 
 Minimal example of using HTMX in an Azion edge function.
 
+##  Deploy Your Own
+
+Deploy your own HTMX project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/htmx/htmx-boilerplate "Deploy with Azion")
+
+
 ## Settings
 
 To successfully deploy this template, you must provide the information to configure your Azion application. Fields identified with an asterisk are mandatory.

@@ -35,4 +35,8 @@ npm run build
 
 You can preview the production build with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+##  Deploy Your Own
+
+Deploy your own Svelte project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/svelte/svelte-boilerplate "Deploy with Azion")

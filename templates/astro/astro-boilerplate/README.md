@@ -6,6 +6,16 @@ This repository is an example of the new GitHub repository created during the de
 
 This template uses Astro version `4.5.12`.
 
+
+---
+
+## Deploy Your Own
+
+Deploy your own Astro project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/astro/astro-boilerplate "Deploy with Azion")
+
+
 ---
 
 ## Usage information

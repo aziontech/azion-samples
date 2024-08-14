@@ -11,3 +11,14 @@ npm create astro@latest -- --template with-markdown-shiki
 This example showcases Astro's [built-in Markdown support](https://docs.astro.build/en/guides/markdown-content/).
 
 - `src/pages/index.md` is a treated as a page entrypoint and uses a `layout`.
+
+---
+
+## Deploy Your Own
+
+Deploy your own Astro project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/astro/astro-markdown-with-shiki "Deploy with Azion")
+
+
+---

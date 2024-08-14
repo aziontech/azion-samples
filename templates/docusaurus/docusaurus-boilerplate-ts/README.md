@@ -2,6 +2,12 @@
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
+###  Deploy Your Own
+
+Deploy your own Docusaurus project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/docusaurus/docusaurus-boilerplate-typescript "Deploy with Azion")
+
 ### Installation
 
 ```

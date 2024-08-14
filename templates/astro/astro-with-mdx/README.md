@@ -9,3 +9,13 @@ npm create astro@latest -- --template with-mdx
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/with-mdx/devcontainer.json)
 
 This example showcases using [`@astrojs/mdx`](https://www.npmjs.com/package/@astrojs/mdx) to author content using [MDX](https://mdxjs.com/).
+
+---
+
+## Deploy Your Own
+
+Deploy your own Astro project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/astro/astro-with-mdx "Deploy with Azion")
+
+---

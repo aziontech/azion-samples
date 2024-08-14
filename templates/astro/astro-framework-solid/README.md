@@ -11,3 +11,14 @@ npm create astro@latest -- --template framework-solid
 This example showcases Astro working with [Solid](https://www.solidjs.com/).
 
 Write your Solid components as `.jsx` or `.tsx` files in your project.
+
+---
+
+## Deploy Your Own
+
+Deploy your own Astro project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/astro/astro-with-framework-solid "Deploy with Azion")
+
+
+---

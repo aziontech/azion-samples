@@ -6,6 +6,13 @@
 with [Tailwind CSS](https://tailwindcss.com) and
 [Alpine.js](https://github.com/alpinejs/alpine/).
 
+##  Deploy Your Own
+
+Deploy your own 11ty project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/11ty/11ty-stater-kit "Deploy with Azion")
+
+
 ## Code Quality
 
 By default `CSS` and `JavaScript` is getting linted with every commit.

@@ -2,11 +2,13 @@
 
 A starter site for creating your own photo or art gallery using the [Eleventy](https://github.com/11ty/eleventy) static site generator.
 
-- [Live demo](https://eleventy-gallery.netlify.app/) - View the project live
-- [Deploy on Netlify](https://app.netlify.com/) - Host your own custom gallery
+- [Live demo](https://f1dp73qktv.map.azionedge.net) - View the project live
 
-## Getting Started
-Quickly generate a highly performant photo gallery from this template by clicking the green [Use Template](https://github.com/tannerdolby/eleventy-photo-gallery/generate) button. Creating a template repository provides the same directory structure and files as the original project.
+##  Deploy Your Own
+
+Deploy your own 11ty project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/11ty/11ty-photo-gallery "Deploy with Azion")
 
 ## Features 
 - Build-time image transformations and responsive image markup in templates with @11ty/eleventy-img

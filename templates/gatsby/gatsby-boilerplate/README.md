@@ -8,6 +8,14 @@ The Gatsby Boilerplate uses Gatsby version `5.13.3` and React version `18.2.0`.
 
 ---
 
+##  Deploy Your Own
+
+Deploy your own Gatsby project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/gatsby/gatsby-boilerplate "Deploy with Azion")
+
+---
+
 ## Usage information
 
 To use this template, you must [sign in on Azion Console](https://console.azion.com/login).

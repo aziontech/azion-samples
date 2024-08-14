@@ -8,6 +8,15 @@ This template uses Vue version `3.3.4`.
 
 ---
 
+##  Deploy Your Own
+
+Deploy your own Vue project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/vue/vue-boilerplate "Deploy with Azion")
+
+
+---
+
 ## Usage Information
 
 To use this template, you must [sign in on Azion Console](https://console.azion.com/login).

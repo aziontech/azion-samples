@@ -8,6 +8,14 @@ This template uses React version `18.2.0`.
 
 ---
 
+##  Deploy Your Own
+
+Deploy your own React project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/react/react-boilerplate "Deploy with Azion")
+
+---
+
 ## Usage Information
 
 To use this template, you must [sign in on Azion Console](https://console.azion.com/login).

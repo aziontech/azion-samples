@@ -8,6 +8,14 @@ This repository is an example of the new GitHub repository created during the de
 
 ---
 
+##  Deploy Your Own
+
+Deploy this project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/github/edge-function-github-autodeploy "Deploy with Azion")
+
+---
+
 ## Usage information
 
 To use this template, you must [sign in on Azion Console](https://console.azion.com/login).

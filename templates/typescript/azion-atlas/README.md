@@ -3,6 +3,14 @@
 The **MongoDB Atlas Boilerplate** allows you to deploy an application integrated with MongoDB Atlas on the edge. Besides, due to the integration with the Atlas Data API, you’re able to create, retrieve, update, and delete items in your collections through standard HTTPS requests.
 
 This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [How to deploy the MongoDB Atlas Boilerplate](https://www.azion.com/en/documentation/products/guides/mongodb-atlas/) guide.
+
+---
+
+##  Deploy Your Own
+
+Deploy your own MongoDB Atlas project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/mongodb-atlas/mongodb-atlas "Deploy with Azion")
  
 ---
 
