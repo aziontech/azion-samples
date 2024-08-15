@@ -11,3 +11,14 @@ npm create astro@latest -- --template framework-preact
 This example showcases Astro working with [Preact](https://preactjs.com).
 
 Write your Preact components as `.jsx` or `.tsx` files in your project.
+
+---
+
+## Deploy Your Own
+
+Deploy your own Astro project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/astro/astro-with-framework-preact "Deploy with Azion")
+
+
+---

@@ -9,3 +9,14 @@ npm create astro@latest -- --template framework-svelte
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/framework-svelte/devcontainer.json)
 
 This example showcases Astro working with [Svelte](https://svelte.dev/).
+
+---
+
+## Deploy Your Own
+
+Deploy your own Astro project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/astro/astro-with-framework-svelte "Deploy with Azion")
+
+
+---

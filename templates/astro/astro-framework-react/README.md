@@ -11,3 +11,14 @@ npm create astro@latest -- --template framework-react
 This example showcases Astro working with [React](https://react.dev).
 
 Write your React components as `.jsx` or `.tsx` files in your project.
+
+---
+
+## Deploy Your Own
+
+Deploy your own Astro project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/astro/astro-with-framework-react "Deploy with Azion")
+
+
+---

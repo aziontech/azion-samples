@@ -2,7 +2,13 @@
 
 `link-in-bio-11ty` was built off of a starter template for the [11ty](https://11ty.io) static site generator on [glitch.com](https://glitch.com). That template was [~11ty](https://glitch.com/~11ty) which [Cassey](https://glitch.com/@cassey) made [some slight modifications to](https://glitch.com/~11ty-simple) for better running on Glitch. The primary change there was to disable browsersync syncing. 
 
-See [the project live](https://link-in-bio-11ty.glitch.me/). 
+See [the project live](https://qk48ihj1x4.map.azionedge.net). 
+
+##  Deploy Your Own
+
+Deploy your own 11ty project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/11ty/11ty-link-in-bio "Deploy with Azion")
 
 ## How to use this app
 1. [Remix this project on Glitch](https://glitch.com/~link-in-bio-11ty) or clone the repository.

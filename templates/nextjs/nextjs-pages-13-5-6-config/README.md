@@ -18,6 +18,14 @@ This template uses Next version `13.5.6`.
 
 ---
 
+##  Deploy Your Own
+
+Deploy your own Next.js project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/nextjs/nextjs-pages-configurations "Deploy with Azion")
+
+---
+
 ## Usage information
 
 To use this template, you must [sign in on Azion Console](https://console.azion.com/login).

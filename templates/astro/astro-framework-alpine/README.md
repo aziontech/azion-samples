@@ -9,3 +9,14 @@ npm create astro@latest -- --template framework-alpine
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/framework-alpine/devcontainer.json)
 
 This example showcases Astro working with [AlpineJS](https://alpinejs.dev/).
+
+---
+
+## Deploy Your Own
+
+Deploy your own Astro project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/astro/astro-with-framework-alpine "Deploy with Azion")
+
+
+---

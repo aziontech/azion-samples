@@ -1,4 +1,4 @@
-![Microsite GitHub Banner](/assets/banner.jpg)
+![Microsite GitHub Banner](./assets/banner.jpg)
 
 Opinionated micro front-end that can be used to _create a one-pager_.  Great for landing pages or sign-up pages. It uses the static site generator [Eleventy (11ty)][11ty] under the hood and sets _common 11ty defaults_.
 
@@ -16,33 +16,12 @@ Opinionated micro front-end that can be used to _create a one-pager_.  Great for
 
 1. Update the `metadata.json` file with your own site details
 2. Edit the `index.njk` file and start coding your website!
-3. _Optional:_ [Deploy the site][deploy] to Netlify.
 
+##  Deploy Your Own
 
-## Install
+Deploy your own 11ty project with Azion.
 
-> Requires node.js and npm
-
-Follow these steps to get started:
-
-1. Clone the project
-
-```
-$ git clone https://github.com/systemdes/micro-site.git
-```
-
-2. Install the dependencies for this projects
-
-```
-npm i
-```
-
-3. Then do
-```
-npm run dev
-```
-
-to start the live-reloadzz on a local development server.
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/11ty/11ty-micro-site "Deploy with Azion")
 
 ## Project Structure
 

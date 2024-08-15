@@ -6,6 +6,14 @@ This repository is an example of the new GitHub repository created during the de
 
 ---
 
+##  Deploy Your Own
+
+Deploy your own Hello World project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/azion/edge-hello-world "Deploy with Azion")
+
+---
+
 ## Usage information
 
 To use this template, you must [sign in on Azion Console](https://console.azion.com/login).

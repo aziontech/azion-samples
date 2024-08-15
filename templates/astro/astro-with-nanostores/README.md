@@ -9,3 +9,13 @@ npm create astro@latest -- --template with-nanostores
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/with-nanostores/devcontainer.json)
 
 This example showcases using [`nanostores`](https://github.com/nanostores/nanostores) to provide shared state between components of any framework. [**Read our documentation on sharing state**](https://docs.astro.build/en/core-concepts/sharing-state/) for a complete breakdown of this project, along with guides to use React, Vue, Svelte, or Solid!
+
+---
+
+## Deploy Your Own
+
+Deploy your own Astro project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/astro/astro-with-nanostores "Deploy with Azion")
+
+---

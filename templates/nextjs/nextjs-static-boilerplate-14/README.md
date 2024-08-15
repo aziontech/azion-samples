@@ -8,6 +8,14 @@ This template uses Next.js version `14.1.4`.
 
 ---
 
+##  Deploy Your Own
+
+Deploy your own Next.js project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/nextjs/next-static-boilerplate "Deploy with Azion")
+
+---
+
 ## Static Exports
 
 Next.js enables starting as a static site or Single-Page Application (SPA), then later optionally upgrading to use features that require a server. More details [Next Static Export](https://nextjs.org/docs/app/building-your-application/deploying/static-exports).

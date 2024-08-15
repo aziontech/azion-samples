@@ -2,6 +2,12 @@
 
 This template provides a quickstart to deploy a [Hugo](https://gohugo.io) static website to the Azion edge platform.
 
+##  Deploy Your Own
+
+Deploy your own Hugo project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/hugo/hugo-boilerplate "Deploy with Azion")
+
 ## Settings
 
 To successfully deploy this template, you must provide the information to configure your Azion application. Fields identified with an asterisk are mandatory.

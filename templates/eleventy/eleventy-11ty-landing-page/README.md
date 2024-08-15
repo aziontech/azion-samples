@@ -2,10 +2,12 @@
 
 A simple landing page built with 11ty and Tailwind CSS.
 
-**Other versions**
+##  Deploy Your Own
 
-- [Astro](https://github.com/ttntm/astro-landing-page)
-- [Hugo](https://github.com/ttntm/hugo-landing-page)
+Deploy your own 11ty project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/11ty/11ty-landing-page "Deploy with Azion")
+
 
 ## How to use this template
 

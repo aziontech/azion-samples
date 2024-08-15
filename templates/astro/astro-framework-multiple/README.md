@@ -11,3 +11,14 @@ npm create astro@latest -- --template framework-multiple
 This example showcases Astro's built-in support for multiple frameworks ([React](https://react.dev), [Preact](https://preactjs.com), [Svelte](https://svelte.dev), and [Vue (`v3.x`)](https://v3.vuejs.org/)).
 
 No configuration is needed to enable these frameworks—just start writing components in `src/components`.
+
+---
+
+## Deploy Your Own
+
+Deploy your own Astro project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/astro/astro-multi "Deploy with Azion")
+
+
+---

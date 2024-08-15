@@ -9,3 +9,14 @@ npm create astro@latest -- --template framework-vue
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/framework-vue/devcontainer.json)
 
 This example showcases Astro working with [Vue](https://v3.vuejs.org/).
+
+---
+
+## Deploy Your Own
+
+Deploy your own Astro project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/astro/astro-with-framework-vue "Deploy with Azion")
+
+
+---

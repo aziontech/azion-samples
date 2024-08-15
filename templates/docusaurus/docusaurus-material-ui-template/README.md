@@ -2,7 +2,11 @@
 
 This project is a Docusaurus website integrated with Material UI. Docusaurus is a modern static website generator that makes it easy to build personal, project, and organization sites. Material UI is a popular React UI framework that provides a set of reusable, well-tested, and accessible UI components.
 
-[**View Demo →**](https://docusaurus-material-ui-template.vercel.app)
+##  Deploy Your Own
+
+Deploy your own Docusaurus project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/docusaurus/docusaurus-material-ui "Deploy with Azion")
 
 ## Technology used
 

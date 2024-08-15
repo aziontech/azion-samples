@@ -10,6 +10,14 @@ For a more detailed step-by-step to deploy this template via Azion Real-Time Man
 
 ---
 
+##  Deploy Your Own
+
+Deploy your own Upstash project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/upstash/upstash-geolocation "Deploy with Azion")
+
+---
+
 ## Usage information
 
 To use this template, you must [sign in on Azion Console](https://console.azion.com/login).

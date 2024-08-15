@@ -9,3 +9,14 @@ npm create astro@latest -- --template with-markdown-plugins
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/with-markdown-plugins/devcontainer.json)
 
 This example showcases Astro's [built-in Markdown support](https://docs.astro.build/en/guides/markdown-content/) with additional, user-provided plugins.
+
+---
+
+## Deploy Your Own
+
+Deploy your own Astro project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/astro/astro-markdown-with-plugins "Deploy with Azion")
+
+
+---

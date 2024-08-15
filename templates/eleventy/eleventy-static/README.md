@@ -81,21 +81,13 @@ Or you can run [debug mode](https://www.11ty.dev/docs/debugging/) to see all the
 
 ## Demos
 
-- [Netlify](https://eleventy-base-blog.netlify.com/)
-- [GitHub Pages](https://11ty.github.io/eleventy-base-blog/)
-- [Remix on Glitch](https://glitch.com/~11ty-eleventy-base-blog)
-- [Cloudflare Pages](https://eleventy-base-blog-d2a.pages.dev/)
+- [Azion](https://jclg2ljbur.map.azionedge.net)
 
-## Deploy this to your own site
+##  Deploy Your Own
 
-Deploy this Eleventy site in just a few clicks on these services:
+Deploy your own 11ty project with Azion.
 
-- [Deploy this to **Netlify**](https://app.netlify.com/start/deploy?repository=https://github.com/11ty/eleventy-base-blog)
-- [Deploy this to **Vercel**](https://vercel.com/import/project?template=11ty%2Feleventy-base-blog)
-- Look in `.github/workflows/gh-pages.yml.sample` for information on Deploying to **GitHub Pages**.
-- [Try it out on **Stackblitz**](https://stackblitz.com/github/11ty/eleventy-base-blog)
-- If you run Eleventy locally you can drag your `_site` folder to [`drop.netlify.com`](https://drop.netlify.com/) to upload it without using `git`.
-- Read more about [Deploying an Eleventy project](https://www.11ty.dev/docs/deployment/) to the web.
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/11ty/11ty-base-blog "Deploy with Azion")
 
 ### Implementation Notes
 

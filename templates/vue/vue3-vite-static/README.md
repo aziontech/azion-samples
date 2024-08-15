@@ -8,6 +8,15 @@ This template uses Vue version `3.3.4` and Vite version `4.4.6`.
 
 ---
 
+##  Deploy Your Own
+
+Deploy your own Vite project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/vitejs/vitejs-vue3-boilerplate "Deploy with Azion")
+
+
+---
+
 ## Usage information
 
 To use this template, you must [sign in on Azion Console](https://console.azion.com/login).
