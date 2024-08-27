@@ -66,7 +66,7 @@ const apiCreatePostHandler = async (request, extras) => {
       authToken: args.token || Azion.env.get("TURSO_TOKEN"),
     });
 
-    await await client.execute({
+    await client.execute({
       sql: "INSERT INTO posts (message) VALUES (:message)",
       args: { message: body?.post }
     });
@@ -103,7 +103,7 @@ const apiDeletePostPostsHandler = async (request, extras) => {
       authToken: args.token || Azion.env.get("TURSO_TOKEN"),
     });
 
-    await await client.execute({
+    await client.execute({
       sql: "DELETE FROM posts WHERE id = :id",
       args: {
         id: id
@@ -155,7 +155,7 @@ const apiUpdatePostPostsHandler = async (request, extras) => {
       authToken: args.token || Azion.env.get("TURSO_TOKEN"),
     });
 
-    await await client.execute({
+    await client.execute({
       sql: "UPDATE posts SET message = :message WHERE id = :id",
       args: {
         message: body?.post,
@@ -170,7 +170,7 @@ const apiUpdatePostPostsHandler = async (request, extras) => {
       status: 200,
     });
   } catch (error) {
-    console.log(error)
+    console.log(error);
     return new Response(JSON.stringify({ message: "not exist!" }), {
       headers: {
         "content-type": "application/json;charset=UTF-8",

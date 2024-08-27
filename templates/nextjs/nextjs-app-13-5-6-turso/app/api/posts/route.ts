@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
       authToken: Azion.env.get("TURSO_TOKEN") || ""
     });
 
-    await await client.execute({
+    await client.execute({
       sql: "INSERT INTO posts (message) VALUES (:message)",
       args: { message: body?.post }
     });
@@ -61,7 +61,7 @@ export async function PUT(request: NextRequest) {
       authToken: Azion.env.get("TURSO_TOKEN") || ""
     });
 
-    await await client.execute({
+    await client.execute({
       sql: "UPDATE posts SET message = :message WHERE id = :id",
       args: {
         message: body?.post,
@@ -94,7 +94,7 @@ export async function DELETE(request: NextRequest) {
       authToken: Azion.env.get("TURSO_TOKEN") || ""
     });
 
-    await await client.execute({
+    await client.execute({
       sql: "DELETE FROM posts WHERE id = :id",
       args: {
         id: id
