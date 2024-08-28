@@ -1,0 +1,12 @@
+---
+import type { TagsList } from '@/types/shared';
+
+export interface Props extends TagsList {}
+
+const { tags, title } = Astro.props;
+---
+
+<div class="text-base">
+  <span class="font-medium text-gray-700">{title}:</span>
+  <span class="font-normal text-gray-500">{tags.map((t) => t.name).join(', ')}</span>
+</div>

@@ -1,0 +1,20 @@
+---
+import type { DateRange } from '@/types/shared';
+import formatDateRange from '@/utils/format-date-range';
+
+export interface Props {
+  class?: string;
+  dates: DateRange;
+}
+
+const { dates, ...props } = Astro.props;
+---
+
+<div
+  class:list={[
+    'flex h-6 w-fit items-center whitespace-nowrap rounded bg-gray-800 px-2.5 text-sm font-medium text-white',
+    props.class,
+  ]}
+>
+  {formatDateRange(dates)}
+</div>

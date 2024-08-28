@@ -1,0 +1,13 @@
+---
+import Description from '@/components/description.astro';
+import { variantToClassName } from './typography.astro';
+
+export interface Props {
+  content: string;
+  class?: string;
+}
+
+const { content, class: className } = Astro.props;
+---
+
+<Description content={content} classList={[variantToClassName.paragraph, className]} />
