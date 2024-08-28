@@ -1,0 +1,8 @@
+{
+  "name": "Webpage to PDF Resume",
+  "message": "A tasteful, printable resume written with Astro and PandaCSS",
+  "preset": "astro",
+  "mode": "deliver",
+  "path": "/webpage-pdf-resume"
+}
+
