@@ -1,0 +1,26 @@
+---
+import type { LabelledValue } from '@/types/shared';
+import Typography from './typography.astro';
+
+export interface Props extends LabelledValue {}
+
+const { label, value, url } = Astro.props;
+
+const parsedValue = Array.isArray(value) ? value.join(', ') : value;
+
+const isHttpLink = url?.startsWith('http');
+const target = isHttpLink ? '_blank' : '_self';
+---
+
+<div>
+  <Typography variant="label">{label}:</Typography>
+  {
+    url ? (
+      <Typography as="a" href={url} target={target} class="underline">
+        {parsedValue}
+      </Typography>
+    ) : (
+      <Typography variant="value">{parsedValue}</Typography>
+    )
+  }
+</div>

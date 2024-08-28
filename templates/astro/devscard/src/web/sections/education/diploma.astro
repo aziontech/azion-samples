@@ -1,0 +1,35 @@
+---
+import type { Diploma } from '@/types/sections/education-section.types';
+import Description from '@/web/components/description.astro';
+import LinkButton from '@/web/components/link-button.astro';
+import Thumbnail from '@/web/components/thumbnail.astro';
+import Timestamp from '@/web/components/timestamp.astro';
+import Typography from '@/web/components/typography.astro';
+
+export interface Props extends Diploma {}
+
+const { title, institution, dates, description, links, image } = Astro.props;
+---
+
+<div class="flex flex-col gap-3">
+  <div class="flex w-full justify-between gap-2">
+    <div class="flex gap-4">
+      <Thumbnail src={image} alt={`${institution} logo`} size="large" />
+      <div class="flex flex-col">
+        <Typography variant="item-title">{title}</Typography>
+        <Typography variant="item-subtitle-primary" class="mb-0.5">{institution}</Typography>
+        <Timestamp dates={dates} />
+      </div>
+    </div>
+    {
+      links.length > 0 && (
+        <div class="flex flex-wrap gap-3 sm:flex-nowrap">
+          {links.map((link) => (
+            <LinkButton {...link} />
+          ))}
+        </div>
+      )
+    }
+  </div>
+  <Description content={description} />
+</div>

@@ -1,0 +1,27 @@
+---
+import type { Tag } from '@/types/shared';
+import Icon from './icon.astro';
+import Typography from './typography.astro';
+
+export interface Props extends Tag {}
+
+const { name, description, icon, iconColor, url } = Astro.props;
+
+const className = /* tw */ 'flex h-6 w-fit items-center gap-x-1.5 rounded bg-gray-100 px-2.5 dark:bg-gray-700';
+const customProps = url
+  ? ({
+      href: url,
+      as: 'a',
+      target: '_blank',
+      rel: 'noopener noreferrer',
+      class: `${className} hover:bg-gray-200 dark:hover:bg-gray-600`,
+    } as const)
+  : {
+      class: className,
+    };
+---
+
+<Typography variant="tag" data-tooltip={description} {...customProps}>
+  {icon && <Icon name={icon} color={iconColor} size={16} />}
+  {name}
+</Typography>

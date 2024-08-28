@@ -1,0 +1,24 @@
+---
+import type { LabelledValue } from '@/types/shared';
+
+export interface Props extends LabelledValue {
+  class?: string;
+}
+
+const { label, value, url, ...props } = Astro.props;
+
+const parsedValue = Array.isArray(value) ? value.join(', ') : value;
+---
+
+<div class:list={['flex gap-1 text-base font-normal text-gray-500', props.class]}>
+  <div class="text-base font-medium text-gray-700">{label}:</div>
+  {
+    url ? (
+      <a href={url} class="underline">
+        {parsedValue}
+      </a>
+    ) : (
+      <div>{parsedValue}</div>
+    )
+  }
+</div>

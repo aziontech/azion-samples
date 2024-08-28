@@ -1,0 +1,18 @@
+# Dependencies
+node_modules
+
+# OS
+.DS_Store
+
+# Build output
+dist
+stats.html
+
+# Favicon generation
+public/favicons
+*.generated.astro
+
+# Azion
+.edge
+.vulcan
+

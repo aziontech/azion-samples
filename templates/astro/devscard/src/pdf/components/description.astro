@@ -1,0 +1,12 @@
+---
+import Description from '@/components/description.astro';
+
+export interface Props {
+  content: string;
+}
+
+const { content } = Astro.props;
+const baseClass = /* tw */ 'text-base font-normal text-gray-500';
+---
+
+<Description content={content} classList={[baseClass]} />

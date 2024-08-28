@@ -1,0 +1,14 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.rulers": [120],
+  "emmet.includeLanguages": { "javascript": "javascriptreact", "astro": "javascriptreact" },
+  "files.eol": "\n",
+  "prettier.documentSelectors": ["**/*.astro"],
+  "tailwindCSS.classAttributes": ["class", "className", "class:list"],
+  "tailwindCSS.experimental.classRegex": [["/\\* tw \\*/ ([^;]*);", "'([^']*)'"]],
+  "tailwindCSS.includeLanguages": { "javascript": "javascriptreact", "astro": "javascriptreact" },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "[ignore]": { "editor.defaultFormatter": "foxundermoon.shell-format" }
+}

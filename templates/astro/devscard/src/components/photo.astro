@@ -1,0 +1,25 @@
+---
+import type { Photo } from '@/types/shared';
+import { Image } from '@astrojs/image/components';
+
+export interface Props {
+  src: Photo;
+  alt: string;
+  class?: string;
+  width?: number;
+  height?: number;
+}
+
+const { src, ...props } = Astro.props;
+
+const isRemoteImage = typeof src === 'string';
+const loading = import.meta.env.PUBLIC_APP_ENV === 'snapshot' ? 'eager' : 'lazy';
+---
+
+{
+  isRemoteImage ? (
+    <img src={src} {...props} />
+  ) : (
+    <Image format="webp" fit="cover" src={src} loading={loading} {...props} />
+  )
+}
