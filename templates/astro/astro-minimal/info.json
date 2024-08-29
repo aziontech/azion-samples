@@ -1,6 +1,6 @@
 {
-  "name": "Astro with Framework Vue",
-  "message": "This example showcases Astro working with Vue",
+  "name": "Astro Minimal",
+  "message": "A minimal template to start a new Astro project",
   "preset": "astro",
   "mode": "deliver",
   "path": "/astro-minimal"
