@@ -1,0 +1,7 @@
+{
+  "name": "Vex Hugo",
+  "message": "A clean multipurpose e-commerce theme that makes building your first online store easier than ever",
+  "preset": "hugo",
+  "mode": "deliver",
+  "path": "/vex-hugo"
+}
