@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  {%- assign site-title = "eCommerce with Snipcart" -%}
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} | {{ site-title }}</title>
+    <link rel="stylesheet" href="/assets/site.css" />
+  </head>
+  <body>
+    <header>
+      <h1>{{ site-title }}<br/>{{ title }}</h1>
+      <nav>
+        <a href="/">Home</a>
+        <span>
+          |
+        </span>
+        <a href="#/cart">Cart</a>
+      </nav>
+    </header>
+    <main>
+      {{ content }}
+    </main>
+    <footer>
+      <p>Part of CSCI E-114, Harvard Extension School</p>
+    </footer>
+    {% render "snipcart" %}
+  </body>
+</html>

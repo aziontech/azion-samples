@@ -1,0 +1,7 @@
+{
+  "name": "Eleventy 2 Snipcart",
+  "message": "A demo app built with JavaScript SSG 11ty",
+  "preset": "eleventy",
+  "mode": "deliver",
+  "path": "/eleventy-2-snipcart"
+}
