@@ -1,0 +1,8 @@
+{
+  "name": "Kupingplug",
+  "message": "A simple ecommerce website with next & tailwindcss",
+  "preset": "next",
+  "mode": "compute",
+  "path": "/kupingplug"
+}
+
