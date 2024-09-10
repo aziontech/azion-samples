@@ -1,0 +1,8 @@
+{
+  "name": "Book Store React",
+  "message": "An online React web application where the users can search for books",
+  "preset": "react",
+  "mode": "deliver",
+  "path": "/book-store-react"
+}
+
