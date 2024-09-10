@@ -1,0 +1,20 @@
+*.gem
+.git
+.bundle
+.DS_Store
+_asset_bundler_cache
+_site
+_drafts
+.jekyll-metadata
+.jekyll-cache
+codekit-config.json
+config.codekit3
+Gemfile.lock
+node_modules
+npm-debug.log*
+.nova
+
+# azion
+.edge
+.vulcan
+
