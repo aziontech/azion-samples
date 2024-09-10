@@ -1,0 +1,11 @@
+{
+  "name": "influencer-hugo",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "hugo",
+    "serve": "hugo server"
+  },
+  "dependencies": {
+    "hugo-bin": "^0.131.0"
+  }
+}

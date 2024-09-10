@@ -1,0 +1,14 @@
+Thumbs.db
+.DS_Store
+.dist
+.tmp
+.sass-cache
+npm-debug.log
+node_modules
+builds
+package-lock.json
+Public
+resources
+.edge/
+.hugo_build.lock
+.vulcan
