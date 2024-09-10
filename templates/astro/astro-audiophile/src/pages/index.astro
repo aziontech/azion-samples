@@ -1,0 +1,84 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/organisms/Hero.astro";
+import { colors } from "../design-system/colors.js";
+import Text from "../components/atoms/Text.astro";
+import Button from "../components/atoms/Button.astro";
+import FeaturedProducts from "../components/organisms/FeaturedProducts.astro";
+import ProductSpotlight from "../components/organisms/ProductSpotlight.astro";
+import Outro from "../components/organisms/Outro.astro";
+import Footer from "../components/organisms/Footer.astro";
+---
+
+<Layout title="Home">
+  <Hero>
+    <div class="hero flex justify-center lg:justify-start pt-36">
+      <div class="flex flex-col items-center lg:items-start gap-4">
+        <Text type="body" color={colors.dimWhite}>NEW PRODUCT</Text>
+        <div class="w-[396px]">
+          <Text
+            className="text-center lg:text-left"
+            type="h1"
+            color={colors.white}
+          >
+            XX99 Mark II Headphones
+          </Text>
+        </div>
+        <div class="w-[349px]">
+          <Text
+            className="text-center lg:text-left"
+            type="body"
+            color={colors.white}
+          >
+            Experience natural, lifelike audio and exceptional build quality
+            made for the passionate music enthusiast.
+          </Text>
+        </div>
+        <a href="/products/xx99-mark-two-headphones"
+          ><Button className="mt-8" type="primary">SEE PRODUCT</Button></a
+        >
+      </div>
+    </div>
+  </Hero>
+
+  <!-- Featured products -->
+  <FeaturedProducts />
+
+  <!-- product spotlight section -->
+  <ProductSpotlight />
+
+  <!-- Outro section -->
+  <Outro />
+
+  <!-- Footer -->
+  <Footer />
+</Layout>
+
+<style>
+  .hero {
+    background-image: url("/assets/home/tablet/image-header.jpg");
+    min-height: 700px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  @media only screen and (min-width: 1024px) {
+    .hero {
+      background-image: url("/assets/home/desktop/image-hero.jpg");
+      background-position-y: 50px;
+      background-position-x: 150px;
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    .hero {
+      background-position-y: -20px;
+      background-position-x: 120px;
+    }
+  }
+  @media only screen and (min-width: 1536px) {
+    .hero {
+      background-position-y: -80px;
+      background-position-x: 260px;
+    }
+  }
+</style>

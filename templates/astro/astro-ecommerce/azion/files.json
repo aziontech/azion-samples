@@ -1,0 +1,170 @@
+[
+   {
+    "name": ".edge/storage/.data.json.swp",
+    "hash": "778806bf7909eadc70cabe0ff9ef22aacc717b380de0984d4fe7014a2155d10b"
+   },
+   {
+    "name": ".edge/storage/_astro/client.9291133d.js",
+    "hash": "e2adff79620c738a410e31109084b2d297601f714ca13f15a201c673382c8f66"
+   },
+   {
+    "name": ".edge/storage/_astro/hoisted.1b4b5208.js",
+    "hash": "bebcce9e4905c5eb6ca48c0c3198b3b4f635c285992c007425483ad4e056e72f"
+   },
+   {
+    "name": ".edge/storage/_astro/hoisted.b7aa5ab1.js",
+    "hash": "15844d3911835f13af13d6487ae4a8632f06e4942da7511c9b827ab75c66923e"
+   },
+   {
+    "name": ".edge/storage/_astro/index.b2c62b4c.css",
+    "hash": "b2c62b4cb4a76f2ec38434447a7386274efe1e194134859bcd2e56c97a5b21a6"
+   },
+   {
+    "name": ".edge/storage/data.json",
+    "hash": "98183c9ec4d408e5fe863c5abf227bbd181f034e95d388d00364d85ecf701cba"
+   },
+   {
+    "name": ".edge/storage/favicon.svg",
+    "hash": "dddac3870e66889496da35eed0f2ae5c3393efb45edf6ac349c8e08a4f617918"
+   },
+   {
+    "name": ".edge/storage/header-blue-purple.jpg",
+    "hash": "c81b8c70bbac9778d9af6d7ad13ae2c897109ef815ac96fcfbe67e36b23a67de"
+   },
+   {
+    "name": ".edge/storage/images/bg1.jpg",
+    "hash": "0eabec45bce8f23c0c130c02d0c357bf453c034e6b09d466e79a6c92db8dd54e"
+   },
+   {
+    "name": ".edge/storage/images/bg2.jpg",
+    "hash": "cf741c736b88bb8efaedc799fbf4ac918c1a9c6e33122a80273ff95e10bc1daa"
+   },
+   {
+    "name": ".edge/storage/images/category1.jpg",
+    "hash": "c213b2d21fc5f9e76a5551df0831979d55191e114342858bcd851be1cb833909"
+   },
+   {
+    "name": ".edge/storage/images/category2.jpg",
+    "hash": "2e84a3e422bbf4101de550ec8648ed321ddb132427a863c9cbfd1be45e0f6aa2"
+   },
+   {
+    "name": ".edge/storage/images/category3.jpg",
+    "hash": "8bfea0752825d5290e116f39893ab5351a0236115aa67c3bd044bb2be0934515"
+   },
+   {
+    "name": ".edge/storage/images/category4.jpg",
+    "hash": "f24b7ce318080c18bee764747d2ab2e3fd87a43d34623b3617ec633b137fc549"
+   },
+   {
+    "name": ".edge/storage/images/category5.jpg",
+    "hash": "20997b743b5b9ce00b355737e90b465e15eee0fe49ad398d6f1939803ea7da4d"
+   },
+   {
+    "name": ".edge/storage/images/mirror.png",
+    "hash": "3e024ff55649767aebfee39bde7f4a3dc5ce1016926f3d18c9ab8f0d4c6e3dd6"
+   },
+   {
+    "name": ".edge/storage/images/product1.jpg",
+    "hash": "fa0b4a854f8e4228530038d098d25e616bfdbe5ef1e70817fa3acf6e38f8c006"
+   },
+   {
+    "name": ".edge/storage/images/product10.jpg",
+    "hash": "0747dd344a496f9f3ae9ed5d5a9adeb7b4fed07aa8e5a6488637cdb0fd71d11e"
+   },
+   {
+    "name": ".edge/storage/images/product11.jpg",
+    "hash": "0f1ed36a2a979902b92678ca414f9a03c70c845bfad71c06c79f49195b214fed"
+   },
+   {
+    "name": ".edge/storage/images/product12.jpg",
+    "hash": "5dd276f6a5b4de50abb635d2359cfb9b6aa95fc767dff29bac6e5f87c0328446"
+   },
+   {
+    "name": ".edge/storage/images/product13.jpg",
+    "hash": "f0067f4ef328f52fb00c992870dbf55e8354f78000774f91a330ef0a77718259"
+   },
+   {
+    "name": ".edge/storage/images/product2.jpg",
+    "hash": "b45be844fea770fdd7f274976ccaa40ace75b66659e26d1ea753abc58d30c958"
+   },
+   {
+    "name": ".edge/storage/images/product3.jpg",
+    "hash": "f69f10e20778286c541f2574574512fa172b3f59ec871e2116f97de6cb913e79"
+   },
+   {
+    "name": ".edge/storage/images/product4.jpg",
+    "hash": "99ac8109ce6b8a4efb3f73869a958102b3e06888414276faf913ca9f8937bac7"
+   },
+   {
+    "name": ".edge/storage/images/product5.jpg",
+    "hash": "3ffb6102f6f0d4b9d8d05ed8fa7dcea925e27f56d4b13ff00235880741709361"
+   },
+   {
+    "name": ".edge/storage/images/product6.jpg",
+    "hash": "f0b7a4cf2d2c376751168b632b9013512bb3eaf48f69feb0cf9cc2d2004c2d8e"
+   },
+   {
+    "name": ".edge/storage/images/product7.jpg",
+    "hash": "a0fbcc4e72826ba0c7e3951f83d95e5b1223b56face495f879b2cb48c45ca853"
+   },
+   {
+    "name": ".edge/storage/images/product8.jpg",
+    "hash": "5b7549c2018c2b869178ea893ebbe4fae7852d712f6bf312a42ee8ce9c0423d6"
+   },
+   {
+    "name": ".edge/storage/images/product9.jpg",
+    "hash": "17e587e397573128a5caa8ec25f1e589ca7c688ae62b60309a5d86cfa5fbab2f"
+   },
+   {
+    "name": ".edge/storage/images/suit-1.jpg",
+    "hash": "0265a6454baa940a22ef1148aa0e476454e335949848a94c145b127d41ce9162"
+   },
+   {
+    "name": ".edge/storage/images/suit-2.jpg",
+    "hash": "30d21b3c47ce86c47bf14d5fb33bbcface31bb90d129cfec22e6cf0bc25f3f28"
+   },
+   {
+    "name": ".edge/storage/images/suit-3.jpg",
+    "hash": "402a49d57e1d0070154923b12ebbf334888f27551eaaab4a12182289bf107e54"
+   },
+   {
+    "name": ".edge/storage/images/suit-4.jpg",
+    "hash": "90d127a278759d1ed811ea652cd1f4d0970dad58109c6f40dba3a0eb68ba4205"
+   },
+   {
+    "name": ".edge/storage/images/suit-5.jpg",
+    "hash": "8de1cd6fe494933447387ddbd65e8783b2f3922ce311ec50e3d2a8e1b37d5c83"
+   },
+   {
+    "name": ".edge/storage/images/suit-6.jpg",
+    "hash": "4f2f7ca4413f136af6cc5939c9457fa7a23cc9af934f7a77ae0762621ddd1e82"
+   },
+   {
+    "name": ".edge/storage/images/team-1.jpg",
+    "hash": "8fe369c54a219feabc8e4c04c16d332851ac03f4980e09cb6003a80c31d82a77"
+   },
+   {
+    "name": ".edge/storage/images/team-2.jpg",
+    "hash": "27caad9a061ad10e6534446d352f07f9609e07bfa272f394f6860e8732ce0024"
+   },
+   {
+    "name": ".edge/storage/index.html",
+    "hash": "fbeb8a89fbe1244c3862c77542ad292f9bf734fd74e259cb52943f2629819f60"
+   },
+   {
+    "name": ".edge/storage/landing/index.html",
+    "hash": "1f8499d9352e6dca49a29d9367ff1a18e1a60036ce6bc91f453069c4b5a66c2f"
+   },
+   {
+    "name": ".edge/storage/logo/logo-spotify.svg",
+    "hash": "37f3657fc5fab8130da8954d0df6ce2801667032f60b3e62fb0cf177d80028dd"
+   },
+   {
+    "name": ".edge/storage/product/index.html",
+    "hash": "e6b3232b2964b02afe7406564e0bc104a2954c30f207beff3d7ae1c4c989b28b"
+   },
+   {
+    "name": ".edge/storage/shopping-cart/index.html",
+    "hash": "c1c0d8d51be4d6e15515e5741af40bc103554a1a3e51bbfaf7cabe198c5737db"
+   }
+  ]

@@ -1,0 +1,39 @@
+---
+import Button from "../../components/atoms/Button.astro";
+import headphone from "../../../public/assets/exported/headphone.png";
+import earphone from "../../../public/assets/exported/earphone.png";
+import speaker from "../../../public/assets/exported/speaker.png";
+import FeaturedProductCard from "../molecules/FeaturedProductCard.astro";
+---
+
+<div
+  class="container flex flex-wrap justify-center xl:justify-between gap-8 featured-products-section"
+>
+  <FeaturedProductCard
+    image={headphone}
+    imageAlt="headphone"
+    title="HEADPHONES"
+  >
+    <a href="/headphones"><Button>Shop</Button></a>
+  </FeaturedProductCard>
+
+  <FeaturedProductCard image={speaker} imageAlt="speakers" title="SPEAKERS">
+    <a href="/speakers"><Button>Shop</Button></a>
+  </FeaturedProductCard>
+
+  <FeaturedProductCard
+    width="160px"
+    image={earphone}
+    imageAlt="earphone"
+    title="EARPHONES"
+  >
+    <a href="/earphones"><Button>Shop</Button></a>
+  </FeaturedProductCard>
+</div>
+
+<style>
+  .featured-products-section {
+    margin-top: 60px;
+    margin-bottom: 80px;
+  }
+</style>
