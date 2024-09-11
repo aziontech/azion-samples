@@ -1,0 +1,8 @@
+{
+  "name": "Ecommerce Stationery NextJs",
+  "message": "An ecommerce template for NextJS",
+  "preset": "next",
+  "mode": "compute",
+  "path": "/ecommerce-stationery-nextjs"
+}
+

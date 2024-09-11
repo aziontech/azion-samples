@@ -1,0 +1,8 @@
+{
+  "name": "Space Jelly Shop",
+  "message": "E-commerce website built with nextjs and react",
+  "preset": "next",
+  "mode": "deliver",
+  "path": "/space-jelly-shop"
+}
+

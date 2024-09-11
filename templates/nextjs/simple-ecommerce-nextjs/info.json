@@ -1,0 +1,8 @@
+{
+  "name": "Simple Ecommerce NextJS",
+  "message": "A shopping cart built in Next.js",
+  "preset": "next",
+  "mode": "compute",
+  "path": "/simple-ecommerce-nextjs"
+}
+

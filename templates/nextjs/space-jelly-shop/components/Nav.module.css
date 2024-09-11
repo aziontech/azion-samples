@@ -1,0 +1,52 @@
+.nav {
+  color: whitesmoke;
+  padding: 0.2rem 2em;
+  display: flex;
+  background: black;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nav p {
+  margin: 0.8rem 0;
+}
+
+.nav button {
+  align-items: center;
+  display: flex;
+  background: none;
+  color: whitesmoke;
+}
+
+.nav button p {
+  margin: 0.5rem;
+}
+@media (max-width: 500px) {
+  .navTitle {
+    font-size: 1.5em !important;
+  }
+}
+.navTitle {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: black;
+  color: whitesmoke;
+}
+
+.description {
+  display: inherit;
+  justify-content: center;
+  align-items: inherit;
+  font-size: 0.85rem;
+  max-width: var(--max-width);
+  width: 100%;
+  z-index: 2;
+  font-family: var(--font-mono);
+  margin-top: 2rem;
+}
