@@ -1,0 +1,8 @@
+{
+  "name": "Jekyll Cart",
+  "message": "A Jekyll based shopping cart built with simpleCart.",
+  "preset": "jekyll",
+  "mode": "deliver",
+  "path": "/jekyll-cart"
+}
+
