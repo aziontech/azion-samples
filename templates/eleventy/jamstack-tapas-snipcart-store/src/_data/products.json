@@ -1,0 +1,33 @@
+{
+
+    "data":[
+    {
+        "id": "123",
+        "name": "Demo Time with Mike!",
+        "price": 9.99,
+        "description": "Demo Time with Mike!  You can't not watch!  Just like a car race!",
+        "image": "/assets/images/demotime.png"
+    },
+    {
+        "id": "124",
+        "name": "Larry's Thoughts!",
+        "price": 9.99,
+        "description": "Deep, reflective. Always thought-provoking.  Always impactful.",
+        "image": "/assets/images/thoughts.png"
+    },
+    {
+        "id": "1235",
+        "name": "Artie's Articulate Explainers!",
+        "price": 9.99,
+        "description": "Best explainers of complex materials!  Plan on digesting 10-fold the time it takes to consume!",
+        "image": "/assets/images/explainers.png"
+    },
+    {
+        "id": "1236",
+        "name": "Seven minute break with David!",
+        "price": 1.99,
+        "description": "You know we all look forward to it!  Seven minutes to regroup, or fast-forward!",
+        "image": "/assets/images/minutes.png"
+    }
+]
+}

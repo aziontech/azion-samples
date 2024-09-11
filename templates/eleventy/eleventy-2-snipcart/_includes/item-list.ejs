@@ -1,0 +1,26 @@
+<h2>
+	<% if(this.url){ %>
+		<a href="<%= url %>"><%= title %></a>
+	<% } else { %>
+		<%= title %>
+	<% } %>
+</h2>
+<ul class="content-list">
+	<% list.slice(0, 3).map(map).map((item) => { %>
+		<li>
+			<a href="<%= item.url %>">
+				<% if(item.image){ %>
+					<img src="<%= item.image %>" alt="<%= item.label %>" />
+				<% } %>
+				<div>
+					<p><%= item.label %></p>
+				</div>
+			</a>
+		</li>
+	<% }) %>
+	<% if(this.url){ %>
+	<li>
+		<a href="<%= url %>">See more…</a>
+	</li>
+	<% } %>
+</ul>

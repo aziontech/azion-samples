@@ -1,0 +1,8 @@
+{
+  "name": "11ty and Snipcart for eCommerce",
+  "message": "eCommerce with Snipcart",
+  "preset": "eleventy",
+  "mode": "deliver",
+  "path": "/jamstack-tapas-snipcart-store"
+}
+

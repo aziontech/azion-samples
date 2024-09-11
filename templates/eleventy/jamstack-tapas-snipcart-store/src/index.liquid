@@ -1,0 +1,25 @@
+---
+title: Super Awesome CSCI E-114 FAKE Store
+layout: base
+---
+<div class="products">
+  {% for product in products.data %}
+    <div class="product">
+      <img src="{{ product.image }}" />
+      <h2>{{ product.name }}</h2>
+      <p>{{ product.description }}</p>
+      <button
+        class="snipcart-add-item"
+        data-item-id="{{ product.id}}"
+        data-item-price="{{ product.price }}"
+        data-item-description="{{ product.description }}"
+        data-item-image="{{ product.image }}"
+        data-item-name="{{ product.name }}">
+        Add to cart
+      </button>
+    </div>
+  {% endfor %}
+</div>
+<p>
+  Checkout <a href="https://snipcart.com/">Snipcart</a> and <a href="https://docs.snipcart.com/">Snipcart documentation</a></p>
+</p>
