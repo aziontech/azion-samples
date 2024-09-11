@@ -1,0 +1,41 @@
+---
+import { Image } from "astro:assets";
+import Text from "../atoms/Text.astro";
+const {
+  image,
+  imageAlt,
+  title,
+  width = "122.947px",
+  height = "160px",
+} = Astro.props;
+---
+
+<div class="product-card">
+  <Image class="item-image" src={image} alt={imageAlt} />
+  <Text type="h4">{title}</Text>
+  <slot />
+</div>
+
+<style define:vars={{ width, height }}>
+  .product-card {
+    width: 350px;
+    height: 204px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    padding-top: 100px;
+    margin-top: 100px;
+  }
+
+  .item-image {
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    top: -80px;
+  }
+</style>

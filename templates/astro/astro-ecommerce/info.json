@@ -1,0 +1,8 @@
+{
+  "name": "Astro Ecommerce",
+  "message": "The ultimate starter template for your e-commerce web project",
+  "preset": "astro",
+  "mode": "deliver",
+  "path": "/astro-ecommerce"
+}
+

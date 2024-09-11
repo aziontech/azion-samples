@@ -1,0 +1,79 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/organisms/Hero.astro";
+import { colors } from "../design-system/colors.js";
+import Text from "../components/atoms/Text.astro";
+import FeaturedProducts from "../components/organisms/FeaturedProducts.astro";
+import Outro from "../components/organisms/Outro.astro";
+import Footer from "../components/organisms/Footer.astro";
+import Button from "../components/atoms/Button.astro";
+import { data } from "../utils/dummyData.js";
+---
+
+<Layout title="Headphones">
+  <Hero>
+    <div class="hero flex justify-center items-center">
+      <Text type="h3" color={colors.white}>HEADPHONES</Text>
+    </div>
+  </Hero>
+
+  {
+    data
+      .filter(({ category }) => category === "headphones")
+      .map(async (item) => {
+        return (
+          <div class="product-item-row container mt-16 mb-36">
+            <div class="w-full flex flex-col justify-center gap-4">
+              <div class="w-full lg:w-[396px]">
+                <Text
+                  type="body"
+                  color={colors.primary}
+                  className="text-center lg:text-left"
+                >
+                  NEW PRODUCT
+                </Text>
+              </div>
+              <div class="w-full lg:w-[396px]">
+                <Text type="h3" className="text-center lg:text-left">
+                  {item.name}
+                </Text>
+              </div>
+              <div class="w-full lg:w-4/6">
+                <Text type="body" className="text-center lg:text-left">
+                  {item.description}
+                </Text>
+              </div>
+              <div class="flex justify-center lg:justify-start">
+                <a href={`products/${item.slug}`}>
+                  <Button type="primary">SEE PRODUCT</Button>
+                </a>
+              </div>
+            </div>
+            <div>
+              <img
+                class="mb-16 lg:mb-0"
+                src={item.image.desktop}
+                alt="best-gear"
+              />
+            </div>
+          </div>
+        );
+      })
+  }
+
+  <!-- Featured products -->
+  <FeaturedProducts />
+
+  <!-- Outro section -->
+  <Outro />
+
+  <!-- Footer -->
+  <Footer />
+</Layout>
+
+<style>
+  .hero {
+    height: 250px;
+    margin-bottom: 100px;
+  }
+</style>

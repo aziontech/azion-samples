@@ -1,0 +1,127 @@
+---
+const { type, color, className } = Astro.props;
+---
+
+{
+  type === "h1" ? (
+    <h1 class={`${className}`}>
+      <slot />
+    </h1>
+  ) : type === "h2" ? (
+    <h2 class={`${className}`}>
+      <slot />
+    </h2>
+  ) : type === "h3" ? (
+    <h3 class={`${className}`}>
+      <slot />
+    </h3>
+  ) : type === "h4" ? (
+    <h4 class={`${className}`}>
+      <slot />
+    </h4>
+  ) : type === "h5" ? (
+    <h5 class={`${className}`}>
+      <slot />
+    </h5>
+  ) : type === "h6" ? (
+    <h6 class={`${className}`}>
+      <slot />
+    </h6>
+  ) : type === "overline" ? (
+    <p class={`overline ${className}`}>
+      <slot />
+    </p>
+  ) : type === "subTitle" ? (
+    <p class={`subTitle ${className}`}>
+      <slot />
+    </p>
+  ) : (
+    <p class={`body ${className}`}>
+      <slot />
+    </p>
+  )
+}
+
+<style define:vars={{ color }}>
+  h1 {
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3.625rem; /* 103.571% */
+    letter-spacing: 0.125rem;
+  }
+  h2 {
+    font-family: Manrope;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.75rem; /* 110% */
+    letter-spacing: 0.08931rem;
+  }
+  h3 {
+    font-family: Manrope;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.25rem; /* 112.5% */
+    letter-spacing: 0.07144rem;
+  }
+  h4 {
+    font-family: Manrope;
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.125rem;
+  }
+  h5 {
+    font-family: Manrope;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.10713rem;
+  }
+  h6 {
+    font-family: Manrope;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.08038rem;
+  }
+  .overline {
+    font-family: Manrope;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.625rem;
+  }
+  .subTitle {
+    font-family: Manrope;
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5625rem; /* 192.308% */
+    letter-spacing: 0.05806rem;
+  }
+  .body {
+    font-family: Manrope;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5625rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .overline,
+  .body,
+  .subTitle {
+    color: var(--color);
+  }
+</style>

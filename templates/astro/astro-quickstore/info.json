@@ -1,0 +1,8 @@
+{
+  "name": "Astro Quickstore",
+  "message": "A free and simple theme for Astro where you can embed your Gumroad or lemonsqueezy",
+  "preset": "astro",
+  "mode": "deliver",
+  "path": "/astro-quickstore"
+}
+

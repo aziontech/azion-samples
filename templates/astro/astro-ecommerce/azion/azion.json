@@ -1,0 +1,64 @@
+{
+  "name": "spiritedly-eternity",
+  "bucket": "spiritedly-eternity",
+  "preset": "astro",
+  "mode": "deliver",
+  "env": "production",
+  "prefix": "20240904131222",
+  "not-first-run": true,
+  "function": {
+    "id": 28918,
+    "name": "__DEFAULT__",
+    "file": ".edge/worker.js",
+    "args": "azion/args.json",
+    "instance-id": 27655,
+    "instance-name": "__DEFAULT__",
+    "cache-id": 0
+  },
+  "application": {
+    "id": 1725386768,
+    "name": "__DEFAULT__"
+  },
+  "domain": {
+    "id": 1725383190,
+    "name": "spiritedly-eternity",
+    "domain_name": "f8dorekvdj.map.azionedge.net",
+    "url": "https://f8dorekvdj.map.azionedge.net"
+  },
+  "rt-purge": {
+    "purge_on_publish": true
+  },
+  "origin": [
+    {
+      "origin-id": 152462,
+      "origin-key": "c6f569ab-0ad5-473a-8953-5929e604ceee",
+      "name": "origin-storage-default"
+    }
+  ],
+  "rules-engine": {
+    "created": false,
+    "rules": [
+      {
+        "id": 293864,
+        "name": "Set Storage Origin for All Requests",
+        "phase": "request"
+      },
+      {
+        "id": 293865,
+        "name": "Deliver Static Assets",
+        "phase": "request"
+      },
+      {
+        "id": 293866,
+        "name": "Redirect to index.html",
+        "phase": "request"
+      },
+      {
+        "id": 293867,
+        "name": "Redirect to index.html for Subpaths",
+        "phase": "request"
+      }
+    ]
+  },
+  "cache-settings": []
+}
