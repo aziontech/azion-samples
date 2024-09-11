@@ -1,0 +1,8 @@
+{
+  "name": "Gatsby Ecommerce Theme",
+  "message": "A Gatsby-based starter theme with e-commerce styled components",
+  "preset": "gatsby",
+  "mode": "deliver",
+  "path": "/gatsby-ecommerce-theme"
+}
+
