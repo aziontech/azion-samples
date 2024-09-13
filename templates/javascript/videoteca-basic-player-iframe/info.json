@@ -1,0 +1,7 @@
+{
+  "name": "Videoteca Basic Player Iframe",
+  "message": "Basic videoteca player page, using iframe",
+  "preset": "javascript",
+  "mode": "compute",
+  "path": "/videoteca-basic-player-iframe"
+}
