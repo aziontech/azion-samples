@@ -28,5 +28,8 @@
     "luxon": "^3.0.1",
     "markdown-it": "^12.0.4",
     "markdown-it-anchor": "^8.6.4"
+  },
+  "dependencies": {
+    "azion": "latest"
   }
 }

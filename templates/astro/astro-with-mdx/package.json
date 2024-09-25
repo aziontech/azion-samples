@@ -14,6 +14,7 @@
     "@astrojs/mdx": "^2.2.2",
     "@astrojs/preact": "^3.1.1",
     "astro": "^4.5.12",
+    "azion": "latest",
     "preact": "^10.19.2"
   }
 }

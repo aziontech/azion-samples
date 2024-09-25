@@ -14,5 +14,8 @@
   "license": "MIT",
   "devDependencies": {
     "prettier": "^2.8.1"
+  },
+  "dependencies": {
+    "azion": "latest"
   }
 }

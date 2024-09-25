@@ -16,6 +16,7 @@
     "@types/canvas-confetti": "^1.6.3",
     "astro": "^4.5.12",
     "autoprefixer": "^10.4.15",
+    "azion": "latest",
     "canvas-confetti": "^1.9.1",
     "postcss": "^8.4.28",
     "tailwindcss": "^3.3.5"
