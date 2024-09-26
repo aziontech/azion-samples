@@ -2,6 +2,16 @@
 
 A fully customizable template to create your online (and paper) resume without writing a single line of code.
 
+---
+
+## Deploy Your Own
+
+Deploy your own DevsCard project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/azion-community/devscard "Deploy with Azion")
+
+---
+
 ## Features
 
 - **✍️ Intellisense** — provide your data in TypeScript files, getting autocompletion and description of each property right in your IDE.
@@ -21,4 +31,3 @@ A fully customizable template to create your online (and paper) resume without w
 To learn how to set up your resume, go to:
 
 [https://devscard.gitbook.io/docs](https://devscard.gitbook.io/docs/setup-guide)
-
