@@ -2,6 +2,16 @@
 
 A straightforward resume or CV template for the web, print, or PDF. Built with [Astro](https://astro.build) and [PandaCSS](https://panda-css.com).
 
+---
+
+## Deploy Your Own
+
+Deploy your own Webpage to PDF Resume project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/azion-community/webpage-to-pdf-resume "Deploy with Azion")
+
+---
+
 ## Features
 
 - Separation of data (name, experience, education, etc) from page templates, allowing you to create different look and feels without copying and pasting your information.
