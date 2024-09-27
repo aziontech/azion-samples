@@ -1,9 +1,9 @@
 import { defineConfig } from 'azion';
 
-module.exports = defineConfig({
+export default defineConfig({
   build: {
     preset: {
-      name: 'vitepress',
+      name: 'react',
     },
   },
 });

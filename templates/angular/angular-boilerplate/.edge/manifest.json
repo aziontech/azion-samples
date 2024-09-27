@@ -1,0 +1,12 @@
+{
+  "build": {
+    "preset": {
+      "name": "angular"
+    }
+  },
+  "origin": [],
+  "cache": [],
+  "domain": {},
+  "purge": [],
+  "rules": []
+}
