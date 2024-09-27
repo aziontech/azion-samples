@@ -1,4 +1,5 @@
-import { defineConfig } from 'azion';
+const azion = require('azion');
+const { defineConfig } = azion;
 
 module.exports = defineConfig({
   build: {
