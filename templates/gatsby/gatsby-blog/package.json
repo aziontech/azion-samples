@@ -10,7 +10,6 @@
   "dependencies": {
     "@fontsource-variable/montserrat": "^5.0.17",
     "@fontsource/merriweather": "^5.0.8",
-    "azion": "latest",
     "gatsby": "^5.13.2",
     "gatsby-plugin-feed": "^5.13.1",
     "gatsby-plugin-image": "^3.13.1",
@@ -27,6 +26,7 @@
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
+    "azion": "latest",
     "prettier": "^2.8.8"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
