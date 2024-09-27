@@ -1,8 +1,7 @@
 import { defineConfig } from 'azion';
 
-module.exports = defineConfig({
+export default defineConfig({
   build: {
-    builder: 'esbuild',
     preset: {
       name: 'next',
     },
