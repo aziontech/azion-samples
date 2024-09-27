@@ -1,6 +1,6 @@
 import { defineConfig } from 'azion';
 
-module.exports = defineConfig({
+export default defineConfig({
   build: {
     polyfills: false,
     worker: false,
