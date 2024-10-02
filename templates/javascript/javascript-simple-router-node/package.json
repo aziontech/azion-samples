@@ -1,4 +1,3 @@
-
 {
   "name": "simple-js-router",
   "version": "1.0.0",
@@ -12,7 +11,7 @@
   "author": "aziontech",
   "license": "ISC",
   "dependencies": {
+    "azion": "latest",
     "itty-router": "^4.2.0"
   }
 }
-

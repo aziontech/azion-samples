@@ -831,6 +831,14 @@ axobject-query@^3.2.1:
   dependencies:
     dequal "^2.0.3"
 
+azion@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/azion/-/azion-1.7.0.tgz#59e763a97402b89e195254789ab9647a0f40eff6"
+  integrity sha512-qJHuw8xkl09zfUTxQMM7a9UgOGXszl/cQZW+/d9bzFhspr7ZYwTVTDRU3pgCXwMcOpi6V/h0JQWxICJeg4eunQ==
+  dependencies:
+    chalk "^5.3.0"
+    progress "^2.0.3"
+
 balanced-match@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
@@ -904,6 +912,11 @@ chalk@^4.0.0:
   dependencies:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
+
+chalk@^5.3.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/chalk/-/chalk-5.3.0.tgz#67c20a7ebef70e7f3970a01f90fa210cb6860385"
+  integrity sha512-dLitG79d+GV1Nb/VYcCDFivJeK1hiukt9QjRNVOsUtTy1rR1YJsmpGGTZ3qJos+uw7WmWF4wUwBd9jxjocFC2w==
 
 chokidar@^3.5.3:
   version "3.5.3"
@@ -2350,6 +2363,11 @@ prettier@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.1.0.tgz#c6d16474a5f764ea1a4a373c593b779697744d5e"
   integrity sha512-TQLvXjq5IAibjh8EpBIkNKxO749UEWABoiIZehEPiY4GNpVdhaFKqSTu+QrlU6D2dPAfubRmtJTi4K4YkQ5eXw==
+
+progress@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
+  integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
 prop-types@^15.8.1:
   version "15.8.1"

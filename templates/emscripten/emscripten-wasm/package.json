@@ -1,0 +1,15 @@
+{
+  "name": "emscripten-wasm",
+  "version": "1.0.0",
+  "description": "The Azion **EMScripten WASM** is designed to simplify and enhance the deployment process for EMScripten WASM applications directly on the edge of the network.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "azion": "latest"
+  }
+}

@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/tailwind": "^5.0.0",
     "astro": "^3.1.2",
+    "azion": "latest",
     "tailwindcss": "^3.3.3"
   },
   "devDependencies": {

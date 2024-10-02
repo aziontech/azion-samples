@@ -15,6 +15,7 @@
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "astro": "^4.5.12",
+    "azion": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }

@@ -43,5 +43,8 @@
     "build": "npm run build:css && npm run minify:css",
     "build:css": "postcss src/sup-tachyons.css > assets/css/sup-tachyons.css",
     "minify:css": "postcss assets/css/sup-tachyons.css > assets/css/sup-tachyons.min.css  --use cssnano"
+  },
+  "dependencies": {
+    "azion": "latest"
   }
 }

@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "azion": "latest",
     "dotenv": "^16.0.3"
   }
 }

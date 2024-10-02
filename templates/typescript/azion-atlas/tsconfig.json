@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "NodeNext",
     "resolveJsonModule": true,
     "declaration": true,
     "removeComments": true,

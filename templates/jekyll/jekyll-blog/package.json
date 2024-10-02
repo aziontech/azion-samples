@@ -1,0 +1,15 @@
+{
+  "name": "jekyll-blog",
+  "version": "1.0.0",
+  "description": "Simplify the deployment of a static Jekyll project on the edge.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "azion": "latest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
