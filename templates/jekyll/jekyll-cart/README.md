@@ -3,6 +3,17 @@
 Code Repo: https://github.com/bradonomics/jekyll-cart/<br>
 Demo: http://bradonomics.github.io/jekyll-cart/
 
+---
+
+## Deploy Your Own
+
+Deploy your own Jekyll Cart project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/azion-community/jekyll-cart "Deploy with Azion")
+
+
+---
+
 Jekyll Cart is a Jekyll based shopping cart built with simpleCart(js). It incorporates work from the following:
 
 ### Jekyll

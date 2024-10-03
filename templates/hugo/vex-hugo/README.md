@@ -2,7 +2,14 @@
 <p align=center>Vex is a clean multipurpose e-commerce theme that makes building your first online store easier than ever. </p>
 <h2 align="center"> <a target="_blank" href="https://demo.gethugothemes.com/vex" rel="nofollow">👀Demo</a> | <a  target="_blank" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fdemo.gethugothemes.com%2Fvex%2Fsite%2F&form_factor=desktop">Page Speed (97%)🚀</a></h2>
 
+## Deploy Your Own
 
+Deploy your own Vex Hugo project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/azion-community/vex-hugo "Deploy with Azion")
+
+
+---
 
 <p align=center>
   <a href="https://github.com/gohugoio/hugo/releases/tag/v0.62.2" alt="Contributors">

@@ -2,6 +2,15 @@
 <p align=center>Influencer is a modern and elegant crafted responsive Hugo theme for book authors and writer </p>
 <h2 align="center"> <a target="_blank" href="https://demo.gethugothemes.com/influencer" rel="nofollow">👀Demo</a> | <a  target="_blank" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fdemo.gethugothemes.com%2Finfluencer%2Fsite%2F&form_factor=desktop">Page Speed (95%)🚀</a></h2>
 
+## Deploy Your Own
+
+Deploy your own Influencer Hugo project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/azion-community/influencer-hugo "Deploy with Azion")
+
+
+---
+
 
 <p align=center>
   <a href="https://github.com/gohugoio/hugo/releases/tag/v0.62.0" alt="Contributors">
