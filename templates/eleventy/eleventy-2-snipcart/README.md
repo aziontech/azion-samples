@@ -2,6 +2,17 @@
 
 Ever heard of 11ty? It's a simple static site generator written in JavaScript. In this tutorial, we craft a small e-commerce app, exploring its set of features in the process.
 
+---
+
+## Deploy Your Own
+
+Deploy your own Eleventy 2 Snipcart project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/azion-community/eleventy-to-snipcart "Deploy with Azion")
+
+
+---
+
 Steps:
 
 - Setting up a web store with Eleventy.

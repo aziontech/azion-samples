@@ -1,5 +1,16 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+---
+
+## Deploy Your Own
+
+Deploy your own Space Jelly Shop project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/azion-community/space-jelly-shop "Deploy with Azion")
+
+
+---
+
 ## Getting Started
 
 First, run the development server:

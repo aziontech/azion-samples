@@ -16,6 +16,17 @@ Supply is designed by [alternatyves](https://alternatyves.com/).
 
 Find more [templates, themes, and Jekyll tutorials](https://jekyllrb.com/resources/).
 
+---
+
+## Deploy Your Own
+
+Deploy your own Jekyll Supply project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/azion-community/jekyll-supply "Deploy with Azion")
+
+
+---
+
 ## Features
 
 - [x] List & display products, thanks to Jekyll's collections

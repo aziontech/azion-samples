@@ -2,7 +2,16 @@
 
 An ecommerce template for small bussiness. Although this template showcases a store for audio devices, it could be used showcase any type of product.
 
-[View live site here](https://astro-commerce-eight.vercel.app/)
+---
+
+## Deploy Your Own
+
+Deploy your own Astro Audiophile project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/azion-community/astro-audiophile "Deploy with Azion")
+
+
+---
 
 ## 🚀 Project Structure
 

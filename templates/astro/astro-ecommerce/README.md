@@ -8,6 +8,17 @@
 
 Introducing **Astro Ecommerce**, the ultimate starter template for your e-commerce web project. Built on Astro's next-gen island architecture, Astro Ecommerce offers a sleek and modern design with a wide range of components and features to help you create a stunning online store.
 
+---
+
+## Deploy Your Own
+
+Deploy your own Astro Ecommerce project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/azion-community/astro-ecommerce "Deploy with Azion")
+
+
+---
+
 **Main Features**
 Build your e-commerce website quickly and efficiently with:
 - 70+ fully coded elements

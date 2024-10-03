@@ -6,7 +6,16 @@ Welcome! This is a repository containing the starter code and final code from my
 
 Please refer to [my blog post](https://codingwithlucy.hashnode.dev/build-a-shopping-cart-in-nextjs-with-use-shopping-cart-and-stripe) for full instructions on how to use this code.
 
-- Demo: https://simple-ecommerce-nextjs.vercel.app/
+---
+
+## Deploy Your Own
+
+Deploy your own Simple Ecommerce Next.js project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/azion-community/simple-ecommerce-next "Deploy with Azion")
+
+
+---
 
 ## Branches
 
