@@ -1,0 +1,13 @@
+{
+  "name": "videoteca-basic-player-iframe",
+  "version": "0.0.1",
+  "description": "Basic videoteca player page, using iframe",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "aziontech",
+  "license": "ISC"
+}
