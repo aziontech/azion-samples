@@ -3,5 +3,5 @@
   "message": "Deploy new Hugo applications to run directly on the edge",
   "preset": "hugo",
   "mode": "deliver",
-  "path": "/hugo-boilerplate"
+  "path": "/hugo-static"
 }
