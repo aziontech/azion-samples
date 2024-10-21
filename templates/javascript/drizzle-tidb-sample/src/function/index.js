@@ -30,7 +30,7 @@ async function handleRequest(request, args) {
     username: args.username || Azion.env.get("DRIZZLE_TIDB_USERNAME"),
   });
 
-  const db = drizzle(client);
+  const db = drizzle({ client });
 
   // Setup TiDB Table
   const posts = mysqlTable('posts', {
