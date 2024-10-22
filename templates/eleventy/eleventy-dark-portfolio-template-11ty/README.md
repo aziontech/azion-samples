@@ -1,80 +1,34 @@
-# Dark-Portfolio-Template-11ty
+# 11ty Portfolio
 
-A starter repository showing how to build a blog with the [Eleventy](https://github.com/11ty/eleventy) static site generator.
-Uses the W3CSS template "Dark Portfolio Template"
+The **11ty Portfolio** template is a starter repository showing how to build a portfolio with the 11ty static site generator. It uses the W3CSS template "Dark Portfolio Template".
 
-[![Build Status](https://travis-ci.com/jmschrack/Dark-Portfolio-Template-11ty.svg?branch=dev)](https://travis-ci.org/jmschrack/dark-portfolio-template-11ty)
+This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [documentation](https://www.azion.com/en/documentation/products/use-a-template-via-azion-console/).
 
+This template uses Eleventy version `0.10.0`.
 
-##  Deploy Your Own
+[Live demo](https://ua0f7vcocv.map.azionedge.net) - View the project live
+
+> **Note**: this is a community template. Third-party or external developers created it, and Azion only enables the deployment in the Azion Edge Platform. Azion doesn't provide maintenance or support for the content itself but can assist you with any queries or issues you may encounter while deploying this template or using the platform.
+>
+> Join the Azion communities at [GitHub](https://github.com/aziontech) and [Discord](https://discord.com/channels/1112754829878624390/1113104727979348008) to learn, seek advice, and stay updated on trends.
+
+---
+
+## Requirements
+
+Before using this template, you need to:
+
+- Have a [GitHub account](https://github.com/signup).
+  - Every push will be deployed automatically to the main branch in this repository to keep your project updated.
+
+> **Note**: this template uses [Application Accelerator](https://www.azion.com/en/documentation/products/build/edge-application/application-accelerator/) and [Edge Functions](https://www.azion.com/en/documentation/products/build/edge-application/edge-functions/), and it could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information.
+
+---
+
+## Deploy your own
 
 Deploy your own 11ty project with Azion.
 
 [![Deploy Button](/static/button.png)](https://console.azion.com/create/11ty/11ty-portfolio "Deploy with Azion")
 
-## Demos
-
-* [Azion](https://ua0f7vcocv.map.azionedge.net)
-
-
-## Getting Started
-
-### 1. Clone this Repository
-
-```
-git clone https://github.com/jmschrack/Dark-Portfolio-Template-11ty.git my-blog-name
-```
-
-
-### 2. Navigate to the directory
-
-```
-cd my-blog-name
-```
-
-Specifically have a look at `.eleventy.js` to see if you want to configure any Eleventy options differently.
-
-### 3. Install dependencies
-
-```
-npm install
-```
-
-### 4. Edit _data/metadata.json
-
-### 5. Run Eleventy
-
-```
-npx eleventy
-```
-
-Or build and host locally for local development
-```
-npx eleventy --serve
-```
-
-Or build automatically when a template changes:
-```
-npx eleventy --watch
-```
-
-Or in debug mode:
-```
-DEBUG=* npx eleventy
-```
-
-### Implementation Notes
-
-* `about/index.md` shows how to add a content page.
-* `posts/` has the blog posts but really they can live in any directory. They need only the `post` tag to be added to this collection.
-* Add the `nav` tag to add a template to the top level site navigation. For example, this is in use on `index.njk` and `about/index.md`.
-* Content can be any template format (blog posts needn’t be markdown, for example). Configure your supported templates in `.eleventy.js` -> `templateFormats`.
-	* Because `css` and `png` are listed in `templateFormats` but are not supported template types, any files with these extensions will be copied without modification to the output (while keeping the same directory structure).
-* The blog post feed template is in `feed/feed.njk`. This is also a good example of using a global data files in that it uses `_data/metadata.json`.
-* This example uses three layouts:
-  * `_includes/layouts/base.njk`: the top level HTML structure
-  * `_includes/layouts/home.njk`: the home page template (wrapped into `base.njk`)
-  * `_includes/layouts/post.njk`: the blog post template (wrapped into `base.njk`)
-* `_includes/postlist.njk` is a Nunjucks include and is a reusable component used to display a list of all the posts. `index.njk` has an example of how to use it.
-
-* The latest 6 blog posts with the "photo" tag wil be used in the photo gallery.
+For a more detailed step-by-step, check the [documentation](https://www.azion.com/en/documentation/products/use-a-template-via-azion-console/).
