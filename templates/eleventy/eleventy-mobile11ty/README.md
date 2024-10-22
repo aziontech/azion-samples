@@ -1,63 +1,32 @@
-# mobile11ty
-----------------------------------------------
+# Mobile11ty
 
+The **Mobile11ty** template allows you to build a website and an Android app all in one, based on Eleventy (11ty).
 
-![eleventy mobile11ty template themes](mobile11ty.jpg)
+This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [documentation](https://www.azion.com/en/documentation/products/use-a-template-via-azion-console/).
 
+This template uses Eleventy version `2.0.0-canary.14`.
 
-Documentation : [https://www.hockeycomputindo.com/2022/04/new-mobile11ty-eleventy-build-website.html](https://www.hockeycomputindo.com/2022/04/new-mobile11ty-eleventy-build-website.html)
-
-Test Drive Demo : [https://ytzmhg7jpb.map.azionedge.net](https://ytzmhg7jpb.map.azionedge.net)
-
-Developer : [eleventy.web.app](https://eleventy.web.app/)
+> **Note**: this is a community template. Third-party or external developers created it, and Azion only enables the deployment in the Azion Edge Platform. Azion doesn't provide maintenance or support for the content itself but can assist you with any queries or issues you may encounter while deploying this template or using the platform.
+>
+> Join the Azion communities at [GitHub](https://github.com/aziontech) and [Discord](https://discord.com/channels/1112754829878624390/1113104727979348008) to learn, seek advice, and stay updated on trends.
 
 ---
-###  Deploy Your Own
+
+## Requirements
+
+Before using this template, you need to:
+
+- Have a [GitHub account](https://github.com/signup).
+  - Every push will be deployed automatically to the main branch in this repository to keep your project updated.
+
+> **Note**: this template uses [Application Accelerator](https://www.azion.com/en/documentation/products/build/edge-application/application-accelerator/) and [Edge Functions](https://www.azion.com/en/documentation/products/build/edge-application/edge-functions/), and it could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information.
+
+---
+
+## Deploy your own
 
 Deploy your own 11ty project with Azion.
 
 [![Deploy Button](/static/button.png)](https://console.azion.com/create/11ty/mobile11ty "Deploy with Azion")
----
 
----------------------------------
-
-Display
-
-
-![eleventy mobile11ty template themes](desktop.png)
-
-
-Desktop version
-
-
-![eleventy mobile11ty template themes](mobile.png)
-
-
-Mobile version 
-
-----------------------
-
-Android Run
-
-![install android 11ty](android/11tyandroid.jpg)
-
-For test demo you can donwload this apk on your smartphone [download android apk here →](https://github.com/mesinkasir/mobile11ty/raw/main/android/mobile11ty.apk)
-+ Download android apk
-+ Change app permissions on your Android phone
-+ Run Install
-+ Open Android App
-
-![install android 11ty](android/android11ty.jpg)
-
----------------------------------
-
-
-Documentation : [https://www.hockeycomputindo.com/2022/04/new-mobile11ty-eleventy-build-website.html](https://www.hockeycomputindo.com/2022/04/new-mobile11ty-eleventy-build-website.html)
-
-Test Drive Demo : [https://mobile11ty.pages.dev](https://mobile11ty.pages.dev)
-
-
-Video test drive demo : [https://www.youtube.com/watch?v=PmwZttbMYm8](https://www.youtube.com/watch?v=PmwZttbMYm8)
-
-
-Developer : [eleventy.web.app](https://eleventy.web.app/)
+For a more detailed step-by-step, check the [documentation](https://www.azion.com/en/documentation/products/use-a-template-via-azion-console/).
