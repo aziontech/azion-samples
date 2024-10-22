@@ -1,33 +1,32 @@
-# 11ty and Snipcart for eCommerce
+# Eleventy and Snipcart for eCommerce
 
-## Deploy Your Own
+The **Eleventy and Snipcart for eCommerce** template is based on the Eleventy framework and integrated with Snipcart, a solution for adding shopping carts and accepting payments. This template allows you to easily deploy an e-commerce or online store with fully functional capabilities.
+
+This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [documentation](https://www.azion.com/en/documentation/products/guides/eleventy-ecommerce-collection/).
+
+This template uses Eleventy version `2.0.1`.
+
+> **Note**: this is a community template. Third-party or external developers created it, and Azion only enables the deployment in the Azion Edge Platform. Azion doesn't provide maintenance or support for the content itself but can assist you with any queries or issues you may encounter while deploying this template or using the platform.
+>
+> Join the Azion communities at [GitHub](https://github.com/aziontech) and [Discord](https://discord.com/channels/1112754829878624390/1113104727979348008) to learn, seek advice, and stay updated on trends.
+
+---
+
+## Requirements
+
+Before using this template, you need to:
+
+- Have a [GitHub account](https://github.com/signup).
+  - Every push will be deployed automatically to the main branch in this repository to keep your project updated.
+
+> **Note**: this template uses [Application Accelerator](https://www.azion.com/en/documentation/products/build/edge-application/application-accelerator/),[Edge Functions](https://www.azion.com/en/documentation/products/build/edge-application/edge-functions/), and [Edge Cache](https://www.azion.com/en/documentation/products/build/edge-application/edge-cache/) and it could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information.
+
+---
+
+## Deploy your own
 
 Deploy your own Eleventy and Snipcart for eCommerce project with Azion.
 
 [![Deploy Button](/static/button.png)](https://console.azion.com/create/azion-community/eleventy-snipcart-for-ecommerce "Deploy with Azion")
 
-
----
-
-- [Snipcart](https://snipcart.com/) and [Snipcart for developers](https://snipcart.com/ecommerce-for-developers)
-- Words great with Jamstack and without!
-- Simple startup:
-  - Sign up, get API key
-  - Include some JavaScript
-  - Encode product data using
-    `data-*` attributes of HTML
-
-```
-<button class="snipcart-add-item" 
-        data-item-id="123" 
-        data-item-price="9.99" 
-        data-item-description="Demo Time with Mike!  You can't not watch!  Just like a car race!"
-        data-item-image="/assets/images/demotime.png" 
-        data-item-name="Demo Time with Mike!">
-    Add to cart
-</button>
-```
-
-Check out `src/index.liquid` and `src/_data/products.json` as a good place to start seeing how Snipcart is easily implemented.
-
-<img width="1639" alt="image" src="https://github.com/cscie114/jamstack-tapas-snipcart-store/assets/4117033/f8487499-8626-4861-ab89-610d42caabec">
+For a more detailed step-by-step, check the [documentation](https://www.azion.com/en/documentation/products/guides/eleventy-ecommerce-collection/).
