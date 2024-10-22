@@ -1,7 +1,6 @@
 import { MainRouter } from "../lib/routers/main-router.js";
 import { PageRouter } from "../lib/routers/page-router.js";
 import { ApiRouter } from "../lib/routers/api-router.js";
-import { createClient } from "@libsql/client/web";
 import { drizzle } from 'drizzle-orm/libsql';
 import { integer, text, sqliteTable } from "drizzle-orm/sqlite-core";
 
@@ -21,12 +20,13 @@ async function handleRequest(request, args) {
     return new Response(`You are trying something incorrect.`, { status: 200 });
   });
 
-  //Setup Turso connection
-  const client = createClient({
-    url: args.url || Azion.env.get("DRIZZLE_TURSO_URL"),
-    authToken: args.token || Azion.env.get("DRIZZLE_TURSO_TOKEN"),
+  // Setup Turso connection
+  const db = drizzle({
+    connection: {
+      url: args.url || Azion.env.get("DRIZZLE_TURSO_URL"),
+      authToken: args.token || Azion.env.get("DRIZZLE_TURSO_TOKEN"),
+    }
   });
-  const db = drizzle(client);
 
   // Setup Turso Table
   const posts = sqliteTable('posts', {
