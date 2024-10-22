@@ -19,11 +19,11 @@ Before using this template, you need to:
 - Have a [GitHub account](https://github.com/signup).
   - Every push will be deployed automatically to the main branch in this repository to keep your project updated.
 
-**Note**: this template uses [Application Accelerator](https://www.azion.com/en/documentation/products/build/edge-application/application-accelerator/) and [Edge Functions](https://www.azion.com/en/documentation/products/build/edge-application/edge-functions/), and it could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information.
+> **Note**: this template uses [Application Accelerator](https://www.azion.com/en/documentation/products/build/edge-application/application-accelerator/) and [Edge Functions](https://www.azion.com/en/documentation/products/build/edge-application/edge-functions/), and it could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information.
 
 ---
 
-##  Deploy Your Own
+##  Deploy your own
 
 Deploy your own 11ty project with Azion.
 
