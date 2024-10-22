@@ -1,29 +1,32 @@
-# 11tyshop
+# 11ty Shop
 
-![heladess online shop](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiFqb7c3xCeMahPABf7isdylCHMMfPEm5SM2m_T4QWSRrPBgep_jiTe2Z5AcQJ-qNylCQkuMK9dBmaU0oo0muvDSey4vdbtpLu7cArRWivnp5D_C5vQFfZnd0H01wOsk2FQeRHwKW1uBc1l1KueL1VJHGRb7LNi6CCrfMeb4VQBgKPYxjo4DuHU6TDK-A/s600/shop11ty.webp)
+The **11ty Shop** template helps you to easily deploy an online shop built with 11ty.
 
-Eleventy 11ty static site generator online shop integrate ecwid free download source code !!
+This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [documentation](https://www.azion.com/en/documentation/products/use-a-template-via-azion-console/).
 
-Starter online shop 11ty ecwid project.
+This template uses Eleventy version `2.0.0-canary.14`.
 
-online shop with markdown just input product id and run your online shop.
+> **Note**: this is a community template. Third-party or external developers created it, and Azion only enables the deployment in the Azion Edge Platform. Azion doesn't provide maintenance or support for the content itself but can assist you with any queries or issues you may encounter while deploying this template or using the platform.
+>
+> Join the Azion communities at [GitHub](https://github.com/aziontech) and [Discord](https://discord.com/channels/1112754829878624390/1113104727979348008) to learn, seek advice, and stay updated on trends.
 
+---
 
-##  Deploy Your Own
+## Requirements
+
+Before using this template, you need to:
+
+- Have a [GitHub account](https://github.com/signup).
+  - Every push will be deployed automatically to the main branch in this repository to keep your project updated.
+
+> **Note**: this template uses [Application Accelerator](https://www.azion.com/en/documentation/products/build/edge-application/application-accelerator/) and [Edge Functions](https://www.azion.com/en/documentation/products/build/edge-application/edge-functions/), and it could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information.
+
+---
+
+##  Deploy your own
 
 Deploy your own 11ty project with Azion.
 
 [![Deploy Button](/static/button.png)](https://console.azion.com/create/11ty/11ty-shop "Deploy with Azion")
 
-
-## Performance Test
-
-![heladess 11ty eleventy ecwid online shop](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg51D8lYDOJ9xP5pDzUuajKGpkhK6z1FdGltnIq0zcB-Ji-8IGwHFixWSMx745MQ2WhYsxgL37wYZqValFEFFOYrdHUtarKr7PVgyRbzKz-2Pp9SiAr9OqYNnxePDZJ2rSyRj5VThF8xkLfBphsFAgRYQn8yESFXO-n256BqSz0pP3N3tiedQF4EzHh4Q/s1349/speed%20online%20shop%20seo.webp)
-
-
-## Design UI
-
-![heladess online shop](./img/shoot11tyshop.webp)
-![11ty eleventy online shop](./img/shoot11tyshop1.webp)
-![e-commerce online shop](./img/shoot11tyshop2.webp)
-![statci site geenrator 11ty eleventy ecwid online shop](./img/shoot11tyshop3.webp)
+For a more detailed step-by-step, check the [documentation](https://www.azion.com/en/documentation/products/use-a-template-via-azion-console/).
