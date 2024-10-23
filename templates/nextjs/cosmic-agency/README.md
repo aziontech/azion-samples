@@ -12,8 +12,6 @@ A website template built using Cosmic's React components, [Blocks](https://block
 
 [Install this template](https://www.cosmicjs.com/marketplace/templates/agency)
 
-[View the live demo](https://cosmic-agency-template.vercel.app/)
-
 ## Features
 
 🛒 Product management and checkout using Stripe
