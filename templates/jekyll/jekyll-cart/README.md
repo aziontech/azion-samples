@@ -1,85 +1,35 @@
 # Jekyll Cart
 
-Code Repo: https://github.com/bradonomics/jekyll-cart/<br>
-Demo: http://bradonomics.github.io/jekyll-cart/
+The **Jekyll Cart** template allows you to build an e-commerce site with Jekyll using simpleCart(js), a JavaScript shopping cart that is easy to set up. The deployment will create a new edge application with its configurations, which you can edit and manage later. It also creates a repository in your GitHub account, based on the template, allowing you to maintain control over the project.
+
+This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [documentation](https://www.azion.com/en/documentation/products/guides/jekyll-ecommerce-collection/).
+
+This template uses Jekyll Cart version `0.1.0`.
+
+> **Note**: this is a community template. Third-party or external developers created it, and Azion only enables the deployment in the Azion Edge Platform. Azion doesn't provide maintenance or support for the content itself but can assist you with any queries or issues you may encounter while deploying this template or using the platform.
+>
+> Join the Azion communities at [GitHub](https://github.com/aziontech) and [Discord](https://discord.com/channels/1112754829878624390/1113104727979348008) to learn, seek advice, and stay updated on trends.
+
+- Code Repo: https://github.com/bradonomics/jekyll-cart/<br>
+- Demo: http://bradonomics.github.io/jekyll-cart/
 
 ---
 
-## Deploy Your Own
+## Requirements
+
+Before using this template, you need to:
+
+- Have a [GitHub account](https://github.com/signup).
+  - Every push will be deployed automatically to the main branch in this repository to keep your project updated.
+
+> **Note**: this template uses [Application Accelerator](https://www.azion.com/en/documentation/products/build/edge-application/application-accelerator/),[Edge Functions](https://www.azion.com/en/documentation/products/build/edge-application/edge-functions/), and [Edge Cache](https://www.azion.com/en/documentation/products/build/edge-application/edge-cache/) and it could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information.
+
+---
+
+## Deploy your own
 
 Deploy your own Jekyll Cart project with Azion.
 
 [![Deploy Button](/static/button.png)](https://console.azion.com/create/azion-community/jekyll-cart "Deploy with Azion")
 
-
----
-
-Jekyll Cart is a Jekyll based shopping cart built with simpleCart(js). It incorporates work from the following:
-
-### Jekyll
-
-Homepage: http://jekyllrb.com/<br>
-GitHub Repo: https://github.com/jekyll/jekyll
-
-### Jekyll Boilerplate
-
-GitHub Repo: https://github.com/bradonomics/jekyll-boilerplate
-
-### simpleCart(js)
-
-Homepage: http://simplecartjs.org/<br>
-GitHub Repo: https://github.com/wojodesign/simplecart-js
-
-### Fur Theme by CloudCannon
-
-Homepage: https://turquoise-rook.cloudvent.net/<br>
-GitHub Repo: https://github.com/CloudCannon/fur-jekyll-template
-
-## Getting Started
-
-You can [download the files from GitHub](https://github.com/bradonomics/jekyll-cart/archive/master.zip) (or clone the repo: `git clone https://github.com/bradonomics/jekyll-cart.git`) and have a fully functioning Jekyll site with shopping cart in minutes.
-
-### Develop
-
-Jekyll Cart was built with Jekyll v3.4.3, but should support newer versions also.
-
-Install the dependencies with [Bundler](http://bundler.io/):
-
-```shell
-$ bundle install
-```
-
-A gulp file and package.json has been included if you'd rather run Browser Sync. If not, you can run Jekyll with it's built-in serve commands
-
-```shell
-$ jekyll serve
-```
-
-Alghouth running `jekyll` commands through Bundler will ensure you're using the right versions:
-
-```shell
-$ bundle exec jekyll serve
-```
-
-### Editing
-
-Jekyll Cart was optimized for CloudCannon but will run without it. If you plan to use the email checkout feature but aren't hosted with CloudCannon, you'll need some form system to do the sending. [Formspree](https://formspree.io/) is a good option.
-
-## License
-
-[Jekyll Cart](https://github.com/bradonomics/jekyll-cart/) is released under the [GPL-2.0 License](http://www.gnu.org/licenses/gpl-2.0.html).
-
-[Jekyll](http://jekyllrb.com/) is released under the MIT license. [simpleCart(js)](https://github.com/wojodesign/simplecart-js) is released under the MIT license and the [GPL-2.0 License](http://www.gnu.org/licenses/gpl-2.0.html). [Fur by CloudCannon](https://github.com/CloudCannon/fur-jekyll-template) is released under the MIT license.
-
-> This program is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License, version 2, as
-published by the Free Software Foundation.
-
-> This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-> You should have received a copy of the GNU General Public License
-along with this program; if not, write to the Free Software
-Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+For a more detailed step-by-step, check the [documentation](https://www.azion.com/en/documentation/products/guides/jekyll-ecommerce-collection/).
