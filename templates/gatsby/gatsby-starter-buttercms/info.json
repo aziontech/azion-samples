@@ -1,0 +1,8 @@
+{
+  "name": "Gatsby with ButterCMS Starter Project",
+  "message": "Drop-in proof-of-concept GatsbyJS app, fully integrated with your ButterCMS account",
+  "preset": "gatsby",
+  "mode": "deliver",
+  "path": "/gatsby-starter-buttercms"
+}
+

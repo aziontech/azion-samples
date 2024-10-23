@@ -1,0 +1,24 @@
+{
+    "name": "ButterCMS Gatsby.js Starter Project ",
+    "description": "Drop-in proof-of-concept Gatsby.js app, fully integrated with your ButterCMS account.",
+    "repository": "https://github.com/ButterCMS/gatsbyjs-starter-buttercms",
+    "logo": "https://cdn.buttercms.com/R3fbtvoRT2CqEQSmk8hb",
+    "keywords": ["Gatsby.js", "buttercms", "cms", "blog"],
+    "buildpacks": [
+        {
+          "url": "heroku/nodejs"
+        },
+        {
+          "url": "https://github.com/heroku/heroku-buildpack-static"
+        }
+    ],
+    "env": {
+        "BUTTER_CMS_API_KEY": {
+            "description": "The API token of your ButterCMS account",
+            "value": ""
+        }
+    },
+    "scripts": {
+        "build": "gatsby build"
+    }
+} 

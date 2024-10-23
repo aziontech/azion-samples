@@ -1,0 +1,41 @@
+{
+  "name": "butter-cms-gatsby.js",
+  "version": "2.0.1",
+  "private": true,
+  "description": "ButterCMS Gatsby.js Starter",
+  "author": "ButterCMS",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "lint": "eslint src/**/*.js"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "buttercms": "^1.2.15",
+    "gatsby": "^5.7.0",
+    "gatsby-plugin-google-analytics": "^5.7.0",
+    "gatsby-plugin-image": "^3.7.0",
+    "gatsby-plugin-react-helmet": "^6.7.0",
+    "gatsby-plugin-sharp": "^5.7.0",
+    "gatsby-plugin-sitemap": "^6.7.0",
+    "gatsby-source-buttercms": "^3.0.0",
+    "gatsby-source-filesystem": "^5.7.0",
+    "gatsby-transformer-sharp": "^5.7.0",
+    "polyfill": "^0.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "sass": "^1.58.3",
+    "tiny-slider": "^2.9.4"
+  },
+  "devDependencies": {
+    "eslint": "^8.35.0",
+    "eslint-config-react-app": "^7.0.1"
+  }
+}
