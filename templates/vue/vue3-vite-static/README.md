@@ -25,4 +25,4 @@ Deploy your own Vue3/Vite project with Azion.
 
 [![Deploy Button](/static/button.png)](https://console.azion.com/create/vitejs/vitejs-vue3-boilerplate "Deploy with Azion")
 
-For a more detailed step-by-step, check the [documentation](https://www.azion.com/en/documentation/products/guides/eleventy-ecommerce-collection/).
+For a more detailed step-by-step, check the [documentation](https://www.azion.com/en/documentation/products/guides/vue-vite-boilerplate/).
