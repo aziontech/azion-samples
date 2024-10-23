@@ -52,14 +52,3 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000/) with your browser to see the result.
 
 You can start editing the page by modifying `src/pages/index.astro`. The page auto-updates as you edit the file.
-
-## Deploy on Vercel
-
-<p>Use the following button to deploy to <a href="https://vercel.com/" rel="noopener noreferrer" target="_blank">Vercel</a>. You will need to add API accesss keys as environment variables. Find these in <em>Bucket Settings &gt; API Access</em>.</p>
-<p>
-<a href="https://vercel.com/new/clone?env=PUBLIC_COSMIC_BUCKET_SLUG,PUBLIC_COSMIC_READ_KEY&repository-url=https://github.com/cosmicjs/simple-astro-blog/tree/api-v3" rel="noopener noreferrer" target="_blank"><img src="https://cdn.cosmicjs.com/d3f0d5e0-c064-11ea-9a05-6f8a16b0b14c-deploy-to-vercel.svg" style="width: 100px;" class="fr-fic fr-dib fr-fil"></a>
-</p>
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-Your feedback and contributions are welcome!

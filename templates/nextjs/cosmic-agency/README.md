@@ -73,13 +73,3 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
-
-## Deploy to Vercel
-
-Use the following button to deploy to Vercel. You will be asked to add API accesss keys as environment variables.
-
-<a href="https://vercel.com/import/git?c=1&s=https://github.com/cosmicjs/agency-template&env=COSMIC_BUCKET_SLUG,COSMIC_READ_KEY,COSMIC_WRITE_KEY" rel="noopener noreferrer" target="_blank"><img src="https://cdn.cosmicjs.com/d3f0d5e0-c064-11ea-9a05-6f8a16b0b14c-deploy-to-vercel.svg" style="width: 100px;" class="fr-fic fr-dib fr-fil"></a>
-
-## License
-
-Licensed under the [MIT license](https://github.com/cosmicjs/agency-template/blob/main/LICENSE).
