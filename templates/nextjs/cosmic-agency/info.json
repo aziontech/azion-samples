@@ -1,0 +1,8 @@
+{
+  "name": "Comic - Agency Website",
+  "message": "Agency website template built using Cosmic's React components",
+  "preset": "next",
+  "mode": "compute",
+  "path": "/cosmic-agency"
+}
+
