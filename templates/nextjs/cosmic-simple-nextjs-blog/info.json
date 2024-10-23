@@ -1,0 +1,7 @@
+{
+  "name": "Cosmic - Simple Next.js Blog",
+  "message": "A Next.js blog template powered by Cosmic",
+  "preset": "next",
+  "mode": "compute",
+  "path": "/cosmic-simple-nextjs-blog"
+}

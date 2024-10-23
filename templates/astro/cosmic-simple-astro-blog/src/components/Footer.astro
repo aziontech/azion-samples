@@ -1,0 +1,28 @@
+---
+import Logo from './Logo.astro'
+---
+
+<footer class="flex h-28 flex-col items-center justify-center gap-y-6">
+  <nav class="flex justify-center">
+    <ul class="flex gap-x-2">
+      <li class="text-sm hover:opacity-70">
+        <a href="/">Home</a>
+      </li>
+      <li class="text-sm hover:opacity-70">
+        <a href="/blog">Blog</a>
+      </li>
+    </ul>
+  </nav>
+  <span class="flex items-center">
+    <span class="flex items-center text-sm"> Powered by</span>
+    <a
+      href="https://www.cosmicjs.com/"
+      target="_blank"
+      aria-label="Cosmic"
+      title="Cosmic"
+      rel="noreferrer"
+      class="ml-2"
+      ><Logo />
+    </a>
+  </span>
+</footer>

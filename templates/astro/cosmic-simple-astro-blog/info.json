@@ -1,0 +1,7 @@
+{
+  "name": "Cosmic - Simple Astro Blog",
+  "message": "An Astro blog template powered by Cosmic",
+  "preset": "astro",
+  "mode": "deliver",
+  "path": "/cosmic-simple-astro-blog"
+}
