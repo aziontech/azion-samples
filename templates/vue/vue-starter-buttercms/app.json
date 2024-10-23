@@ -1,0 +1,21 @@
+{
+  "name": "ButterCMS VueJS Starter Project ",
+  "description": "Drop-in proof-of-concept VueJs app, fully integrated with your ButterCMS account.",
+  "repository": "https://github.com/ButterCMS/vuejs-starter-buttercms",
+  "logo": "https://cdn.buttercms.com/R3fbtvoRT2CqEQSmk8hb",
+  "keywords": ["Vue.js", "buttercms", "cms", "blog"],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-static.git"
+    }
+  ],
+  "env": {
+    "VITE_APP_BUTTER_CMS_API_KEY": {
+      "description": "The API token of your ButterCMS account",
+      "value": ""
+    }
+  }
+}
