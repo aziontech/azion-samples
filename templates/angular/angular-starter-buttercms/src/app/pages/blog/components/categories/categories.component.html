@@ -1,0 +1,8 @@
+<div class="widget categories-widget">
+  <h5 class="widget-title">Categories</h5>
+  <ul class="categories-list">
+    <li *ngFor="let category of categories">
+      <a style="cursor: pointer" (click)="navigateToCategory(category.slug)">{{category.name}}</a>
+    </li>
+  </ul>
+</div>

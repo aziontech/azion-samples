@@ -1,0 +1,29 @@
+<section [id]="fields.scroll_anchor_id" class="testimonial-section mt-100">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-7 col-lg-9">
+        <div class="testimonial-active-wrapper">
+
+          <div class="section-title text-center">
+            <h2 class="mb-20">{{fields.headline}}</h2>
+          </div>
+
+          <div class="testimonial-active">
+            <div class="single-testimonial" *ngFor="let item of fields.testimonial">
+              <div class="quote">
+                <i class="lni lni-quotation"></i>
+              </div>
+              <div class="content">
+                <p>{{item.quote}}</p>
+              </div>
+              <div class="info">
+                <h6>{{item.name}}</h6>
+                <p>{{item.title}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
