@@ -1,0 +1,8 @@
+{
+  "name": "React with ButterCMS Starter Project",
+  "message": "Drop-in proof-of-concept app for React, fully integrated with your ButterCMS account",
+  "preset": "react",
+  "mode": "deliver",
+  "path": "/react-starter-buttercms"
+}
+
