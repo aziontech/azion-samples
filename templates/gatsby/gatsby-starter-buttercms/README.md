@@ -2,8 +2,6 @@
 
 This Gatsby starter project fully integrates with dynamic sample content from your ButterCMS account, including main menu, pages, blog posts, categories, and tags, and all with a beautiful, custom theme with already-implemented search functionality. All of the included sample content is automatically created in your account dashboard when you sign up for a free trial of ButterCMS.
 
-[![Deploy with Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ButterCMS/gatsbyjs-starter-buttercms&env%5BBUTTER_CMS_API_KEY%5D=check%20https://buttercms.com/settings)
-
 ### 1. Installation
 
 First, clone the repo and install the dependencies by running `npm install`
