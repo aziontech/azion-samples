@@ -1,0 +1,9 @@
+
+{
+  "name": "Angular with ButterCMS Starter Project",
+  "message": "Drop-in proof-of-concept Angular app, fully integrated with your ButterCMS account",
+  "preset": "angular",
+  "mode": "deliver",
+  "path": "/angular-starter-buttercms"
+}
+

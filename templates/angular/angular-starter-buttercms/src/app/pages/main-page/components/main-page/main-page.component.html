@@ -1,0 +1,39 @@
+<ng-container *ngIf="pageData; else loading">
+  <ng-container *ngFor="let bodyItem of pageData.body">
+    <ng-container [ngSwitch]="bodyItem.type">
+      <ng-container *ngSwitchCase="'hero'">
+        <app-hero
+          [fields]="bodyItem.fields"
+        >
+        </app-hero>
+      </ng-container>
+      <ng-container *ngSwitchCase="'two_column_with_image'">
+        <app-two-column-with-image
+          [fields]="bodyItem.fields"
+        >
+        </app-two-column-with-image>
+      </ng-container>
+      <ng-container *ngSwitchCase="'features'">
+        <app-features
+          [fields]="bodyItem.fields"
+        >
+        </app-features>
+      </ng-container>
+      <ng-container *ngSwitchCase="'testimonials'">
+        <app-testimonials
+          [fields]="bodyItem.fields"
+        >
+        </app-testimonials>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+</ng-container>
+<ng-container *ngIf="posts">
+  <app-blog-section
+    [posts]="posts"
+  >
+  </app-blog-section>
+</ng-container>
+<ng-template #loading>
+  <app-loader></app-loader>
+</ng-template>

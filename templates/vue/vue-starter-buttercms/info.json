@@ -1,0 +1,8 @@
+{
+  "name": "Vue.js with ButterCMS Starter Project",
+  "message": "Drop-in proof-of-concept VueJs app, fully integrated with your ButterCMS account",
+  "preset": "vue",
+  "mode": "deliver",
+  "path": "/vue-starter-buttercms"
+}
+

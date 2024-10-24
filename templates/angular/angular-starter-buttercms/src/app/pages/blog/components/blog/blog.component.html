@@ -1,0 +1,156 @@
+<ng-container *ngIf="(posts || post); else loading">
+  <section [id]="(blogType === 'post') ? 'blog-header' : 'blog-roll'"
+           [ngClass]="{'blog-roll-nav': blogType !== 'post','single-post-nav': blogType === 'post'}">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <div class="section-title text-center">
+            <!-- Breadcrumb navigation -->
+            <ng-container [ngSwitch]="blogType">
+              <ng-container *ngSwitchCase="'all'">
+                <h2>All Blog Posts</h2>
+                <ul class="breadcrumb-nav">
+                  <li><a href="index.html">Home</a></li>
+                  <li>All blog posts</li>
+                </ul>
+              </ng-container>
+              <ng-container *ngSwitchCase="'category'">
+                <h2>Blog Posts by Category</h2>
+                <ul class="breadcrumb-nav">
+                  <li><a href="">Home</a></li>
+                  <li><a href="blog">Blog</a></li>
+                  <li>Category: {{brTitle}}</li>
+                </ul>
+              </ng-container>
+              <ng-container *ngSwitchCase="'tag'">
+                <h2>Blog Posts by Tag</h2>
+                <ul class="breadcrumb-nav">
+                  <li><a href="">Home</a></li>
+                  <li><a href="blog">Blog</a></li>
+                  <li>Tag: {{brTitle}}</li>
+                </ul>
+              </ng-container>
+              <ng-container *ngSwitchCase="'search'">
+                <h2>Search Results</h2>
+                <ul class="breadcrumb-nav">
+                  <li><a href="">Home</a></li>
+                  <li><a href="blog">Blog</a></li>
+                  <li>Search: {{brTitle}}</li>
+                </ul>
+              </ng-container>
+              <ng-container *ngSwitchCase="'post'">
+                <h2>{{post.title}}</h2>
+                <ul class="breadcrumb-nav">
+                  <li><a href="">Home</a></li>
+                  <li><a href="blog">Blog</a></li>
+                  <li>{{post.title}}</li>
+                </ul>
+              </ng-container>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section [ngClass]="{'blog-posts': blogType !== 'post','blog-post': blogType === 'post'}">
+    <div class="container">
+      <div class="row justify-content-center">
+        <!--Blog posts-->
+        <ng-container *ngIf="blogType !== 'post'">
+          <div class="col-12 col-lg-8 blog-roll-cards">
+            <div class="row"><!--nested row for blogroll-->
+              <p *ngIf="posts.length <= 0">
+                No blog posts found matching this query.
+              </p>
+              <ng-container *ngIf="posts.length > 0">
+                <div class="col-12 col-lg-6" *ngFor="let post of posts">
+                  <div class="blog-roll-card">
+                    <div class="blog-roll-card-meta">
+                      <h2 class="blog-roll-card-header">
+                        <a [href]="'/blog/' + post.slug" (click)="navigationChange(post.slug, undefined, undefined)">
+                          {{post.title}}
+                        </a>
+                      </h2>
+                      <ul class="blog-roll-card-meta-info">
+                        <li>
+                          <a href="javascript:void(0)"><img
+                            [src]="post.author.profile_image || '../../../../assets/images/placeholder.png'" alt="#">
+                            {{post.author.first_name}} {{post.author.last_name}}
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0)">
+                            <i class="lni lni-calendar"></i>
+                            {{post.published | date: "MM. dd. YYYY hh:mm:ss"}}
+                          </a>
+                        </li>
+                        <li *ngFor="let tag of post.tags">
+                          <a style="cursor: pointer" (click)="navigationChange('tag', tag.slug, undefined)"><i
+                            class="lni lni-tag"></i>{{tag.name}}</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="single-post-thumbnail" *ngIf="post.featured_image">
+                      <img [src]="post.featured_image" [alt]="post.featured_image_alt">
+                    </div>
+                    <div class="blog-roll-card-body" [innerHTML]="post.summary">
+                    </div>
+                    <div class="blog-roll-card-footer text-center">
+                      <a (click)="navigationChange(post.slug, undefined, undefined)" class="main-btn btn-hover">Read
+                        More</a>
+                    </div>
+                  </div>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </ng-container>
+        <!--Single blog post-->
+        <ng-container *ngIf="blogType === 'post'">
+          <div class="col-lg-8 col-md-12 col-12">
+            <div class="single-post">
+              <div class="single-post-meta">
+                <h2 class="single-post-header">{{post.title}}</h2>
+                <ul class="single-post-meta-info">
+                  <li>
+                    <a href="javascript:void(0)"><img [src]="post.author.profile_image || '../../../../assets/images/placeholder.png'" alt="#">
+                      {{post.author.first_name}} {{post.author.last_name}}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)"><i class="lni lni-calendar"></i>{{post.published | date: "MM. dd. YYYY hh:mm:ss"}}
+                    </a>
+                  </li>
+                  <li *ngFor="let tag of post.tags">
+                    <a style="cursor: pointer" (click)="navigationChange('tag', tag.slug, undefined)"><i
+                      class="lni lni-tag"></i>{{tag.name}}</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="single-post-thumbnail" *ngIf="post.featured_image">
+                <img [src]="post.featured_image" alt="post.featured_image_alt">
+              </div>
+              <div class="single-post-body" [innerHTML]="post.body">
+              </div>
+            </div>
+          </div>
+        </ng-container>
+        <!-- Widgets Column -->
+        <aside class="col-12 col-lg-4">
+          <app-search
+            (searchChange)="navigationChange(undefined, undefined, $event)"
+          >
+          </app-search>
+          <app-categories
+            [categories]="categories"
+            (categoryChange)="navigationChange('category', $event, undefined)"
+          >
+          </app-categories>
+        </aside>
+      </div>
+    </div>
+  </section>
+</ng-container>
+<ng-template #loading>
+  <app-loader></app-loader>
+</ng-template>
