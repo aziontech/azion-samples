@@ -1,0 +1,8 @@
+{
+  "name": "Clean Angular App with Sanity",
+  "message": "A minimal Angular site with Sanity",
+  "preset": "angular",
+  "mode": "deliver",
+  "path": "/sanity-angular-clean"
+}
+

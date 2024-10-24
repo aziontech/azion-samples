@@ -1,0 +1,8 @@
+{
+  "name": "Clean Astro App with Sanity",
+  "message": "A minimal Astro site with Sanity Studio",
+  "preset": "astro",
+  "mode": "deliver",
+  "path": "/sanity-astro-clean"
+}
+
