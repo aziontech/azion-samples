@@ -1,0 +1,8 @@
+{
+  "name": "Clean Nuxt App with Sanity",
+  "message": "A minimal Nuxt site with Sanity Studio",
+  "preset": "nuxt",
+  "mode": "deliver",
+  "path": "/sanity-nuxt-clean"
+}
+
