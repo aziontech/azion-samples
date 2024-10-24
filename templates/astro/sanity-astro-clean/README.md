@@ -41,33 +41,3 @@ If you do not wish to use TypeScript, we've included a `remove-typescript.mjs` f
 
 If you intend to use TypeScript, you can safely remove the `remove-typescript.mjs` file.
 
-## Removing the embedded Studio
-
-If you wish to manage and host the Studio separately, you remove the `studioBasePath` property for the `sanity` configuration in `astro.config.mjs`. You can also remove the following dependencies:
-
-- `output` in `astro.config.mjs`…
-  - …and `adapter` in `astro.config.mjs`
-- `react()` in `astro.config.mjs`
-- `@sanity/vision` `react` `react-dom` `@types/react` `@types/react-dom` from `package.json`
-- `schema` folder (you might want to copy this to the new Studio location)
-- `sanity.config.ts` (you might want to copy this to the new Studio location)
-
-## Deployments
-
-Feel free to deploy the App to whichever hosting provider you prefer ([Vercel](https://vercel.com/), [Netlify](https://netlify.com), [Cloudflare](https://pages.cloudflare.com/), etc). Remember [to change the adapter](https://docs.astro.build/en/guides/server-side-rendering/#adding-an-adapter) in the `astro.config.mjs` file to match your hosting provider.
-
-### Deploying the Studio on \*\.sanity.studio
-
-You can also deploy the Sanity Studio on its own URL by running `npx sanity deploy`, provided you have added a [`sanity.cli.ts` configuration file](https://www.sanity.io/docs/cli):
-
-```ts
-// sanity.cli.ts
-import { defineCliConfig } from "sanity/cli";
-
-export default defineCliConfig({
-  api: {
-    projectId: "<your-project-id>",
-    dataset: "<your-dataset-name>",
-  },
-});
-```
