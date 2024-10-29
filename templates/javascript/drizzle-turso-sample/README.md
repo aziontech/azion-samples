@@ -28,3 +28,12 @@ Or via JSON Args:
   "token" "DB_TOKEN"
 }
 ```
+---
+
+## Deploy Your Own
+
+Deploy your own Drizzle + Turso project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/drizzle-orm/drizzle-turso-starter-kit "Deploy with Azion")
+
+---

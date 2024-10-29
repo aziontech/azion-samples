@@ -41,7 +41,7 @@ Or via JSON Args:
 
 ## Deploy Your Own
 
-Deploy your own Drizzle + TiDB Sample project with Azion.
+Deploy your own Drizzle + TiDB project with Azion.
 
 [![Deploy Button](/static/button.png)](https://console.azion.com/create/drizzle-orm/drizzle-tidb-starter-kit "Deploy with Azion")
 

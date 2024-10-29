@@ -26,3 +26,12 @@ Or via JSON Args:
   "connection_url": "postgresql://user:passwor@hostname.neon.tech/database"
 }
 ```
+---
+
+## Deploy Your Own
+
+Deploy your own Drizzle + Neon project with Azion.
+
+[![Deploy Button](/static/button.png)](https://console.azion.com/create/drizzle-orm/drizzle-neon-starter-kit "Deploy with Azion")
+
+---
