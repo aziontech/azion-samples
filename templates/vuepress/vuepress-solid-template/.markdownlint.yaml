@@ -1,0 +1,13 @@
+default: true
+
+# line-length (default: 80)
+MD013: false
+
+# blanks-around-fences (allow only code in list)
+MD031:
+  list_items: false
+
+# no-inline-html (allow only Catalog)
+MD033:
+  allowed_elements:
+    - Catalog
