@@ -1,0 +1,25 @@
+{
+  "name": "vuepress-theme-hope-starter",
+  "private": true,
+  "type": "module",
+  "description": "A online demo for vuepress-theme-hope",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:vuepress-theme-hope/online-demo.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "pnpm run docs:dev",
+    "docs:build": "vuepress build docs",
+    "docs:dev": "vuepress dev docs"
+  },
+  "devDependencies": {
+    "@vuepress/bundler-vite": "2.0.0-rc.17",
+    "@vuepress/helper": "2.0.0-rc.52",
+    "sass": "^1.79.5",
+    "vue": "^3.5.12",
+    "vuepress": "2.0.0-rc.17",
+    "vuepress-theme-hope": "2.0.0-rc.58"
+  },
+  "packageManager": "pnpm@8.15.9"
+}

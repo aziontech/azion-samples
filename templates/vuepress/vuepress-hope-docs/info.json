@@ -1,5 +1,5 @@
 {
-  "name": "VuePress docs with Hope them",
+  "name": "VuePress docs with Hope theme",
   "message": "A demonstration of how to use the VuePress Hope theme to build a documentation website",
   "preset": "vuepress",
   "mode": "deliver",

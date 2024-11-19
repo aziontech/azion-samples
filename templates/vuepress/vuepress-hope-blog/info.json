@@ -1,0 +1,8 @@
+{
+  "name": "VuePress blog with Hope theme",
+  "message": "A demonstration of how to use the VuePress Hope theme to build a blog",
+  "preset": "vuepress",
+  "mode": "deliver",
+  "path": "/vuepress-hope-blog"
+}
+
