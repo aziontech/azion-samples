@@ -1,0 +1,30 @@
+{
+  "name": "vuepress-plugin-ribbon",
+  "version": "1.1.6",
+  "description": "Add a beautiful ribbon to your vuepress!",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/moefyit/vuepress-plugin-ribbon.git"
+  },
+  "keywords": [
+    "vuepress",
+    "plugin",
+    "ribbon"
+  ],
+  "files": [
+    "index.js",
+    "lib/",
+    "package.json",
+    "README.md"
+  ],
+  "author": "Nyakku Shigure",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/moefyit/vuepress-plugin-ribbon/issues"
+  },
+  "homepage": "https://github.com/moefyit/vuepress-plugin-ribbon#readme",
+  "dependencies": {
+    "@moefy-canvas/theme-ribbon": "^0.5.2"
+  }
+}

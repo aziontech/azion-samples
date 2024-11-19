@@ -1,0 +1,14 @@
+# Mac
+.DS_Store
+
+# .vscode
+/.vscode/
+
+# node
+node_modules/
+
+# vuepress
+dist
+
+# yarn
+yarn-error.log
