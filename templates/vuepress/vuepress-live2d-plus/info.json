@@ -1,0 +1,7 @@
+{
+  "name": "VuePress Live2D Plus Template",
+  "message": "A demonstration of how to integrate the Live2D Plus plugin to your VuePress",
+  "preset": "vuepress",
+  "mode": "deliver",
+  "path": "/vuepress-live2d-plus"
+}
