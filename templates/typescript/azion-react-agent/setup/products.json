@@ -1,0 +1,82 @@
+[
+  {
+    "product_id": "arroz_tipo1",
+    "name": "Arroz Branco Tipo 1",
+    "description": "Arroz branco tipo 1, grãos longos e selecionados. Produto 100% natural, fonte de carboidratos e energia.\n\nBenefícios:\n• Alto rendimento\n• Grãos selecionados\n• Livre de impurezas\n\nModo de preparo:\n1. Lave o arroz em água corrente\n2. Para cada xícara de arroz, use 2 xícaras de água\n3. Tempo médio de cozimento: 15-20 minutos\n\nInformação Nutricional:\n• Porção de 50g (1/4 xícara)\n• Valor energético: 170kcal\n• Carboidratos: 40g\n• Proteínas: 3.3g",
+    "price": "R$ 7.99",
+    "weight": "1kg",
+    "category": "alimentos",
+    "subcategory": "arroz_feijao_graos",
+    "stock": 150
+  },
+  {
+    "product_id": "feijao_carioca",
+    "name": "Feijão Carioca",
+    "description": "Feijão carioca tipo 1, grãos selecionados e limpos. Rico em ferro e proteínas.\n\nBenefícios:\n• Fonte de ferro\n• Alto teor de fibras\n• Grãos selecionados\n\nModo de preparo:\n1. Selecione e lave os grãos\n2. Deixe de molho por 1 hora\n3. Cozinhe em panela de pressão por 30 minutos",
+    "price": "R$ 8.99",
+    "weight": "1kg",
+    "category": "alimentos",
+    "subcategory": "arroz_feijao_graos",
+    "stock": 120
+  },
+  {
+    "product_id": "suco_uva",
+    "name": "Suco de Uva Integral",
+    "description": "Suco de uva 100% natural, sem adição de açúcares ou conservantes.\n\nBenefícios:\n• 100% natural\n• Rico em antioxidantes\n• Sem conservantes\n• Sem açúcar adicionado\n\nInformação Nutricional:\n• Porção de 200ml\n• Valor energético: 136kcal\n• Carboidratos: 32g\n• Vitamina C: 34mg",
+    "price": "R$ 13.99",
+    "volume": "1L",
+    "category": "bebidas",
+    "subcategory": "sucos_prontos",
+    "stock": 80
+  },
+  {
+    "product_id": "refrigerante_cola",
+    "name": "Refrigerante Cola",
+    "description": "Refrigerante sabor cola, bebida gaseificada refrescante.\n\nInformação Nutricional:\n• Porção de 200ml\n• Valor energético: 85kcal\n• Carboidratos: 21g\n• Sódio: 10mg",
+    "price": "R$ 9.99",
+    "volume": "2L",
+    "category": "bebidas",
+    "subcategory": "refrigerantes",
+    "stock": 200
+  },
+  {
+    "product_id": "agua_sanitaria",
+    "name": "Água Sanitária",
+    "description": "Água sanitária para limpeza geral e desinfecção. Elimina 99.9% das bactérias.\n\nUsos:\n• Limpeza de pisos e azulejos\n• Desinfecção de banheiros\n• Alvejante para roupas brancas\n\nPrecauções:\n• Manter fora do alcance de crianças\n• Não ingerir\n• Evitar contato com os olhos\n• Não misturar com outros produtos",
+    "price": "R$ 3.99",
+    "volume": "1L",
+    "category": "limpeza",
+    "subcategory": "limpeza_geral",
+    "stock": 150
+  },
+  {
+    "product_id": "detergente_neutro",
+    "name": "Detergente Líquido Neutro",
+    "description": "Detergente líquido neutro para lavar louças.\n\nBenefícios:\n• Remove gorduras\n• Rendimento superior\n• Não agride as mãos\n• Biodegradável\n\nModo de uso:\n• Aplicar na esponja\n• Lavar a louça\n• Enxaguar bem",
+    "price": "R$ 2.49",
+    "volume": "500ml",
+    "category": "limpeza",
+    "subcategory": "lava_loucas",
+    "stock": 200
+  },
+  {
+    "product_id": "desinfetante",
+    "name": "Desinfetante",
+    "description": "Desinfetante de uso geral. Elimina 99.9% das bactérias.\n\nBenefícios:\n• Limpa e desinfeta\n• Perfuma o ambiente\n• Poder bactericida\n\nIndicado para:\n• Limpeza de pisos\n• Banheiros\n• Ralos\n• Lixeiras",
+    "price": "R$ 6.99",
+    "volume": "1L",
+    "category": "limpeza",
+    "subcategory": "desinfetantes",
+    "stock": 120
+  },
+  {
+    "product_id": "suco_laranja",
+    "name": "Suco de Laranja",
+    "description": "Néctar de laranja pronto para beber.\n\nBenefícios:\n• Rico em vitamina C\n• Sem conservantes artificiais\n• Prático de consumir\n\nInformação Nutricional:\n• Porção de 200ml\n• Valor energético: 82kcal\n• Carboidratos: 20g\n• Vitamina C: 34mg",
+    "price": "R$ 4.99",
+    "volume": "1L",
+    "category": "bebidas",
+    "subcategory": "sucos_prontos",
+    "stock": 90
+  }
+]

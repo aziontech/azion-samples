@@ -1,0 +1,25 @@
+{
+  "name": "azion-react-agent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup": "tsx setup/setup.ts"
+  },
+  "keywords": [],
+  "author": "aziontech",
+  "license": "ISC",
+  "dependencies": {
+    "@langchain/community": "^0.3.16",
+    "@langchain/core": "^0.3.19",
+    "@langchain/langgraph": "^0.2.24",
+    "azion": "^1.11.1",
+    "langchain": "^0.3.6"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.6",
+    "tsx": "^4.19.2",
+    "typescript": "^5.4.2"
+  }
+}

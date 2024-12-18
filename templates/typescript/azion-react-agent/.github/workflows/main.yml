@@ -1,4 +1,4 @@
-name: Main Edge Deploy
+name: Main Edge Deploy - Azion React Agent
 
 on:
   pull_request:
@@ -26,9 +26,6 @@ jobs:
 
       - name: Install NPM dependencies
         run: npm i
-
-      - name: Update PDF file
-        run: npx --yes bun@latest ./scripts/create-pdf.ts
         
       - name: Install Azion CLI
         run: |
@@ -38,5 +35,5 @@ jobs:
 
       - name: Azion Action Deploy
         run: |
-          azion -t ${{ secrets.AZION_PERSONAL_TOKEN }}
+          azion -t ${{ secrets.AZION_TOKEN }}
           azion deploy

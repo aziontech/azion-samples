@@ -1,7 +1,0 @@
-{
-  "name": "Docusaurus Blog Template",
-  "message": "Deploy a blog page based on the Docusaurus framework in a few steps",
-  "preset": "docusaurus",
-  "mode": "deliver",
-  "path": "/docusaurus-blog-template"
-}

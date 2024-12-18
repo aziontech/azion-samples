@@ -1,9 +1,0 @@
-.titleLink {
-  position: relative;
-  font-weight: 500;
-  color: var(--ifm-heading-color);
-}
-
-.titleLink:hover {
-  color: var(--ifm-link-hover-color);
-}
