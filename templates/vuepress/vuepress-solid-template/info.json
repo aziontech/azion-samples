@@ -1,0 +1,8 @@
+{
+  "name": "VuePress Solid Template",
+  "message": "A VuePress starter template with many pre-configured features",
+  "preset": "vuepress",
+  "mode": "deliver",
+  "path": "/vuepress-solid-template"
+}
+

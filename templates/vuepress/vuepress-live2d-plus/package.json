@@ -1,0 +1,73 @@
+{
+  "name": "vuepress-plugin-live2d-plus",
+  "version": "0.2.2",
+  "type": "module",
+  "description": "vuepress plugin for live2d",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xinlei3166/vuepress-plugin-live2d-plus"
+  },
+  "keywords": [
+    "vuepress2",
+    "vuepress",
+    "live2d",
+    "plugin"
+  ],
+  "bugs": {
+    "url": "https://github.com/xinlei3166/vuepress-plugin-live2d-plus/issues"
+  },
+  "homepage": "https://github.com/xinlei3166/vuepress-plugin-live2d-plus#readme",
+  "author": "君惜",
+  "license": "MIT",
+  "files": [
+    "client",
+    "node"
+  ],
+  "main": "node/index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "cross-env BASE=/ vuepress build docs --clean-cache",
+    "docs:serve": "serve docs/.vuepress/dist",
+    "test": "jest",
+    "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx,.vue",
+    "release": "yunque-release --skipBuild",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+  },
+  "dependencies": {
+    "vuepress": "2.0.0-beta.51"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.39",
+    "@typescript-eslint/eslint-plugin": "^4.17.0",
+    "@typescript-eslint/parser": "^4.17.0",
+    "@yunquejs/release": "^0.1.4",
+    "cross-env": "^7.0.3",
+    "chalk": "^5.1.2",
+    "conventional-changelog-cli": "^2.1.1",
+    "eslint": "^7.21.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.7.0",
+    "jest": "^26.1.0",
+    "lint-staged": "^10.5.4",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.1",
+    "tsup": "^4.11.1",
+    "typescript": "^4.2.3",
+    "vue-eslint-parser": "^7.6.0",
+    "yorkie": "^2.0.0"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged",
+    "commit-msg": "node scripts/verify-commit.js"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

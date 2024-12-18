@@ -1,0 +1,28 @@
+{
+  "name": "vuepress-plugin-go-top",
+  "version": "1.0.4",
+  "description": "Click such a lovely cat to back to top!",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/moefyit/vuepress-plugin-go-top.git"
+  },
+  "keywords": [
+    "vuepress",
+    "plugin",
+    "cat",
+    "back-to-top"
+  ],
+  "files": [
+    "index.js",
+    "lib/",
+    "package.json",
+    "README.md"
+  ],
+  "author": "Nyakku Shigure",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/moefyit/vuepress-plugin-go-top/issues"
+  },
+  "homepage": "https://github.com/moefyit/vuepress-plugin-go-top#readme"
+}

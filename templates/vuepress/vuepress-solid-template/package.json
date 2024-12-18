@@ -1,0 +1,38 @@
+{
+  "name": "vuepress-solid-template",
+  "type": "module",
+  "version": "0.1.0",
+  "packageManager": "pnpm@9.12.0",
+  "description": "Best Vuepress Template",
+  "author": "Alex Sun",
+  "license": "MIT",
+  "keywords": [],
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "clean-dev": "vuepress dev docs --clean-cache",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "docs:clean-dev": "vuepress dev docs --clean-cache"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "@vuepress/bundler-vite": "2.0.0-rc.18",
+    "@vuepress/client": "2.0.0-rc.18",
+    "@vuepress/plugin-catalog": "2.0.0-rc.56",
+    "@vuepress/plugin-copy-code": "2.0.0-rc.56",
+    "@vuepress/plugin-markdown-image": "2.0.0-rc.56",
+    "@vuepress/plugin-markdown-math": "2.0.0-rc.56",
+    "@vuepress/plugin-shiki": "2.0.0-rc.56",
+    "@vuepress/theme-default": "2.0.0-rc.56",
+    "github-slugger": "^2.0.0",
+    "katex": "^0.16.11",
+    "mermaid": "^11.3.0",
+    "sass-embedded": "^1.79.4",
+    "vue": "^3.5.11",
+    "vuepress": "2.0.0-rc.18",
+    "vuepress-plugin-md-enhance": "2.0.0-rc.59",
+    "vuepress-plugin-search-pro": "2.0.0-rc.59"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "VuePress Moefy Template",
+  "message": "A demonstration of how to add some lovely plugins to your VuePress",
+  "preset": "vuepress",
+  "mode": "deliver",
+  "path": "/vuepress-moefy"
+}
+
