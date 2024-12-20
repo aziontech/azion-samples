@@ -1,7 +1,7 @@
 {
-  "name": "Vue3/Vite Boilerplate",
-  "message": "Accelerate the deployment of Vue3/Vite applications ready to run on the edge",
+  "name": "Vue3 AI Chatbot Widget",
+  "message": "Accelerate the deployment of AI-powered Vue3 chatbot widgets optimized for edge environments",
   "preset": "vue",
   "mode": "deliver",
-  "path": "/vue3-vite-static"
+  "path": "/vue3-ai-chatbot-widget"
 }
