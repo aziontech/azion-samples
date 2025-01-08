@@ -9,7 +9,7 @@ This repository is an example of the new GitHub repository created during the de
 
 This template uses Stencil version `4.22.2`.
 
-
+---
 
 ## Requirements
 
