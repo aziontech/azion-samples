@@ -1,6 +1,6 @@
-# Stencil App Boilerplate
+# Stencil Boilerplate
 
-The **Stencil App Boilerplate** template deploys a basic Stencil (4.22.2) web application and creates basic Edge Applications configurations to optimize it, such as creating multiple Cache Settings, enabling the use of Gzip compression, etc. The template creates a GitHub repository containing your project, as well as an edge application and a domain to facilitate your access and management through Azion Edge Platform.
+The **Stencil Boilerplate** template deploys a basic Stencil (4.22.2) web application and creates basic Edge Applications configurations to optimize it, such as creating multiple Cache Settings, enabling the use of Gzip compression, etc. The template creates a GitHub repository containing your project, as well as an edge application and a domain to facilitate your access and management through Azion Edge Platform.
 
 Stencil is a modern compiler for building reusable, scalable web components. It allows developers to easily write standard-compliant components, providing features like JSX, TypeScript, and lazy-loading while outputting highly optimized code for fast performance.
 
@@ -26,7 +26,7 @@ Fill in the fields presented on the configuration form and deploy the template. 
 
 ## Deploy your own
 
-Deploy your own Stencil App Boilerplate project with Azion.
+Deploy your own Stencil Boilerplate project with Azion.
 
 [![Deploy Button](https://www.azion.com/button/)](https://console.azion.com/create/stencil/stencil-boilerplate "Deploy with Azion")
 
