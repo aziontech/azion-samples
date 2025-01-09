@@ -1,6 +1,6 @@
 # VuePress Solid
 
-The **VuePress Solid** template is a [VuePress](https://vuepress.vuejs.org/guide/introduction.html) framework providing a starter kit that includes pre-configured features like Markdown enhancement plugins, automatic catalog generation, and auto formatting.
+The **VuePress Solid** template is a [VuePress](https://vuepress.vuejs.org/guide/introduction.html) starter kit that includes pre-configured features like Markdown enhancement plugins, automatic catalog generation, and auto formatting.
 
 The deployment creates an edge application with customizable configurations, an **Edge Storage** origin for content delivery, and a GitHub repository based on the template to facilitate your access and management through the Azion Edge Platform. 
 
