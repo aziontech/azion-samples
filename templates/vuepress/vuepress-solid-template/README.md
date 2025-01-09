@@ -1,89 +1,36 @@
-# *Solid*: a VuePress 2 Template
+# VuePress Solid
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/Sun-ZhenXing/vuepress-solid-template/deploy-docs.yml?branch=main)
+The **VuePress Solid** template is a [VuePress](https://vuepress.vuejs.org/guide/introduction.html) framework providing a starter kit that includes pre-configured features like Markdown enhancement plugins, automatic catalog generation, and auto formatting.
 
-🌐 [**中文文档**](./README.zh.md) | 🚀 [**Demo Page**](https://blog.alexsun.top/vuepress-solid-template/)
+The deployment creates an edge application with customizable configurations, an **Edge Storage** origin for content delivery, and a GitHub repository based on the template to facilitate your access and management through the Azion Edge Platform. 
 
-## *Solid* is not *Solid.js*! *Solid* is a VuePress2-powered static site generator
+This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [How to deploy a web application based on VuePress using templates](https://www.azion.com/en/documentation/products/guides/vuepress-templates-collection/) guide.
+ 
+This template uses VuePress version `2.0.0`.
 
-Best VuePress2 Template. Get a beautiful and configured default theme document in a minute.
+> **Note**: this is a community template. It was created by third-party or external developers and Azion is only enabling the deployment in the Azion Edge Platform. Azion doesn't provide maintenance or support for the content itself but can assist you with any queries or issues you may encounter while deploying this template or using the platform.
+>
+> Join the Azion communities at [GitHub](https://github.com/aziontech) and [Discord](https://discord.com/channels/1112754829878624390/1113104727979348008) to learn, seek advice, and stay updated on trends.
 
-Features:
+---
 
-- 🎉 VuePress 2 (Vue 3 + Vite 5 + TypeScript)
-- ✨ [VuePress MarkDown Enhance](https://vuepress-theme-hope.github.io/v2/md-enhance/)
-  - 📖 Support LaTeX math formulas (use [KaTeX](https://katex.org/))
-  - 📈 [Mermaid](https://theme-hope.vuejs.press/guide/markdown/mermaid.html) (**optional**, installed by default)
-  - 💡 [chartjs](https://vuepress-theme-hope.github.io/v2/md-enhance/guide/chart/chartjs.html) (**optional**, please refer to the [VuePress MarkDown Enhance](https://vuepress-theme-hope.github.io/v2/md-enhance/))
-  - 📊 [Echarts](https://theme-hope.vuejs.press/guide/markdown/echarts.html) (**optional**, please refer to the [VuePress MarkDown Enhance](https://vuepress-theme-hope.github.io/v2/md-enhance/))
-  - 🎞️ [Presentation](https://theme-hope.vuejs.press/guide/markdown/revealjs.html) (use `reveal.js`, **optional**, please refer to the [VuePress MarkDown Enhance](https://vuepress-theme-hope.github.io/v2/md-enhance/))
-  - 📐 [Flowchart](https://theme-hope.vuejs.press/guide/markdown/flowchart.html) (**optional**, please refer to the [VuePress MarkDown Enhance](https://vuepress-theme-hope.github.io/v2/md-enhance/))
-- 📋 Copy code support
-- 📜 Auto catalog generation
-- 🔍 Static search support
-- 🎇 Auto format
+## Requirements
 
-## 1. Start
+Before using this template, you need to:
 
-```bash
-git clone https://github.com/Sun-ZhenXing/vuepress-solid-template
-cd vuepress-solid-template
-pnpm i
-pnpm dev
-```
+- Have a [GitHub account](https://github.com/signup).
+ - Every push will be deployed automatically to the main branch in this repository to keep your project updated.
 
-The only thing you need to do is to configure `docs/.vuepress/config.ts`:
+> **Note**: this template uses [Application Accelerator](https://www.azion.com/en/documentation/products/build/edge-application/application-accelerator/), [Edge Functions](https://www.azion.com/en/documentation/products/build/edge-application/edge-functions/), and [Edge Cache](https://www.azion.com/en/documentation/products/build/edge-application/edge-cache/) and it could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information.
 
-1. change `USER_NAME` to yours.
-2. change `BASE_PATH` to your repo name.
+Fill in the fields presented on the configuration form and deploy the template. This will create a new edge application with its configurations, which you can edit and manage later. It also creates a repository in your GitHub account, based on the template, allowing you to maintain control over the project.
 
-## 2. Uploading code to remote repo
+---
 
-Change `${YOUR_REPO}` to the address of your remote repository.
+## Deploy your own
 
-```bash
-cd vuepress-my-docs
-rm -rf .git && git init && git add .
-git commit -m "init from Sun-ZhenXing/vuepress-solid-template"
-git remote add origin ${YOUR_REPO}
-git branch -M main
-git push -u origin main
-```
+Deploy your own VuePress Solid project with Azion.
 
-## 3. Build
+[![Deploy Button](https://www.azion.com/button/)](https://console.azion.com/create/azion-community/vuepress-solid "Deploy with Azion")
 
-Build with `pnpm`:
-
-```bash
-pnpm i
-pnpm build
-```
-
-You can find the generated static files in `docs/.vuepress/dist`.
-
-Build with Docker:
-
-```bash
-docker build -t vuepress-solid-template .
-docker run -itd -p 80:80 vuepress-solid-template
-```
-
-Now you can visit <http://localhost> to see your document.
-
-## 4. How to config GitHub Pages?
-
-If you don't want it, reomve `.github/workflows/` file.
-
-When building in GitHub Actions for the first time, an error will be reported and an email will be sent to you. Don't panic because you haven't set up GitHub Pages yet.
-
-If you need to open GitHub Pages:
-
-1. Open your GitHub repo page
-2. Click `Settings`
-3. Click `Actions`, then click `General`
-4. Find `Workflow permissions`, select `Read and write permissions`, save
-5. If you have not successfully executed GitHub Actions at this time, you need to manually execute them once. Open the actions you just created and click `re-run all jobs`
-6. Click `Pages` on the sidebar, goto `Build and deployment`
-7. Config as `Branch: gh-pages /(root)`, or force HTTPS, save
-
-It will create **GitHub Pages** automatically.
+For a more detailed step-by-step, check the [documentation](https://www.azion.com/en/documentation/products/guides/vuepress-templates-collection/).
