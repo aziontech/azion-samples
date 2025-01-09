@@ -7,7 +7,8 @@ Stencil, combined with the Ionic PWA toolkit, offers a robust solution for build
 
 This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [How to deploy the Stencil PWA Boilerplate](https://www.azion.com/en/documentation/products/guides/stencil-pwa-boilerplate/) guide.
  
-This template uses Stencil version `4.22.2`.
+This template uses Stencil version `4.17.0`.
+
 ---
 
 ## Requirements
