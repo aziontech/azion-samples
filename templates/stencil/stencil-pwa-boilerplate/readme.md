@@ -1,6 +1,6 @@
 # Stencil PWA Boilerplate
 
-With the **Stencil PWA Boilerplate** template, you can start a project using the [Stencil](https://stenciljs.com/docs/introduction) framework in the [Ionic PWA](https://ionic.io/pwa) format, deploying it to the edge in just a few steps. The template creates a GitHub repository containing your project, as well as an edge application and a domain to facilitate your access and management through Azion Edge Platform.
+With the **Stencil PWA Boilerplate** template, you can start a project using the [Stencil](https://stenciljs.com/docs/introduction) framework in the [Ionic PWA](https://ionic.io/pwa) format, deploying it to the edge in just a few steps. The template also creates a GitHub repository containing your project, an edge application, and a domain to facilitate your access and management through the Azion Edge Platform.
  
 Stencil, combined with the Ionic PWA toolkit, offers a robust solution for building fast, modern Progressive Web Apps. It provides tools to create reusable components, leverage modern web APIs, and deliver apps with native-like performance and offline capabilities.
 
