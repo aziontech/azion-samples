@@ -1,6 +1,6 @@
 # VuePress Live2D Plus
 
-The **VuePress Live2D Plus** template is a [VuePress](https://vuepress.vuejs.org/guide/introduction.html)  documentation website starter kit that features an integrated [Live2D plugin](https://github.com/xinlei3166/vuepress-plugin-live2d-plus).
+The **VuePress Live2D Plus** template is a [VuePress](https://vuepress.vuejs.org/guide/introduction.html) documentation website starter kit that features an integrated [Live2D plugin](https://github.com/xinlei3166/vuepress-plugin-live2d-plus).
 
 The deployment creates an edge application with customizable configurations, an **Edge Storage** origin for content delivery, and a GitHub repository based on the template to facilitate your access and management through the Azion Edge Platform.
 
