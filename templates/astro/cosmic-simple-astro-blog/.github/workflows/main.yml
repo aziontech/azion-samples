@@ -1,15 +1,13 @@
 name: Main Edge Deploy
 
 on:
-  pull_request:
-    types:
-      - closed
+  workflow_dispatch:
+  push:
     branches:
       - "main"
 
 jobs:
   deploy:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     permissions:
@@ -23,10 +21,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-
-      - name: Install dependencies
-        run: pnpm i
-        
+ 
       - name: Install Azion CLI
         run: |
           curl -o azionlinux https://downloads.azion.com/linux/x86_64/azion
