@@ -1,15 +1,13 @@
 name: Main Edge Deploy
 
 on:
-  pull_request:
-    types:
-      - closed
+  workflow_dispatch:
+  push:
     branches:
       - "main"
 
 jobs:
   deploy:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     permissions:
