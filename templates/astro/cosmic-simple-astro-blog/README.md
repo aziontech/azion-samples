@@ -1,54 +1,31 @@
-# Simple Astro Blog built with Astro and Cosmic
+# CosmicJS Simple Astro Blog 
 
-To build this app, we’re going to use the following technologies:
+The **CosmicJS Simple Astro Blog** template helps you create and manage a blog easily, combining [Astro](https://docs.astro.build/en/concepts/why-astro/)'s performance with [Cosmic](https://www.cosmicjs.com/) headless CMS for content management.
 
-- [Astro](https://astro.build/) - A React framework for production that makes it easy to spin up a full-stack application.
-- [Cosmic](https://www.cosmicjs.com/) - A Headless CMS enables the independence of the data (content) layer and gives us the ability to quickly manage template content.
-- [Tailwind CSS](https://tailwindcss.com/) - A performant utility-first CSS framework that can be composed directly in your markup.
+This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [How to deploy edge applications with CosmicJS Simple Astro Blog](https://www.azion.com/en/documentation/products/guides/cosmic-simple-astro-blog/) guide.
 
-### Links
+This template uses Astro version `3.0.8`.
 
-- [Install the template](https://www.cosmicjs.com/marketplace/templates/simple-astro-blog)
-- [View the live demo](https://simple-astro-blog.vercel.app/)
+---
 
-## Screenshots
+## Requirements
 
-![Home Page](https://imgix.cosmicjs.com/e0b61790-32db-11ed-8a37-f1952c73e588-astro-cms-screenshot-4.png?w=1200&auto=format)
+Before using this template, you need to:
 
-![Blog Page](https://cdn.cosmicjs.com/cbd90ee0-32db-11ed-8a37-f1952c73e588-astro-cms-screenshot-3.png)
+- Have a [GitHub account](https://github.com/signup).
+  - Every push will be deployed automatically to the main branch in this repository to keep your project updated.
+- A [Cosmic CMS](https://www.cosmicjs.com/) account.
 
-## Getting started
+> **Note**: this template uses [Application Accelerator](https://www.azion.com/en/documentation/products/build/edge-application/application-accelerator/), [Edge Functions](https://www.azion.com/en/documentation/products/build/edge-application/edge-functions/), and [Edge Cache](https://www.azion.com/en/documentation/products/build/edge-application/edge-cache/) and it could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information.
 
-### Environment Variables
+Fill in the fields presented on the configuration form and deploy the template. This will create a new edge application with its configurations, which you can edit and manage later. It also creates a repository in your GitHub account, based on the template, allowing you to maintain control over the project.
 
-You'll need to create an .env file in the root of the project. Log in to Cosmic and from Bucket Settings > API Access take the following values:
+---
 
-```
-//.env
-PUBLIC_COSMIC_BUCKET_SLUG=your_cosmic_slug
-PUBLIC_COSMIC_READ_KEY=your_cosmic_read_key
-```
+## Deploy your own
 
-Install the dependencies with
+Deploy your own CosmicJS Simple Astro Blog project with Azion.
 
-```
-pnpm install
-# or
-yarn install
-# or
-npm install
-```
+[![Deploy Button](https://www.azion.com/button/)](https://console.azion.com/create/cosmic/cosmic-simple-astro-blog "Deploy with Azion")
 
-Then run the development server:
-
-```
-pnpm run dev
-# or
-yarn dev
-# or
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000/) with your browser to see the result.
-
-You can start editing the page by modifying `src/pages/index.astro`. The page auto-updates as you edit the file.
+For a more detailed step-by-step, check the [documentation](https://www.azion.com/en/documentation/products/guides/cosmic-simple-astro-blog/).
