@@ -11,6 +11,7 @@
     "generate": "stencil generate"
   },
   "devDependencies": {
+    "azion": "latest",
     "stencil-router-v2": "^0.6.0",
     "@stencil/core": "4.22.2",
     "@types/jest": "^29.5.6",
