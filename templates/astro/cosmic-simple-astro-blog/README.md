@@ -1,8 +1,8 @@
-# CosmicJS Simple Astro Blog 
+# Cosmic Simple Astro Blog 
 
-The **CosmicJS Simple Astro Blog** template helps you create and manage a blog easily, combining [Astro](https://docs.astro.build/en/concepts/why-astro/)'s performance with [Cosmic](https://www.cosmicjs.com/) headless CMS for content management.
+The **Cosmic Simple Astro Blog** template helps you create and manage a blog easily, combining [Astro](https://docs.astro.build/en/concepts/why-astro/)'s performance with [Cosmic](https://www.cosmicjs.com/) headless CMS for content management.
 
-This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [How to deploy edge applications with CosmicJS Simple Astro Blog](https://www.azion.com/en/documentation/products/guides/cosmic-simple-astro-blog/) guide.
+This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [How to deploy edge applications with Cosmic Simple Astro Blog](https://www.azion.com/en/documentation/products/guides/cosmic-simple-astro-blog/) guide.
 
 This template uses Astro version `3.0.8`.
 
@@ -24,7 +24,7 @@ Fill in the fields presented on the configuration form and deploy the template. 
 
 ## Deploy your own
 
-Deploy your own CosmicJS Simple Astro Blog project with Azion.
+Deploy your own Cosmic Simple Astro Blog project with Azion.
 
 [![Deploy Button](https://www.azion.com/button/)](https://console.azion.com/create/cosmic/cosmic-simple-astro-blog "Deploy with Azion")
 

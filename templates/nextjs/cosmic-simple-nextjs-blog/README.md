@@ -1,8 +1,8 @@
-# CosmicJS Simple Next.js Blog
+# Cosmic Simple Next.js Blog
 
-The **CosmicJS Simple Next.js Blog** template helps you create and manage a blog easily, combining [Next.js](https://nextjs.org/docs)'s performance with [Cosmic](https://www.cosmicjs.com/) headless CMS for content management.
+The **Cosmic Simple Next.js Blog** template helps you create and manage a blog easily, combining [Next.js](https://nextjs.org/docs)'s performance with [Cosmic](https://www.cosmicjs.com/) headless CMS for content management.
 
-This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [How to deploy edge applications with CosmicJS Simple Next.js Blog](https://www.azion.com/en/documentation/products/guides/cosmic-simple-next-blog/) guide.
+This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [How to deploy edge applications with Cosmic Simple Next.js Blog](https://www.azion.com/en/documentation/products/guides/cosmic-simple-next-blog/) guide.
 
 This template uses Next.js version `14.2.5`.
 
@@ -24,7 +24,7 @@ Fill in the fields presented on the configuration form and deploy the template. 
 
 ## Deploy your own
 
-Deploy your own CosmicJS Simple Next.js Blog project with Azion.
+Deploy your own Cosmic Simple Next.js Blog project with Azion.
 
 [![Deploy Button](https://www.azion.com/button/)](https://console.azion.com/create/cosmic/cosmic-simple-nextjs-blog "Deploy with Azion")
 
