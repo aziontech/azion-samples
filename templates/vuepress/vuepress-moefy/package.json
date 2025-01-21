@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
+    "azion": "latest",
     "cross-env": "^7.0.3",
     "vuepress": "^1.9.9"
   },
