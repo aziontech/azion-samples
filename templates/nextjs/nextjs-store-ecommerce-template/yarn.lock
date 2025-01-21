@@ -357,10 +357,10 @@ axobject-query@^2.2.0:
   resolved "https://registry.yarnpkg.com/axobject-query/-/axobject-query-2.2.0.tgz#943d47e10c0b704aa42275e20edf3722648989be"
   integrity sha512-Td525n+iPOOyUQIeBfcASuG6uJsDOITl7Mds5gFyerkWiX7qhUTdYUBlSgNMyVqtSJqwpt1kXGLdUt6SykLMRA==
 
-azion@^1.7.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/azion/-/azion-1.7.0.tgz#59e763a97402b89e195254789ab9647a0f40eff6"
-  integrity sha512-qJHuw8xkl09zfUTxQMM7a9UgOGXszl/cQZW+/d9bzFhspr7ZYwTVTDRU3pgCXwMcOpi6V/h0JQWxICJeg4eunQ==
+azion@latest:
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/azion/-/azion-1.12.1.tgz#5d61885ff60e4ec858043f3f00b6b1addc66e001"
+  integrity sha512-Or0v1NZ8ImtSm9g/T8AZS5bn5rBI0pA5nfWeZNE0Wzd16T9GND1ddt0xWOinrfbzEzHAwF//pWu8AJZDx3cEJQ==
   dependencies:
     chalk "^5.3.0"
     progress "^2.0.3"
