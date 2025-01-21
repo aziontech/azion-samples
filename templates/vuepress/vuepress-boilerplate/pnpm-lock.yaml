@@ -11,6 +11,9 @@ devDependencies:
   '@vuepress/theme-default':
     specifier: ^2.0.0-rc.18
     version: 2.0.0-rc.60(markdown-it@14.1.0)(sass-embedded@1.80.6)(vuepress@2.0.0-rc.18)
+  azion:
+    specifier: latest
+    version: 1.12.1
   sass-embedded:
     specifier: ^1.80.6
     version: 1.80.6
@@ -1189,6 +1192,16 @@ packages:
       postcss-value-parser: 4.2.0
     dev: true
 
+  /azion@1.12.1:
+    resolution: {integrity: sha512-Or0v1NZ8ImtSm9g/T8AZS5bn5rBI0pA5nfWeZNE0Wzd16T9GND1ddt0xWOinrfbzEzHAwF//pWu8AJZDx3cEJQ==}
+    engines: {node: '>=18.0.0'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      chalk: 5.3.0
+      progress: 2.0.3
+    dev: true
+
   /binary-extensions@2.3.0:
     resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==}
     engines: {node: '>=8'}
@@ -1947,6 +1960,11 @@ packages:
   /prismjs@1.29.0:
     resolution: {integrity: sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==}
     engines: {node: '>=6'}
+    dev: true
+
+  /progress@2.0.3:
+    resolution: {integrity: sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==}
+    engines: {node: '>=0.4.0'}
     dev: true
 
   /punycode.js@2.3.1:
