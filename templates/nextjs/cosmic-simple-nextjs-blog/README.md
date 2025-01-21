@@ -1,46 +1,31 @@
-# Simple Next.js Blog
+# CosmicJS Simple Next.js Blog
 
-![simple-nextjs-blog](https://github.com/cosmicjs/simple-nextjs-blog/assets/1950722/64b6673a-e25b-4124-93ed-bb57a6a35211)
+The **CosmicJS Simple Next.js Blog** template helps you create and manage a blog easily, combining [Next.js](https://nextjs.org/docs)'s performance with [Cosmic](https://www.cosmicjs.com/) headless CMS for content management.
 
-### React + Next.js + Cosmic
+This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [How to deploy edge applications with CosmicJS Simple Next.js Blog](https://www.azion.com/en/documentation/products/guides/cosmic-simple-next-blog/) guide.
 
-This blog uses Next.js to create a React blog. It uses Next.js 15 and the new [Partial Prerendering](https://vercel.com/blog/partial-prerendering-with-next-js-creating-a-new-default-rendering-model) to optimize performance and user experience. It connects to the Cosmic API via the [Cosmic JavaScript SDK](https://www.npmjs.com/package/@cosmicjs/sdk).
+This template uses Next.js version `14.2.5`.
 
-### Opimized for speed and performance
-<img width="901" alt="simple-next-blog" src="https://github.com/user-attachments/assets/e53ef1be-f5a3-4d5a-9eac-4ddd6b32cec4">
+---
 
-## Getting Started
+## Requirements
 
-1. Log in to Cosmic and install the [Simple Next.js Blog template](https://www.cosmicjs.com/marketplace/templates/simple-nextjs-blog).
-2. Run the following commands to install the code locally.
+Before using this template, you need to:
 
-```
-git clone https://github.com/cosmicjs/simple-nextjs-blog
-cd simple-nextjs-blog
-```
+- Have a [GitHub account](https://github.com/signup).
+  - Every push will be deployed automatically to the main branch in this repository to keep your project updated.
+- A [Cosmic CMS](https://www.cosmicjs.com/) account.
 
-#### Environment Variables
+> **Note**: this template uses [Application Accelerator](https://www.azion.com/en/documentation/products/build/edge-application/application-accelerator/), [Edge Functions](https://www.azion.com/en/documentation/products/build/edge-application/edge-functions/), and [Edge Cache](https://www.azion.com/en/documentation/products/build/edge-application/edge-cache/) and it could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information.
 
-1. Create an `.env.local` file to gain API access to your Cosmic Bucket. To do this, run:
+Fill in the fields presented on the configuration form and deploy the template. This will create a new edge application with its configurations, which you can edit and manage later. It also creates a repository in your GitHub account, based on the template, allowing you to maintain control over the project.
 
-```
-cp .env.example .env.local
-```
+---
 
-2. Find your API access keys at <em>Bucket Settings &gt; API Access</em> after logging into [your Cosmic dashboard](https://app.cosmicjs.com/login) and add them to the `.env.local` file. It should look something like this:
+## Deploy your own
 
-```
-COSMIC_BUCKET_SLUG=your-bucket-slug
-COSMIC_READ_KEY=your-bucket-read-key
-```
+Deploy your own CosmicJS Simple Next.js Blog project with Azion.
 
-#### Run in development
+[![Deploy Button](https://www.azion.com/button/)](https://console.azion.com/create/cosmic/cosmic-simple-nextjs-blog "Deploy with Azion")
 
-Install all dependencies and run in development mode.
-
-```
-yarn
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
+For a more detailed step-by-step, check the [documentation](https://www.azion.com/en/documentation/products/guides/cosmic-simple-next-blog/).

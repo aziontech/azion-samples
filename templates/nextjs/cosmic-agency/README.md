@@ -1,73 +1,33 @@
-# Agency Template, powered by Blocks
+# CosmicJS Agency Website
 
-![desktop.png](https://imgix.cosmicjs.com/69313380-b156-11ee-9844-f9a09795e2a3-desktop.png)
+The **CosmicJS Agency Website** template helps you create a dynamic and visually appealing online presence with customizable websites to showcase your services and portfolio.
 
-### UPDATED
+This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [How to deploy edge applications with CosmicJS Agency Website
+](https://www.azion.com/en/documentation/products/guides/cosmic-agency-website/) guide.
 
-🛒 Now includes product management and checkout using Stripe.
+This template uses Next version `14.2.5`.
 
-A website template built using Cosmic's React components, [Blocks](https://blocks.cosmicjs.com). Use this template to get familiar with Blocks and how they can be used to build common content-powered features for your websites and apps, or simply use it as a starting point for your next project. Save development time and learn content modeling best practices.
+---
 
-## Links
+## Requirements
 
-[Install this template](https://www.cosmicjs.com/marketplace/templates/agency)
+Before using this template, you need to:
 
-## Features
+- Have a [GitHub account](https://github.com/signup).
+ - Every push will be deployed automatically to the main branch in this repository to keep your project updated.
+- A [Cosmic CMS](https://www.cosmicjs.com/) account.
+- A [Stripe](https://stripe.com/en-br) account.
 
-🛒 Product management and checkout using Stripe
+> **Note**: this template uses [Application Accelerator](https://www.azion.com/en/documentation/products/build/edge-application/application-accelerator/), [Edge Functions](https://www.azion.com/en/documentation/products/build/edge-application/edge-functions/), and [Edge Cache](https://www.azion.com/en/documentation/products/build/edge-application/edge-cache/) and it could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information.
 
-⚡️ Performance optimized
+Fill in the fields presented on the configuration form and deploy the template. This will create a new edge application with its configurations, which you can edit and manage later. It also creates a repository in your GitHub account, based on the template, allowing you to maintain control over the project.
 
-👁 Draft preview ready
+---
 
-📱 Mobile responsive
+## Deploy your own
 
-🌎 Localization ready
+Deploy your own CosmicJS Agency Website project with Azion.
 
-🌓 Dark mode ready
+[![Deploy Button](https://www.azion.com/button/)](https://console.azion.com/create/cosmic/cosmic-agency-website "Deploy with Azion")
 
-🔧 Customizable
-
-♿️ Accessible
-
-🦺 Type safe
-
-![blocks.png](https://imgix.cosmicjs.com/271670f0-b156-11ee-9844-f9a09795e2a3-blocks.png)
-![blocks.png](https://imgix.cosmicjs.com/0bf19f40-b16d-11ee-9844-f9a09795e2a3-blocks.png)
-
-## Getting started
-
-1. [Install this template in Cosmic](https://www.cosmicjs.com/marketplace/templates/agency).
-
-2. Download this code repository and install the dependencies.
-
-```bash
-git clone https://github.com/cosmicjs/agency-template
-cd agency-template
-bun install
-```
-
-3. Create a `.env.local` file with your Cosmic API keys. Find these after logging in to the Cosmic dashboard in [Project > API keys](https://app.cosmicjs.com/?redirect_to=?highlight=api-keys).
-
-```
-cp .env.example .env.local
-```
-
-It will look like this:
-
-```
-# .env.local
-AGENCY_COSMIC_BUCKET_SLUG=change_to_your_bucket_slug
-AGENCY_COSMIC_READ_KEY=change_to_your_bucket_read_key
-AGENCY_COSMIC_WRITE_KEY=change_to_your_bucket_write_key
-AGENCY_STRIPE_PUBLISHABLE_KEY=change_to_your_stripe_public_key
-AGENCY_STRIPE_SECRET_KEY=change_to_your_AGENCY_STRIPE_SECRET_KEY
-```
-
-4. Run the template.
-
-```
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
+For a more detailed step-by-step, check the [documentation](https://www.azion.com/en/documentation/products/guides/cosmic-agency-website/).
