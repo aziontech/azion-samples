@@ -75,7 +75,7 @@
           <ChatMessages />
         </div>
       </div>
-      <ChatInput class="p-6" />
+      <ChatInput :title="props.title" class="p-6" />
     </div>
   </div>
   <div class="fixed bottom-4 right-4">

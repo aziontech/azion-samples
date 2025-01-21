@@ -38,7 +38,7 @@
     </div>
     <div>
       <small class="text-xs text-color-secondary font-normal leading-5 text-center mb-2 mx-2">
-        Azion Copilot may make mistakes. Consider verifying important information.
+        {{ (props.title || 'Azion Copilot') + ' may make mistakes. Consider verifying important information.' }}
       </small>
     </div>
   </div>
@@ -51,6 +51,10 @@
   import { useChat } from '../composables/useChat'
 
   const { isLoading, sendMessage, abortRequest } = useChat()
+
+  const props = defineProps({
+    title: String
+  })
 
   const isOverflowTextArea = ref('')
   const checkOverflow = (event) => {
