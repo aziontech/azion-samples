@@ -35,6 +35,9 @@ importers:
       '@vuepress/theme-default':
         specifier: 2.0.0-rc.61
         version: 2.0.0-rc.61(markdown-it@14.1.0)(sass-embedded@1.81.1)(typescript@5.4.5)(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.10.1)(sass-embedded@1.81.1)(typescript@5.4.5)(yaml@2.5.1))(typescript@5.4.5)(vue@3.5.13(typescript@5.4.5)))
+      azion:
+        specifier: latest
+        version: 1.12.1
       github-slugger:
         specifier: ^2.0.0
         version: 2.0.0
@@ -1029,6 +1032,11 @@ packages:
     peerDependencies:
       postcss: ^8.1.0
 
+  azion@1.12.1:
+    resolution: {integrity: sha512-Or0v1NZ8ImtSm9g/T8AZS5bn5rBI0pA5nfWeZNE0Wzd16T9GND1ddt0xWOinrfbzEzHAwF//pWu8AJZDx3cEJQ==}
+    engines: {node: '>=18.0.0'}
+    hasBin: true
+
   balloon-css@1.2.0:
     resolution: {integrity: sha512-urXwkHgwp6GsXVF+it01485Z2Cj4pnW02ICnM0TemOlkKmCNnDLmyy+ZZiRXBpwldUXO+aRNr7Hdia4CBvXJ5A==}
 
@@ -1786,6 +1794,10 @@ packages:
   prismjs@1.29.0:
     resolution: {integrity: sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==}
     engines: {node: '>=6'}
+
+  progress@2.0.3:
+    resolution: {integrity: sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==}
+    engines: {node: '>=0.4.0'}
 
   property-information@6.5.0:
     resolution: {integrity: sha512-PgTgs/BlvHxOu8QuEN7wi5A0OmXaBcHpmCSTehcs6Uuu9IkDIEo13Hy7n898RHfrQ49vKCoGeWZSaAK01nwVig==}
@@ -3434,6 +3446,11 @@ snapshots:
       postcss: 8.4.49
       postcss-value-parser: 4.2.0
 
+  azion@1.12.1:
+    dependencies:
+      chalk: 5.3.0
+      progress: 2.0.3
+
   balloon-css@1.2.0: {}
 
   binary-extensions@2.3.0: {}
@@ -4259,6 +4276,8 @@ snapshots:
       parse-ms: 4.0.0
 
   prismjs@1.29.0: {}
+
+  progress@2.0.3: {}
 
   property-information@6.5.0: {}
 
