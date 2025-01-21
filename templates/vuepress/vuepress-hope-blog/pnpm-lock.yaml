@@ -11,6 +11,9 @@ devDependencies:
   '@vuepress/helper':
     specifier: 2.0.0-rc.66
     version: 2.0.0-rc.66(vuepress@2.0.0-rc.19)
+  azion:
+    specifier: latest
+    version: 1.12.1
   sass:
     specifier: ^1.83.0
     version: 1.83.0
@@ -2114,6 +2117,16 @@ packages:
       postcss-value-parser: 4.2.0
     dev: true
 
+  /azion@1.12.1:
+    resolution: {integrity: sha512-Or0v1NZ8ImtSm9g/T8AZS5bn5rBI0pA5nfWeZNE0Wzd16T9GND1ddt0xWOinrfbzEzHAwF//pWu8AJZDx3cEJQ==}
+    engines: {node: '>=18.0.0'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      chalk: 5.3.0
+      progress: 2.0.3
+    dev: true
+
   /balloon-css@1.2.0:
     resolution: {integrity: sha512-urXwkHgwp6GsXVF+it01485Z2Cj4pnW02ICnM0TemOlkKmCNnDLmyy+ZZiRXBpwldUXO+aRNr7Hdia4CBvXJ5A==}
     dev: true
@@ -2455,6 +2468,7 @@ packages:
     resolution: {integrity: sha512-FuLPevChGDshgSicjisSooU0cemp/sGXR841D5LHMB7mTVOmsEHcAxaH3irL53+8YDIeVNQEySh4DaYU/iuPqQ==}
     engines: {node: '>=18'}
     hasBin: true
+    requiresBuild: true
     optionalDependencies:
       '@esbuild/aix-ppc64': 0.24.0
       '@esbuild/android-arm': 0.24.0
@@ -3157,6 +3171,11 @@ packages:
     engines: {node: '>=18'}
     dependencies:
       parse-ms: 4.0.0
+    dev: true
+
+  /progress@2.0.3:
+    resolution: {integrity: sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==}
+    engines: {node: '>=0.4.0'}
     dev: true
 
   /property-information@6.5.0:
