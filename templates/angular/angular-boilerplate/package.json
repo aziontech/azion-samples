@@ -10,6 +10,7 @@
   },
   "private": true,
   "dependencies": {
+    "azion": "latest",
     "@angular/animations": "^18.2.0",
     "@angular/common": "^18.2.0",
     "@angular/compiler": "^18.2.0",
