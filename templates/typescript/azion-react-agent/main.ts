@@ -8,6 +8,7 @@ import { respond2User,
   validateStreamForErrors} from "./src/helper/utils";
 import { v4 as uuidv4 } from 'uuid';
 import { AzionEdgeTracer } from './src/helper/tracer';
+import { MESSAGE_STORE_DB_NAME, MESSAGE_STORE_TABLE_NAME } from "./src/helper/config";
 
 /**
  * @param {CustomEvent} event - The event object containing the request.
@@ -19,12 +20,9 @@ export default async function main(
   // Get the request from the event
   const request = event.request;
   const args = {
-    systemPromptTemplate: event.args.SYSTEM_PROMPT_TEMPLATE,
-    messageStoreDbName: event.args.MESSAGE_STORE_DB_NAME,
-    messageStoreTableName: event.args.MESSAGE_STORE_TABLE_NAME,
     session_id: uuidv4(),
   }
-
+  
   // Return early if not a POST request
   if (request.method != 'POST') {
     return await respond2User(request.method);
@@ -67,7 +65,7 @@ async function streamGraph(
   runId: string,
   args: Record<string, any>
 ): Promise<Response> {
-  let tracer = new AzionEdgeTracer('stream', args.messageStoreDbName, args.messageStoreTableName, args.session_id)
+  let tracer = new AzionEdgeTracer('stream', MESSAGE_STORE_DB_NAME, MESSAGE_STORE_TABLE_NAME, args.session_id)
   try {
     // Update the tracer with the input messages
     tracer.updateInput(messages, runId)
@@ -109,7 +107,7 @@ async function invokeGraph(
   runId: string,
   args: Record<string, any>
 ): Promise<Response> {
-  let tracer = new AzionEdgeTracer('invoke', args.messageStoreDbName, args.messageStoreTableName, args.session_id)
+  let tracer = new AzionEdgeTracer('invoke', MESSAGE_STORE_DB_NAME, MESSAGE_STORE_TABLE_NAME, args.session_id)
   try {
     // Update the tracer with the input messages
     tracer.updateInput(messages, runId)
