@@ -1,9 +1,9 @@
-import { SystemMessage } from "@langchain/core/messages";
+import { AIMessage, SystemMessage } from "@langchain/core/messages";
 import { RunnableConfig } from "@langchain/core/runnables";
 import { MessagesAnnotation } from "@langchain/langgraph";
 import { TOOLS } from "./tools.js";
 import { ChatOpenAI } from "@langchain/openai";
-import { SYSTEM_PROMPT_TEMPLATE } from "../helper/prompts.js";
+import { SYSTEM_PROMPT } from "../helper/config.js";
 import { OPENAI_API_KEY, OPENAI_MODEL } from "../helper/config.js";
 
 /**
@@ -17,8 +17,8 @@ export async function callModel(
 ): Promise<Partial<typeof MessagesAnnotation.State>> {
 
   const { messages } = state
-  
-  messages.push(new SystemMessage({content: config.configurable?.systemPrompt || SYSTEM_PROMPT_TEMPLATE}))
+
+  messages.push(new SystemMessage({content: SYSTEM_PROMPT}))
   
   const model = new ChatOpenAI({
     model: OPENAI_MODEL,
@@ -29,7 +29,7 @@ export async function callModel(
     apiKey: OPENAI_API_KEY,
   }).bindTools(TOOLS);
 
-  const response = await model.invoke(messages,{recursionLimit:3});
+  const response = new AIMessage(await model.invoke(messages,{recursionLimit:3}))
   
   return { messages: [response] };
 }
