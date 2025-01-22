@@ -1,48 +1,32 @@
-# Gatsby + ButterCMS Starter Project
+# ButterCMS + Gatsby Starter Project
 
-This Gatsby starter project fully integrates with dynamic sample content from your ButterCMS account, including main menu, pages, blog posts, categories, and tags, and all with a beautiful, custom theme with already-implemented search functionality. All of the included sample content is automatically created in your account dashboard when you sign up for a free trial of ButterCMS.
+The **ButterCMS + Gatsby Starter Project** template creates a fully-functional [Gatsby](https://www.gatsbyjs.com/docs/) starter project, completely integrated with [ButterCMS](https://buttercms.com/), a leading headless CMS that makes collaborative content management of your application easier.
 
-### 1. Installation
+This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [How to deploy a web application based on ButterCMS using templates
+](https://www.azion.com/en/documentation/products/guides/butter-templates-collection/) guide.
 
-First, clone the repo and install the dependencies by running `npm install`
+This template uses Gatsby version `5.7.0`.
 
-```bash
-git clone https://github.com/ButterCMS/gatsbyjs-starter-buttercms.git
-cd gatsbyjs-starter-buttercms
-npm install
-```
+---
 
-### 2. Set API Token
+## Requirements
 
-To fetch your ButterCMS content, add your API token as an environment variable.
+Before using this template, you need to:
 
-```bash
-$ echo 'BUTTER_CMS_API_KEY=<Your API Token>' >> .env
-```
+- Have a [GitHub account](https://github.com/signup).
+  - Every push will be deployed automatically to the main branch in this repository to keep your project updated.
+- A [ButterCMS](https://buttercms.com/) account.
 
-### 3. Run local server
+> **Note**: this template uses [Application Accelerator](https://www.azion.com/en/documentation/products/build/edge-application/application-accelerator/), [Edge Functions](https://www.azion.com/en/documentation/products/build/edge-application/edge-functions/), and [Edge Cache](https://www.azion.com/en/documentation/products/build/edge-application/edge-cache/) and it could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information.
 
-To view the app in the browser, you'll need to run the local development server:
+Fill in the fields presented on the configuration form and deploy the template. This will create a new edge application with its configurations, which you can edit and manage later. It also creates a repository in your GitHub account, based on the template, allowing you to maintain control over the project.
 
-```bash
-$ npm run develop
-```
+---
 
-Congratulations! Your starter project is now live at [http://localhost:8000/](http://localhost:8000/).
+## Deploy your own
 
-### 4. Webhooks
+Deploy your own ButterCMS + Gatsby Starter Project with Azion.
 
-In order for your deployed app to pull in content changes from your ButterCMS account, you'll need to follow your hosting provider's steps for setting up webhooks. The ButterCMS webhook settings are located at https://buttercms.com/webhooks/. 
+[![Deploy Button](https://www.azion.com/button/)](https://console.azion.com/create/buttercms/buttercms-gatsby-starter "Deploy with Azion")
 
-### 5. Previewing Draft Changes
-
-By default, your starter project is set up to allow previewing of draft changes saved in your ButterCMS.com account. To disable this functionality, set the following value in your .env file: BUTTER_CMS_PREVIEW=false
-
-Note that if you deployed with heroku and you want to use the iframe previewing ability on the ButterCMS.com website, you'll need to include trailing slashes when specifying your URLS in
-[your ButterCMS.com settings](https://buttercms.com/settings/previews).
-
-```
-mydomain.com/blog/<slug>   <-- Won't work for previewing
-mydomain.com/blog/<slug>/  <-- Will work for previewing.
-```
-
+For a more detailed step-by-step, check the [documentation](https://www.azion.com/en/documentation/products/guides/butter-templates-collection/).

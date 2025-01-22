@@ -1,35 +1,32 @@
-![recommended node version](https://img.shields.io/badge/node-v16-green)
+# ButterCMS + Nuxt Starter Project
 
-# Nuxt.js + ButterCMS Starter Project
+The **ButterCMS + Nuxt Starter Project** template creates a fully-functional [Nuxt](https://nuxt.com/docs/getting-started/introduction) starter project, completely integrated with [ButterCMS](https://buttercms.com/), a leading headless CMS that makes collaborative content management of your application easier.
 
-This Nuxt.js starter project fully integrates with dynamic sample content from your ButterCMS account, including main menu, pages, blog posts, categories, and tags, all with a beautiful, custom theme with already-implemented search functionality. All of the included sample content is automatically created in your account dashboard when you sign up for a free trial of ButterCMS.
+This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [How to deploy a web application based on ButterCMS using templates
+](https://www.azion.com/en/documentation/products/guides/butter-templates-collection/) guide.
 
-## 1. Installation
+This template uses Nuxt version `3.2.3`.
 
-First, clone the repo and install the dependencies by running `npm install`
-```shell
-git clone https://github.com/ButterCMS/nuxtjs-starter-buttercms
-cd nuxtjs-starter-buttercms
-npm install
-```
+---
 
-## 2. Set API Token
+## Requirements
 
-To fetch your ButterCMS content, add your API token as an environment variable.
+Before using this template, you need to:
 
-```bash
-$ echo 'NUXT_ENV_BUTTER_API_TOKEN=<Your API Token>' >> .env
-```
+- Have a [GitHub account](https://github.com/signup).
+  - Every push will be deployed automatically to the main branch in this repository to keep your project updated.
+- A [ButterCMS](https://buttercms.com/) account.
 
-## 3. Run local server
+> **Note**: this template uses [Application Accelerator](https://www.azion.com/en/documentation/products/build/edge-application/application-accelerator/), [Edge Functions](https://www.azion.com/en/documentation/products/build/edge-application/edge-functions/), and [Edge Cache](https://www.azion.com/en/documentation/products/build/edge-application/edge-cache/) and it could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information.
 
-To view the app in the browser, you'll need to run the local development server:
+Fill in the fields presented on the configuration form and deploy the template. This will create a new edge application with its configurations, which you can edit and manage later. It also creates a repository in your GitHub account, based on the template, allowing you to maintain control over the project.
 
-```bash
-$ npm run dev
-```
+---
 
-Congratulations! Your starter project is now live at [http://localhost:3000/](http://localhost:3000/).
+## Deploy your own
 
-## 4. Previewing Draft Changes
-By default, your starter project is set up to allow previewing of draft changes saved in your ButterCMS.com account. To disable this functionality, set the following value in your .env file: NUXT_ENV_BUTTER_PREVIEW=false
+Deploy your own ButterCMS + Nuxt Starter Project with Azion.
+
+[![Deploy Button](https://www.azion.com/button/)](https://console.azion.com/create/buttercms/buttercms-nuxt-starter "Deploy with Azion")
+
+For a more detailed step-by-step, check the [documentation](https://www.azion.com/en/documentation/products/guides/butter-templates-collection/).
