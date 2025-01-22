@@ -1,42 +1,31 @@
-# Nuxt 3 Minimal Starter
+# Clean Nuxt + Sanity application
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+The **Clean Nuxt + Sanity application** template creates a minimal [Nuxt](https://nuxt.com/docs/getting-started/introduction) application with a [Sanity Studio](http://sanity.io/), which is an open-source React application that connects to your Sanity project’s hosted dataset. The Studio is configured locally and can then be deployed for content collaboration.
 
-## Setup
+This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [How to deploy a web application based on Clean Nuxt + Sanity application](https://www.azion.com/en/documentation/products/guides/clean-nuxt-sanity/) guide.
 
-Make sure to install the dependencies:
+This template uses Nuxt version `3.12.3`.
 
-```bash
-# yarn
-yarn install
+---
 
-# npm
-npm install
+## Requirements
 
-# pnpm
-pnpm install
-```
+Before using this template, you need to:
 
-## Development Server
+- Have a [GitHub account](https://github.com/signup).
+  - Every push will be deployed automatically to the main branch in this repository to keep your project updated.
+- A [Sanity.io](http://sanity.io/) account.
 
-Start the development server on `http://localhost:3000`
+> **Note**: this template uses [Application Accelerator](https://www.azion.com/en/documentation/products/build/edge-application/application-accelerator/), [Edge Functions](https://www.azion.com/en/documentation/products/build/edge-application/edge-functions/), and [Edge Cache](https://www.azion.com/en/documentation/products/build/edge-application/edge-cache/) and it could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information.
 
-```bash
-npm run dev
-```
+Fill in the fields presented on the configuration form and deploy the template. This will create a new edge application with its configurations, which you can edit and manage later. It also creates a repository in your GitHub account, based on the template, allowing you to maintain control over the project.
 
-## Production
+---
 
-Build the application for production:
+## Deploy your own
 
-```bash
-npm run build
-```
+Deploy your own Clean Nuxt + Sanity application project with Azion.
 
-Locally preview production build:
+[![Deploy Button](https://www.azion.com/button/)](https://console.azion.com/create/sanity/clean-nuxt-sanity-app/ "Deploy with Azion")
 
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+For a more detailed step-by-step, check the [documentation](https://www.azion.com/en/documentation/products/guides/clean-nuxt-sanity/).

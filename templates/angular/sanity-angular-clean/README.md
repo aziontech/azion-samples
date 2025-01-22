@@ -1,29 +1,31 @@
-# Angular
+# Clean Angular + Sanity application
 
-This directory is a brief example of an [Angular](https://angular.io/) app.
+The **Clean Angular + Sanity application** template creates an [Angular](https://angular.dev/overview) application with a [Sanity Studio](http://sanity.io/), which is an open-source React application that connects to your Sanity project’s hosted dataset. The Studio is configured locally and can then be deployed for content collaboration.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1
+This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [How to deploy a web application based on Clean Angular + Sanity application](https://www.azion.com//en/documentation/products/guides/clean-angular-sanity/) guide.
 
-## Development server
+This template uses Angular version `16.0.1`.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## Requirements
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Before using this template, you need to:
 
-## Build
+- Have a [GitHub account](https://github.com/signup).
+  - Every push will be deployed automatically to the main branch in this repository to keep your project updated.
+- A [Sanity.io](http://sanity.io/) account.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+> **Note**: this template uses [Application Accelerator](https://www.azion.com/en/documentation/products/build/edge-application/application-accelerator/), [Edge Functions](https://www.azion.com/en/documentation/products/build/edge-application/edge-functions/), and [Edge Cache](https://www.azion.com/en/documentation/products/build/edge-application/edge-cache/) and it could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information.
 
-## Running unit tests
+Fill in the fields presented on the configuration form and deploy the template. This will create a new edge application with its configurations, which you can edit and manage later. It also creates a repository in your GitHub account, based on the template, allowing you to maintain control over the project.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Running end-to-end tests
+## Deploy your own
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Deploy your own Clean Angular + Sanity application project with Azion.
 
-## Further help
+[![Deploy Button](https://www.azion.com/button/)](https://console.azion.com/create/sanity/clean-angular-sanity-app "Deploy with Azion")
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+For a more detailed step-by-step, check the [documentation](https://www.azion.com/en/documentation/products/guides/clean-angular-sanity/).
