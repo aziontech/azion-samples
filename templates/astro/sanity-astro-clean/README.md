@@ -1,43 +1,31 @@
-# A minimal Astro site with Sanity Studio
+# Clean Astro + Sanity application
 
-This starter uses [Astro](https://astro.build/) for the front end and [Sanity](https://sanity.io/) to handle its content.
+The **Clean Astro + Sanity application** template creates a minimal [Astro](https://docs.astro.build/en/concepts/why-astro/) website integrated with Sanity.io for content management.
 
-## Featuring
+This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [How to deploy a web application based on Clean Astro + Sanity application](https://www.azion.com//en/documentation/products/guides/clean-astro-sanity/) guide.
 
-- How to fetch content as data from [the Sanity Content Lake](https://www.sanity.io/docs/datastore)
-- How to render block content with [Portable Text](https://www.sanity.io/docs/presenting-block-text)
-- A [Sanity Studio](https://www.sanity.io/docs/sanity-studio) to create and edit content
-- How to crop and render images with [Sanity Image URLs](https://www.sanity.io/docs/presenting-images)
+This template uses Astro version `3.1.4`.
 
-## Prerequisites
+---
 
-- [Node.js](https://nodejs.org/en/) (v16.12 or later)
+## Requirements
 
-## Getting started
+Before using this template, you need to:
 
-Run the following commands
+- Have a [GitHub account](https://github.com/signup).
+  - Every push will be deployed automatically to the main branch in this repository to keep your project updated.
+- A [Sanity.io](http://sanity.io/) account.
 
-1. `npm install` to install dependencies
-2. `npx sanity@latest init --env`, this will:
+> **Note**: this template uses [Application Accelerator](https://www.azion.com/en/documentation/products/build/edge-application/application-accelerator/), [Edge Functions](https://www.azion.com/en/documentation/products/build/edge-application/edge-functions/), and [Edge Cache](https://www.azion.com/en/documentation/products/build/edge-application/edge-cache/) and it could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information.
 
-   - ask you to select or create a Sanity project and dataset
-   - output a `.env` file with appropriate variables
-   - _(or use `sanity init --env` if you have the CLI installed)_
+Fill in the fields presented on the configuration form and deploy the template. This will create a new edge application with its configurations, which you can edit and manage later. It also creates a repository in your GitHub account, based on the template, allowing you to maintain control over the project.
 
-3. `npm run dev` to start the development server
+---
 
-Your Astro app should now be running on [http://localhost:4321/](http://localhost:4321/) and Studio on [http://localhost:4321/admin](http://localhost:4321/admin).
+## Deploy your own
 
-### Add content
+Deploy your own Clean Astro + Sanity application project with Azion.
 
-1. Visit the Studio and create and publish a new `Post` document
-2. Visit the homepage and refresh the page to see your content rendered on the page
+[![Deploy Button](https://www.azion.com/button/)](https://console.azion.com/create/sanity/clean-astro-sanity-app "Deploy with Azion")
 
-The schema for the `Post` document is defined in the `/schema` folder. You can [add more document types](https://www.sanity.io/docs/schema-types) to the Studio to suit your needs.
-
-## Removing TypeScript
-
-If you do not wish to use TypeScript, we've included a `remove-typescript.mjs` file in the root of this repository. You can run this file with `node remove-typescript.mjs` to strip all types from this project. Please run this before tampering with any code to ensure that all types are properly removed.
-
-If you intend to use TypeScript, you can safely remove the `remove-typescript.mjs` file.
-
+For a more detailed step-by-step, check the [documentation](https://www.azion.com/en/documentation/products/guides/clean-astro-sanity/).
