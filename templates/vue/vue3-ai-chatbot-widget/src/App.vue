@@ -154,6 +154,11 @@
   const toggleChat = () => {
     chatVisible.value = !chatVisible.value
   }
+
+  const closeSidebar = () => {
+    chatVisible.value = false
+  }
+  
 </script>
 
 <style>
