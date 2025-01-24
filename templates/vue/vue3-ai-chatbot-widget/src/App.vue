@@ -20,6 +20,7 @@
             />
           </div>
         </template>
+        <template #end>
         <div class="flex gap-3">
           <PrimeButton
             icon="pi pi-eraser"
@@ -30,14 +31,6 @@
             @click="clearChat"
           />
           <PrimeButton
-            icon="pi pi-external-link"
-            outlined
-            class="surface-border h-8 w-8"
-            aria-label="Open a chat in new tab"
-            v-tooltip.bottom="'Open a chat in new tab'"
-            @click="openChatInNewTab"
-          />
-          <PrimeButton
             icon="pi pi-times"
             outlined
             class="surface-border h-8 w-8"
@@ -46,6 +39,7 @@
             @click="closeSidebar"
           />
         </div>
+        </template>
       </Toolbar>
       <div
         class="flex flex-auto flex-col overflow-x-hidden p-6 pt-3 custom-scroll"
@@ -160,6 +154,11 @@
   const toggleChat = () => {
     chatVisible.value = !chatVisible.value
   }
+
+  const closeSidebar = () => {
+    chatVisible.value = false
+  }
+  
 </script>
 
 <style>
