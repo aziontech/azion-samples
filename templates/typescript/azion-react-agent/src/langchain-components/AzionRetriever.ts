@@ -355,7 +355,7 @@ export class AzionRetriever extends BaseRetriever {
   /**
    * Converts a query to a FTS query.
    * @param query The user query
-   * @returns A promise that resolves with the converted FTS query when the conversion is complete.
+   * @returns The converted FTS query
    */
   protected convert2FTSQuery(
     query: string
