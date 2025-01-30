@@ -54,11 +54,11 @@ export default async function azionVectorStoreSetup() {
   const vectorStore = new AzionVectorStore(embeddingModel, {dbName:process.env.VECTOR_STORE_DB_NAME, tableName:process.env.VECTOR_STORE_TABLE_NAME})
   
   // Add documents to the vector store
-  // await vectorStore.addDocuments(productDocs)
+  await vectorStore.addDocuments(productDocs)
 
   // Use the vector store as retriever
-  const docs = await vectorStore.AzionHybridSearch("what is good for headache?",{kfts:1,kvector:1})
-  console.log(JSON.stringify(docs, null, 2))
+  // const docs = await vectorStore.AzionHybridSearch("what is good for headache?",{kfts:1,kvector:1})
+  // console.log(JSON.stringify(docs, null, 2))
 }
 
 azionVectorStoreSetup()
