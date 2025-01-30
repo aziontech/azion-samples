@@ -108,12 +108,23 @@ export class AzionEdgeTracer {
   }
 
   /**
+   * Remove the single quotes from input, output and run metadata
+   */
+  removeSingleQuotesFromStrings(): void {
+    this.inputMessages = this.inputMessages.map((message:string) => message.replace(/'/g, ""))
+    this.outputMessages = this.outputMessages.replace(/'/g, "")
+    this.runMetadata = this.runMetadata?.map((message:string) => message.replace(/'/g, ""))
+  }
+
+  /**
    * Save the trace into the database
    */
   async save() {
     console.log("Saving trace into ", this.databaseName, "for session ", this.sessionId)
     const createdAt = new Date().toISOString()
+    this.removeSingleQuotesFromStrings()
     const statements = [`INSERT INTO ${this.tableName} (session_id, run_id, input_messages, output_messages, run_metadata, created_at) VALUES ('${this.sessionId}', '${this.runId}', '${this.inputMessages}', '${this.outputMessages}', '${this.runMetadata}', '${createdAt}')`]
+
     const { data, error } = await useExecute(this.databaseName,statements)
     if (error) {
       console.error("Error saving trace:", error)
