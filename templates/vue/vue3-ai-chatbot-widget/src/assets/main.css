@@ -12,11 +12,19 @@ body,
 #app {
   height: 100%;
 }
-
 #app {
   font-family: var(--font-family);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: clip;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: var(--surface-500);
+  border-radius: 4px;
 }

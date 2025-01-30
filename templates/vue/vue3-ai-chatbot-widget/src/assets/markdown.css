@@ -20,12 +20,13 @@
 }
 
 .markdown *::-webkit-scrollbar {
-  width: 8px;
+  width: 4px;
+  height: 8px;
 }
 
 .markdown *::-webkit-scrollbar-thumb {
   background-color: #7a7a7a;
-  border-radius: 4px;
+  border-radius: 4px;  
 }
 
 .markdown h1 {
@@ -57,6 +58,10 @@
   font-weight: 500;
 }
 
+.markdown p:first-child {
+  margin-top: 0em;
+}
+
 .markdown p {
   margin-top: 1.25em;
   tab-size: 4;
@@ -81,10 +86,13 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
   width: 100%;
+  display: block;
+  overflow-y: auto;
 }
 
+
+
 .markdown th {
-  background-color: #e0e0e0;
   border: 1px solid #ccc;
   padding: 0.25rem 0.75rem;
 }
@@ -102,7 +110,6 @@
 .markdown td {
   border: 1px solid #ccc;
   padding: 0.25rem 0.75rem;
-  color: #f8f8f2;
 }
 
 .markdown td:first-child {
@@ -137,6 +144,6 @@
   padding-left: 1.625em;
 }
 
-.markdown .float-image + p {
+.markdown .float-image+p {
   margin-top: 0;
 }
