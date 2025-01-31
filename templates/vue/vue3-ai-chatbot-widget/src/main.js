@@ -30,8 +30,8 @@ const getConfigDefaults = () => ({
   ],
   title: import.meta.env.VITE_TITLE || '',
   subTitle: import.meta.env.VITE_SUBTITLE || '',
-  isOpenByDefault: import.meta.env.VITE_OPEN_BY_DEFAULT === 'true',
-  isMaximizedByDefault: import.meta.env.VITE_MAXIMIZED_BY_DEFAULT === 'true',
+  isOpenByDefault: true,
+  isMaximizedByDefault: true,
   previewText: import.meta.env.VITE_PREVIEW_TEXT || '',
   footerDisclaimer: import.meta.env.VITE_FOOTER_DISCLAIMER || ''
 })
@@ -41,6 +41,8 @@ const CONFIG_DEFAULT = getConfigDefaults()
 const app = createApp(App, CONFIG_DEFAULT)
 
 document.documentElement.className = `azion azion-${CONFIG_DEFAULT.theme}`
+
+document.title = CONFIG_DEFAULT.title || 'Copilot'
 
 app.use(PrimeVue)
 app.directive('tooltip', Tooltip)
