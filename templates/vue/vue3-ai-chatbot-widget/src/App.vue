@@ -14,7 +14,7 @@
     serverUrl: Object,
     isOpenByDefault: Boolean,
     isMaximizedByDefault: Boolean,
-    tooltipMessage: String,
+    previewText: String,
     footerDisclaimer: String
   })
 
@@ -26,7 +26,7 @@
     serverUrl: props.serverUrl,
     isOpenChat: props.isOpenByDefault,
     isMaximizedChat: props.isMaximizedByDefault,
-    tooltipMessage: props.tooltipMessage,
+    previewText: props.previewText,
     footerDisclaimer: props.footerDisclaimer
   })
 

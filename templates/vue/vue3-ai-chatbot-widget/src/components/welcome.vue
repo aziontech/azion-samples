@@ -2,7 +2,7 @@
   <div>
     <h1 class="font-roboto text-3xl font-medium leading-9 text-center text-color">
       <template v-if="!title">
-        Welcome to <span class="text-orange-500"> Azion Copilot! </span>
+        Welcome to <span class="text-orange-500"> Copilot! </span>
       </template>
       <template v-else>
         {{ title }}

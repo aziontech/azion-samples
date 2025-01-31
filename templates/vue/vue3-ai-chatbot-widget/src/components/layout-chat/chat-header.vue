@@ -3,7 +3,7 @@
     <template #start>
       <div class="flex flex-1 flex-row gap-3 items-center">
         <h3 class="text-color text-lg font-medium flex gap-3 break-all">
-          {{ chatWidget.title || 'Azion Copilot' }}
+          {{ chatWidget.title || 'Copilot' }}
         </h3>
         <PrimeTag
           v-tooltip.bottom="chatWidget.previewText"
