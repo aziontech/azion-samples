@@ -1,4 +1,3 @@
-<!-- src/components/avatar.vue -->
 <template>
   <component
     :is="avatarComponent"
@@ -7,10 +6,10 @@
 </template>
 
 <script setup>
-  import DefaultAvatar from '../assets/icons/icon-azion-ai.vue'
+  import DefaultAvatar from './icons/icon-azion-ai.vue'
 
   defineOptions({
-    name: 'chat-avatar'
+    name: 'avatar'
   })
 
   defineProps({

@@ -1,7 +1,3 @@
-/**
- * Chat service that makes a POST request and processes the response in stream.
- * @param params - Parameters for the request and processing.
- */
 export async function chatService({ parsedBody, server, signal, onMessage }) {
   try {
     const response = await fetch(server, {
@@ -35,9 +31,9 @@ export async function chatService({ parsedBody, server, signal, onMessage }) {
         .forEach((line) => {
           try {
             const parsedLine = JSON.parse(line)
-            const { choices } = parsedLine
+            const { choices, id } = parsedLine
             const content = choices[0]?.delta?.content
-            if (content) onMessage(content, true)
+            if (content) onMessage(content, true, id)
           } catch (error) {
             onMessage('', false)
             throw new Error('An error occurred while processing the chat stream')
