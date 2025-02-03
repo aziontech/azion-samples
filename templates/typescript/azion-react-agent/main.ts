@@ -124,7 +124,7 @@ async function invokeGraph(
     const chatCompletions = transformToChatCompletions(invokeResponse.messages.at(-1), runId, false);
 
     // Return the response to the user
-    return await respond2User('POST', `data:{${JSON.stringify(chatCompletions)}}`);
+    return await respond2User('POST', `${JSON.stringify(chatCompletions)}`);
     
   } catch (error) {
     const errorMessage = "Error invoking graph: " + JSON.stringify(error)
