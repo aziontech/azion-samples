@@ -4,16 +4,17 @@ The **Vue3 AI Chatbot Widget** is the frontend application for the **LangGraph A
 
 This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy the **LangGraph AI Agent Boilerplate** through Azion's platform, check the [How to deploy the LangGraph AI Agent Boilerplate](https://www.azion.com/en/documentation/products/guides/langgraph-ai-agent-boilerplate/) guide.
 
-This application uses Vue version `3.3.4`.
+This template uses Vue version `3.3.4`.
 
 ---
 
 ## Requirements
 
-Before using this application, you need to:
+Before using this template, you need to:
 
 - Have a [GitHub account](https://github.com/signup).
   - Every push will be deployed automatically to the main branch in this repository to keep your project updated.
+- Have an [OpenAI](https://platform.openai.com/) API Key.
 
 > **Note**: this template uses [Application Accelerator](https://www.azion.com/en/documentation/products/build/edge-application/application-accelerator/), [Edge Functions](https://www.azion.com/en/documentation/products/build/edge-application/edge-functions/), and [Edge SQL](https://www.azion.com/en/documentation/products/store/edge-sql/), and it could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information.
 
@@ -35,7 +36,7 @@ To start using your own documents, you must set the appropriate database by foll
 
 2. You must have a `.env` file with your environment variables in it. If you want to create a new one, it must follow the structure below:
 
-```
+```dotenv
 AZION_TOKEN=
 OPENAI_API_KEY=
 OPENAI_MODEL=
@@ -66,7 +67,7 @@ Note that not all environment variables are required. Check details on the table
 | MESSAGE_STORE_DB_NAME     | The database name for storing conversation history messages. Default name: `<agent-name>-messagestore`. | Yes |
 | MESSAGE_STORE_TABLE_NAME  | The table name within the messages database for storing the conversation history. Default name: `messages`. | Yes |
 | VECTOR_STORE_DB_NAME      | The database name for storing your documents as vector embeddings. Default name: `<agent-name>-vectorstore`. | Yes |
-| VECTOR_STORE_TABLE_NAME   | The table name within the documents database for storing embeddings. Default name: `<vectors`. | Yes |
+| VECTOR_STORE_TABLE_NAME   | The table name within the documents database for storing embeddings. Default name: `vectors`. | Yes |
 
 :::tip
 You can use the [Azion EdgeSQL Shell](/en/documentation/products/store/sql/edge-sql-shell-commands/) to interact with your databases. This shell provides a command-line interface that allows you to better visualize your databases and tables and execute SQL commands directly from the terminal.
