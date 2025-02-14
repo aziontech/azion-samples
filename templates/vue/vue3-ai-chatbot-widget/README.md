@@ -26,9 +26,12 @@ This application is designed to work together with the backend application for t
 
 [![Deploy Button](https://www.azion.com/button/)](https://console.azion.com/create/langgraph-ai-agent-boilerplate "Deploy with Azion")
 
+
+---
+
 ## Configuring the template
 
-After the deploy, the template creates two databases, one for conversation history and another for reference documents. The **Vue3 AI Chatbot Widget** provides a graphic interface to chat with your AI agent; the databases must be correctly configured to store the chat messages and provide the documents which will serve as the agent's reference.
+After the deployment, the template creates two databases, one for conversation history and another for reference documents. The **Vue3 AI Chatbot Widget** provides a graphic interface to chat with your AI agent; the databases must be correctly configured to store the chat messages and provide the documents that will serve as the agent's reference.
 
 To start using your own documents, you must set the appropriate database by following these steps:
 
