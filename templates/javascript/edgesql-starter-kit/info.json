@@ -1,0 +1,7 @@
+{
+  "name": "EdgeSQL Starter Kit",
+  "message": "Create your first EdgeSQL-based application",
+  "preset": "javascript",
+  "mode": "compute",
+  "path": "/edgesql-starter-kit"
+}

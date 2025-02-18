@@ -1,0 +1,25 @@
+{
+  "name": "edgesql-starter-kit",
+  "version": "1.0.0",
+  "description": "A Starter Kit template to use Azion EdgeSQL",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node main.js"
+  },
+  "keywords": [
+    "edge",
+    "edge computing",
+    "edge sql",
+    "azion",
+    "sql",
+    "db"
+  ],
+  "author": "azion",
+  "license": "MIT",
+  "dependencies": {
+    "azion": "1.15.0",
+    "dotenv": "16.4.7",
+    "itty-router": "4.0.23",
+    "sqlstring": "2.3.3"
+  }
+}
