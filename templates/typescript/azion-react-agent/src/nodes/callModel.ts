@@ -18,7 +18,7 @@ export async function callModel(
 
   const { messages } = state
 
-  messages.push(new SystemMessage({content: SYSTEM_PROMPT}))
+  messages.unshift(new SystemMessage({content: SYSTEM_PROMPT}))
   
   const model = new ChatOpenAI({
     model: OPENAI_MODEL,
