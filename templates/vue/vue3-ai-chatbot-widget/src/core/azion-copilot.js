@@ -29,7 +29,7 @@ export class AzionCopilot {
       id: msg.id || crypto.randomUUID(),
       status: CONSTANTS.STATUS.MESSAGES.COMPLETED,
       feedback:
-        msg.role === 'system'
+        msg.role === 'assistant'
           ? (msg.feedback ?? { completed: false, rating: CONSTANTS.STATUS.FEEDBACK.NEUTRAL })
           : msg.feedback
     }))
@@ -54,9 +54,9 @@ export class AzionCopilot {
     }
   }
 
-  createSystemMessage() {
+  createAssistantMessage() {
     return {
-      role: 'system',
+      role: 'assistant',
       content: '',
       status: CONSTANTS.STATUS.MESSAGES.RESPONDING,
       feedback: {
@@ -156,10 +156,10 @@ export class AzionCopilot {
 
   async sendMessage(content) {
     const userMessage = this.createInitialMessage(content)
-    const systemMessage = this.createSystemMessage()
+    const assistantMessage = this.createAssistantMessage()
 
     const messageQueue = [...this.messages, userMessage]
-    this.messages = [...this.messages, userMessage, systemMessage]
+    this.messages = [...this.messages, userMessage, assistantMessage]
     this.emitMessagesUpdate()
 
     this.currentRequest = new AbortController()
@@ -189,21 +189,21 @@ export class AzionCopilot {
           this.events.emit(CONSTANTS.EVENTS.AUTH_REQUIRED)
           throw new Error('Authentication required')
         }
-        systemMessage.status = CONSTANTS.STATUS.MESSAGES.ERROR
-        systemMessage.content = CONSTANTS.MESSAGES.SYSTEM.ERROR
+        assistantMessage.status = CONSTANTS.STATUS.MESSAGES.ERROR
+        assistantMessage.content = CONSTANTS.MESSAGES.SYSTEM.ERROR
 
-        this.messages[this.messages.length - 1] = { ...systemMessage }
+        this.messages[this.messages.length - 1] = { ...assistantMessage }
 
         this.emitMessagesUpdate()
         throw new Error(`HTTP error! status: ${response.status}`)
       }
 
       if (this.config.stream) {
-        await this.handleStreamResponse(response, systemMessage)
+        await this.handleStreamResponse(response, assistantMessage)
       } else {
         const data = await response.json()
         const completedMessage = {
-          ...systemMessage,
+          ...assistantMessage,
           content: data.content,
           status: CONSTANTS.STATUS.MESSAGES.COMPLETED
         }
@@ -213,11 +213,11 @@ export class AzionCopilot {
         this.emitMessagesUpdate()
       }
 
-      return systemMessage
+      return assistantMessage
     } catch (error) {
       if (error.name !== 'AbortError') {
         const errorMessage = {
-          ...systemMessage,
+          ...assistantMessage,
           status: CONSTANTS.STATUS.MESSAGES.ERROR
         }
 
@@ -234,17 +234,17 @@ export class AzionCopilot {
     this.currentRequest?.abort()
     this.currentRequest = null
 
-    const lastSystemMessage = [...this.messages]
+    const lastAssistantMessage = [...this.messages]
       .reverse()
-      .find((m) => m.role === 'system' && m.status === CONSTANTS.STATUS.MESSAGES.RESPONDING)
+      .find((m) => m.role === 'assistant' && m.status === CONSTANTS.STATUS.MESSAGES.RESPONDING)
 
-    if (lastSystemMessage) {
-      lastSystemMessage.status = CONSTANTS.STATUS.MESSAGES.CANCELED
-      lastSystemMessage.content += '\n'
+    if (lastAssistantMessage) {
+      lastAssistantMessage.status = CONSTANTS.STATUS.MESSAGES.CANCELED
+      lastAssistantMessage.content += '\n'
 
-      const index = this.messages.findIndex((m) => m.id === lastSystemMessage.id)
+      const index = this.messages.findIndex((m) => m.id === lastAssistantMessage.id)
       if (index !== -1) {
-        this.messages[index] = { ...lastSystemMessage }
+        this.messages[index] = { ...lastAssistantMessage }
       }
 
       this.emitMessagesUpdate()

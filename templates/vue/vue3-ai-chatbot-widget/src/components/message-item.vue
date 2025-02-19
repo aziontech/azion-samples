@@ -149,7 +149,7 @@
     }
   })
 
-  const isSystem = computed(() => props.message.role === 'system')
+  const isSystem = computed(() => props.message.role === 'assistant')
   const messageReadingStatus = computed(
     () => props.message.status === CONSTANTS.STATUS.MESSAGES.RESPONDING
   )
