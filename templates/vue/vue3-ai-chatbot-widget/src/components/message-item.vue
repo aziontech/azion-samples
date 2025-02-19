@@ -4,13 +4,13 @@
     :class="classRoleApply"
   >
     <div
-      v-if="isSystem"
+      v-if="isAssistant"
       class="flex gap-3 mt-1"
     >
       <Avatar />
     </div>
     <div class="message-content">
-      <div v-if="!isSystem">
+      <div v-if="!isAssistant">
         <div
           v-html="formattedMessage"
           class="formatted-content"
@@ -149,14 +149,14 @@
     }
   })
 
-  const isSystem = computed(() => props.message.role === 'assistant')
+  const isAssistant = computed(() => props.message.role === 'assistant')
   const messageReadingStatus = computed(
     () => props.message.status === CONSTANTS.STATUS.MESSAGES.RESPONDING
   )
 
   const classRole = {
     user: 'surface-300 ml-auto break-words w-fit rounded-lg h-fit px-4 py-3',
-    system: 'mr-auto w-full mt-3'
+    assistant: 'mr-auto w-full mt-3'
   }
 
   const classRoleApply = classRole[props.message.role]
