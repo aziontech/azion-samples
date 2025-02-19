@@ -33,6 +33,7 @@ export const CONSTANTS = {
     ERROR: 'error',
     CLEAR: 'clear',
     CANCEL: 'cancel',
-    FEEDBACK: 'feedback'
+    FEEDBACK: 'feedback',
+    AUTH_REQUIRED: 'auth_required'
   }
 }

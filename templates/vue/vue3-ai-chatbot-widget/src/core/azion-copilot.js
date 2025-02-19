@@ -6,6 +6,7 @@ export class AzionCopilot {
     this.messages = []
     this.sessionId = crypto.randomUUID()
     this.events = new EventEmitter()
+    this.authToken = null
 
     this.serverConfig = {
       ...CONSTANTS.SERVER.DEFAULT,
@@ -163,9 +164,18 @@ export class AzionCopilot {
 
     this.currentRequest = new AbortController()
     try {
+      const headers = { 
+        'Content-Type': 'application/json',
+      }
+
+      if (this.authToken) {
+        headers['Authorization'] = `Bearer ${this.authToken}`
+      }
+
       const response = await fetch(`${this.serverConfig.url}${this.serverConfig.conversation}`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        headers,
         body: JSON.stringify({
           messages: messageQueue,
           stream: this.config.stream,
@@ -175,6 +185,10 @@ export class AzionCopilot {
       })
 
       if (!response.ok) {
+        if (response.status === 401) {
+          this.events.emit(CONSTANTS.EVENTS.AUTH_REQUIRED)
+          throw new Error('Authentication required')
+        }
         systemMessage.status = CONSTANTS.STATUS.MESSAGES.ERROR
         systemMessage.content = CONSTANTS.MESSAGES.SYSTEM.ERROR
 
@@ -258,9 +272,18 @@ export class AzionCopilot {
         comments
       }
 
+      const headers = { 
+        'Content-Type': 'application/json',
+      }
+
+      if (this.authToken) {
+        headers['Authorization'] = `Bearer ${this.authToken}`
+      }
+
       const response = await fetch(`${this.serverConfig.url}${this.serverConfig.feedback}`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        headers,
         body: JSON.stringify(feedbackData)
       })
 
@@ -337,5 +360,9 @@ export class AzionCopilot {
 
   on(event, callback) {
     return this.events.on(event, callback)
+  }
+
+  setAuthToken(token) {
+    this.authToken = token
   }
 }

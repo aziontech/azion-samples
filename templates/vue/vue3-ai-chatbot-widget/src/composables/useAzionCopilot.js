@@ -3,6 +3,11 @@ import { AzionCopilot, CONSTANTS } from '../core'
 
 export function useAzionCopilot(config) {
   const copilot = new AzionCopilot(config)
+  
+  const token = sessionStorage.getItem('copilot_auth_token')
+  if (token) {
+    copilot.setAuthToken(token)
+  }
 
   const messages = ref([])
   const isProcessingRequest = ref(false)
@@ -40,6 +45,7 @@ export function useAzionCopilot(config) {
     sendFeedback,
     resetChat,
     isProcessingRequest,
-    cancelMessage
+    cancelMessage,
+    copilot
   }
 }

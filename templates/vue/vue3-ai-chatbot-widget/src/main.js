@@ -15,6 +15,7 @@ import PrimeVue from 'primevue/config'
 import Tooltip from 'primevue/tooltip'
 import ToastService from 'primevue/toastservice'
 import App from './App.vue'
+import { AuthService } from './services/auth'
 
 const getConfigDefaults = () => ({
   theme: import.meta.env.VITE_THEME || 'light',
@@ -33,19 +34,48 @@ const getConfigDefaults = () => ({
   isOpenByDefault: true,
   isMaximizedByDefault: true,
   previewText: import.meta.env.VITE_PREVIEW_TEXT || '',
-  footerDisclaimer: import.meta.env.VITE_FOOTER_DISCLAIMER || ''
+  footerDisclaimer: import.meta.env.VITE_FOOTER_DISCLAIMER || '',
+  clerkPublicKey: import.meta.env.VITE_CLERK_PUBLISHABLE_KEY,
+  authMode: import.meta.env.VITE_AUTH_MODE
 })
 
 const CONFIG_DEFAULT = getConfigDefaults()
 
-const app = createApp(App, CONFIG_DEFAULT)
-
 document.documentElement.className = `azion azion-${CONFIG_DEFAULT.theme}`
-
 document.title = CONFIG_DEFAULT.title || 'Copilot'
 
-app.use(PrimeVue)
-app.directive('tooltip', Tooltip)
-app.use(ToastService)
+async function init() {
+  const authService = new AuthService({
+    authMode: CONFIG_DEFAULT.authMode,
+    copilotBackend: CONFIG_DEFAULT.serverUrl.url,
+    clerkPublicKey: CONFIG_DEFAULT.clerkPublicKey
+  })
 
-app.mount('#app')
+  try {
+    const user = await authService.signIn()
+    if (user) {
+      mountMainApp()
+    }
+  } catch (error) {
+    console.error('Authentication error:', error)
+  }
+}
+
+function mountMainApp() {
+  const app = createApp(App, CONFIG_DEFAULT)
+  app.use(PrimeVue)
+  app.directive('tooltip', Tooltip)
+  app.use(ToastService)
+  app.mount('#app')
+}
+
+// Add this to handle the redirect
+if (window.location.hash.includes('__clerk_status=active')) {
+  console.log('Detected Clerk redirect, reloading...')
+  window.location.hash = ''
+  window.location.reload()
+} else {
+  init()
+}
+
+
