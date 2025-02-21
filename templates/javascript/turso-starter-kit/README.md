@@ -24,6 +24,6 @@ This template uses LibSQL `0.5.3`.
 
 Deploy your own Turso project with Azion.
 
-[![Deploy Button](https://www.azion.com/button/)](https://console.azion.com/create/turso/turso-starter-kit "Deploy with Azion")
+[![Deploy Button](https://www.azion.com/button.svg)](https://console.azion.com/create/turso/turso-starter-kit "Deploy with Azion")
 
 For a more detailed step-by-step, check the [documentation](https://www.azion.com/en/documentation/products/guides/turso-starter-kit/).  You can also learn how to deploy this template by watching [this video](https://youtu.be/YkZoJ-EQBH0?feature=shared) on Azion's YouTube channel.

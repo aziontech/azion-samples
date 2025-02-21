@@ -43,6 +43,6 @@ Or via JSON Args:
 
 Deploy your own Drizzle + TiDB project with Azion.
 
-[![Deploy Button](https://www.azion.com/button/)](https://console.azion.com/create/drizzle-orm/drizzle-tidb-starter-kit "Deploy with Azion")
+[![Deploy Button](https://www.azion.com/button.svg)](https://console.azion.com/create/drizzle-orm/drizzle-tidb-starter-kit "Deploy with Azion")
 
 ---

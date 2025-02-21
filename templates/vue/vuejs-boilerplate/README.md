@@ -23,6 +23,6 @@ Before using this template, you need to:
 
 Deploy your own Vue project with Azion.
 
-[![Deploy Button](https://www.azion.com/button/)](https://console.azion.com/create/vue/vue-boilerplate "Deploy with Azion")
+[![Deploy Button](https://www.azion.com/button.svg)](https://console.azion.com/create/vue/vue-boilerplate "Deploy with Azion")
 
 For a more detailed step-by-step, check the [documentation](https://www.azion.com/en/documentation/products/guides/vue-boilerplate/).

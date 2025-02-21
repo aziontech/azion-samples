@@ -24,6 +24,6 @@ This repository is an example of the new GitHub repository created during the de
 
 Deploy your own MongoDB Atlas project with Azion.
 
-[![Deploy Button](https://www.azion.com/button/)](https://console.azion.com/create/mongodb-atlas/mongodb-atlas "Deploy with Azion")
+[![Deploy Button](https://www.azion.com/button.svg)](https://console.azion.com/create/mongodb-atlas/mongodb-atlas "Deploy with Azion")
 
 For a more detailed step-by-step on using this template, check the [How to deploy the MongoDB Atlas Boilerplate](https://www.azion.com/en/documentation/products/guides/mongodb-atlas/) guide. You can also learn how to deploy this template by watching [this video](https://www.youtube.com/watch?v=pKv8c0RNbGY&list=PL02NW2s3y10OR8Vw4hsth3TLw4R7VE094&index=6&pp=iAQB) on Azion's YouTube channel.

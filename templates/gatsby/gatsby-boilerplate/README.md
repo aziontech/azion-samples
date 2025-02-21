@@ -23,6 +23,6 @@ Before using this template, you need to:
 
 Deploy your own Gatsby project with Azion.
 
-[![Deploy Button](https://www.azion.com/button/)](https://console.azion.com/create/gatsby/gatsby-boilerplate "Deploy with Azion")
+[![Deploy Button](https://www.azion.com/button.svg)](https://console.azion.com/create/gatsby/gatsby-boilerplate "Deploy with Azion")
 
 For a more detailed step-by-step, check the [documentation](https://www.azion.com/en/documentation/guides/gatsby-boilerplate/).

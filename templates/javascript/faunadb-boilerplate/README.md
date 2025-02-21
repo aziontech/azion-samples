@@ -25,6 +25,6 @@ Before using this template, you need to:
 
 Deploy your own Fauna project with Azion.
 
-[![Deploy Button](https://www.azion.com/button/)](https://console.azion.com/create/fauna/faunadb-boilerplate "Deploy with Azion")
+[![Deploy Button](https://www.azion.com/button.svg)](https://console.azion.com/create/fauna/faunadb-boilerplate "Deploy with Azion")
 
 For a more detailed step-by-step, check the [documentation](https://www.azion.com/en/documentation/products/guides/faunadb-boilerplate/). You can also learn how to deploy this template by watching [this video](https://youtu.be/QqVUr6RKCnY?feature=shared) on Azion's YouTube channel.

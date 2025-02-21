@@ -34,6 +34,6 @@ Or via JSON Args:
 
 Deploy your own Drizzle + Turso project with Azion.
 
-[![Deploy Button](https://www.azion.com/button/)](https://console.azion.com/create/drizzle-orm/drizzle-turso-starter-kit "Deploy with Azion")
+[![Deploy Button](https://www.azion.com/button.svg)](https://console.azion.com/create/drizzle-orm/drizzle-turso-starter-kit "Deploy with Azion")
 
 ---
