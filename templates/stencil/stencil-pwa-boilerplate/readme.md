@@ -28,6 +28,6 @@ Fill in the fields presented on the configuration form and deploy the template. 
 
 Deploy your own Stencil PWA Boilerplate project with Azion.
 
-[![Deploy Button](https://www.azion.com/button/)](https://console.azion.com/create/stencil/stencil-pwa-boilerplate "Deploy with Azion")
+[![Deploy Button](https://www.azion.com/button.svg)](https://console.azion.com/create/stencil/stencil-pwa-boilerplate "Deploy with Azion")
 
 For a more detailed step-by-step, check the [documentation](https://www.azion.com/en/documentation/products/guides/stencil-pwa-boilerplate/).

@@ -24,7 +24,7 @@ Before using this template, you need to:
 
 This application is designed to work together with the backend application for the **LangGraph AI Agent Boilerplate**. You can use the button below to deploy this template with both applications:
 
-[![Deploy Button](https://www.azion.com/button/)](https://console.azion.com/create/langgraph-ai-agent-boilerplate "Deploy with Azion")
+[![Deploy Button](https://www.azion.com/button.svg)](https://console.azion.com/create/langgraph-ai-agent-boilerplate "Deploy with Azion")
 
 
 ---

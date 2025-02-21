@@ -21,6 +21,6 @@ Before using this template, you need to:
 
 Deploy this project with Azion.
 
-[![Deploy Button](https://www.azion.com/button/)](https://console.azion.com/create/github/edge-function-github-autodeploy "Deploy with Azion")
+[![Deploy Button](https://www.azion.com/button.svg)](https://console.azion.com/create/github/edge-function-github-autodeploy "Deploy with Azion")
 
 For a more detailed step-by-step, check the [documentation](https://www.azion.com/en/documentation/products/guides/edge-function-github-autodeploy/).

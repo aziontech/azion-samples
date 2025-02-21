@@ -27,6 +27,6 @@ Before using this template, you need to:
 
 Deploy your own 11ty project with Azion.
 
-[![Deploy Button](https://www.azion.com/button/)](https://console.azion.com/create/11ty/11ty-landing-page "Deploy with Azion")
+[![Deploy Button](https://www.azion.com/button.svg)](https://console.azion.com/create/11ty/11ty-landing-page "Deploy with Azion")
 
 For a more detailed step-by-step, check the [documentation](https://www.azion.com/en/documentation/products/use-a-template-via-azion-console/).

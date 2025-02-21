@@ -25,6 +25,6 @@ Before using this template, you need to:
 
 Deploy your own Docusaurus project with Azion.
 
-[![Deploy Button](https://www.azion.com/button/)](https://console.azion.com/create/docusaurus/docusaurus-boilerplate-typescript "Deploy with Azion")
+[![Deploy Button](https://www.azion.com/button.svg)](https://console.azion.com/create/docusaurus/docusaurus-boilerplate-typescript "Deploy with Azion")
 
 For a more detailed step-by-step, check the [documentation](https://www.azion.com/en/documentation/products/guides/docusaurus-typescript-boilerplate/).
