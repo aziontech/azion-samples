@@ -22,8 +22,8 @@ const azionRetriever = new AzionRetriever(embeddingModel, entityExtractor,
   {dbName:VECTOR_STORE_DB_NAME,
    vectorTable:VECTOR_STORE_TABLE_NAME,
    ftsTable:VECTOR_STORE_TABLE_NAME+"_fts",
-   ftsK:1,
-   similarityK:1,
+   ftsK:3,
+   similarityK:3,
    searchType:"hybrid",
    promptEntityExtractor:'Extraia as entidades relevantes para a busca. Apenas responda com as entidades, sem explicações e pontuação.'
   });

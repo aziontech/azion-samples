@@ -17,8 +17,6 @@ export async function callModel(
 ): Promise<Partial<typeof MessagesAnnotation.State>> {
 
   const { messages } = state
-
-  messages.unshift(new SystemMessage({content: SYSTEM_PROMPT}))
   
   const model = new ChatOpenAI({
     model: OPENAI_MODEL,
@@ -29,7 +27,7 @@ export async function callModel(
     apiKey: OPENAI_API_KEY,
   }).bindTools(TOOLS);
 
-  const response = new AIMessage(await model.invoke(messages,{recursionLimit:3}))
+  const response = new AIMessage(await model.invoke([new SystemMessage(SYSTEM_PROMPT),...messages],{recursionLimit:3}))
   
   return { messages: [response] };
 }
