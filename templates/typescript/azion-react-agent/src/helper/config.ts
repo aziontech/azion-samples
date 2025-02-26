@@ -9,3 +9,8 @@ export const MESSAGE_STORE_DB_NAME = process.env.MESSAGE_STORE_DB_NAME || 'messa
 export const MESSAGE_STORE_TABLE_NAME = 'messages'
 
 export const SYSTEM_PROMPT = "You are a helpful assistant."
+
+export const AUTHENTICATION_TYPE = process.env.AUTHENTICATION_TYPE
+export const AUTHENTICATION_TOKEN = process.env.AUTHENTICATION_TOKEN
+export const CLERK_PUBLISHABLE_KEY = process.env.CLERK_PUBLISHABLE_KEY
+export const CLERK_SECRET_KEY = process.env.CLERK_SECRET_KEY

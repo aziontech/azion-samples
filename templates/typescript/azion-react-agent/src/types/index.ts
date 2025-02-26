@@ -136,3 +136,12 @@ export interface Message {
   /** The content of the message */
   content: string;
 }
+
+/**
+ * Interface for the user data
+ * @interface UserData
+ * @property {string} email - The email of the user
+ */
+export interface UserData {
+  email: string;
+}
