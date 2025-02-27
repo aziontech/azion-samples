@@ -9,8 +9,11 @@
   >
     <div
       v-if="chatWidget.isOpenChat || chatWidget.isClosing"
-      class="fixed right-0 z-[55] border surface-ground surface-border transition-transform ease-in-out max-md:w-full max-md:h-full max-md:top-0 max-md:right-0"
-      :class="chatClass"
+      :class="[
+        ...chatClass,
+        { 'pointer-events-none': showAuthOverlay },
+        'fixed right-0 z-[55] border surface-ground surface-border transition-transform ease-in-out max-md:w-full max-md:h-full max-md:top-0 max-md:right-0'
+      ]"
       @transitionend="onTransitionEnd"
     >
       <div class="h-full flex flex-col">
@@ -32,21 +35,60 @@
       </div>
     </div>
   </Transition>
+
+  <!-- Auth overlay - only show for basic auth -->
+  <Transition
+    enter-active-class="transition-all duration-300 ease-out"
+    enter-from-class="opacity-0"
+    enter-to-class="opacity-100"
+    leave-active-class="transition-all duration-300 ease-in"
+    leave-from-class="opacity-100"
+    leave-to-class="opacity-0"
+  >
+    <div v-if="showAuthOverlay && chatWidget.authMode === 'basic'" 
+         class="fixed inset-0 z-[60] bg-black/50 flex items-center justify-center">
+      <BasicAuthWindow :onSubmit="handleAuthSubmit" />
+    </div>
+  </Transition>
 </template>
 
 <script setup>
-  import { computed, inject } from 'vue'
+  import { computed, inject, ref } from 'vue'
   import ChatHeader from './chat-header.vue'
   import ChatBody from './chat-body.vue'
   import ChatFooter from './chat-footer.vue'
+  import BasicAuthWindow from '../BasicAuthWindow.vue'
   import { useAzionCopilot } from '../../composables/useAzionCopilot'
+  import { AuthService } from '../../services/auth'
+  import { CONSTANTS } from '../../core'
 
   const chatWidget = inject('chatWidget')
+  const showAuthOverlay = ref(false)
 
   defineOptions({ name: 'layout-chat' })
 
-  const { messages, sendMessage, cancelMessage, resetChat, isProcessingRequest, sendFeedback } =
+  const { messages, sendMessage, cancelMessage, resetChat, isProcessingRequest, sendFeedback, copilot } =
     useAzionCopilot({ server: chatWidget.serverUrl })
+
+  copilot.on(CONSTANTS.EVENTS.AUTH_REQUIRED, () => {
+    console.log(chatWidget)
+    if (chatWidget.authMode === 'basic') {
+      showAuthOverlay.value = true
+    }
+  })
+
+  const handleAuthSubmit = async (password) => {
+    const authService = new AuthService({
+      authMode: 'basic',
+      copilotBackend: chatWidget.serverUrl.url
+    })
+    
+    const result = await authService.fetchBasicAuth(password)
+    if (result.token) {
+      copilot.setAuthToken(result.token)
+      showAuthOverlay.value = false
+    }
+  }
 
   const closeChat = () => {
     chatWidget.isClosing = true
