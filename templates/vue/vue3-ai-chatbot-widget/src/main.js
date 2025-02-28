@@ -35,7 +35,7 @@ const getConfigDefaults = () => ({
   isMaximizedByDefault: true,
   previewText: import.meta.env.VITE_PREVIEW_TEXT || '',
   footerDisclaimer: import.meta.env.VITE_FOOTER_DISCLAIMER || '',
-  clerkPublicKey: import.meta.env.VITE_CLERK_PUBLISHABLE_KEY,
+  clerkPublicKey: import.meta.env.VITE_CLERK_PUBLIC_KEY,
   authMode: import.meta.env.VITE_AUTH_MODE
 })
 

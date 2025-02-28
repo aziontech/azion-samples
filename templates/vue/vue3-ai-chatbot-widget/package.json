@@ -12,6 +12,7 @@
     "axios": "^1.7.9",
     "azion": "latest",
     "azion-theme": "^1.8.1",
+    "@clerk/clerk-js": "^5.54.1",
     "marked": "^15.0.3",
     "primeflex": "^3.3.1",
     "primeicons": "7.0.0",
