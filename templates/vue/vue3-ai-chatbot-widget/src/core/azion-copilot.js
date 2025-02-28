@@ -174,7 +174,7 @@ export class AzionCopilot {
 
       const response = await fetch(`${this.serverConfig.url}${this.serverConfig.conversation}`, {
         method: 'POST',
-        credentials: 'include',
+        // credentials: 'include',
         headers,
         body: JSON.stringify({
           messages: messageQueue,
@@ -282,7 +282,7 @@ export class AzionCopilot {
 
       const response = await fetch(`${this.serverConfig.url}${this.serverConfig.feedback}`, {
         method: 'POST',
-        credentials: 'include',
+        // credentials: 'include',
         headers,
         body: JSON.stringify(feedbackData)
       })
