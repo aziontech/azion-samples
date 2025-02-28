@@ -66,7 +66,7 @@ export class AuthService {
 
         const response = await fetch(`${this.copilotBackend}/auth`, {
             method: 'POST',
-            credentials: 'include',
+            // credentials: 'include',
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${password}`
