@@ -167,14 +167,14 @@ export class AzionCopilot {
       const headers = { 
         'Content-Type': 'application/json',
       }
-
+      
       if (this.authToken) {
         headers['Authorization'] = `Bearer ${this.authToken}`
       }
 
       const response = await fetch(`${this.serverConfig.url}${this.serverConfig.conversation}`, {
         method: 'POST',
-        // credentials: 'include',
+        credentials: this.authToken ? 'include' : 'omit',
         headers,
         body: JSON.stringify({
           messages: messageQueue,
@@ -282,7 +282,7 @@ export class AzionCopilot {
 
       const response = await fetch(`${this.serverConfig.url}${this.serverConfig.feedback}`, {
         method: 'POST',
-        // credentials: 'include',
+        credentials: this.authToken ? 'include' : 'omit',        
         headers,
         body: JSON.stringify(feedbackData)
       })
