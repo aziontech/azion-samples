@@ -1,0 +1,9 @@
+
+{
+  "name": "Angular Boilerplate",
+  "message": "Automate your Angular.js deployment process on the edge",
+  "preset": "angular",
+  "mode": "deliver",
+  "path": "/angular-boilerplate"
+}
+
