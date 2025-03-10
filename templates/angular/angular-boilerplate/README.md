@@ -1,59 +1,29 @@
-# AngularBoilerplate
+# Angular Boilerplate
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.1.
+With the **Angular Boilerplate**, you can simplify and enhance the deployment of Angular applications directly on the edge of the network. This template provides an automation solution that encapsulates several steps, from repository management to edge deployment, accelerating and simplifying your workflow.
 
-## Development server
+This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [How to deploy edge applications with the Angular Boilerplate](https://www.azion.com/en/documentation/products/guides/angular-boilerplate/) guide.
 
-To start a local development server, run:
+This template uses Angular CLI version `18.2.11`.
 
-```bash
-ng serve
-```
+---
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Requirements
 
-## Code scaffolding
+Before using this template, you need to:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Have a [GitHub account](https://github.com/signup).
+  - Every push will be deployed automatically to the main branch in this repository to keep your project updated.
 
-```bash
-ng generate component component-name
-```
+> **Note**: this template uses [Edge Functions](https://www.azion.com/en/documentation/products/build/edge-application/edge-functions/) and it could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## Deploy your own
 
-## Building
+Deploy your own Angular project with Azion.
 
-To build the project run:
+[![Deploy Button](https://www.azion.com/button.svg)](https://console.azion.com/create/angular/angular-boilerplate "Deploy with Azion")
 
-```bash
-ng build
-```
+For a more detailed step-by-step, check the [documentation](https://www.azion.com/en/documentation/products/guides/angular-boilerplate/).
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
