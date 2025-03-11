@@ -7,6 +7,7 @@ export class AzionCopilot {
     this.sessionId = crypto.randomUUID()
     this.events = new EventEmitter()
     this.authToken = null
+    this.authMode = config.authMode
 
     this.serverConfig = {
       ...CONSTANTS.SERVER.DEFAULT,
@@ -168,13 +169,15 @@ export class AzionCopilot {
         'Content-Type': 'application/json',
       }
       
-      if (this.authToken) {
+      const shouldIncludeCredentials = this.authMode === 'clerk' || this.authMode === 'basic'
+
+      if (this.authToken && this.authMode === 'basic') {
         headers['Authorization'] = `Bearer ${this.authToken}`
       }
 
       const response = await fetch(`${this.serverConfig.url}${this.serverConfig.conversation}`, {
         method: 'POST',
-        credentials: this.authToken ? 'include' : 'omit',
+        credentials: shouldIncludeCredentials ? 'include' : 'omit',
         headers,
         body: JSON.stringify({
           messages: messageQueue,
@@ -276,13 +279,15 @@ export class AzionCopilot {
         'Content-Type': 'application/json',
       }
 
-      if (this.authToken) {
+      const shouldIncludeCredentials = this.authMode === 'clerk' || this.authMode === 'basic'
+
+      if (this.authToken && this.authMode === 'basic') {
         headers['Authorization'] = `Bearer ${this.authToken}`
       }
 
       const response = await fetch(`${this.serverConfig.url}${this.serverConfig.feedback}`, {
         method: 'POST',
-        credentials: this.authToken ? 'include' : 'omit',        
+        credentials: shouldIncludeCredentials ? 'include' : 'omit',
         headers,
         body: JSON.stringify(feedbackData)
       })
