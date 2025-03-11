@@ -45,9 +45,9 @@
     leave-from-class="opacity-100"
     leave-to-class="opacity-0"
   >
-    <div v-if="showAuthOverlay && chatWidget.authMode === 'basic'" 
+    <div v-if="showAuthOverlay" 
          class="fixed inset-0 z-[60] bg-black/50 flex items-center justify-center">
-      <BasicAuthWindow :onSubmit="handleAuthSubmit" />
+      <BasicAuthWindow :onSubmit="handleBasicAuthSubmit" />
     </div>
   </Transition>
 </template>
@@ -68,16 +68,18 @@
   defineOptions({ name: 'layout-chat' })
 
   const { messages, sendMessage, cancelMessage, resetChat, isProcessingRequest, sendFeedback, copilot } =
-    useAzionCopilot({ server: chatWidget.serverUrl })
+    useAzionCopilot({ server: chatWidget.serverUrl, authMode: chatWidget.authMode })
 
-  copilot.on(CONSTANTS.EVENTS.AUTH_REQUIRED, () => {
-    console.log(chatWidget)
+  copilot.on(CONSTANTS.EVENTS.AUTH_REQUIRED, async () => {
     if (chatWidget.authMode === 'basic') {
       showAuthOverlay.value = true
+    } else if (chatWidget.authMode === 'clerk') {
+      await handleClerkAuth()
     }
   })
 
-  const handleAuthSubmit = async (password) => {
+  const handleBasicAuthSubmit = async (password) => {
+
     const authService = new AuthService({
       authMode: 'basic',
       copilotBackend: chatWidget.serverUrl.url
@@ -86,6 +88,19 @@
     const result = await authService.fetchBasicAuth(password)
     if (result.token) {
       copilot.setAuthToken(result.token)
+      showAuthOverlay.value = false
+    }
+  }
+
+  const handleClerkAuth = async () => {
+    const authService = new AuthService({
+      authMode: 'clerk',
+      copilotBackend: chatWidget.serverUrl.url,
+      clerkPublicKey: chatWidget.clerkPublicKey
+    })
+    
+    const user = await authService.clerkSignIn()
+    if (user) {
       showAuthOverlay.value = false
     }
   }

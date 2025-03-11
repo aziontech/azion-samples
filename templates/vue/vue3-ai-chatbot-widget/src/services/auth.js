@@ -28,34 +28,42 @@ export class AuthService {
     }
 
     async clerkSignIn() {
-        
         const clerk = new Clerk(this.clerkPublicKey)
         await clerk.load()
         
         if (!clerk.user) {
-          clerk.openSignIn({
-            appearance: {
-              socialButtonsVariant: "iconButton",
-              elements: {
-                card: {
-                  boxShadow: 'none',
-                },
-                modalCloseButton: {
-                  display: 'none'
-                },
-                footerAction: {
-                  display: 'none'
-                },
-              }
-            },
-          })
-        
-          await new Promise(resolve => {
-            clerk.addListener(({ user }) => {
-              if (user) resolve()
+            return new Promise((resolve) => {
+                const openSignIn = () => clerk.openSignIn()
+                openSignIn()
+                
+                // Create mutation observer to watch for modal removal
+                const observer = new MutationObserver((mutations) => {
+                    for (const mutation of mutations) {
+                        if (mutation.removedNodes.length > 0) {
+                            const modalRemoved = Array.from(mutation.removedNodes)
+                                .some(node => node.classList?.contains('cl-modalBackdrop'))
+                        
+                            if (modalRemoved && !clerk.user) {
+                                setTimeout(() => {openSignIn()}, 1)
+                            }
+                        }
+                    }
+                })
+
+                observer.observe(document.body, { 
+                    childList: true,
+                    subtree: true 
+                })
+
+                clerk.addListener(({ user }) => {
+                    if (user) {
+                        observer.disconnect()
+                        resolve(user)
+                    }
+                })
             })
-          })
         }
+
         return clerk.user
     }
 

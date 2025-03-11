@@ -16,7 +16,8 @@
     isMaximizedByDefault: Boolean,
     previewText: String,
     footerDisclaimer: String,
-    authMode: String
+    authMode: String,
+    clerkPublicKey: String
   })
 
   const chatWidget = reactive({
@@ -29,7 +30,8 @@
     isMaximizedChat: props.isMaximizedByDefault,
     previewText: props.previewText,
     footerDisclaimer: props.footerDisclaimer,
-    authMode: props.authMode
+    authMode: props.authMode,
+    clerkPublicKey: props.clerkPublicKey
   })
 
   provide('chatWidget', chatWidget)
