@@ -175,6 +175,10 @@ export class AzionCopilot {
         headers['Authorization'] = `Bearer ${this.authToken}`
       }
 
+      if (this.authMode === 'clerk') {
+        headers['Authorization'] = `Bearer ${document.cookie.split('__session=')[1]?.split(';')[0]}`
+      }
+
       const response = await fetch(`${this.serverConfig.url}${this.serverConfig.conversation}`, {
         method: 'POST',
         credentials: shouldIncludeCredentials ? 'include' : 'omit',
@@ -283,6 +287,10 @@ export class AzionCopilot {
 
       if (this.authToken && this.authMode === 'basic') {
         headers['Authorization'] = `Bearer ${this.authToken}`
+      }
+
+      if (this.authMode === 'clerk') {
+        headers['Authorization'] = `Bearer ${document.cookie.split('__session=')[1]?.split(';')[0]}`
       }
 
       const response = await fetch(`${this.serverConfig.url}${this.serverConfig.feedback}`, {
