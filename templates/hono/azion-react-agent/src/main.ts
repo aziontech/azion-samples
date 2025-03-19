@@ -34,6 +34,6 @@ app.options('/*', async (c) => {
 })
 
 app.post('/auth', async (c) => authRequestHandler(c.req.raw))
-app.post('/', async (c) => chatRequestHandler(c.req.raw))
+app.post('/chat/completions', async (c) => chatRequestHandler(c.req.raw))
 
 app.fire()
