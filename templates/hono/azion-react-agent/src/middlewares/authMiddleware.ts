@@ -60,7 +60,7 @@ export class AuthMiddleware {
   ): Promise<AuthResponse> {
     try {
 
-      if (!request.headers.get('cookie') || !request.headers.get('authorization')) {
+      if (!request.headers.get('cookie') && !request.headers.get('authorization')) {
         return { success: false, error: 'Unauthorized: No authentication provided' };
       }
 
