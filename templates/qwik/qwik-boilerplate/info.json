@@ -1,0 +1,7 @@
+{
+  "name": "Qwik Boilerplate",
+  "message": "Qwik application demo with sample routes",
+  "preset": "qwik",
+  "mode": "deliver",
+  "path": "/qwik-boilerplate"
+}
