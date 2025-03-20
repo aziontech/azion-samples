@@ -1,0 +1,8 @@
+{
+  "name": "Preact Boilerplate TS",
+  "message": "Automate your Preact deployment process on the edge, using Typescript",
+  "preset": "preact",
+  "mode": "deliver",
+  "path": "/preact-boilerplate-ts"
+}
+

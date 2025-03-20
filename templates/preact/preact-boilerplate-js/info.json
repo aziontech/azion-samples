@@ -1,0 +1,8 @@
+{
+  "name": "Preact Boilerplate JS",
+  "message": "Automate your Preact deployment process on the edge, using Javascript",
+  "preset": "preact",
+  "mode": "deliver",
+  "path": "/preact-boilerplate-js"
+}
+
