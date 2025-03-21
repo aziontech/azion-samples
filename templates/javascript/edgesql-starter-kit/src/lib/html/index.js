@@ -193,9 +193,8 @@ export const indexHTML = () => {
               }
 
               let responseJson = await response.json();
-              await getMessage();
               document.getElementById("btn-new-post").removeAttribute('disabled');
-              alert("You have successfully saved your post to your database!")
+              alert("You have successfully saved your post to your database! As EdgeSQL is a globally distributed, reading focused database, it might take a few minutes for the new data to be propagated.")
           }
   
           async function deleteItem(element, id) {
@@ -214,8 +213,7 @@ export const indexHTML = () => {
             }
 
             let responseJson = await response.json();
-            element.parentElement.parentElement.parentElement.remove();
-            alert("You've successfully deleted your post from your database!")
+            alert("You've successfully deleted your post from your database! As EdgeSQL is a globally distributed, reading focused database, it might take a few minutes for the deletion to be propagated.")
           }
   
           async function updateItem(id) {
@@ -241,8 +239,7 @@ export const indexHTML = () => {
               }
               
               let responseJson = await response.json();
-              await getMessage();
-              alert("You've successfully updated your post in your database!")
+              alert("You've successfully updated your post in your database! As EdgeSQL is a globally distributed, reading focused database, it might take a few minutes for the updated data to be propagated.")
           }
   
       </script>
