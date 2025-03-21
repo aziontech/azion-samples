@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "@floating-ui/dom": "1.4.4",
-    "azion": "latest",
+    "azion": "1.15.0",
     "iconify-icon": "1.0.8",
     "nanoid": "4.0.2"
   },

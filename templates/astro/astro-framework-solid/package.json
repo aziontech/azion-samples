@@ -13,7 +13,7 @@
   "dependencies": {
     "@astrojs/solid-js": "^4.0.1",
     "astro": "^4.5.12",
-    "azion": "latest",
+    "azion": "1.15.0",
     "solid-js": "^1.8.5"
   }
 }
