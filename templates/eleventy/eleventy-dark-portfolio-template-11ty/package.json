@@ -32,6 +32,6 @@
     "markdown-it-anchor": "^5.2.5"
   },
   "dependencies": {
-    "azion": "latest"
+    "azion": "1.15.0"
   }
 }

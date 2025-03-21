@@ -16,7 +16,7 @@
     "lint": "eslint src/**/*.js"
   },
   "dependencies": {
-    "azion": "latest",
+    "azion": "1.15.0",
     "bootstrap": "^5.2.3",
     "buttercms": "^1.2.15",
     "gatsby": "^5.7.0",

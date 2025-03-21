@@ -22,6 +22,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"azion": "latest"
+		"azion": "1.15.0"
 	}
 }
