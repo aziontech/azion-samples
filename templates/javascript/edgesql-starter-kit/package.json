@@ -17,7 +17,7 @@
   "author": "azion",
   "license": "MIT",
   "dependencies": {
-    "azion": "1.16.0",
+    "azion": "1.15.0",
     "dotenv": "16.4.7",
     "itty-router": "4.0.23",
     "sqlstring": "2.3.3"
