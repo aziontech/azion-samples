@@ -19,11 +19,11 @@ async function handleRequest(request, args) {
     return new Response(`You are trying something incorrect.`, { status: 200 });
   });
   
-  const name = args.name || Azion.env.get("EDGE_SQL_STARTER_KIT_DBNAME");
-  const token = args.token || Azion.env.get("EDGE_SQL_STARTER_KIT_TOKEN");
+  const name = args?.name || Azion.env.get("EDGE_SQL_STARTER_KIT_DBNAME");
+  const token = args?.token || Azion.env.get("EDGE_SQL_STARTER_KIT_TOKEN");
 
   // Setup Azion Lib client for Edge SQL
-  const edgeSqlClient = await createClient(({token: token, options: { debug: false }}));
+  const edgeSqlClient = await createClient(({token: token, options: { debug: false, external: true }}));
   const { data, error } = await edgeSqlClient.getDatabase(name);
   
   if (error) {
