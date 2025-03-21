@@ -54,7 +54,9 @@ export const indexHTML = () => {
                         </button>
                   </div>
                   <div class="list">
-                      <ol reversed id="posts"></ol>
+                      <ol reversed id="posts">
+                        <!-- posts_data -->
+                      </ol>
                   </div>
   
               </div>
@@ -95,42 +97,12 @@ export const indexHTML = () => {
   
           window.onload = async function () {
               try {
-                  await getMessage();
+                lucide.createIcons();
+                autoRowText();
               } catch (error) {
-                  alert("Something went wrong, check the console for more details");
-                  console.log(error?.message);
+                alert("Something went wrong, check the console for more details");
+                console.log(error?.message);
               }
-          }
-  
-          async function getMessage() {
-  
-              let response = await fetch("/api/posts", {
-                  method: 'GET',
-                  headers: {
-                      "Accept": "application/json",
-                      "Content-Type": "application/json"
-                  }
-              });
-  
-              if (response?.status !== 200) {
-                  alert("Something went wrong, check the console for more details");
-                  console.log(responseJson);
-              }
-
-              let responseJson = await response.json();
-              const { results } = responseJson;
-              if (results?.length === 0) {
-                  createItemElement();
-                  return
-              }
-              let listBody = ""
-              const items = results.forEach(item => {
-                  let id = item[0];
-                  listBody += \`<li><div class=\"list-content\"><textarea class=\"textarea-post\" disabled type=\"text\" id=\"text-post-\${id}\">\${item[1]}</textarea><div class=\"actions\"><button id=\"btn-post-save-\${id}\" style=\"display: none;\" onclick=\"updateItem('\${id}')\"><i class=\"icons\" data-lucide="save"></i></button><button onclick=\"onEditElement(this, '\${id}')\"><i class=\"icons\" data-lucide="pencil"></i></button><button onclick=\"deleteItem(this, '\${id}')\"><i class=\"icons\" data-lucide="trash"></i></button></div></div></li>\`
-              })
-              document.getElementById("posts").innerHTML = listBody;
-              lucide.createIcons();
-              autoRowText();
           }
   
           function onEditElement(element, id) {
@@ -193,9 +165,8 @@ export const indexHTML = () => {
               }
 
               let responseJson = await response.json();
-              await getMessage();
               document.getElementById("btn-new-post").removeAttribute('disabled');
-              alert("You have successfully saved your post to your database!")
+              alert("You have successfully saved your post to your database! As EdgeSQL is a globally distributed, reading focused database, it might take a few minutes for the new data to be propagated.")
           }
   
           async function deleteItem(element, id) {
@@ -214,8 +185,7 @@ export const indexHTML = () => {
             }
 
             let responseJson = await response.json();
-            element.parentElement.parentElement.parentElement.remove();
-            alert("You've successfully deleted your post from your database!")
+            alert("You've successfully deleted your post from your database! As EdgeSQL is a globally distributed, reading focused database, it might take a few minutes for the deletion to be propagated.")
           }
   
           async function updateItem(id) {
@@ -241,8 +211,7 @@ export const indexHTML = () => {
               }
               
               let responseJson = await response.json();
-              await getMessage();
-              alert("You've successfully updated your post in your database!")
+              alert("You've successfully updated your post in your database! As EdgeSQL is a globally distributed, reading focused database, it might take a few minutes for the updated data to be propagated.")
           }
   
       </script>

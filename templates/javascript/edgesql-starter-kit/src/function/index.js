@@ -23,7 +23,7 @@ async function handleRequest(request, args) {
   const token = args?.token || Azion.env.get("EDGE_SQL_STARTER_KIT_TOKEN");
 
   // Setup Azion Lib client for Edge SQL
-  const edgeSqlClient = await createClient(({token: token, options: { debug: false, external: true }}));
+  const edgeSqlClient = await createClient(({token: token, options: { debug: false }}));
   const { data, error } = await edgeSqlClient.getDatabase(name);
   
   if (error) {
