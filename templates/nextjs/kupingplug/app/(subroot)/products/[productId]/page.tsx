@@ -19,7 +19,7 @@ import { Product } from "@/types/product";
 
 async function getProductById(productId: string) {
   const res = await fetch(
-    `https://kupingplug.vercel.app/api/products/${productId}`,
+    `https://kupingplug.azion.app/api/products/${productId}`,
   );
 
   if (res.status === 404) return notFound();

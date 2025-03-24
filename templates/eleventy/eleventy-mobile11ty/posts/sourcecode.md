@@ -26,13 +26,4 @@ And yes, we have built and created a project to help with the needs of creating 
 
 there are several projects that we work on with each different theme and concept design, you can download them directly for free.
 
-here are some of our eleventy projects
-+ Eleventy blog Bootstrap11ty full SEO for bloger [Demo →](https://eleventyblog.vercel.app/)
-+ text11ty for article and documentation [Download →](https://github.com/mesinkasir/text11ty) or [Demo →](https://text11ty.pages.dev/)
-+ Thisis full SEO for blogger [Download →](https://github.com/mesinkasir/thisis-11ty) or [Demo →](https://thisis11ty.netlify.app/)
-
-Other premium themes 
-+ Bootstrap11ty [Download →]() or [Demo →](https://bootstrap11ty.pages.dev/)
-+ Premium eleventy [Demo →](https://tokorak.web.app/)
-
 If you need our services for build and deploy modern eleventy website please visit [https://eleventy.web.app/](https://eleventy.web.app/)
