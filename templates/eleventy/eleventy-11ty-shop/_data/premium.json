@@ -27,12 +27,12 @@
  "cover": "/img/proonlineshop.webp",
  "title": "Pro Online Shop",
  "description": "Built online shop with blast fast and SEO 11ty",
- "url": "https://mesinkasironline.vercel.app/"
+ "url": "https://mesinkasironline.azion.app/"
  },
   {
  "cover": "/img/premiumonlineshop.webp",
  "title": "Premium Shop",
  "description": "Modern online shop static site generator 11ty",
- "url": "https://tokokasir.vercel.app/"
+ "url": "https://tokokasir.azion.app/"
  }
 ]

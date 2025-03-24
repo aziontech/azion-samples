@@ -5,7 +5,7 @@ const previewMode = !(process.env.BUTTER_CMS_PREVIEW === "false" || process.env.
 module.exports = {
   siteMetadata: {
     title: `ButterCMS Gatsby.js Starter Project`,
-    siteUrl: `https://gatsbyjs-starter-buttercms-vercel.vercel.app/`,
+    siteUrl: `https://gatsbyjs-starter-buttercms-vercel.azion.app/`,
   },
   plugins: [
     {
@@ -20,11 +20,11 @@ module.exports = {
           // Optional. Set to 1 to enable test mode for viewing draft content.
           test: previewMode,
         },
-        // Use the optional pageTypes array for ButterCMS PageTypes. Any 
+        // Use the optional pageTypes array for ButterCMS PageTypes. Any
         // Page Types you want the app to have access to should have their
         // slugs explicitly included in the pageTypes array, as seen below.
         pageTypes: [`landing-page`],
-        // Specify locales you want the app to have access to, if you have 
+        // Specify locales you want the app to have access to, if you have
         // locales enabled in your account.
         locales: [],
         preview: previewMode, // Return draft content
