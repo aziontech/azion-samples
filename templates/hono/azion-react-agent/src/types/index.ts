@@ -146,8 +146,17 @@ export interface AuthResponse {
 export interface Message {
   /** The role of the message sender: 'system', 'assistant', or 'user' */
   role: 'system' | 'assistant' | 'user';
-  /** The content of the message */
-  content: string;
+  /** The content of the message, which can be either a string or an array of content objects */
+  content: string | Array<{
+    /** The type of content: 'text' or 'image_url' */
+    type: 'text' | 'image_url';
+    /** Optional text content */
+    text?: string;
+    /** Optional image URL object */
+    image_url?: {
+      url: string;
+    };
+  }>;
 }
 
 /**

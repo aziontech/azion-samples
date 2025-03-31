@@ -2,8 +2,8 @@ export const CONSTANTS = {
   SERVER: {
     DEFAULT: {
       url: '',
-      conversation: '',
-      feedback: ''
+      conversation: '/chat/completions',
+      feedback: '/feedback'
     }
   },
   MESSAGES: {

@@ -17,13 +17,25 @@ export const AUTHENTICATION_TOKEN = process.env.AUTHENTICATION_TOKEN
 export const CLERK_PUBLISHABLE_KEY = process.env.CLERK_PUBLISHABLE_KEY
 export const CLERK_SECRET_KEY = process.env.CLERK_SECRET_KEY
 
-export const MessageSchema = z.object({
-    role: z.enum(['system', 'assistant', 'user']),
-    content: z.string().max(64000),
-  });
-  
+const TextMessageSchema = z.object({
+  role: z.enum(['system', 'assistant', 'user']),
+  content: z.string().max(64000)
+});
+
+const ImageMessageSchema = z.object({
+  role: z.enum(['system', 'assistant', 'user']),
+  content: z.array(z.object({
+      type: z.enum(['text', 'image_url']),
+      text: z.string().optional(),
+      image_url: z.object({
+          url: z.string().url(),
+      }).optional(),
+  })),
+});
+export const InputMessageSchema = z.array(z.union([TextMessageSchema, ImageMessageSchema]))
+
 export const RequestChatBodySchema = z.object({
-    messages: z.array(MessageSchema),
+    messages: InputMessageSchema,
     stream: z.boolean().default(false).optional(),
     session_id: z.string().optional(),
     stream_options: z
