@@ -45,6 +45,6 @@
     "minify:css": "postcss assets/css/sup-tachyons.css > assets/css/sup-tachyons.min.css  --use cssnano"
   },
   "dependencies": {
-    "azion": "1.15.0"
+    "azion": "latest"
   }
 }

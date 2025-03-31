@@ -10,7 +10,7 @@
   "author": "aziontech",
   "license": "ISC",
   "dependencies": {
-    "azion": "1.15.0",
+    "azion": "latest",
     "itty-router": "^4.2.0"
   },
   "devDependencies": {

@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "axios": "^1.7.9",
-    "azion": "1.15.0",
+    "azion": "latest",
     "azion-theme": "^1.8.1",
     "@clerk/clerk-js": "^5.54.1",
     "marked": "^15.0.3",

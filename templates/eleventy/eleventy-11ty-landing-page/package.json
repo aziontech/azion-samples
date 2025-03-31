@@ -20,6 +20,6 @@
     "tailwindcss": "^2.0.4"
   },
   "dependencies": {
-    "azion": "1.15.0"
+    "azion": "latest"
   }
 }
