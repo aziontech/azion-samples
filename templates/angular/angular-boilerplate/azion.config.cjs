@@ -1,9 +1,7 @@
 
 module.exports = {
   build: {
-    preset: {
-      name: 'angular'
-    }
+    preset: 'angular'
   }
 }
 

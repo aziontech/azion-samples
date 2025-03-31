@@ -1,7 +1,5 @@
 module.exports = {
   build: {
-    preset: {
-      name: 'nuxt'
-    }
+    preset: 'nuxt'
   }
 }

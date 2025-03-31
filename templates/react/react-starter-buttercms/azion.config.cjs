@@ -1,8 +1,6 @@
 module.exports = {
   build: {
-    preset: {
-      name: 'react'
-    }
+    preset: 'react'
   }
 }
 

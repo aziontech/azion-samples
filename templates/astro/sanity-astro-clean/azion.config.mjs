@@ -1,8 +1,6 @@
 export default {
   build: {
-    preset: {
-      name: 'astro'
-    }
+    preset: 'astro'
   }
 }
 
