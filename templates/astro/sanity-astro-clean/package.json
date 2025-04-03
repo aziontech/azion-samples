@@ -21,7 +21,7 @@
     "autoprefixer": "10.4.19",
     "groq": "3.48.1",
     "prettier-plugin-astro": "0.14.0",
-    "sanity": "3.48.1"
+    "sanity": "3.77.2"
   },
   "devDependencies": {
     "@portabletext/types": "2.0.13",
