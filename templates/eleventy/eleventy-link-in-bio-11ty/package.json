@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^0.9.0",
-    "azion": "1.15.0"
+    "azion": "latest"
   },
   "license": "MIT"
 }

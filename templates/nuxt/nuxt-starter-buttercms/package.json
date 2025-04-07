@@ -10,7 +10,7 @@
     "nuxt": "^3"
   },
   "dependencies": {
-    "azion": "1.15.0",
+    "azion": "latest",
     "buttercms": "^1.2.15",
     "tiny-slider": "^2.9.4",
     "vue": "^3.2.47"

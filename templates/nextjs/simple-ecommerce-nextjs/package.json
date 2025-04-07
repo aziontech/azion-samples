@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@next/font": "13.1.6",
-    "azion": "1.15.0",
+    "azion": "latest",
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",

@@ -4,9 +4,7 @@ export default defineConfig({
   build: {
     entry: "src/main.ts",
     worker: true,
-    preset: {
-      name: "typescript",
-    },
+    preset: 'typescript',
   },
   rules: {
     request: [

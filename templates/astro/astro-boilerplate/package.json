@@ -13,6 +13,6 @@
   },
   "dependencies": {
     "astro": "^4.5.12",
-    "azion": "1.15.0"
+    "azion": "latest"
   }
 }

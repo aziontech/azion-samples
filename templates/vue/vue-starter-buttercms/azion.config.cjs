@@ -1,8 +1,6 @@
 module.exports = {
   build: {
-    preset: {
-      name: 'vue'
-    }
+    preset: 'vue'
   }
 }
 
