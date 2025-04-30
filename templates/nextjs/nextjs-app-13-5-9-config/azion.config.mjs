@@ -2,7 +2,8 @@ import { defineConfig } from 'azion';
 
 export default defineConfig({
   build: {
-    builder: 'esbuild',
+    bundler: 'esbuild',
     preset: 'next',
   },
 });
+

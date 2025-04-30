@@ -3,5 +3,5 @@
   "message": "Deploy a Next.js application with App Router and custom configurations.",
   "preset": "next",
   "mode": "compute",
-  "path": "/nextjs-app-13-5-6-config"
+  "path": "/nextjs-app-13-5-9-config"
 }
