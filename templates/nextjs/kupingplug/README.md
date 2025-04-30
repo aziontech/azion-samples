@@ -4,7 +4,7 @@ The **Kupingplug** template provides an option to easily create and deploy an e-
 
 This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [documentation](https://www.azion.com/en/documentation/products/use-a-template-via-azion-console/).
 
-This template uses Next.js version `14.0.3`, React version `18`, and TailwindCSS version `3.3.0`.
+This template uses Next.js version `13.5.9`, React version `18`, and TailwindCSS version `3.3.0`.
 
 > **Note**: this is a community template. Third-party or external developers created it, and Azion only enables the deployment in the Azion Edge Platform. Azion doesn't provide maintenance or support for the content itself but can assist you with any queries or issues you may encounter while deploying this template or using the platform.
 >
