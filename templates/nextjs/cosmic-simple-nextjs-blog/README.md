@@ -4,7 +4,7 @@ The **Cosmic Simple Next.js Blog** template helps you create and manage a blog e
 
 This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [How to deploy edge applications with Cosmic Simple Next.js Blog](https://www.azion.com/en/documentation/products/guides/cosmic-simple-next-blog/) guide.
 
-This template uses Next.js version `14.2.5`.
+This template uses Next.js version `14.2.25`.
 
 ---
 

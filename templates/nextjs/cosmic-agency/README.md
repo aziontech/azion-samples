@@ -5,7 +5,7 @@ The **CosmicJS Agency Website** template helps you create a dynamic and visually
 This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [How to deploy edge applications with CosmicJS Agency Website
 ](https://www.azion.com/en/documentation/products/guides/cosmic-agency-website/) guide.
 
-This template uses Next version `14.2.5`.
+This template uses Next version `14.2.25`.
 
 ---
 
