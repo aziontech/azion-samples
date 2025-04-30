@@ -6,7 +6,7 @@ The **Next.js Pages + Middleware** template enables you to quickly deploy a Next
 
 This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [How to deploy the Next.js Pages + Middleware template](https://www.azion.com/en/documentation/products/guides/nextjs-pages-middleware/) guide.
 
-This template uses Next version `13.5.6`.
+This template uses Next version `13.5.9`.
 
 ---
 
