@@ -6,7 +6,7 @@ The **Next.js App + Middleware** accelerates the deployment of a Next.js applica
 
 This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [How to deploy the Next.js App + Middleware template](https://www.azion.com/en/documentation/products/guides/nextjs-app-middleware/) guide.
 
-Next.js App + Middleware uses Next version `13.5.6`.
+Next.js App + Middleware uses Next version `13.5.9`.
 
 ---
 
