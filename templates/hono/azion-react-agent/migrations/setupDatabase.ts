@@ -1,4 +1,4 @@
-import { AzionVectorStore } from "../src/services/ai/langchain-components/AzionVectorStore";
+import { AzionVectorStore } from "@langchain//community/vectorstores/azion_edgesql";
 import { OpenAIEmbeddings } from "@langchain/openai";
 import dotenv from "dotenv";
 
@@ -22,7 +22,7 @@ export default async function azionVectorStoreSetup() {
 
   // Setup vector store if database doesn't exist yet
 
-  await AzionVectorStore.createVectorStore(
+  await AzionVectorStore.initialize(
     embeddingModel,
     {
       dbName: VECTOR_STORE_DB_NAME,

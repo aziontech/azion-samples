@@ -1,4 +1,4 @@
-import { AzionVectorStore } from "../src/services/ai/langchain-components/AzionVectorStore";
+import { AzionVectorStore } from "@langchain//community/vectorstores/azion_edgesql";
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { getDocsFromFolder } from "./helpers/documentLoaders";
 import { DocumentChunker } from "./helpers/documentChunker";
