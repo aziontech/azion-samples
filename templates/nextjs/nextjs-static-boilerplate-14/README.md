@@ -4,7 +4,7 @@ The **Next.js Static Boilerplate** provides an automation solution to simplify a
 
 This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template, check the [How to deploy edge applications with the Next.js Static Boilerplate](https://www.azion.com/en/documentation/products/guides/nextjs-static-boilerplate/) guide.
 
-This template uses Next.js version `14.1.4`.
+This template uses Next.js version `14.2.25`.
 
 ---
 
