@@ -1,7 +1,7 @@
 import { EMBEDDING_MODEL, VECTOR_STORE_DB_NAME, VECTOR_STORE_TABLE_NAME } from "@/helpers/constants";
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { ChatOpenAI } from "@langchain/openai";
-import { AzionRetriever } from "@/services/ai/langchain-components/AzionRetriever";
+import { AzionRetriever } from "@langchain/community/retrievers/azion_edgesql";
 import { ToolNode } from "@langchain/langgraph/prebuilt";
 import { createRetrieverTool } from "langchain/tools/retriever";
 import { MessagesAnnotation } from "@langchain/langgraph";
@@ -18,8 +18,9 @@ const entityExtractor = new ChatOpenAI({
 })
 
 // AzionRetriever - a tool that retrieves information from the vector database (Edge SQL)
-const azionRetriever = new AzionRetriever(embeddingModel, entityExtractor,
-  {dbName:VECTOR_STORE_DB_NAME,
+const azionRetriever = new AzionRetriever(embeddingModel,
+  {entityExtractor,
+   dbName:VECTOR_STORE_DB_NAME,
    vectorTable:VECTOR_STORE_TABLE_NAME,
    ftsTable:VECTOR_STORE_TABLE_NAME+"_fts",
    ftsK:3,
