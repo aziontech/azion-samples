@@ -6,6 +6,10 @@ export default defineConfig({
     worker: true,
     preset: 'typescript',
   },
+  functions:[{
+    name:"main",
+    path:".edge/worker.js"
+  }],
   rules: {
     request: [
       {
@@ -13,9 +17,7 @@ export default defineConfig({
         active: true,
         match: "^\\/",
         behavior: {
-            runFunction:{
-              path: ".edge/worker.js"
-            }
+            runFunction:"main"
         },
       },
     ],
