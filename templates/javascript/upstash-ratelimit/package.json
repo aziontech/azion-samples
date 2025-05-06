@@ -18,6 +18,6 @@
   "dependencies": {
     "@upstash/ratelimit": "0.3.2",
     "@upstash/redis": "1.22.0",
-    "azion": "latest"
+    "azion": "1.19.1"
   }
 }

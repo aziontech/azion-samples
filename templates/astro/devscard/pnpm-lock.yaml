@@ -12,8 +12,8 @@ dependencies:
     specifier: 1.4.4
     version: 1.4.4
   azion:
-    specifier: latest
-    version: 1.19.0(@babel/core@7.26.10)(@fastly/js-compute@3.34.0)
+    specifier: 1.19.1
+    version: 1.19.1(@babel/core@7.26.10)(@fastly/js-compute@3.34.0)
   iconify-icon:
     specifier: 1.0.8
     version: 1.0.8
@@ -3445,10 +3445,9 @@ packages:
       possible-typed-array-names: 1.1.0
     dev: false
 
-  /azion@1.19.0(@babel/core@7.26.10)(@fastly/js-compute@3.34.0):
-    resolution: {integrity: sha512-e5BKd9SpIcVmDMmRsHdFeFhrdATe3xcpbT+lxTgI7+UGOBFmqLc6D9mjoyEN4dJF94DPuobDQvYe8/ysuNjGzw==}
+  /azion@1.19.1(@babel/core@7.26.10)(@fastly/js-compute@3.34.0):
+    resolution: {integrity: sha512-VlJTkUrkn/pQq5F2J+BWIcAX3RZ64kFxoOBsUNb9H2y3yV5R9xfwHc6+v1IitH0nigpwYIqL83BfcrgSEhfRFQ==}
     engines: {node: '>=18.0.0'}
-    hasBin: true
     dependencies:
       '@babel/plugin-proposal-optional-chaining-assign': 7.25.9(@babel/core@7.26.10)
       '@babel/preset-env': 7.26.9(@babel/core@7.26.10)

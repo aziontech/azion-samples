@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@floating-ui/dom": "1.4.4",
-    "azion": "latest",
+    "azion": "1.19.1",
     "iconify-icon": "1.0.8",
     "nanoid": "4.0.2"
   },
@@ -75,4 +75,3 @@
   },
   "homepage": "https://github.com/KonradSzwarc/devscard#readme"
 }
-

@@ -16,6 +16,6 @@
     "prettier": "^2.8.1"
   },
   "dependencies": {
-    "azion": "latest"
+    "azion": "1.19.1"
   }
 }

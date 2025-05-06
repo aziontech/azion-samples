@@ -15,6 +15,6 @@
     "@types/alpinejs": "^3.13.5",
     "alpinejs": "^3.13.3",
     "astro": "^4.5.12",
-    "azion": "latest"
+    "azion": "1.19.1"
   }
 }

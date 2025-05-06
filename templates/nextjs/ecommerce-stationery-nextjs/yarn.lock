@@ -1373,7 +1373,7 @@ available-typed-arrays@^1.0.7:
   dependencies:
     possible-typed-array-names "^1.0.0"
 
-azion@latest:
+azion@1.19.1:
   version "1.19.1"
   resolved "https://registry.yarnpkg.com/azion/-/azion-1.19.1.tgz#a58cf2bcb83ae59d7d77aaaf861efd1da6e8406f"
   integrity sha512-VlJTkUrkn/pQq5F2J+BWIcAX3RZ64kFxoOBsUNb9H2y3yV5R9xfwHc6+v1IitH0nigpwYIqL83BfcrgSEhfRFQ==

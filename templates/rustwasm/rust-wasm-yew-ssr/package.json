@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "azion": "latest"
+    "azion": "1.19.1"
   }
 }

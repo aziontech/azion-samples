@@ -1,6 +1,6 @@
 {
   "name": "docusaurus-material-ui-template",
-  "author": "Thành Nam Nguyễn",
+  "author": "Th\u00e0nh Nam Nguy\u1ec5n",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -27,7 +27,7 @@
     "@mui/icons-material": "^5.15.18",
     "@mui/lab": "^5.0.0-alpha.170",
     "@mui/material": "^5.15.18",
-    "azion": "latest",
+    "azion": "1.19.1",
     "classnames": "^2.5.1",
     "clsx": "^2.1.1",
     "docusaurus-plugin-sass": "^0.2.5",
