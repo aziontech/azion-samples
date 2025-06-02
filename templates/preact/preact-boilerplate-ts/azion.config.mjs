@@ -1,6 +1,6 @@
 export default {
   build: {
-    preset: 'preact'
+    preset: 'vue' // temporarily using this preset, should return to preact soon
   }
 }
 
