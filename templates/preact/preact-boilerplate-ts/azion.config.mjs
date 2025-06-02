@@ -1,6 +1,6 @@
 export default {
   build: {
-    preset: 'preact'
+    preset: 'vue'
   }
 }
 
