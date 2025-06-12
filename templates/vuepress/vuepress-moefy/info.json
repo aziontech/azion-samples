@@ -1,8 +1,8 @@
 {
-  "name": "VuePress Live2D Plus Template",
-  "message": "A demonstration of how to integrate the Live2D Plus plugin to your VuePress",
+  "name": "VuePress Moefy",
+  "message": "Create a VuePress website with animations",
   "preset": "vuepress",
   "mode": "deliver",
-  "path": "/vuepress-live2d-plus"
+  "path": "/vuepress-moefy"
 }
 
