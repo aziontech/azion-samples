@@ -1,0 +1,8 @@
+{
+  "name": "Nextal - (NextJS, Typescript, Tailwind)",
+  "message": "Starter template for Next with TypeScript. Supports Tailwind with CSS-Modules. Vitest and @react/testing-library configured and ready to go. Also ESLint, Prettier, Husky, Commit-lint and Atomic Design for components.",
+  "preset": "opennextjs",
+  "mode": "compute",
+  "path": "/nextal-next-typescript-tailwind"
+}
+

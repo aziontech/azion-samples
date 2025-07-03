@@ -1,0 +1,82 @@
+{
+  "name": "nextal",
+  "private": false,
+  "description": "Starter template for Next with TypeScript. Supports Tailwind with CSS-Modules. Vitest and @react/testing-library configured and ready to go. Also ESLint, Prettier, Husky, Commit-lint and Atomic Design for components.",
+  "homepage": "https://github.com/jvidalv/nextal#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jvidalv/nextal.git"
+  },
+  "author": "Josep Vidal <josepvidalvidal@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jvidalv/nextal/issues"
+  },
+  "keywords": [
+    "react",
+    "next",
+    "nextjs",
+    "typescript",
+    "vitest",
+    "tailwind",
+    "template",
+    "starter",
+    "css-modules",
+    "eslint",
+    "prettier",
+    "husky",
+    "commit-lint"
+  ],
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not IE 11"
+  ],
+  "engines": {
+    "node": ">=18.17",
+    "yarn": ">=1.22.5"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "vitest",
+    "test:ci": "vitest",
+    "postinstall": "husky install",
+    "ts": "tsc"
+  },
+  "dependencies": {
+    "@heroicons/react": "2.1.1",
+    "azion": "^1.20.1",
+    "classnames": "2.5.1",
+    "next": "14.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@aziontech/opennextjs-azion": "^0.0.5",
+    "@commitlint/cli": "18.6.0",
+    "@commitlint/config-conventional": "18.6.0",
+    "@tailwindcss/forms": "0.5.7",
+    "@tailwindcss/typography": "0.5.10",
+    "@testing-library/react": "^14.2.1",
+    "@testing-library/user-event": "14.5.2",
+    "@types/node": "20.11.17",
+    "@types/react": "18.2.55",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "10.4.17",
+    "eslint": "8.56.0",
+    "eslint-config-next": "14.1.0",
+    "eslint-plugin-testing-library": "6.2.0",
+    "husky": "8.0.3",
+    "jsdom": "^24.0.0",
+    "lint-staged": "15.2.2",
+    "postcss": "8.4.35",
+    "prettier": "3.2.5",
+    "tailwindcss": "3.4.1",
+    "typescript": "5.3.3",
+    "vitest": "^1.2.2"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}
