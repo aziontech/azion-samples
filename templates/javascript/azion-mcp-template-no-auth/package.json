@@ -1,0 +1,23 @@
+{
+  "name": "azion-mpc-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "upload-docs": "tsx migrations/uploadDocs.ts",
+    "setup": "tsx migrations/setupDatabase.ts",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "aziontech",
+  "license": "ISC",
+  "dependencies": {
+    "azion": "1.19.0",
+    "fetch-to-node": "^2.1.0",
+    "hono": "^4.8.3"
+  },
+  "devDependencies": {}
+}
