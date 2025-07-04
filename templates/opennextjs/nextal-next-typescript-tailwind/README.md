@@ -87,9 +87,13 @@ yarn start
 
 Then you can visit http://localhost:3000 and check that everything works as expected.
 
-### Deploy on Netlify
+###  Deploy your own
 
-Go to [Vercel](https://vercel.com/new) and select your repository, `OK` along the way, and your App will be live in a minute.
+Deploy your own OpenNext project with Azion.
+
+[![Deploy Button](https://www.azion.com/button.svg)](https://console.azion.com/create/react/react-boilerplate "Deploy with Azion")
+
+For a more detailed step-by-step, check the [documentation](https://www.azion.com/en/documentation/)
 
 #### Husky
 
