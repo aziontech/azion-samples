@@ -33,7 +33,7 @@ Mocking up web app with <b>Nextal</b><sup><em>(speed)</em></sup><br>
 
 - [TypeScript](https://www.typescriptlang.org/)
 - [Commit lint](https://github.com/conventional-changelog/commitlint) - helps your team adhering to a commit convention
-- [Vercel](https://www.vercel.com/) - zero-config deployment
+- [Azion](https://www.azion.com/) - zero-config deployment
 
 ## Try it now!
 
