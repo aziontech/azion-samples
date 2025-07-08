@@ -3,4 +3,4 @@ module.exports = {
     preset: 'opennextjs',
     polyfills: true
   }
-}
+};
