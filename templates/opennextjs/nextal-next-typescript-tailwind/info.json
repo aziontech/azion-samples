@@ -1,0 +1,7 @@
+{
+  "name": "Nextal - (NextJS, Typescript, Tailwind)",
+  "message": "Starter template for Next with TypeScript. Supports Tailwind with CSS-Modules.",
+  "preset": "opennextjs",
+  "mode": "compute",
+  "path": "/nextal-next-typescript-tailwind"
+}
