@@ -1,7 +1,7 @@
 {
   "name": "nextal",
   "private": false,
-  "description": "Starter template for Next with TypeScript. Supports Tailwind with CSS-Modules. Vitest and @react/testing-library configured and ready to go. Also ESLint, Prettier, Husky, Commit-lint and Atomic Design for components.",
+  "description": "Starter template for Next with TypeScript. Supports Tailwind with CSS-Modules. Vitest and @react/testing-library configured and ready to go. Also ESLint, Prettier, Commit-lint and Atomic Design for components.",
   "homepage": "https://github.com/jvidalv/nextal#readme",
   "repository": {
     "type": "git",
@@ -24,7 +24,6 @@
     "css-modules",
     "eslint",
     "prettier",
-    "husky",
     "commit-lint"
   ],
   "browserslist": [
@@ -42,7 +41,6 @@
     "lint": "next lint",
     "test": "vitest",
     "test:ci": "vitest",
-    "postinstall": "husky install",
     "ts": "tsc"
   },
   "dependencies": {
@@ -68,7 +66,6 @@
     "eslint": "8.56.0",
     "eslint-config-next": "14.1.0",
     "eslint-plugin-testing-library": "6.2.0",
-    "husky": "8.0.3",
     "jsdom": "^24.0.0",
     "lint-staged": "15.2.2",
     "postcss": "8.4.35",
