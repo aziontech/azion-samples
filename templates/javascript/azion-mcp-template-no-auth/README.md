@@ -18,7 +18,7 @@ A simple calculation tool that can add, subtract, multiply, and divide two numbe
 
 1. Clone this repository
 ```bash
-git clone https://github.com/your-username/azion-mcp-server.git
+git clone https://github.com/aziontech/azion-mcp-server.git
 cd azion-mcp-server
 ```
 
