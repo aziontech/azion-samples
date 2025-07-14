@@ -4,4 +4,3 @@ dist
 worker
 args.json
 .edge
-.vulcan
