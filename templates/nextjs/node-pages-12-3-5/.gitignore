@@ -37,4 +37,6 @@ yarn-error.log*
 next-env.d.ts
 
 .edge
+.vulcan
+
 compute-js
