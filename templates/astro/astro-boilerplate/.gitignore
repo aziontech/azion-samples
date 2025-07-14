@@ -1,5 +1,4 @@
 node_modules
 .edge
 dist
-.vulcan
 .env

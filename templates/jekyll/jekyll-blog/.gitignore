@@ -4,6 +4,5 @@ _site
 .jekyll-metadata
 vendor
 .edge
-.vulcan
 node_modules
 .env

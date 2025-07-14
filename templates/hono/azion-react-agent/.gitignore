@@ -21,4 +21,3 @@ yarn-error.log*
 # local env files
 .env#Paths added by Azion CLI
 .edge/
-.vulcan
