@@ -1,0 +1,29 @@
+{
+  "name": "stripe-webhooks",
+  "version": "1.0.0",
+  "description": "stripe webhooks",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "DEBUG=true pnpm dlx edge-functions@5.0.2 dev",
+    "build": "pnpm dlx edge-functions@5.0.2 build",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "aziontech",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^24.0.10",
+    "azion": "1.20.1",
+    "hono": "^4.8.3",
+    "stripe": "^18.3.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/supertest": "^6.0.3",
+    "jest": "^30.0.4",
+    "supertest": "^7.1.1",
+    "ts-jest": "^29.4.0",
+    "typescript": "^5.4.2"
+  }
+}
