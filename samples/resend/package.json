@@ -1,0 +1,23 @@
+{
+  "name": "resend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "DEBUG=true pnpm dlx edge-functions@5.0.2 dev",
+    "build": "pnpm dlx edge-functions@5.0.2 build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "packageManager": "pnpm@10.13.1",
+  "license": "MIT",
+  "dependencies": {
+    "azion": "1.19.1",
+    "hono": "^4.5.3",
+    "resend": "^4.6.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.2"
+  }
+}
