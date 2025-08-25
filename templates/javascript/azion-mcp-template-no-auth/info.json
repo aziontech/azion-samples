@@ -1,0 +1,7 @@
+{
+  "name": "Azion MCP Template No Auth",
+  "message": "Template for Azion MCP Server without authentication, using JavaScript. Ideal for quick starts and public endpoints.",
+  "preset": "typescript",
+  "mode": "compute",
+  "path": "/azion-mcp-template-no-auth"
+}
