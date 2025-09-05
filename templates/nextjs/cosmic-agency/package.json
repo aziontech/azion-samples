@@ -1,6 +1,6 @@
 {
   "name": "agency-template",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -23,7 +23,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "lucide-react": "^0.311.0",
-    "next": "14.2.25",
+    "next": "14.2.31",
     "next-themes": "^0.2.1",
     "react": "^18",
     "react-dom": "^18",
