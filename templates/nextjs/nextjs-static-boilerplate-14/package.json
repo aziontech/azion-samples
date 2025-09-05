@@ -1,6 +1,6 @@
 {
   "name": "nextjs-static-boilerplate-14",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "azion": "1.19.1",
-    "next": "14.2.25",
+    "next": "14.2.31",
     "react": "^18",
     "react-dom": "^18"
   },
