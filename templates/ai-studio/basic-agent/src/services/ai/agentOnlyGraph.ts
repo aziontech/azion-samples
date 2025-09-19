@@ -99,7 +99,7 @@ export async function generateAgentOnlyGraph(
         verbose: false,
         tags: ['agent'],
         configuration: {
-          baseURL: 'https://swjkwqi8lj.map.azionedge.net'
+          baseURL: process.env.EDGEAI_ENDPOINT
         },
         apiKey: process.env.EDGE_AI_TOKEN,
       })

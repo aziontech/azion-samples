@@ -98,7 +98,7 @@ function resolveAuthenticateParams(
     cookie: string | null,
     token: string
 ): RequestAuth {
-    let url = 'https://sso-origin.azion.com/api/user/me';
+    let url = process.env.AUTHENTICATION_URL as string;
     let cookiePrefix = 'azsid=';
 
     if (env && env.includes('stage')) {
@@ -836,7 +836,7 @@ export function getPastMessages(
 
 export {
     createConfigurable, createInputMessages, createTransformStream, defineProject, extractRequestParams,
-    handleSystemPrompt, processEventStream, resolveAuthenticateParams, resolveLangChainTracer, resolveToken, 
+    handleSystemPrompt, processEventStream, resolveAuthenticateParams, resolveLangChainTracer, resolveToken,
     track2segment, trackError2segment, transformToChatCompletions, transformToDocsResponse, transformToInvokeResponse,
     transformToLastMessage, transformToStreamResponse, validateStreamForErrors
 };

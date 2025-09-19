@@ -46,7 +46,7 @@ export async function toolsAnnouncer(
       streaming: true,
       tags: ['announcer'],
       configuration: {
-        baseURL: 'https://swjkwqi8lj.map.azionedge.net'
+        baseURL: process.env.EDGEAI_ENDPOINT
       },
     });
 

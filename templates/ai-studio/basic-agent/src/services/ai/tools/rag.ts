@@ -28,7 +28,7 @@ async function generateQueryEmbeddings(query: string, embeddingModel?: string): 
     apiKey: process.env.EDGE_AI_TOKEN,
     // Route embedding calls through Azion Edge AI endpoint
     configuration: {
-      baseURL: 'https://swjkwqi8lj.map.azionedge.net'
+      baseURL: process.env.EDGEAI_ENDPOINT
     }
   } as any);
   const embedding = await embeddingsModel.embedQuery(query);
@@ -438,8 +438,8 @@ class EdgeAiModel {
         model: this.model,
         ...input
       })
-
-      const response = await fetch('https://swjkwqi8lj.map.azionedge.net/', {
+      const url = process.env.EDGEAI_ENDPOINT as string
+      const response = await fetch(url, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
