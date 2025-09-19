@@ -1,5 +1,5 @@
 import { AIChatRequestBodySchema } from '@/helpers/schema';
-import { createConfigurable, createInputMessages, extractRequestParams, resolveLangChainTracer, track2segment, trackError2segment, validateRequestBody } from '@/helpers/utils';
+import { createConfigurable, createInputMessages, extractRequestParams, resolveLangChainTracer, validateRequestBody } from '@/helpers/utils';
 import { resolveAgentByName } from '@/services/agentService';
 import { generateAgentOnlyGraph } from '@/services/ai/agentOnlyGraph';
 import { GraphService } from '@/services/graphService';
@@ -92,9 +92,6 @@ export async function aiChatRequestHandler(context: Context): Promise<Response> 
       tracer,
       run_id: uuidv4(),
     };
-
-    // Track event to Segment
-    track2segment('Asked Question to AI Chat', config.configurable, config.run_id);
 
     // Persist the user message BEFORE running the graph to ensure correct chronological order
     try {
@@ -201,12 +198,6 @@ export async function aiChatRequestHandler(context: Context): Promise<Response> 
         },
       });
     }
-
-    trackError2segment(
-      'Failed to Ask Question to AI Chat',
-      { ...config.configurable, error_type: 'Error Streaming Graph', error_message: gsResponse.error },
-      config.run_id,
-    );
 
     return new Response(JSON.stringify(gsResponse.error), {
       status: 500,

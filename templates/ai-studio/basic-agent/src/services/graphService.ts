@@ -16,7 +16,6 @@ export class GraphService {
   /**
    * @property {any} graph - The graph instance
    * @property {string} runId - The run id
-   * @property {EdgeSQLTracerService} tracer - The tracer service
    */
   private graph: any
   private messages: Message[]
@@ -53,9 +52,7 @@ export class GraphService {
     if (this.stream) {
       return await this.streamGraph()
     }
-    if (this.graph.name === 'support') {
-      return await this.invokeSupportGraph()
-    }
+
     return await this.invokeGraph()
   }
 
@@ -104,49 +101,6 @@ export class GraphService {
         });
 
       return { success: true, data: JSON.stringify(transformToChatCompletions(invokeResponse.messages.at(-1), this.runId, false)) }
-    } catch (error) {
-      console.error("Error invoking graph: " + error)
-      return { success: false, error: "Error invoking graph: " + JSON.stringify(error) }
-    }
-  }
-
-  async getDocs(): Promise<GraphServiceDocsResponse> {
-
-    try {
-      const invokeResponse = await this.graph.invoke({ messages: this.messages },
-        {
-          configurable: { ...this.configs.configurable, mode: "docs", docs_options: this.configs.docs_options },
-          callbacks: this.configs.tracer,
-          runId: this.configs.run_id
-        });
-
-      return { success: true, data: transformToDocsResponse(invokeResponse.messages) }
-
-    } catch (error) {
-      console.error("Error retrieving docs: " + JSON.stringify(error))
-      return { success: false, error: "Error retrieving docs: " + JSON.stringify(error) }
-    }
-  }
-
-  /**
-   * Invokes the graph.
-   * 
-   * @returns {Promise<GraphServiceResponse>} A Promise that resolves to a GraphServiceResponse object.
-   */
-  async invokeSupportGraph(): Promise<GraphServiceResponse> {
-    try {
-      console.log("invokeSupportGraph")
-
-      const invokeResponse = await this.graph.invoke({ userQuestion: this.messages },
-        {
-          configurable: { ...this.configs.configurable },
-          callbacks: this.configs.tracer,
-          runId: this.configs.run_id
-        });
-
-      const output = invokeResponse.finalAnswer.at(-1).content
-
-      return { success: true, data: JSON.stringify(transformToChatCompletions(new AIMessageChunk(output), this.runId, false)) }
     } catch (error) {
       console.error("Error invoking graph: " + error)
       return { success: false, error: "Error invoking graph: " + JSON.stringify(error) }
