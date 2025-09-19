@@ -1,6 +1,5 @@
 import { AIMessage, AIMessageChunk, BaseMessage } from '@langchain/core/messages';
 import { LangChainTracer, LangChainTracerFields, Run } from '@langchain/core/tracers/tracer_langchain';
-import { Analytics } from '@segment/analytics-node';
 import { v4 as uuidv4 } from 'uuid';
 import { z } from 'zod';
 import {
@@ -601,91 +600,6 @@ function resolveAnnouncerPrompt(
     return prompt;
 }
 
-/**
- * Tracks the event to Segment.
- * @param {string} event - The event to track.
- * @param {any} data - The data to track.
- * @param {string} run_id - The run ID.
- */
-async function track2segment(
-    event: string,
-    data: any,
-    run_id: string
-): Promise<void> {
-
-    const allowedProjects = config.SEGMENT_ALLOWED_PROJECTS.split(',');
-    const project = data.project.split('azion-copilot-')[1]
-    const isProjectAllowed = allowedProjects.includes(project)
-
-    if (isProjectAllowed && config.SEGMENT_WRITE_KEY && config.SHOULD_TRACK_TO_SEGMENT === 'true') {
-
-        const analytics = new Analytics({
-            writeKey: config.SEGMENT_WRITE_KEY
-        });
-
-        const properties = {
-            client_id: data.client_id,
-            email: data.email,
-            app: data.app,
-            client_ip: data.ip,
-            thread_id: data.thread_id,
-            message_id: run_id,
-            url: data.url,
-        }
-
-        const eventData = {
-            userId: String(data.account_id),
-            event: event,
-            properties: properties
-        }
-        analytics.track(eventData);
-
-        console.log('Sent data successfully to segment:', eventData);
-    }
-}
-
-/**
- * Tracks the event to Segment.
- * @param {string} event - The event to track.
- * @param {any} data - The data to track.
- * @param {string} run_id - The run ID.
- */
-async function trackError2segment(
-    event: string,
-    data: any,
-    run_id: string
-): Promise<void> {
-
-    const allowedProjects = config.SEGMENT_ALLOWED_PROJECTS.split(',');
-    const project = data.project.split('azion-copilot-')[1]
-    const isProjectAllowed = allowedProjects.includes(project)
-
-    if (isProjectAllowed && config.SEGMENT_WRITE_KEY && config.SHOULD_TRACK_TO_SEGMENT === 'true') {
-
-        const analytics = new Analytics({
-            writeKey: config.SEGMENT_WRITE_KEY
-        });
-
-        const properties = {
-            client_id: data.client_id,
-            email: data.email,
-            app: data.app,
-            client_ip: data.ip,
-            thread_id: data.thread_id,
-            message_id: run_id,
-            url: data.url,
-            errorType: data.error_type,
-            errorMessage: data.error_message
-        }
-
-        analytics.track({
-            userId: String(data.account_id),
-            event: event,
-            properties: properties
-        });
-        console.log('Sent data successfully to segment:', properties);
-    }
-}
 
 /**
  * Processes the event stream for streaming responses.
@@ -837,7 +751,7 @@ export function getPastMessages(
 export {
     createConfigurable, createInputMessages, createTransformStream, defineProject, extractRequestParams,
     handleSystemPrompt, processEventStream, resolveAuthenticateParams, resolveLangChainTracer, resolveToken,
-    track2segment, trackError2segment, transformToChatCompletions, transformToDocsResponse, transformToInvokeResponse,
+    transformToChatCompletions, transformToDocsResponse, transformToInvokeResponse,
     transformToLastMessage, transformToStreamResponse, validateStreamForErrors
 };
 
