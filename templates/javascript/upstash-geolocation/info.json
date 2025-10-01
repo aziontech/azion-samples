@@ -3,5 +3,18 @@
   "message": "Provide a personalized and localized user experience on the edge",
   "preset": "javascript",
   "mode": "compute",
-  "path": "/upstash-geolocation"
+  "path": "/upstash-geolocation",
+  "extras": {
+    "type": "args",
+    "inputs": [
+      {
+        "key": "UPSTASH_REDIS_REST_URL",
+        "text": "Type the URL to access your Redis database"
+      },
+      {
+        "key": "UPSTASH_REDIS_REST_TOKEN",
+        "text": "Type the Token to access your Redis database"
+      }
+    ]
+  }
 }

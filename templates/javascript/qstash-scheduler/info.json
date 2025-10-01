@@ -3,5 +3,18 @@
   "message": "Schedule and dispatch tasks using a custom edge function and QStash.",
   "preset": "javascript",
   "mode": "compute",
-  "path": "/qstash-scheduler"
+  "path": "/qstash-scheduler",
+  "extras": {
+    "type": "args",
+    "inputs": [
+      {
+        "key": "QSTASH_CURRENT_SIGNING_KEY",
+        "text": "Type your current QStash Signing Key"
+      },
+      {
+        "key": "QSTASH_NEXT_SIGNING_KEY",
+        "text": "Type your next QStash Signing Key"
+      }
+    ]
+  }
 }

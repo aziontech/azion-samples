@@ -3,5 +3,6 @@
   "message": "Integrate a TiDB database, using the Drizzle ORM",
   "preset": "javascript",
   "mode": "compute",
-  "path": "/drizzle-tidb-sample"
+  "path": "/drizzle-tidb-sample",
+  "requires_additional_build": true
 }

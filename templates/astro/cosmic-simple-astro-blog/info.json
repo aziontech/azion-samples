@@ -3,5 +3,18 @@
   "message": "An Astro blog template powered by Cosmic",
   "preset": "astro",
   "mode": "deliver",
-  "path": "/cosmic-simple-astro-blog"
+  "path": "/cosmic-simple-astro-blog",
+  "extras": {
+    "type": "env",
+    "inputs": [
+      {
+        "key": "PUBLIC_COSMIC_BUCKET_SLUG",
+        "text": "Type the Bucket Slug of your Cosmic project"
+      },
+      {
+        "key": "PUBLIC_COSMIC_READ_KEY",
+        "text": "Type the Read Key of your Cosmic project "
+      }
+    ]
+  }
 }

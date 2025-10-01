@@ -3,5 +3,26 @@
   "message": "Implement rate limiting in a serverless environment",
   "preset": "javascript",
   "mode": "compute",
-  "path": "/upstash-ratelimit"
+  "path": "/upstash-ratelimit",
+  "extras": {
+    "type": "args",
+    "inputs": [
+      {
+        "key": "UPSTASH_REDIS_REST_TOKEN",
+        "text": "Type the URL to access your Redis database"
+      },
+      {
+        "key": "UPSTASH_REDIS_REST_TOKEN",
+        "text": "Type the Token to access your Redis database"
+      },
+      {
+        "key": "UPSTASH_LIMIT",
+        "text": "Type the Rate Limit your application should allow. Example: 3"
+      },
+      {
+        "key": "UPSTASH_LIMIT_WINDOW",
+        "text": "Type the time window of your Rate Limit. Example: 60 s"
+      }
+    ]
+  }
 }

@@ -3,6 +3,31 @@
   "message": "Agency website template built using Cosmic's React components",
   "preset": "next",
   "mode": "compute",
-  "path": "/cosmic-agency"
+  "path": "/cosmic-agency",
+    "extras": {
+    "type": "env",
+    "inputs": [
+      {
+        "key": "AGENCY_COSMIC_BUCKET_SLUG",
+        "text": "Type the Bucket Slug of your Cosmic project"
+      },
+      {
+        "key": "AGENCY_COSMIC_READ_KEY",
+        "text": "Type the Read Key of your Cosmic project "
+      },
+      {
+        "key": "AGENCY_COSMIC_WRITE_KEY",
+        "text": "Type the Write Key of your Cosmic project "
+      },
+      {
+        "key": "AGENCY_STRIPE_PUBLISHABLE_KEY",
+        "text": "Type the Publishable Key of your Stripe integration"
+      },
+      {
+        "key": "AGENCY_STRIPE_SECRET_KEY",
+        "text": "Type the Secret Key of your Stripe integration"
+      }
+    ]
+  }
 }
 

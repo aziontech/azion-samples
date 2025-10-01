@@ -3,5 +3,6 @@
   "message": "Integrate a Neon database, using the Drizzle ORM",
   "preset": "javascript",
   "mode": "compute",
-  "path": "/drizzle-neondb-sample"
+  "path": "/drizzle-neondb-sample",
+  "requires_additional_build": true
 }

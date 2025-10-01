@@ -3,5 +3,6 @@
   "message": "Integrate a Turso database, created using Turso's LibSQL SDK, into an edge function",
   "preset": "javascript",
   "mode": "compute",
-  "path": "/turso-starter-kit"
+  "path": "/turso-starter-kit",
+  "requires_additional_build": true
 }
