@@ -4,6 +4,15 @@
   "message": "Drop-in proof-of-concept Angular app, fully integrated with your ButterCMS account",
   "preset": "angular",
   "mode": "deliver",
-  "path": "/angular-starter-buttercms"
+  "path": "/angular-starter-buttercms",
+  "extras": {
+    "type": "env",
+    "inputs": [
+      {
+        "key": "NG_APP_ANGULAR_BUTTER_CMS_API_KEY",
+        "text": "Type your Butter CNS API Key"
+      }
+    ]
+  }
 }
 
