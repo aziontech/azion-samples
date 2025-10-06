@@ -3,5 +3,6 @@
   "message": "Integrate a Turso database, using the Drizzle ORM",
   "preset": "javascript",
   "mode": "compute",
-  "path": "/drizzle-turso-sample"
+  "path": "/drizzle-turso-sample",
+  "requires_additional_build": true
 }

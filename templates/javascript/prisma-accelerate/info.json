@@ -3,5 +3,6 @@
   "message": "Integrate a database using the Prisma ORM Accelerate",
   "preset": "javascript",
   "mode": "compute",
-  "path": "/prisma-accelerate"
+  "path": "/prisma-accelerate",
+  "requires_additional_build": true
 }

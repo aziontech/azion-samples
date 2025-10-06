@@ -3,6 +3,19 @@
   "message": "A minimal Angular site with Sanity",
   "preset": "angular",
   "mode": "deliver",
-  "path": "/sanity-angular-clean"
+  "path": "/sanity-angular-clean",
+  "extras": {
+    "type": "env",
+    "inputs": [
+      {
+        "key": "SANITY_STUDIO_PROJECT_ID",
+        "text": "Type your Sanity Studio Project ID"
+      },
+      {
+        "key": "SANITY_STUDIO_DATASET",
+        "text": "Type your Sanity Studio dataset name"
+      }
+    ]
+  }
 }
 

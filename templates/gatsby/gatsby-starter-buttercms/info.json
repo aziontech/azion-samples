@@ -3,6 +3,14 @@
   "message": "Drop-in proof-of-concept GatsbyJS app, fully integrated with your ButterCMS account",
   "preset": "gatsby",
   "mode": "deliver",
-  "path": "/gatsby-starter-buttercms"
+  "path": "/gatsby-starter-buttercms",
+  "extras": {
+    "type": "env",
+    "inputs": [
+      {
+        "key": "BUTTER_CMS_API_KEY",
+        "text": "Type your Butter CNS API Key"
+      }
+    ]
+  }
 }
-

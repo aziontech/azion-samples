@@ -3,5 +3,6 @@
   "message": "Create your first EdgeSQL-based application",
   "preset": "javascript",
   "mode": "compute",
-  "path": "/edgesql-starter-kit"
+  "path": "/edgesql-starter-kit",
+  "requires_additional_build": true
 }

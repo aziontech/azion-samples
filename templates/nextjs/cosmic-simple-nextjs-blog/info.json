@@ -3,5 +3,18 @@
   "message": "A Next.js blog template powered by Cosmic",
   "preset": "next",
   "mode": "compute",
-  "path": "/cosmic-simple-nextjs-blog"
+  "path": "/cosmic-simple-nextjs-blog",
+  "extras": {
+    "type": "env",
+    "inputs": [
+      {
+        "key": "COSMIC_BUCKET_SLUG",
+        "text": "Type the Bucket Slug of your Cosmic project"
+      },
+      {
+        "key": "COSMIC_READ_KEY",
+        "text": "Type the Read Key of your Cosmic project "
+      }
+    ]
+  }
 }

@@ -3,6 +3,19 @@
   "message": "A minimal Astro site with Sanity Studio",
   "preset": "astro",
   "mode": "deliver",
-  "path": "/sanity-astro-clean"
+  "path": "/sanity-astro-clean",
+  "extras": {
+    "type": "env",
+    "inputs": [
+      {
+        "key": "PUBLIC_SANITY_STUDIO_PROJECT_ID",
+        "text": "Type your Sanity Studio Project ID"
+      },
+      {
+        "key": "PUBLIC_SANITY_STUDIO_DATASET",
+        "text": "Type your Sanity Studio Project dataset name"
+      }
+    ]
+  }
 }
 
