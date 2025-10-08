@@ -15,9 +15,10 @@
   "author": "aziontech",
   "license": "ISC",
   "dependencies": {
-    "azion": "1.19.0",
+    "@modelcontextprotocol/sdk": "^1.19.1",
     "fetch-to-node": "^2.1.0",
-    "hono": "^4.8.3"
+    "hono": "^4.8.3",
+    "zod": "3.23.8"
   },
   "devDependencies": {}
 }

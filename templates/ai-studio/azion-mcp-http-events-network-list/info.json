@@ -1,0 +1,7 @@
+{
+    "name": "Azion MCP - HTTP Events with Network Lists",
+    "message": "Template for Azion MCP Server with HTTP Events and Network Lists, using TypeScript.",
+    "preset": "typescript",
+    "mode": "compute",
+    "path": "/azion-mcp-http-events-network-list"
+  }
