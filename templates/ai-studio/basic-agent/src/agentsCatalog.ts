@@ -26,28 +26,22 @@ export type CatalogAgent = {
 export const AGENTS_CATALOG: CatalogAgent[] = [
   {
     agent_id: '00000000-0000-0000-0000-000000000001',
-    name: 'agente-de-teste',
+    name: 'agente-basico',
     system_prompt: 'Você é um assistente técnico. Sempre use suas tools para buscar informacoes.',
     goal: 'Responder curto e objetivamente.',
-    llm_model: 'Qwen/Qwen3-30B-A3B-Instruct-2507-FP8',
+    llm_model: 'gpt-4o',
     tools: [
       {
         name: 'test',
-        description: 'tool de teste para RAG',
+        description: 'tool para RAG',
         type: 'RAG',
         active: true,
         kb: [
           {
-            kb_id: '750',
-            name: 'kbdoseuale',
-            edgesql_db_id: 'kbdoseuale',
-            embedding_model: 'Qwen/Qwen3-Embedding-4B',
-          },
-          {
-            kb_id: '762',
-            name: 'bancodocopilot',
-            edgesql_db_id: 'bancodocopilot',
-            embedding_model: 'Qwen/Qwen3-Embedding-4B',
+            kb_id: '1',
+            name: 'banco',
+            edgesql_db_id: 'banco',
+            embedding_model: 'text-embedding-3-small',
           }
         ],
       },
