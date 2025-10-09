@@ -9,30 +9,15 @@ const TextMessageSchema = z.object({
 const ImageMessageSchema = z.object({
   role: z.enum(['system', 'assistant', 'user']),
   content: z.array(z.object({
-      type: z.enum(['text', 'image_url']),
-      text: z.string().optional(),
-      image_url: z.object({
-          url: z.string().url(),
-      }).optional(),
+    type: z.enum(['text', 'image_url']),
+    text: z.string().optional(),
+    image_url: z.object({
+      url: z.string().url(),
+    }).optional(),
   })),
 });
 
 const InputMessageSchema = z.array(z.union([TextMessageSchema, ImageMessageSchema]))
-
-const AzionSchema = z.object({
-  session_id: z.string().length(36).optional(),
-  url: z.string().max(300).optional(),
-  app: z.string().default('console'),
-  user_name: z.string().max(50).optional(),
-  client_id: z.string().max(5).optional(),
-  system_prompt: z.string().max(3500).optional(),
-  user_prompt: z.string().max(300).optional(),
-  id: z.number().optional(),
-  first_name: z.string().max(50).optional(),
-  last_name: z.string().max(50).optional(),
-  email: z.string().max(50).optional(),
-  support_plan: z.string().max(50).optional()
-});
 
 const DocsOptionsSchema = z.object({
   amountPerSearch: z.number().int().optional(),
@@ -40,9 +25,9 @@ const DocsOptionsSchema = z.object({
   filters: z.array(
     z.object({
       operator: z.enum(['=', '!=', '>', '<>', '<', '>=', '<=', 'LIKE', 'NOT LIKE', 'IN', 'NOT IN', 'IS NULL', 'IS NOT NULL']),
-      column :z.enum(['id', 'content', 'metatags', 'collection', 'title', 'description', 'tags', 'source', 'language', 'scope']),
+      column: z.enum(['id', 'content', 'metatags', 'collection', 'title', 'description', 'tags', 'source', 'language', 'scope']),
       value: z.string()
-  })
+    })
   ).optional(),
 });
 
@@ -110,7 +95,6 @@ const AIChatArgsSchema = z.object({
 const AIChatShortRequestSchema = z.object({
   messages: InputMessageSchema,
   agent: z.string(),
-  azion: AzionSchema.optional(),
   variables: z.unknown().optional(),
   stream: z.boolean().default(false).optional(),
   thread_id: z.string().uuid().optional(),
@@ -123,7 +107,6 @@ const AIChatShortRequestSchema = z.object({
 const AIChatRequestBodySchema = z.union([
   z.object({
     messages: InputMessageSchema,
-    azion: AzionSchema.optional(),
     variables: z.unknown().optional(),
     stream: z.boolean().default(false).optional(),
     thread_id: z.string().uuid().optional(),
@@ -134,7 +117,6 @@ const AIChatRequestBodySchema = z.union([
 
 const RequestChatBodySchema = z.object({
   messages: InputMessageSchema,
-  azion: AzionSchema.optional(),
   variables: z.unknown().optional(),
   args: z.record(z.any()).optional(),
   docs_options: DocsOptionsSchema.optional(),
@@ -191,5 +173,5 @@ const FeedbackSchema = z.object({
 });
 
 
-export { AzionSchema, RequestChatBodySchema, FeedbackSchema, InputMessageSchema, DocsOptionsSchema };
+export { RequestChatBodySchema, FeedbackSchema, InputMessageSchema, DocsOptionsSchema };
 export { AgentSchema, AIChatRequestBodySchema };

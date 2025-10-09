@@ -1,5 +1,5 @@
 import { handleSystemPrompt } from '@/helpers/utils';
-import { GraphState, toolsAnnouncer } from '@/services/ai/nodes/chat/agent';
+import { GraphState } from '@/services/ai/nodes/chat/agent';
 import { generateAsyncTools, toolRouter } from '@/services/ai/nodes/chat/tools';
 import { LangGraphContext } from '@/types';
 import { AIMessage, BaseMessage, HumanMessage, SystemMessage } from '@langchain/core/messages';
@@ -98,10 +98,7 @@ export async function generateAgentOnlyGraph(
         streaming: false,
         verbose: false,
         tags: ['agent'],
-        configuration: {
-          baseURL: process.env.EDGEAI_ENDPOINT
-        },
-        apiKey: process.env.EDGE_AI_TOKEN,
+        apiKey: process.env.OPENAI_API_KEY,
       })
       console.log('Chat base created');
       // If tools are requested and include RAG, bind tools
@@ -197,16 +194,13 @@ export async function generateAgentOnlyGraph(
     workflow
       .addNode('tools', toolNode)
       .addNode('toolsReporter', toolsReporter)
-      .addNode('toolsAnnouncer', toolsAnnouncer as any)
       .addEdge(START, 'agent')
       .addConditionalEdges('agent', (state) => toolRouter(state as any), {
         noTools: END,
         tools: 'tools',
-        toolsAnnouncer: 'toolsAnnouncer',
       })
       .addEdge('tools', 'toolsReporter')
       .addEdge('toolsReporter', 'agent')
-      .addEdge('toolsAnnouncer', 'agent');
   } else {
     workflow
       .addEdge(START, 'agent')

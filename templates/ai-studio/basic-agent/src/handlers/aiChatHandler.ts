@@ -1,5 +1,5 @@
 import { AIChatRequestBodySchema } from '@/helpers/schema';
-import { createConfigurable, createInputMessages, extractRequestParams, resolveLangChainTracer, validateRequestBody } from '@/helpers/utils';
+import { createConfigurable, createInputMessages, extractRequestParams, validateRequestBody } from '@/helpers/utils';
 import { resolveAgentByName } from '@/services/agentService';
 import { generateAgentOnlyGraph } from '@/services/ai/agentOnlyGraph';
 import { GraphService } from '@/services/graphService';
@@ -42,12 +42,12 @@ export async function aiChatRequestHandler(context: Context): Promise<Response> 
       const agentName = (parsedBody as any).agent as string;
       messages = (parsedBody as any).messages;
       stream = (parsedBody as any).stream;
-      azion = (parsedBody as any).azion;
       variables = (parsedBody as any).variables;
       threadId = (parsedBody as any).thread_id;
-      const overrideAgents = (parsedBody as any).args?.agents;
-
+      // @ts-ignore
+      const overrideAgents = context.event.args?.agents;
       const resolvedAgent = await resolveAgentByName(agentName, accountId, overrideAgents);
+
       if (!resolvedAgent) {
         return new Response(JSON.stringify({ message: `Agent not found: ${agentName}` }), { status: 404 });
       }
@@ -58,25 +58,26 @@ export async function aiChatRequestHandler(context: Context): Promise<Response> 
       const bodyWithArgs = parsedBody as any;
       messages = bodyWithArgs.messages;
       stream = bodyWithArgs.stream;
-      azion = bodyWithArgs.azion;
       variables = bodyWithArgs.variables;
       args = bodyWithArgs.args;
       threadId = bodyWithArgs.thread_id;
+      // @ts-ignore
+      args = { agent: context.event.args };
     }
 
     const agent = args.agent;      // obrigatório
+
     // Tools priority: args.agent.tools > args.tools (backward compatibility)
     const tools = (agent && Array.isArray(agent.tools) ? agent.tools : undefined) ?? args.tools ?? [];
 
     // Ex.: usar system_prompt/goal do agent
     const goal = agent.goal ? `\nGoal: ${agent.goal}` : '';
     const systemPrompt = `${agent.system_prompt}${goal}`;
-    const tracer = resolveLangChainTracer(url, azion?.app);
 
     const inputs = createInputMessages(messages);
 
     // Build configurable (metadata) e sobrescreve com system prompt do agent
-    const configurable = createConfigurable(azion, variables, args, url, azion?.session_id || uuidv4(), ip, token, accountId);
+    const configurable = createConfigurable(variables, args, url, threadId || uuidv4(), ip, token, accountId);
     // Override thread id if provided at top-level input
     if (threadId) {
       // @ts-ignore augment configurable with thread id
@@ -89,7 +90,6 @@ export async function aiChatRequestHandler(context: Context): Promise<Response> 
 
     const config: Config = {
       configurable,
-      tracer,
       run_id: uuidv4(),
     };
 
@@ -133,10 +133,10 @@ export async function aiChatRequestHandler(context: Context): Promise<Response> 
 
     // Build minimal agent graph com ferramentas opcionais
     const model = agent.llm_model;
-    // Propagate the selected model into the graph context so all nodes (agent, toolsAnnouncer) use the same LLM
+    // Propagate the selected model into the graph context so all nodes (agent) use the same LLM
     // @ts-ignore augment configurable with runtime model selection
     config.configurable.model = model;
-    // Also expose run_id to nodes (toolsAnnouncer/toolsReporter) via context
+    // Also expose run_id to nodes (toolsReporter) via context
     // @ts-ignore augment configurable with run_id for thread message persistence
     config.configurable.run_id = config.run_id;
     const chatGraph = await generateAgentOnlyGraph(model, tools);
