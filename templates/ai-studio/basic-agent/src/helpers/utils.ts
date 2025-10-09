@@ -12,41 +12,11 @@ import {
     ExtractRequestParamsResult,
     LangGraphContext,
     Message,
-    RequestAuth,
     RequestChatBody,
     StreamEvent,
     ValidateRequestBodyResult,
 } from '../types';
-import config from './constants';
 import { RequestChatBodySchema } from './schema';
-
-//TODO - transform this into a service
-class EnvDetector {
-    env: string;
-    constructor() {
-        this.env = ''
-    }
-
-    detectEnv(eventMetadata: Record<string, any>) {
-        if (!eventMetadata) {
-            this.env = 'prod'
-            return
-        }
-        if (eventMetadata.function_id == 30295) {
-            console.log('Detected Env: stage')
-            this.env = 'stage'
-        } else {
-            console.log('Detected Env: prod')
-            this.env = 'prod'
-        }
-    }
-
-    getEnv() {
-        return this.env
-    }
-}
-
-export const envDetector = new EnvDetector()
 
 /**
  * Validates the request body against the RequestChatBodySchema.
@@ -82,48 +52,6 @@ export function extractChatParameters(
     const sessionId = azion?.session_id || uuidv4();
 
     return { errors: null, azion, sessionId, messages, stream: stream || false, variables };
-}
-
-
-/**
- * Resolves the authentication parameters for the API request.
- * @param {string} env - The environment to use for the API request.
- * @param {string | undefined} cookie - The cookie to use for the API request.
- * @param {string | undefined} token - The token to use for the API request.
- * @returns {RequestAuth} The authentication parameters for the API request.
- */
-function resolveAuthenticateParams(
-    env: string,
-    cookie: string | null,
-    token: string
-): RequestAuth {
-    let url = process.env.AUTHENTICATION_URL as string;
-    let cookiePrefix = 'azsid=';
-
-    if (env && env.includes('stage')) {
-        url = url.replace('sso', 'stage-sso');
-        cookiePrefix = 'azsid_stg=';
-    }
-
-    const headers: Record<string, string> = {
-        'Accept': 'application/json; version=3'
-    };
-
-    if (cookie) {
-        headers.Cookie = cookiePrefix + cookie.split(cookiePrefix)[1].split(';')[0]
-    }
-
-    if (token) {
-        headers.Authorization = token.replace('Bearer', 'Token');
-    }
-
-    return {
-        urlAuthenticate: url,
-        options: {
-            method: 'GET',
-            headers
-        }
-    };
 }
 
 /**
@@ -414,76 +342,6 @@ function defineProject(
 }
 
 /**
- * Creates a LangChainTracer with the given project name.
- * @param {string} url - The URL to evaluate.
- * @returns {[LangChainTracer] | undefined} A new instance of LangChainTracer.
- */
-function resolveLangChainTracer(
-    url: string,
-    app: string | undefined
-): [LangChainTracer] | undefined {
-    const projectName = defineProject(url, app);
-    if (projectName) {
-        return [new AzionLangChainTracer({ projectName })]
-    } else {
-        return undefined;
-    }
-}
-
-class AzionLangChainTracer extends LangChainTracer {
-    constructor(fields: LangChainTracerFields) {
-        super(fields);
-    }
-
-    override async persistRun(run: Run) {
-        if (run.outputs && run.outputs.messages) {
-            run.outputs.messages = run.outputs.messages.slice(-1)
-        }
-
-        const lastHumanMessage = run.inputs.messages.findLast((msg: Message) => msg.role === "user")
-        if (lastHumanMessage) {
-            run.inputs.messages = [lastHumanMessage]
-        }
-
-        return await super.persistRun(run);
-    }
-
-    override async onRunCreate(run: Run) {
-        if (run.extra?.metadata?.key) {
-            delete run.extra.metadata.key;
-        }
-
-        if (run.extra?.metadata.token) {
-            delete run.extra.metadata.token;
-        }
-        return await super.onRunCreate(run);
-    }
-}
-
-// /**
-//  * Resolves the appropriate OpenAI API key based on the environment URL.
-//  * @param {string} url - The URL to evaluate.
-//  * @returns {string | undefined} The OpenAI API key for the corresponding environment.
-//  */
-// function resolveApiKey(
-//     url: string
-// ): string | undefined {
-//     console.log('url', url);
-//     if (url.includes('stage-ai')) {
-//         console.log('ENV: stage');
-//         return config.OPENAI_API_KEY_STAGE;
-//     } else if (url.includes('ai')) {
-//         console.log('ENV: PROD');
-//         return config.OPENAI_API_KEY_PROD;
-//     } else if (url.includes('localhost')) {
-//         console.log('ENV: LOCAL');
-//         return config.OPENAI_API_KEY_LOCAL;
-//     } else {
-//         throw new Error('different url requested');
-//     }
-// }
-
-/**
  * Creates a configurable object for the chat session.
  * @param {AzionSchema | undefined} azion - The Azion parameters to identify the users.
  * @param {unknown} variables - Variables from the client (e.g., OpenWebUI).
@@ -496,7 +354,6 @@ class AzionLangChainTracer extends LangChainTracer {
  * @returns {Configurable} The configurable object.
  */
 function createConfigurable(
-    azion: AzionSchema | undefined,
     variables: unknown,
     args: Record<string, any> | undefined,
     url: string,
@@ -513,40 +370,12 @@ function createConfigurable(
 
     return {
         thread_id: sessionId,
-        url: azion?.url,
-        app: azion?.app,
-        user_name: azion?.user_name || userName,
-        client_id: azion?.client_id,
-        id: azion?.id,
-        first_name: azion?.first_name,
-        last_name: azion?.last_name,
-        email: azion?.email,
-        support_plan: azion?.support_plan,
-        user_prompt: azion?.user_prompt,
-        // key: resolveApiKey(url),
+        user_name: userName,
         token: token,
         ip: ip,
-        project: defineProject(url, azion?.app),
         account_id: accountId,
         // Generic arguments exposed to the graph via context.metadata.args
         args: args
-    }
-}
-
-function extractAzionMetadata(
-    configurable: Configurable
-): any {
-    return {
-        user_name: configurable.user_name || '',
-        first_name: configurable.first_name || '',
-        last_name: configurable.last_name || '',
-        client_id: configurable.client_id || '',
-        email: configurable.email || '',
-        support_plan: configurable.support_plan || '',
-        url: configurable.url || '',
-        app: configurable.app || '',
-        project: configurable.project || '',
-        ticket_id: configurable.ticket_id || '',
     }
 }
 
@@ -578,28 +407,6 @@ async function extractRequestParams(
         return { requestParams: null, error: error };
     }
 }
-
-/**
- * Resolves the announcer prompt based on the last message and user question.
- * @param {string} userQuestion - The last user question.
- * @param {AIMessage} lastMessage - The last message.
- * @param {string} prompt - The announcer prompt.
- * @returns {string} The resolved announcer prompt.
- */
-function resolveAnnouncerPrompt(
-    userQuestion: string,
-    lastMessage: BaseMessage,
-    prompt: string
-): string {
-    if (lastMessage &&
-        'tool_calls' in lastMessage &&
-        Array.isArray(lastMessage.tool_calls) &&
-        lastMessage.tool_calls.length) {
-        return prompt.replace('{tools}', lastMessage.tool_calls.map(tool => tool.name).join(', ')).replace('{userQuestion}', userQuestion)
-    }
-    return prompt;
-}
-
 
 /**
  * Processes the event stream for streaming responses.
@@ -635,11 +442,6 @@ async function processEventStream(
             }
         }
 
-        // const link = linkSender.getLink()
-        // if (link) {
-        //     await writeEncodedData(new AIMessageChunk(link))
-        //     linkSender.clearLink()
-        // }
         await writeEncodedData(new AIMessageChunk(''), true);
 
         await writer.write(encoder.encode('data: [DONE]\n\n'));
@@ -750,7 +552,7 @@ export function getPastMessages(
 
 export {
     createConfigurable, createInputMessages, createTransformStream, defineProject, extractRequestParams,
-    handleSystemPrompt, processEventStream, resolveAuthenticateParams, resolveLangChainTracer, resolveToken,
+    handleSystemPrompt, processEventStream, resolveToken,
     transformToChatCompletions, transformToDocsResponse, transformToInvokeResponse,
     transformToLastMessage, transformToStreamResponse, validateStreamForErrors
 };

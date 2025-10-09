@@ -68,7 +68,6 @@ export class GraphService {
         {
           version: "v2",
           configurable: { ...this.configs.configurable },
-          callbacks: this.configs.tracer,
           runId: this.configs.run_id
         });
 

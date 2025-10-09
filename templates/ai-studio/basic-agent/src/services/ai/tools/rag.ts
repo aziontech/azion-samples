@@ -1,4 +1,3 @@
-import config from '@/helpers/constants';
 import { DynamicStructuredTool } from '@langchain/core/tools';
 import { OpenAIEmbeddings } from '@langchain/openai';
 import { useQuery, type AzionEnvironment } from 'azion/sql';
@@ -156,7 +155,10 @@ async function executeHybridSearch(
   fieldsToUseOnRerank?: string[],
   overrides?: { dbName?: string; embeddingModel?: string }
 ): Promise<any[]> {
-  const dbName = overrides?.dbName || (config as any).DBNAME;
+  const dbName = overrides?.dbName
+  if (!dbName) {
+    throw new Error('DB name is required');
+  }
   console.log('[RAG] Hybrid search DB name:', dbName);
   const chunkTable = 'chunk';
   const ftsTable = 'chunk_fts';

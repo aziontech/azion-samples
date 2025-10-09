@@ -62,5 +62,5 @@ export function toolRouter(state: typeof GraphState.State): string | string[] {
     console.log('[ToolRouter] Tool call details:', details);
   } catch { }
 
-  return ['tools', 'toolsAnnouncer'];
+  return 'tools'
 }
