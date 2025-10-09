@@ -50,7 +50,7 @@ export interface GraphServiceDocsResponse {
  */
 export interface AuthSuccessResponse {
   success: true
-  data: AuthData
+  data: any
 }
 
 /**
@@ -66,18 +66,6 @@ export interface AuthErrorResponse {
  */
 export type AuthResponse = AuthSuccessResponse | AuthErrorResponse
 
-/**
- * Represents the data from an authentication request.
- */
-export interface AuthData {
-  accountId: string
-}
-
-export interface SSOResponse {
-  results: {
-    id: string
-  }
-}
 
 /**
  * Interface representing the response from a chat completion.

@@ -1,9 +1,8 @@
 import { aiChatRequestHandler } from "@/handlers/aiChatHandler";
-import { AuthMiddleware } from "@/middlewares/authMiddleware";
-import { AuthData } from "@/types";
+import { authMiddleware } from "@/middlewares/authMiddleware";
 import { Hono } from "hono";
 
-const app = new Hono<{ Variables: AuthData }>()
+const app = new Hono<{}>()
 
 app.use('*', async (c, next) => {
   if (c.req.method !== 'OPTIONS' && c.req.method !== 'POST') {
@@ -19,15 +18,11 @@ app.use('/*', async (c, next) => {
     return
   }
 
-  const authMiddleware = new AuthMiddleware()
-
   const authentication = await authMiddleware.authenticate(c.req.raw)
 
   if (!authentication.success) {
     return new Response(JSON.stringify(authentication.error), { status: authentication.error?.status })
   }
-
-  c.set('accountId', authentication.data.accountId)
 
   await next()
 })
@@ -39,4 +34,3 @@ app.options('/*', async (c) => {
 app.post('/ai/chat', async (c) => aiChatRequestHandler(c))
 
 app.fire()
-
