@@ -1,145 +1,150 @@
-# Azion Edge AI - React Agent
+# AI Studio – Basic Agent
 
-Deploy AI Agents at the edge with Typescript, powered by Azion's Edge Computing Platform. This template uses LangGraph framework to build the AI Agent and Hono to build the API.
+Deploy an AI Studio chat agent using TypeScript on Azion. This template exposes a small Hono API, builds a basic LangGraph agent, and uses OpenAI Models. Soon, the version with AI Inference will be available
 
-## Setup Instructions
+## Setup
 
 ### Prerequisites
-1. Create accounts and get API keys from:
-   - [Azion](https://www.console.azion.com/)
-   - [OpenAI](https://platform.openai.com/)
+- **Azion** account and CLI: https://www.azion.com/en/documentation/products/azion-cli/overview/
+- **OpenAI** API key: https://platform.openai.com/
 
-   Optional:
-   - [LangSmith](https://smith.langchain.com/) - To trace the requests and responses
+### Install
+```bash
+git clone git@github.com:aziontech/azion-samples.git
+cd azion-samples/templates/ai-studio/basic-agent
+yarn install
+```
 
-2. Install Azion CLI
-   ```bash
-   brew install azion   # For macOS
-   # See other options at: https://www.azion.com/en/documentation/products/azion-cli/overview/
-   ```
+### Environment variables
+Create a local environment (e.g., via your IDE/run configuration or system env). At minimum:
 
-### Installation & Configuration
-1. Clone the repository
-   ```bash
-   git clone git@github.com:aziontech/azion-samples.git
-   ```
+- **OPENAI_API_KEY** (required)
+- **AI_STUDIO_URL** or **AI-STUDIO-URL** (optional) to persist thread messages to AI Studio
+- **USE_LOCAL_TOKEN** (optional, 'true' to use LOCAL_TOKEN)
+- **LOCAL_TOKEN** (optional, used if USE_LOCAL_TOKEN is true)
 
-2. Set up environment:
-   - Create `.env` file with API keys
-   - Configure project name for LangSmith request tracing
+## Run locally
+```bash
+azion build
+azion dev
+```
 
-3. Install dependencies:
-   ```bash
-   yarn install
-   ```
+The API only accepts POST/OPTIONS. Main endpoint: `POST /ai/chat`.
 
-4. Install EdgeSQL Python to interact with the database:
-   - Clone EdgeSQL repository:
-     ```bash
-     git clone git@github.com:aziontech/edgesql-shell.git
-     ```
-   
-   - Install system dependencies:
-     [mysql-connector-python](https://pypi.org/project/mysql-connector-python/)
-     [psycopg2](https://pypi.org/project/psycopg2/)
+## Deploy
+```bash
+azion deploy
+```
 
-   - Set up Python environment:
-     ```bash
-     python -m venv env
-     source env/bin/activate
-     pip install -r requirements.txt
-     ```
-   
-   - Configure Azion Token authentication:
-     ```bash
-     export AZION_TOKEN="your_auth_token_here"
-     ```
-   
-   - Run EdgeSQL Shell:
-    For interactive mode:
-     ```bash
-     python edgesql-shell.py
-     ```
-    For non interactive mode:
-     ```bash
-      python3 edgesql-shell.py -n -c ".use MyDB2024" -c ".tables"
-      ```
-    
-    For more information access the [EdgeSQL Shell](https://github.com/aziontech/edgesql-shell) repository.
+## API usage
+Only POST is allowed; non-POST methods return 405. CORS/headers are handled by Azion rules.
 
-### Database Setup and Uploading Documents
-If you have used the console template, your database is already set up. 
+### Endpoint
+`POST /ai/chat`
 
- - To insert documents into the database, run:
+### Authentication
+`src/middlewares/authMiddleware.ts` currently returns success for all requests. Adjust as needed.
 
-   ```bash
-   yarn upload-docs
-   ```
+If you want to persist thread messages to AI Studio, pass an Authorization header and a `thread_id` in the body. The server extracts the token from `Authorization: Token <your_token>` (or `Bearer <token>`) and posts messages to `${AI_STUDIO_URL}/v4/workspace/ai/threads/{thread_id}/messages`.
 
-This will read the files in the "migrations/files" folder, chunk with the DocumentChunker class and insert them into the database, by running the migrations/uploadDocs.ts script.
-Note: You can add more data to the folder "migrations/files". Currently, pdf, md, json and txts files are supported.
+### Request formats
+Validated in `src/helpers/schema.ts`.
 
+- **Short format (agent by name):**
+```json
+{
+  "messages": [
+    { "role": "user", "content": "Olá" }
+  ],
+  "agent": "agente-basico",
+  "stream": false,
+  "thread_id": "<uuid-optional>",
+  "variables": {}
+}
+```
 
-- If the database is not set up, you can initialize the database with:
+- **Args-based format (full agent):**
+```json
+{
+  "messages": [
+    { "role": "user", "content": "Olá" }
+  ],
+  "stream": false,
+  "thread_id": "<uuid-optional>",
+  "args": {
+    "agent": {
+      "agent_id": "00000000-0000-0000-0000-000000000001",
+      "account_id": "00000000-0000-0000-0000-000000000000",
+      "name": "agente-basico",
+      "system_prompt": "Você é um assistente técnico.",
+      "goal": "Responder curto e objetivamente.",
+      "llm_model": "gpt-4o",
+      "tools": [
+        {
+          "name": "test",
+          "type": "RAG",
+          "kb": [
+            { "kb_id": "1", "edgesql_db_id": "banco", "embedding_model": "text-embedding-3-small" }
+          ]
+        }
+      ]
+    }
+  }
+}
+```
 
-   ```bash
-   yarn setup-db
-   ```
+If you pass just the agent name (short format), it is resolved via `src/agentsCatalog.ts`. You may also override the catalog by passing `args.agents` in the short format.
 
-This will create the database and the table with the necessary columns, by running the migrations/setupDatabase.ts script.
+### Streaming vs non-streaming
+- Set `stream: true` to receive `text/event-stream` chunks.
+- Set `stream: false` (default) to receive an OpenAI-style `chat.completion` JSON.
 
-### Local Development
-1. Run locally:
-   ```bash
-   azion build
-   azion dev
-   ```
+### Examples
+- **Non-streaming (local):**
+```bash
+curl -X POST 'http://localhost:3333/ai/chat' \
+  -H 'Content-Type: application/json' \
+  --data-raw '{
+    "messages":[{"role":"user","content":"Hello"}],
+    "agent":"agente-basico",
+    "stream":false
+  }'
+```
 
-2. Test local deployment:
-   ```bash
-   curl 'http://localhost:3333/' \
-     --data-raw '{"messages":[{"role":"user","content":"Hello"}],"stream":false}'
-   ```
+- **Streaming (local):**
+```bash
+curl -N -X POST 'http://localhost:3333/ai/chat' \
+  -H 'Content-Type: application/json' \
+  --data-raw '{
+    "messages":[{"role":"user","content":"Hello"}],
+    "agent":"agente-basico",
+    "stream":true
+  }'
+```
 
-### Production Deployment
-1. Deploy to Azion Edge Network:
-   ```bash
-   azion deploy
-   ```
-   This creates an Edge application and converts your code into a single Edge Function.
+- **With thread persistence (requires AI_STUDIO_URL and Authorization):**
+```bash
+curl -X POST 'http://localhost:3333/ai/chat' \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Token <your_token>' \
+  --data-raw '{
+    "messages":[{"role":"user","content":"Hello"}],
+    "agent":"agente-basico",
+    "thread_id":"11111111-1111-1111-1111-111111111111",
+    "stream":false
+  }'
+```
 
-2. Test production deployment:
-   ```bash
-   curl 'https://<your-new-domain>/' \
-     --data-raw '{"messages":[{"role":"user","content":"Hello"}],"stream":false}'
-   ```
+## Project structure
+- **src/main.ts**: Hono app and routes (`/ai/chat`).
+- **src/handlers/aiChatHandler.ts**: Validates input, resolves/loads agent, builds graph, streams or returns JSON.
+- **src/services/ai/agentOnlyGraph.ts**: Builds a minimal LangGraph agent using `ChatOpenAI` (uses `OPENAI_API_KEY`). Optional RAG tools binding.
+- **src/services/graphService.ts**: Streaming/invoke helpers and OpenAI-style response shaping.
+- **src/helpers/schema.ts**: Zod schemas for requests and agent payload.
+- **src/helpers/utils.ts**: Utilities for request parsing, SSE transform, token extraction, etc.
+- **src/agentsCatalog.ts**: Default agent catalog used by short format.
+- **src/middlewares/authMiddleware.ts**: Authentication stub.
 
-## Monitoring & Evaluation
-
-### Request Tracing
-Monitor requests through LangSmith by selecting your project and viewing traces. See [LangSmith documentation](https://smith.langchain.com/) for details.
-
-### RAG Evaluation
-![RAG Evaluation Flow](img/evaluation-chart.png)
-*Source: [LangSmith RAG Evaluation Tutorial](https://docs.smith.langchain.com/evaluation/tutorials/rag)*
-
-#### Evaluation Areas
-1. **Retrieval Quality**
-   - Compare retrieved documents with questions asked
-   - Verify vector database and retriever functionality
-   - Check document formatting
-
-2. **Hallucination Detection**
-   - Compare retrieved documents with responses given
-   - Verify LLM's adherence to source material
-
-3. **Answer Relevance**
-   - Evaluate response relevance to questions asked
-
-4. **Reference Answer**
-   - Compare against ground truth answers
-   - Assess overall correctness
-
-For detailed evaluation examples, see [LangSmith Evaluation Tutorials](https://docs.smith.langchain.com/evaluation/tutorials).
-
-For more information about Langgraph, see the [Introduction to Langgraph](https://academy.langchain.com/courses/intro-to-langgraph) course.
+## Notes
+- The template uses `azion.config.ts` with entrypoint `src/main.ts` and exports a single Edge Function.
+- Adjust auth and agent catalog for your use case.
