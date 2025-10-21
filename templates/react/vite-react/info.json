@@ -1,0 +1,7 @@
+{
+  "name": "Vite + React Boilerplate",
+  "message": "This template provides a minimal setup to get React working in Vite",
+  "preset": "react",
+  "mode": "deliver",
+  "path": "/vite-react"
+}
