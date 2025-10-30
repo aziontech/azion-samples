@@ -1,0 +1,7 @@
+{
+  "name": "AI Studio Basic Agent",
+  "message": "Deploy a basic AI Studio agent using LangGraph",
+  "preset": "typescript",
+  "mode": "compute",
+  "path": "/basic-agent"
+}
