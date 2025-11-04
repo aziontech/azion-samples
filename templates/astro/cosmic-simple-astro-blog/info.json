@@ -9,11 +9,13 @@
     "inputs": [
       {
         "key": "PUBLIC_COSMIC_BUCKET_SLUG",
-        "text": "Type the Bucket Slug of your Cosmic project"
+        "text": "Type the Bucket Slug of your Cosmic project",
+        "is_secret": false
       },
       {
         "key": "PUBLIC_COSMIC_READ_KEY",
-        "text": "Type the Read Key of your Cosmic project "
+        "text": "Type the Read Key of your Cosmic project ",
+        "is_secret": true
       }
     ]
   }

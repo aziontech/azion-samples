@@ -9,11 +9,13 @@
     "inputs": [
       {
         "key": "SANITY_STUDIO_PROJECT_ID",
-        "text": "Type your Sanity Studio Project ID"
+        "text": "Type your Sanity Studio Project ID",
+        "is_secret": false
       },
       {
         "key": "SANITY_STUDIO_DATASET",
-        "text": "Type your Sanity Studio dataset name"
+        "text": "Type your Sanity Studio dataset name",
+        "is_secret": true
       }
     ]
   }
