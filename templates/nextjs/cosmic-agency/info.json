@@ -9,23 +9,28 @@
     "inputs": [
       {
         "key": "AGENCY_COSMIC_BUCKET_SLUG",
-        "text": "Type the Bucket Slug of your Cosmic project"
+        "text": "Type the Bucket Slug of your Cosmic project",
+        "is_secret": false
       },
       {
         "key": "AGENCY_COSMIC_READ_KEY",
-        "text": "Type the Read Key of your Cosmic project "
+        "text": "Type the Read Key of your Cosmic project ",
+        "is_secret": true
       },
       {
         "key": "AGENCY_COSMIC_WRITE_KEY",
-        "text": "Type the Write Key of your Cosmic project "
+        "text": "Type the Write Key of your Cosmic project ",
+        "is_secret": true
       },
       {
         "key": "AGENCY_STRIPE_PUBLISHABLE_KEY",
-        "text": "Type the Publishable Key of your Stripe integration"
+        "text": "Type the Publishable Key of your Stripe integration",
+        "is_secret": true
       },
       {
         "key": "AGENCY_STRIPE_SECRET_KEY",
-        "text": "Type the Secret Key of your Stripe integration"
+        "text": "Type the Secret Key of your Stripe integration",
+        "is_secret": true
       }
     ]
   }

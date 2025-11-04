@@ -9,7 +9,8 @@
     "inputs": [
       {
         "key": "BUTTER_CMS_API_KEY",
-        "text": "Type your Butter CNS API Key"
+        "text": "Type your Butter CNS API Key",
+        "is_secret": true
       }
     ]
   }

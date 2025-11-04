@@ -9,19 +9,23 @@
     "inputs": [
       {
         "key": "UPSTASH_REDIS_REST_TOKEN",
-        "text": "Type the URL to access your Redis database"
+        "text": "Type the URL to access your Redis database",
+        "is_secret": true
       },
       {
         "key": "UPSTASH_REDIS_REST_TOKEN",
-        "text": "Type the Token to access your Redis database"
+        "text": "Type the Token to access your Redis database",
+        "is_secret": true
       },
       {
         "key": "UPSTASH_LIMIT",
-        "text": "Type the Rate Limit your application should allow. Example: 3"
+        "text": "Type the Rate Limit your application should allow. Example: 3",
+        "is_secret": false
       },
       {
         "key": "UPSTASH_LIMIT_WINDOW",
-        "text": "Type the time window of your Rate Limit. Example: 60 s"
+        "text": "Type the time window of your Rate Limit. Example: 60 s",
+        "is_secret": false
       }
     ]
   }

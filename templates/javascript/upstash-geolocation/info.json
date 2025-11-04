@@ -9,11 +9,13 @@
     "inputs": [
       {
         "key": "UPSTASH_REDIS_REST_URL",
-        "text": "Type the URL to access your Redis database"
+        "text": "Type the URL to access your Redis database",
+        "is_secret": false
       },
       {
         "key": "UPSTASH_REDIS_REST_TOKEN",
-        "text": "Type the Token to access your Redis database"
+        "text": "Type the Token to access your Redis database",
+        "is_secret": true
       }
     ]
   }

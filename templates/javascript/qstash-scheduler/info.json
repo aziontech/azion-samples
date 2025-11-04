@@ -9,11 +9,13 @@
     "inputs": [
       {
         "key": "QSTASH_CURRENT_SIGNING_KEY",
-        "text": "Type your current QStash Signing Key"
+        "text": "Type your current QStash Signing Key",
+        "is_secret": true
       },
       {
         "key": "QSTASH_NEXT_SIGNING_KEY",
-        "text": "Type your next QStash Signing Key"
+        "text": "Type your next QStash Signing Key",
+        "is_secret": true
       }
     ]
   }
