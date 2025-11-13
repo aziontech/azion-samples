@@ -197,7 +197,7 @@ export function createListNetworkListTool(
         description,
         inputSchema: {},
         execute: async (args: Record<string, any>) => {
-            const token = process.env.AZION_API_TOKEN || process.env.AZION_TOKEN || 'azion4b4a96c1a95c46e525209ef20b3a333772f';
+            const token = process.env.AZION_API_TOKEN || process.env.AZION_TOKEN;
             if (!token) {
                 return {
                     content: [
@@ -543,7 +543,7 @@ export function createCreateNetworkListTool(
             active: z.boolean().optional().describe("Whether the network list is active. Defaults to true."),
         },
         execute: async (args: Record<string, any>) => {
-            const token = process.env.AZION_API_TOKEN || process.env.AZION_TOKEN || 'azion4b4a96c1a95c46e525209ef20b3a333772f';
+            const token = process.env.AZION_API_TOKEN || process.env.AZION_TOKEN;
             if (!token) {
                 return {
                     content: [
