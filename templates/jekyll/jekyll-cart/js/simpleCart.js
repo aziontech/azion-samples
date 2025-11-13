@@ -262,7 +262,7 @@
 
 									// less than
 									} else if (val.match(/</)) {
-										val = parseFloat(val.replace('<', ''));
+										val = parseFloat(val.replace(/</g, ''));
 										if (!(item.get(attr) && parseFloat(item.get(attr)) < val)) {
 											match = false;
 										}
@@ -276,7 +276,7 @@
 
 									// greater than
 									} else if (val.match(/>/)) {
-										val = parseFloat(val.replace('>', ''));
+										val = parseFloat(val.replace(/>/g, ''));
 										if (!(item.get(attr) && parseFloat(item.get(attr)) > val)) {
 											match = false;
 										}
@@ -402,7 +402,7 @@
 					// Determine the "best fit" selector engine
 					for (engine in selectorEngines) {
 						if (Object.prototype.hasOwnProperty.call(selectorEngines, engine) && window[engine]) {
-							members = selectorEngines[engine].replace("*", engine).split(".");
+							members = selectorEngines[engine].replace(/\*/g, engine).split(".");
 							member = members.shift();
 							if (member) {
 								context = context[member];
