@@ -14,7 +14,7 @@ export class ButtercmssdkService {
       process.env.NG_APP_ANGULAR_BUTTER_CMS_PREVIEW === undefined ? true :
       !(process.env.NG_APP_ANGULAR_BUTTER_CMS_PREVIEW === 'false' ||
       process.env.NG_APP_ANGULAR_BUTTER_CMS_PREVIEW === '0');
-    return Butter(process.env.NG_APP_ANGULAR_BUTTER_CMS_API_KEY, butterCmsPreview);
+    return Butter(process.env.NG_APP_ANGULAR_BUTTER_CMS_API_KEY, {testMode: butterCmsPreview});
   }
 
   navigateToNotFound() {

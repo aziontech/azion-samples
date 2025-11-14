@@ -1,13 +1,16 @@
+
 name: Main Edge Deploy
 
 on:
-  workflow_dispatch:
-  push:
+  pull_request:
+    types:
+      - closed
     branches:
       - "main"
 
 jobs:
   deploy:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     permissions:
@@ -23,7 +26,7 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: npm i
+        run: yarn
 
       - name: Install Azion CLI
         run: |
@@ -31,11 +34,8 @@ jobs:
           sudo mv azionlinux /usr/bin/azion
           sudo chmod u+x /usr/bin/azion
 
-      - name: Create .env file
-        run: |
-          echo "NG_APP_ANGULAR_BUTTER_CMS_API_KEY=${{ secrets.NG_APP_ANGULAR_BUTTER_CMS_API_KEY }}" >> .env
-
       - name: Azion Action Deploy
         run: |
           azion -t ${{ secrets.AZION_PERSONAL_TOKEN }}
           azion deploy
+

@@ -1,32 +1,68 @@
-# ButterCMS + Angular Starter Project
+![recommended node version](https://img.shields.io/badge/node-v22-green)
 
-The **ButterCMS + Angular Starter Project** template creates a fully-functional [Angular](https://angular.dev/overview) starter project, completely integrated with [ButterCMS](https://buttercms.com/), a leading headless CMS that makes collaborative content management of your application easier.
+# Angular + ButterCMS Starter Project
 
-This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [How to deploy a web application based on ButterCMS using templates
-](https://www.azion.com/en/documentation/products/guides/butter-templates-collection/) guide.
+This Angular starter project fully integrates with dynamic sample content from your ButterCMS account, including main menu, pages, blog posts, categories, and tags, all with a beautiful, custom theme with already-implemented search functionality. All of the included sample content is automatically created in your account dashboard when you sign up for a free trial of ButterCMS.
 
-This template uses Angular version `15.1.2`.
+[View our live demo hosted at Vercel](https://test.vercel.app/), or you can click a button below to deploy your own copy of our starter
+project to the provider of your choice.
 
----
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FButterCMS%2Fangular-starter-buttercms&env=NG_APP_ANGULAR_BUTTER_CMS_API_KEY&envDescription=Your%20ButterCMS%20API%20Token&envLink=https%3A%2F%2Fbuttercms.com%2Fsettings%2F&project-name=angular-starter-buttercms&repo-name=angular-starter-buttercms&redirect-url=https%3A%2F%2Fbuttercms.com%2Fonboarding%2Fvercel-starter-deploy-callback%2F&production-deploy-hook=Deploy%20Triggered%20from%20ButterCMS&demo-title=ButterCMS%20Angular%20Starter&demo-description=Fully%20integrated%20with%20your%20ButterCMS%20account&demo-url=https%3A%2F%2Ftest.vercel.app%2F&demo-image=https://cdn.buttercms.com/r0tGK8xFRti2iRKBJ0eY&repository-name=angular-starter-buttercms) 
 
-## Requirements
 
-Before using this template, you need to:
+## Technical Details and Requirements
 
-- Have a [GitHub account](https://github.com/signup).
-  - Every push will be deployed automatically to the main branch in this repository to keep your project updated.
-- A [ButterCMS](https://buttercms.com/) account.
+### Supported Versions
 
-> **Note**: this template uses [Application Accelerator](https://www.azion.com/en/documentation/products/build/edge-application/application-accelerator/), [Edge Functions](https://www.azion.com/en/documentation/products/build/edge-application/edge-functions/), and [Edge Cache](https://www.azion.com/en/documentation/products/build/edge-application/edge-cache/) and it could generate usage-related costs. Check the [pricing page](https://www.azion.com/en/pricing/) for more information.
+This project currently uses:
+- **Node.js**: v22 or later
+- **Angular**: v18.2 (LTS)
+- **ButterCMS**: v3.0.0
+- **TypeScript**: v5.4.5
 
-Fill in the fields presented on the configuration form and deploy the template. This will create a new edge application with its configurations, which you can edit and manage later. It also creates a repository in your GitHub account, based on the template, allowing you to maintain control over the project.
+### Browser Compatibility
 
----
+The application targets ES2022, which is supported by all modern browsers. For specific browser support, see the [Angular browser support guide](https://angular.dev/reference/versions).
 
-## Deploy your own
 
-Deploy your own ButterCMS + Angular Starter Project with Azion.
+## 1. Installation
 
-[![Deploy Button](https://www.azion.com/button.svg)](https://console.azion.com/create/buttercms/buttercms-angular-starter "Deploy with Azion")
+First, clone the repo and install the dependencies by running `npm install`
 
-For a more detailed step-by-step, check the [documentation](https://www.azion.com/en/documentation/products/guides/butter-templates-collection/).
+```bash
+git clone https://github.com/ButterCMS/angular-starter-buttercms
+cd angular-starter-buttercms
+npm install
+```
+
+### 2. Set API Token
+
+To fetch your ButterCMS content, add your API token as an environment variable.
+
+```bash
+$ echo 'NG_APP_ANGULAR_BUTTER_CMS_API_KEY=<Your API Token>' >> .env
+```
+
+### 3. Run local server
+
+To view the app in the browser, you'll need to run the local development server:
+
+```bash
+$ npm run start
+```
+
+Congratulations! Your starter project is now live at [http://localhost:4200/](http://localhost:4200/).
+
+## 4. Deploy on Vercel
+
+Deploy your Angular app using Vercel, the creators of Next.js. With a single click, you'll create a copy of our starter project in your Git provider account, instantly deploy it, and institute a full content workflow connected to your ButterCMS account. Smooth.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FButterCMS%2Fangular-starter-buttercms&env=NG_APP_ANGULAR_BUTTER_CMS_API_KEY&envDescription=Your%20ButterCMS%20API%20Token&envLink=https%3A%2F%2Fbuttercms.com%2Fsettings%2F&project-name=angular-starter-buttercms&repo-name=angular-starter-buttercms&redirect-url=https%3A%2F%2Fbuttercms.com%2Fonboarding%2Fvercel-starter-deploy-callback%2F&production-deploy-hook=Deploy%20Triggered%20from%20ButterCMS&demo-title=ButterCMS%20Angular%20Starter&demo-description=Fully%20integrated%20with%20your%20ButterCMS%20account&demo-url=https%3A%2F%2Ftest.vercel.app%2F&demo-image=https://cdn.buttercms.com/r0tGK8xFRti2iRKBJ0eY&repository-name=angular-starter-buttercms) 
+
+### 5. Webhooks
+
+The ButterCMS webhook settings are located at https://buttercms.com/webhooks/
+
+### 6. Previewing Draft Changes
+
+By default, your starter project is set up to allow previewing of draft changes saved in your ButterCMS.com account. To disable this functionality, set the following value in your .env file: NG_APP_ANGULAR_BUTTER_CMS_PREVIEW=false

@@ -32,6 +32,7 @@ speed-measure-plugin*.json
 .history/*
 
 # misc
+.env
 /.angular/cache
 /.sass-cache
 /connect.lock
@@ -41,12 +42,10 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
-.env
 
 # System Files
 .DS_Store
 Thumbs.db
 
-# azion
+# Azion
 .edge
-

@@ -1,4 +1,3 @@
-
 {
   "name": "Angular with ButterCMS Starter Project",
   "message": "Drop-in proof-of-concept Angular app, fully integrated with your ButterCMS account",
@@ -10,7 +9,7 @@
     "inputs": [
       {
         "key": "NG_APP_ANGULAR_BUTTER_CMS_API_KEY",
-        "text": "Type your Butter CNS API Key",
+        "text": "Type your Butter CMS API Key",
         "is_secret": true
       }
     ]
