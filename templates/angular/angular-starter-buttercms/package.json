@@ -36,9 +36,6 @@
     "typescript": "5.4.5",
     "webpack": "5.98.0"
   },
-  "engines": {
-    "node": ">=22.10.5"
-  },
   "overrides": {
     "@babel/runtime": "7.26.10",
     "@babel/helpers": "7.26.10",
