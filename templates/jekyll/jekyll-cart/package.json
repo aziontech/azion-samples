@@ -14,11 +14,11 @@
   },
   "homepage": "https://github.com/bradonomics/jekyll-cart#readme",
   "devDependencies": {
-    "browser-sync": "^2.18.8",
+    "browser-sync": "^2.29.3",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-shell": "^0.6.3",
+    "gulp-rename": "^1.4.0",
+    "gulp-shell": "^0.6.5",
     "gulp-uglify": "^2.1.2"
   },
   "dependencies": {
