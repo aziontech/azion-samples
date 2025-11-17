@@ -11,10 +11,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/lit": "^4.0.1",
+    "@astrojs/lit": "^4.3.0",
     "@webcomponents/template-shadowroot": "^0.2.1",
-    "astro": "^4.5.12",
+    "astro": "^4.16.19",
     "azion": "latest",
-    "lit": "^3.1.2"
+    "lit": "^3.3.1"
   }
 }
