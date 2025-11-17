@@ -20,8 +20,8 @@
   "dependencies": {
     "@tidbcloud/serverless": "^0.2.0",
     "azion": "latest",
-    "dotenv": "^16.3.1",
-    "drizzle-orm": "^0.35.2",
+    "dotenv": "^16.6.1",
+    "drizzle-orm": "^0.35.3",
     "itty-router": "4.0.23"
   }
 }
