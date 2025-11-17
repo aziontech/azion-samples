@@ -12,6 +12,6 @@
   "license": "ISC",
   "dependencies": {
     "azion": "latest",
-    "itty-router": "^4.2.0"
+    "itty-router": "^4.2.2"
   }
 }
