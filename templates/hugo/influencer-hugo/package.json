@@ -7,6 +7,6 @@
   },
   "dependencies": {
     "azion": "latest",
-    "hugo-bin": "^0.131.0"
+    "hugo-bin": "^0.131.3"
   }
 }
