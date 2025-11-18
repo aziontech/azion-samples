@@ -40,7 +40,11 @@
     "@babel/runtime": "7.26.10",
     "@babel/helpers": "7.26.10",
     "esbuild": "0.25.1",
-    "vite": "6.2.1",
+    "glob": ">=11.1.0",
+    "http-proxy-middleware": ">=3.0.4",
+    "tmp": ">=0.2.4",
+    "vite": ">=6.4.1",
+    "webpack-dev-server": ">=5.2.1",
     "@vitejs/plugin-basic-ssl": "2.0.0",
     "critters": "npm:beasties@latest"
   }
