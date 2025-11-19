@@ -11,11 +11,11 @@
     "lint": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\" && eslint --fix \"src/**/*.{js,ts,jsx,tsx,astro}\""
   },
   "dependencies": {
-    "@astrojs/react": "^3.6.3",
-    "@astrojs/tailwind": "^5.1.5",
+    "@astrojs/react": "^4.4.2",
+    "@astrojs/tailwind": "^6.0.2",
     "@astrojs/ts-plugin": "^1.10.5",
     "@cosmicjs/sdk": "^1.5.6",
-    "astro": "^3.6.5",
+    "astro": "^5.15.9",
     "azion": "latest",
     "date-fns": "^2.30.0",
     "react-markdown": "^8.0.7",
