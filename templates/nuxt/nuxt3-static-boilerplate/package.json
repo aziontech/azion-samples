@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "azion": "latest",
-    "nuxt": "^3.13.0",
+    "nuxt": "^3.20.1",
     "vue": "latest",
     "vue-router": "latest"
   }
