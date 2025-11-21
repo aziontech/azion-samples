@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "azion": "latest",
-    "critters": "^0.0.19",
-    "next": "^12.3.5",
+    "critters": "^0.0.20",
+    "next": "^12.3.7",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
