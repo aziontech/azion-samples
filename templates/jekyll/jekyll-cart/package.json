@@ -14,8 +14,8 @@
   },
   "homepage": "https://github.com/bradonomics/jekyll-cart#readme",
   "devDependencies": {
-    "browser-sync": "^2.29.3",
-    "gulp": "^3.9.1",
+    "browser-sync": "^3.0.4",
+    "gulp": "^5.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-rename": "^1.4.0",
     "gulp-shell": "^0.6.5",
