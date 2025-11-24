@@ -11,9 +11,9 @@
   "dependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
     "azion": "latest",
-    "buttercms": "^1.2.15",
+    "buttercms": "^3.0.3",
     "tiny-slider": "^2.9.4",
-    "vite": "^4.0.4",
+    "vite": "^5.4.21",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
   },
@@ -24,6 +24,6 @@
     "eslint": "^8.32.0",
     "eslint-plugin-vue": "^9.9.0",
     "prettier": "^2.8.3",
-    "vue-tsc": "^1.0.24"
+    "vue-tsc": "^3.1.5"
   }
 }
