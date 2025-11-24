@@ -33,7 +33,7 @@ export const GET: APIRoute = async ({ request, params }) => {
     }
     await browser.close();
 
-    return new Response(buffer, {
+    return new Response(new Uint8Array(buffer), {
       status: 200,
       headers: {
         "Content-Type": "application/pdf",
