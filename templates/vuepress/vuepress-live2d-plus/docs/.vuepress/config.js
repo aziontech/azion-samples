@@ -1,4 +1,6 @@
-import { defaultTheme, defineUserConfig } from 'vuepress'
+import { viteBundler } from "@vuepress/bundler-vite";
+import { defaultTheme } from '@vuepress/theme-default'
+import { defineUserConfig } from 'vuepress'
 import { live2dPlugin } from '../../node'
 
 const locales = {
@@ -22,6 +24,7 @@ export default defineUserConfig({
   head: [['link', { rel: 'icon', type: 'image/png', href: '/logo.png' }]],
   base: process.env.BASE || '/',
   port: 3000,
+  bundler: viteBundler(),
   theme: defaultTheme({
     repo: 'xinlei3166/vuepress-plugin-demoblock',
     logo: '/logo.png',
