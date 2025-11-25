@@ -15,7 +15,7 @@
   "dependencies": {
     "@astrojs/check": "^0.5.10",
     "@fontsource-variable/rubik": "^5.0.21",
-    "astro": "^4.6.1",
+    "astro": "^5.16.0",
     "astro-dev-only-routes": "^0.0.2",
     "azion": "latest",
     "typescript": "^5.4.5"

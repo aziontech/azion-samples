@@ -12,8 +12,7 @@
   "dependencies": {
     "@astrojs/check": "0.7.0",
     "@astrojs/react": "3.6.0",
-    "@astrojs/vercel": "^9.0.1",
-    "@sanity/astro": "^3.1.4",
+    "@sanity/astro": "^3.2.10",
     "@sanity/image-url": "1.0.2",
     "azion": "latest",
     "astro": "^5.15.9",
@@ -21,7 +20,7 @@
     "autoprefixer": "10.4.19",
     "groq": "3.48.1",
     "prettier-plugin-astro": "0.14.0",
-    "sanity": "3.77.2"
+    "sanity": "^4.18.0"
   },
   "devDependencies": {
     "@portabletext/types": "2.0.13",
@@ -33,7 +32,7 @@
     "prismjs": "^1.30.0",
     "rimraf": "5.0.1",
     "typescript": "^5.5.2",
-    "vite": "^5.3.2"
+    "vite": "^7.2.4"
   },
   "engines": {
     "node": ">= 16.12"
