@@ -1,0 +1,7 @@
+{
+  "name": "Azion React Agent",
+  "message": "Deploy a React Agent directly on the edge using LangGraph - a powerful framework for building AI agents that run at the network edge powered by Azion's edge computing platform",
+  "preset": "typescript",
+  "mode": "compute",
+  "path": "/azion-react-agent"
+}

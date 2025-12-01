@@ -1,0 +1,36 @@
+{
+  "name": "azion-security-agent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "upload-docs": "tsx migrations/uploadDocs.ts",
+    "setup": "tsx migrations/setupDatabase.ts",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "aziontech",
+  "license": "ISC",
+  "dependencies": {
+    "@clerk/backend": "^1.24.2",
+    "@langchain/community": "0.3.42",
+    "@langchain/core": "0.3.51",
+    "@langchain/langgraph": "0.2.67",
+    "@langchain/mcp-adapters": "^0.6.0",
+    "@langchain/openai": "0.5.10",
+    "azion": "^1.11.1",
+    "hono": "^4.7.4",
+    "langchain": "^0.3.6"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.6",
+    "eslint": "^9.22.0",
+    "gray-matter": "^4.0.3",
+    "pdf-parse": "^1.1.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.4.2"
+  }
+}
