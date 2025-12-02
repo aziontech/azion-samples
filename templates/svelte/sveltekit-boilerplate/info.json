@@ -1,0 +1,8 @@
+{
+  "name": "SvelteKit Boilerplate",
+  "message": "A SvelteKit app including nested routes, layouts, and page endpoints",
+  "preset": "svelte",
+  "mode": "deliver",
+  "path": "/sveltekit-boilerplate"
+}
+
