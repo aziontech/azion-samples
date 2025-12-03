@@ -168,7 +168,7 @@ export const WebPreviewBody = ({
 
   return (
     <div className="flex-1">
-      {/* lgtm[js/xss-through-dom] */}
+      {/* codeql[js/xss-through-dom] */}
       {/* CodeQL suppression: iframe src with sandbox attribute provides XSS protection */}
       <iframe
         className={cn("size-full", className)}
