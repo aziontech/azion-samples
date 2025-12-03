@@ -9,6 +9,9 @@ export function generateHashedPassword(password: string) {
 }
 
 export function generateDummyPassword() {
+  // CodeQL suppression: Using generateId() for dummy/test passwords only
+  // This is used only for dummy/test passwords
+  // lgtm[js/insecure-randomness]
   const password = generateId();
   const hashedPassword = generateHashedPassword(password);
 
