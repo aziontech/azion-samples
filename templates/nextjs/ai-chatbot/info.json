@@ -1,0 +1,7 @@
+{
+  "name": "Next.js AI Chatbot",
+  "message": "A full-featured AI Chatbot site powered by Next.js and AI SDK",
+  "preset": "next",
+  "mode": "compute",
+  "path": "/nextjs-ai-chatbot"
+}
