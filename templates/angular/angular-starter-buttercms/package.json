@@ -41,6 +41,7 @@
     "@babel/helpers": "7.26.10",
     "esbuild": "0.25.1",
     "glob": ">=11.1.0",
+    "node-forge": "^1.3.2",
     "http-proxy-middleware": ">=3.0.4",
     "tmp": ">=0.2.4",
     "vite": ">=6.4.1",
