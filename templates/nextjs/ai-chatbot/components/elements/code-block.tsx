@@ -8,6 +8,9 @@ import {
   oneDark,
   oneLight,
 } from "react-syntax-highlighter/dist/esm/styles/prism";
+
+// Type cast to fix React 19 compatibility
+const SyntaxHighlighterComponent = SyntaxHighlighter as any;
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -43,7 +46,7 @@ export const CodeBlock = ({
       {...props}
     >
       <div className="relative">
-        <SyntaxHighlighter
+        <SyntaxHighlighterComponent
           className="overflow-hidden dark:hidden"
           codeTagProps={{
             className: "font-mono text-sm",
@@ -68,8 +71,8 @@ export const CodeBlock = ({
           style={oneLight}
         >
           {code}
-        </SyntaxHighlighter>
-        <SyntaxHighlighter
+        </SyntaxHighlighterComponent>
+        <SyntaxHighlighterComponent
           className="hidden overflow-hidden dark:block"
           codeTagProps={{
             className: "font-mono text-sm",
@@ -94,7 +97,7 @@ export const CodeBlock = ({
           style={oneDark}
         >
           {code}
-        </SyntaxHighlighter>
+        </SyntaxHighlighterComponent>
         {children && (
           <div className="absolute top-2 right-2 flex items-center gap-2">
             {children}
