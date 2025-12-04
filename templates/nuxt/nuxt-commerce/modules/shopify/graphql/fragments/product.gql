@@ -1,0 +1,36 @@
+fragment product on Product {
+  id
+  featuredImage {
+    ...image
+  }
+  images(first: 20) {
+    edges {
+      node {
+        ...image
+      }
+    }
+  }
+  options {
+    id
+    name
+    values
+  }
+  handle
+  title
+  availableForSale
+  description
+  priceRange {
+    maxVariantPrice {
+      amount
+      currencyCode
+    }
+    minVariantPrice {
+      amount
+      currencyCode
+    }
+  }
+  seo {
+    ...seo
+  }
+  tags
+}
