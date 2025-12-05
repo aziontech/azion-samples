@@ -1,0 +1,7 @@
+{
+  "name": "Next.js Boilerplate",
+  "message": "Next.js Boilerplate",
+  "preset": "next",
+  "mode": "compute",
+  "path": "/nextjs-boilerplate"
+}
