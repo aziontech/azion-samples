@@ -1,0 +1,43 @@
+{
+  "name": "nuxt-commerce",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "start": "nuxt start",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "stackblitz": "pnpm install && pnpm run dev"
+  },
+  "git": {
+    "pre-commit": "lint-staged"
+  },
+  "stackblitz": {
+    "installDependencies": false,
+    "startCommand": "pnpm run stackblitz"
+  },
+  "devDependencies": {
+    "@iconify-json/heroicons": "^1.2.2",
+    "@nuxt/devtools": "latest",
+    "@nuxt/eslint": "^0.7.2",
+    "@nuxt/eslint-config": "^0.7.2",
+    "@nuxt/image": "^1.9.0",
+    "@nuxt/scripts": "0.11.1",
+    "@nuxt/ui": "3.0.0",
+    "@nuxtjs/robots": "5.0.1",
+    "@nuxtjs/sitemap": "7.0.0",
+    "azion": "~1.20.14",
+    "eslint": "9.16.0",
+    "lint-staged": "^15.2.10",
+    "nuxt": "^3.16.0",
+    "nuxt-lazy-hydrate": "^1.0.0",
+    "nuxt-og-image": "^5.0.2",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "nuxt-graphql-client": "^0.2.43"
+  }
+}

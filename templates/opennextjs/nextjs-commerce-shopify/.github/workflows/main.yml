@@ -1,0 +1,46 @@
+name: Main Deploy
+
+on:
+  workflow_dispatch:
+  # push:
+  #   branches:
+  #     - "main"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Use Node.js 18.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: yarn
+        
+      - name: Install Azion CLI
+        run: |
+          curl -o azionlinux https://downloads.azion.com/linux/x86_64/azion
+          sudo mv azionlinux /usr/bin/azion
+          sudo chmod u+x /usr/bin/azion
+
+      - name: Create .env file
+        run: |
+          echo "COMPANY_NAME=${{ secrets.COMPANY_NAME }}" >> .env
+          echo "SITE_NAME=${{ secrets.SITE_NAME }}" >> .env
+          echo "SHOPIFY_REVALIDATION_SECRET=${{ secrets.SHOPIFY_REVALIDATION_SECRET }}" >> .env
+          echo "SHOPIFY_STOREFRONT_ACCESS_TOKEN=${{ secrets.SHOPIFY_STOREFRONT_ACCESS_TOKEN }}" >> .env
+          echo "SHOPIFY_STORE_DOMAIN=${{ secrets.SHOPIFY_STORE_DOMAIN }}" >> .env
+          
+
+      - name: Azion Action Deploy
+        run: |
+          azion -t ${{ secrets.AZION_PERSONAL_TOKEN }}
+          azion deploy

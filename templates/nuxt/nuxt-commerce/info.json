@@ -1,0 +1,7 @@
+{
+  "name": "Nuxt Commerce",
+  "message": "An opionionated Nuxt.js Template with Nuxt Commerce",
+  "preset": "nuxt",
+  "mode": "compute",
+  "path": "/nuxt-commerce"
+}
