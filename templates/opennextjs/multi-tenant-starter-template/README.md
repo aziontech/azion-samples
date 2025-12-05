@@ -2,7 +2,6 @@
 
 A minimalistic multi-tenant Next.js starter template with minimal setup and a modular design. Bring your own backend and database.
 
-[Demo](https://stack-template.vercel.app/)
 
 ## Landing Page
 
@@ -54,7 +53,7 @@ A minimalistic multi-tenant Next.js starter template with minimal setup and a mo
 
 ## Features & Tech Stack
 
-- Next.js 14 app router
+- Next.js 15 app router
 - TypeScript
 - Tailwind & Shadcn UI
 - Stack Auth

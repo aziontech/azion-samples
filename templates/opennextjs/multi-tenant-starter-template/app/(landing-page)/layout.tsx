@@ -18,7 +18,7 @@ export default function Layout(props: { children: React.ReactNode }) {
         builtByLink="https://stack-auth.com/"
         githubLink="https://github.com/stack-auth/stack-template"
         twitterLink="https://twitter.com/stack_auth"
-        linkedinLink="linkedin.com/company/stack-auth"
+        linkedinLink="https://linkedin.com/company/stack-auth"
       />
     </div>
   );
