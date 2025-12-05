@@ -1,0 +1,63 @@
+query getProduct($handle: String!, $variants: Int!) {
+  product(handle: $handle) {
+    ...product
+    variants(first: $variants) {
+      nodes {
+        id
+        availableForSale
+        price {
+          amount
+          currencyCode
+        }
+        selectedOptions {
+          name
+          value
+        }
+      }
+    }
+  }
+}
+
+query getProducts($first: Int!, $variants: Int!, $query: String) {
+  products(first: $first, query: $query) {
+    edges {
+      node {
+        ...product
+        variants(first: $variants) {
+          nodes {
+            id
+            availableForSale
+            price {
+              amount
+              currencyCode
+            }
+            selectedOptions {
+              name
+              value
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+query getProductRecommendations($productId: ID!, $variants: Int!) {
+  productRecommendations(productId: $productId) {
+    ...product
+    variants(first: $variants) {
+      nodes {
+        id
+        availableForSale
+        price {
+          amount
+          currencyCode
+        }
+        selectedOptions {
+          name
+          value
+        }
+      }
+    }
+  }
+}
