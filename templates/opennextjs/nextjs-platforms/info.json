@@ -1,7 +1,7 @@
 {
   "name": "Next.js Multi-Tenant",
   "message": "A production-ready example of a multi-tenant application built with Next.js 15, featuring custom subdomains for each tenant.",
-  "preset": "next",
+  "preset": "opennextjs",
   "mode": "compute",
   "path": "/nextjs-platforms"
 }

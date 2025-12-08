@@ -104,7 +104,7 @@ export function DocumentPreview({
   return (
     <div className="relative w-full cursor-pointer">
       <HitboxLayer
-        hitboxRef={hitboxRef}
+        hitboxRef={hitboxRef as React.RefObject<HTMLDivElement>}
         result={result}
         setArtifact={setArtifact}
       />
