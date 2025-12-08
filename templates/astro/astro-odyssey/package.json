@@ -1,0 +1,30 @@
+{
+  "name": "odyssey-theme",
+  "version": "3.1.0",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:treefarmstudio/odyssey-theme"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "format": "npx prettier -w ."
+  },
+  "devDependencies": {
+    "@astrojs/lit": "^4.3.0",
+    "@astrojs/mdx": "^4.3.12",
+    "@astrojs/sitemap": "^3.6.0",
+    "@iconify-json/ic": "^1.2.4",
+    "@iconify-json/mdi": "^1.2.3",
+    "@webcomponents/template-shadowroot": "^0.2.1",
+    "astro": "^5.16.4",
+    "astro-icon": "^1.1.5",
+    "azion": "latest",
+    "date-fns": "^4.1.0",
+    "lit": "^3.3.1",
+    "prettier-plugin-astro": "^0.14.1"
+  }
+}
