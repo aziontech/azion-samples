@@ -1,0 +1,8 @@
+{
+  "name": "Paint by Text",
+  "message": "Edit your photos by chatting with a generative AI model (InstructPix2Pix), powered by Replicate",
+  "preset": "opennextjs",
+  "mode": "compute",
+  "path": "/paint-by-text"
+}
+

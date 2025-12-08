@@ -1,0 +1,8 @@
+{
+  "name": "Next.js Multi-tenant Starter Template",
+  "message": "A minimalistic multi-tenant Next.js starter template",
+  "preset": "opennextjs",
+  "mode": "compute",
+  "path": "/multi-tenant-starter-template"
+}
+
