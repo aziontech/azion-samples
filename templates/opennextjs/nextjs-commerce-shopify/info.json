@@ -1,8 +1,7 @@
 {
   "name": "Next.js Commerce with Shopify",
   "message": "A full-featured e-commerce site powered by Next.js and Shopify",
-  "preset": "next",
+  "preset": "opennextjs",
   "mode": "compute",
   "path": "/nextjs-commerce-shopify"
 }
-
