@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/content": "^2.13.4",
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "azion": "^1.20.14",
+    "nuxt": "^3.20.1"
+  },
+  "dependencies": {
+    "@nuxt/image": "^1.11.0"
+  }
+}
