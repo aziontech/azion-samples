@@ -1,0 +1,8 @@
+{
+  "name": "Nuxt 3 Kitchen Sink",
+  "message": "A kitchen sink template to demonstrate how to use Nuxt 3 features",
+  "preset": "nuxt",
+  "mode": "compute",
+  "path": "/nuxt3-kitchen-sink"
+}
+
