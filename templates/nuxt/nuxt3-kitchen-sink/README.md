@@ -16,13 +16,3 @@ Look at the [Nuxt 3 documentation](https://nuxt.com) to learn more.
 - `NuxtContent`
 - Data Fetching
 
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-git clone https://github.com/vercel/nuxt3-kitchen-sink.git
-cd nuxt3-kitchen-sink
-pnpm i
-pnpm dev
-```

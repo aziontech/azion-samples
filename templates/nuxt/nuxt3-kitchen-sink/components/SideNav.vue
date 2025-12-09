@@ -5,8 +5,6 @@
     >
       <div class="flex items-center justify-between mb-6">
         <div class="flex items-center">
-          <img src="/logo-vercel.svg" class="h-6" />
-          <div class="mx-1 font-bold">+</div>
           <img src="/logo-nuxt.png" class="h-5" />
         </div>
         <img
