@@ -1,7 +1,7 @@
 import { neon } from "@neondatabase/serverless";
-import { POSTGRES_URL } from '$env/static/private'
+import { NEONDB_SVELTEKIT_URL } from '$env/static/private'
 
-const sql = neon(POSTGRES_URL);
+const sql = neon(NEONDB_SVELTEKIT_URL);
 
 async function seed() {
   const createTable = await sql`
