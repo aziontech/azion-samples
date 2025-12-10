@@ -3,6 +3,6 @@
   "message": "Simple SvelteKit template that uses a Neon (Postgres) database.",
   "preset": "svelte",
   "mode": "compute",
-  "path": "/postgres-sveltkit"
+  "path": "/postgres-sveltekit"
 }
 
