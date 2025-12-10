@@ -10,5 +10,5 @@ SvelteKit Commerce is an open-source, customizable ecommerce template built with
 
 # Configuration
 In order to build this project, you must add the following environment variables in the .env file:
-- `VITE_SHOPIFY_API_ENDPOINT`
-- `VITE_SHOPIFY_STOREFRONT_API_TOKEN`
+- `SVELTEKIT_SHOPIFY_API_ENDPOINT`
+- `SVELTEKIT_SHOPIFY_STOREFRONT_API_TOKEN`
