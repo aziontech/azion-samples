@@ -3,6 +3,15 @@
   "message": "Simple SvelteKit template that uses a Neon (Postgres) database.",
   "preset": "svelte",
   "mode": "compute",
-  "path": "/postgres-sveltekit"
+  "path": "/postgres-sveltekit",
+  "extras": {
+    "type": "env",
+    "inputs": [
+      {
+        "key": "NEONDB_SVELTEKIT_URL",
+        "text": "Type your Neon DB connection URL",
+        "is_secret": true
+      }
+    ]
+  }
 }
-

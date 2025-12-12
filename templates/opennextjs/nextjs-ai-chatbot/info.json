@@ -3,5 +3,25 @@
   "message": "A full-featured AI Chatbot site powered by Next.js and AI SDK",
   "preset": "opennextjs",
   "mode": "compute",
-  "path": "/nextjs-ai-chatbot"
+  "path": "/nextjs-ai-chatbot",
+  "extras": {
+    "type": "env",
+    "inputs": [
+      {
+        "key": "AUTH_SECRET",
+        "text": "Type your Next Auth secret",
+        "is_secret": true
+      },
+      {
+        "key": "POSTGRES_URL",
+        "text": "Type the your Neon DB connection URL",
+        "is_secret": true
+      },
+      {
+        "key": "OPENAI_API_KEY",
+        "text": "Type the your Open AI API key",
+        "is_secret": true
+      }
+    ]
+  }
 }

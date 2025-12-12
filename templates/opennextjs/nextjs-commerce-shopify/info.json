@@ -3,6 +3,41 @@
   "message": "A full-featured e-commerce site powered by Next.js and Shopify",
   "preset": "opennextjs",
   "mode": "compute",
-  "path": "/nextjs-commerce-shopify"
+  "path": "/nextjs-commerce-shopify",
+  "extras": {
+    "type": "env",
+    "inputs": [
+      {
+        "key": "COMPANY_NAME",
+        "text": "Type the Company Name for your Ecommerce application",
+        "is_secret": false
+      },
+      {
+        "key": "SITE_NAME",
+        "text": "Type the Site Name for your Ecommerce application",
+        "is_secret": false
+      },
+      {
+        "key": "SHOPIFY_REVALIDATION_SECRET",
+        "text": "Type the your Shopify Revalidation Secret",
+        "is_secret": true
+      },
+      {
+        "key": "SHOPIFY_STOREFRONT_ACCESS_TOKEN",
+        "text": "Type the your Shopify Storefront Access Token",
+        "is_secret": true
+      },
+      {
+        "key": "SHOPIFY_STORE_DOMAIN",
+        "text": "Type the your Shopify Store Domain",
+        "is_secret": true
+      },
+      {
+        "key": "SHOPIFY_ACCOUNT_SECRET",
+        "text": "Type the your Shopify Account Secret",
+        "is_secret": true
+      }
+    ]
+  }
 }
 

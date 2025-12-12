@@ -3,5 +3,15 @@
   "message": "Get started using Deepgram's Live Transcription with this Next.js demo app.",
   "preset": "opennextjs",
   "mode": "compute",
-  "path": "/nextjs-live-transcription"
+  "path": "/nextjs-live-transcription",
+  "extras": {
+    "type": "env",
+    "inputs": [
+      {
+        "key": "DEEPGRAM_API_KEY",
+        "text": "Type your Deepgram API key",
+        "is_secret": true
+      }
+    ]
+  }
 }

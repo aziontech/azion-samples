@@ -3,5 +3,15 @@
   "message": "Edit your photos by chatting with a generative AI model (InstructPix2Pix), powered by Replicate",
   "preset": "opennextjs",
   "mode": "compute",
-  "path": "/paint-by-text"
+  "path": "/paint-by-text",
+  "extras": {
+    "type": "env",
+    "inputs": [
+      {
+        "key": "REPLICATE_API_TOKEN",
+        "text": "Type your Replicate API Token",
+        "is_secret": true
+      }
+    ]
+  }
 }
