@@ -3,5 +3,20 @@
   "message": "An opionionated Nuxt.js Template with Nuxt Commerce",
   "preset": "nuxt",
   "mode": "compute",
-  "path": "/nuxt-commerce"
+  "path": "/nuxt-commerce",
+  "extras": {
+    "type": "env",
+    "inputs": [
+      {
+        "key": "SHOPIFY_GRAPHQL_API_URL",
+        "text": "Type your Shopify GraphQL API URL",
+        "is_secret": false
+      },
+      {
+        "key": "SHOPIFY_ACCESS_TOKEN",
+        "text": "Type your Shopify Access Token",
+        "is_secret": true
+      }
+    ]
+  }
 }

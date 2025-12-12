@@ -3,5 +3,25 @@
   "message": "A minimalistic multi-tenant Next.js starter template",
   "preset": "opennextjs",
   "mode": "compute",
-  "path": "/multi-tenant-starter-template"
+  "path": "/multi-tenant-starter-template",
+  "extras": {
+    "type": "env",
+    "inputs": [
+      {
+        "key": "NEXT_PUBLIC_STACK_PROJECT_ID",
+        "text": "Type your Stack Auth Project ID",
+        "is_secret": false
+      },
+      {
+        "key": "NEXT_PUBLIC_STACK_PUBLISHABLE_CLIENT_KEY",
+        "text": "Type your Stack Auth Publishable Client Key",
+        "is_secret": true
+      },
+      {
+        "key": "STACK_SECRET_SERVER_KEY",
+        "text": "Type your Stack Auth Secret Server Key",
+        "is_secret": true
+      }
+    ]
+  }
 }

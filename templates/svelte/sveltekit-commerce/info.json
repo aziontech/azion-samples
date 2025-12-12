@@ -3,6 +3,21 @@
   "message": "An all-in-one starter kit for high-performance e-commerce sites built with SvelteKit",
   "preset": "svelte",
   "mode": "compute",
-  "path": "/sveltekit-commerce"
+  "path": "/sveltekit-commerce",
+  "extras": {
+    "type": "env",
+    "inputs": [
+      {
+        "key": "SVELTEKIT_SHOPIFY_API_ENDPOINT",
+        "text": "Type your Shopify GraphQL API endpoint",
+        "is_secret": false
+      },
+      {
+        "key": "SVELTEKIT_SHOPIFY_STOREFRONT_API_TOKEN",
+        "text": "Type your Shopify Storefront API Token",
+        "is_secret": true
+      }
+    ]
+  }
 }
 
