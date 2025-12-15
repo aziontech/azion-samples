@@ -12,7 +12,7 @@
     "azion": "latest",
     "isomorphic-dompurify": "^1.13.0",
     "lucide-react": "^0.427.0",
-    "next": "14.2.33",
+    "next": "14.2.35",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
     "typescript": "^5.9.3"
