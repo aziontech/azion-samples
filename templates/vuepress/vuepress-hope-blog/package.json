@@ -19,8 +19,8 @@
     "@vuepress/bundler-vite": "2.0.0-rc.26",
     "@vuepress/helper": "2.0.0-rc.118",
     "azion": "latest",
-    "sass": "^1.94.1",
-    "vue": "^3.5.24",
+    "sass": "^1.97.2",
+    "vue": "^3.5.26",
     "vuepress": "2.0.0-rc.26",
     "vuepress-theme-hope": "2.0.0-rc.98"
   }

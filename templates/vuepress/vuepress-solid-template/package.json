@@ -17,7 +17,7 @@
     "docs:clean-dev": "vuepress dev docs --clean-cache"
   },
   "devDependencies": {
-    "@types/node": "^22.19.1",
+    "@types/node": "^22.19.3",
     "@vuepress/bundler-vite": "2.0.0-rc.18",
     "@vuepress/client": "2.0.0-rc.18",
     "@vuepress/plugin-catalog": "2.0.0-rc.61",
@@ -28,10 +28,10 @@
     "@vuepress/theme-default": "2.0.0-rc.61",
     "azion": "latest",
     "github-slugger": "^2.0.0",
-    "katex": "^0.16.25",
-    "mermaid": "^11.12.1",
-    "sass-embedded": "^1.93.3",
-    "vue": "^3.5.24",
+    "katex": "^0.16.27",
+    "mermaid": "^11.12.2",
+    "sass-embedded": "^1.97.2",
+    "vue": "^3.5.26",
     "vuepress": "2.0.0-rc.18",
     "vuepress-plugin-md-enhance": "2.0.0-rc.59",
     "vuepress-plugin-search-pro": "2.0.0-rc.59"
