@@ -15,7 +15,7 @@
     "@sanity/astro": "^3.2.10",
     "@sanity/image-url": "1.0.2",
     "azion": "latest",
-    "astro": "^5.15.9",
+    "astro": "^5.16.11",
     "astro-portabletext": "0.10.0",
     "autoprefixer": "10.4.19",
     "groq": "3.48.1",
