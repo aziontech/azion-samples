@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^6.0.2",
-    "astro": "^5.16.3",
+    "astro": "^5.16.11",
     "azion": "latest",
     "tailwindcss": "^3.3.3"
   },
