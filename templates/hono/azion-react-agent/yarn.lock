@@ -1744,10 +1744,10 @@ available-typed-arrays@^1.0.7:
   dependencies:
     possible-typed-array-names "^1.0.0"
 
-azion@^2.3.3:
-  version "2.3.3"
-  resolved "https://registry.yarnpkg.com/azion/-/azion-2.3.3.tgz#364709e05667c44e653f3ff55d495e9a5243c82f"
-  integrity sha512-TAdaAfDTWqEj7lnh6pBlFMp/qWn5kA+cAHXW0fxXi/LnYVxyCL7o+zWAXrC+wZbOKv7S0kb69Xp5aojTlyBP3g==
+azion@latest:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/azion/-/azion-3.0.0.tgz#a0404a9f642b8aeb364510d9560ea311ca306116"
+  integrity sha512-SpT89Kx57CRcFBCgVNFA1+GbP4SbHYfN5yF1bCqDj+PQ646CXB+pDxq4UXChdmP2vXzEYXk6Onkz0fSxMNRF4A==
   dependencies:
     "@babel/plugin-proposal-optional-chaining-assign" "^7.27.1"
     "@babel/preset-env" "^7.28.3"
@@ -2842,10 +2842,10 @@ hmac-drbg@^1.0.1:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
-hono@^4.10.6:
-  version "4.11.3"
-  resolved "https://registry.yarnpkg.com/hono/-/hono-4.11.3.tgz#4ddd985d50944b527feea930c6d0a6e80fdebc66"
-  integrity sha512-PmQi306+M/ct/m5s66Hrg+adPnkD5jiO6IjA7WhWw0gSBSo1EcRegwuI1deZ+wd5pzCGynCcn2DprnE4/yEV4w==
+hono@^4.11.4:
+  version "4.11.4"
+  resolved "https://registry.yarnpkg.com/hono/-/hono-4.11.4.tgz#0c1ba7175e08624932224bc7644e4cb22b294080"
+  integrity sha512-U7tt8JsyrxSRKspfhtLET79pU8K+tInj5QZXs1jSugO1Vq5dFj3kmZsRldo29mTBfcjDRVRXrEZ6LS63Cog9ZA==
 
 ieee754@^1.2.1:
   version "1.2.1"
