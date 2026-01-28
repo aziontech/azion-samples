@@ -22,7 +22,6 @@
     "tailwind-merge": "^3.3.0"
   },
   "devDependencies": {
-    "@aziontech/opennextjs-azion": "^1.1.2",
     "@tailwindcss/postcss": "^4.1.6",
     "@types/node": "^22.15.17",
     "@types/react": "~19.2.1",

@@ -19,7 +19,6 @@
     "sonner": "^2.0.1"
   },
   "devDependencies": {
-    "@aziontech/opennextjs-azion": "^1.1.2",
     "@tailwindcss/container-queries": "^0.1.1",
     "@tailwindcss/postcss": "^4.0.14",
     "@tailwindcss/typography": "^0.5.16",
