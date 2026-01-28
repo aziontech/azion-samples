@@ -4,7 +4,7 @@ The **React Boilerplate** is designed to simplify and enhance the deployment pro
 
 This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template via Azion Real-Time Manager (RTM), check the [How to deploy edge applications with the React Boilerplate](https://www.azion.com/en/documentation/products/guides/react-boilerplate/) guide.
 
-This template uses React version `18.2.0`.
+This template uses React version `19.2.4`.
 
 ---
 
