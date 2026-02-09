@@ -2842,10 +2842,10 @@ hmac-drbg@^1.0.1:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
-hono@^4.11.4:
-  version "4.11.4"
-  resolved "https://registry.yarnpkg.com/hono/-/hono-4.11.4.tgz#0c1ba7175e08624932224bc7644e4cb22b294080"
-  integrity sha512-U7tt8JsyrxSRKspfhtLET79pU8K+tInj5QZXs1jSugO1Vq5dFj3kmZsRldo29mTBfcjDRVRXrEZ6LS63Cog9ZA==
+hono@^4.11.9:
+  version "4.11.9"
+  resolved "https://registry.yarnpkg.com/hono/-/hono-4.11.9.tgz#4e0dec5309a8f05216c777cbd93131a41cf28eb9"
+  integrity sha512-Eaw2YTGM6WOxA6CXbckaEvslr2Ne4NFsKrvc0v97JD5awbmeBLO5w9Ho9L9kmKonrwF9RJlW6BxT1PVv/agBHQ==
 
 ieee754@^1.2.1:
   version "1.2.1"
