@@ -12,13 +12,13 @@
   "dependencies": {
     "@clerk/backend": "^1.24.2",
     "@langchain/community": "0.3.42",
-    "@langchain/core": "0.3.51",
+    "@langchain/core": "0.3.80",
     "@langchain/langgraph": "0.2.67",
     "@langchain/mcp-adapters": "^0.6.0",
     "@langchain/openai": "0.5.10",
     "@segment/analytics-node": "^2.3.0",
     "azion": "1.20.5",
-    "hono": "^4.7.4",
+    "hono": "^4.11.7",
     "langchain": "^0.3.6"
   },
   "devDependencies": {
