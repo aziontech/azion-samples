@@ -11,7 +11,7 @@
     "@nuxt/content": "^2.13.4",
     "@nuxtjs/tailwindcss": "^6.14.0",
     "azion": "latest",
-    "nuxt": "^3.21.0"
+    "nuxt": "^3.21.1"
   },
   "dependencies": {
     "@nuxt/image": "^1.11.0"
