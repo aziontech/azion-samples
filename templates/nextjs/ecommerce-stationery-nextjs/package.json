@@ -16,7 +16,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.94.0",
-    "swiper": "^9.4.1"
+    "swiper": "^12.1.2"
   },
   "overrides": {
     "pbkdf2": "^3.1.3",
