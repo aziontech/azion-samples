@@ -14,7 +14,7 @@
     "@astrojs/react": "^4.4.2",
     "@astrojs/tailwind": "^6.0.2",
     "@astrojs/ts-plugin": "^1.10.6",
-    "@cosmicjs/sdk": "^1.6.0",
+    "@cosmicjs/sdk": "^1.7.0",
     "astro": "^5.17.1",
     "azion": "latest",
     "date-fns": "^2.30.0",

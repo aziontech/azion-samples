@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@cosmicjs/sdk": "^1.5.6",
+    "@cosmicjs/sdk": "^1.7.0",
     "azion": "latest",
     "isomorphic-dompurify": "^1.13.0",
     "lucide-react": "^0.427.0",

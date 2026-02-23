@@ -18,8 +18,8 @@ importers:
         specifier: ^1.10.6
         version: 1.10.6
       '@cosmicjs/sdk':
-        specifier: ^1.6.0
-        version: 1.6.0
+        specifier: ^1.7.0
+        version: 1.7.0
       astro:
         specifier: ^5.17.1
         version: 5.17.1(@types/node@18.19.130)(jiti@1.21.7)(rollup@4.57.1)(terser@5.46.0)(typescript@5.9.3)(yaml@2.8.2)
@@ -770,8 +770,8 @@ packages:
     resolution: {integrity: sha512-VERIM64vtTP1C4mxQ5thVT9fK0apjPFobqybMtA1UdUujWka24ERHbRHFGmpbbhp73MhV+KSsHQH9C6uOTdEQA==}
     engines: {node: '>=18'}
 
-  '@cosmicjs/sdk@1.6.0':
-    resolution: {integrity: sha512-71Vxd2p1BkPXF5292djxAAo7f7qyznutInAKsk0+AIf8gHkAg6NzF3j5BLfIlVYgxJd7jz/JT0/bpZiyo7gN9A==}
+  '@cosmicjs/sdk@1.7.0':
+    resolution: {integrity: sha512-sOIcFaCWYpm5ZAhpu1txDq8Ggp52A0BeAjMa/hYsWUyWEIGGwTBhtErSR5d5KMpD0bCIjb42aFFvwzM/RsLLug==}
 
   '@edge-runtime/primitives@3.1.1':
     resolution: {integrity: sha512-ROO22py+KdAfzqWZu6CtVMC4qV6mS0W1jPI51jGXE+uenyBUN7cQTWB9ReQc8Bm4cnjqmhajvpqEx3j7Y9iSOg==}
@@ -5826,7 +5826,7 @@ snapshots:
     dependencies:
       fontkitten: 1.0.2
 
-  '@cosmicjs/sdk@1.6.0':
+  '@cosmicjs/sdk@1.7.0':
     dependencies:
       axios: 1.13.4
       form-data: 4.0.5
@@ -5974,7 +5974,7 @@ snapshots:
       '@bytecodealliance/wizer': 7.0.5
       '@jridgewell/remapping': 2.3.5
       '@jridgewell/trace-mapping': 0.3.31
-      acorn: 8.15.0
+      acorn: 8.16.0
       acorn-walk: 8.3.4
       esbuild: 0.25.12
       magic-string: 0.30.21
@@ -6662,7 +6662,7 @@ snapshots:
 
   acorn-walk@8.3.4:
     dependencies:
-      acorn: 8.15.0
+      acorn: 8.16.0
 
   acorn@8.15.0: {}
 
