@@ -15,7 +15,7 @@
     "@astrojs/tailwind": "^6.0.2",
     "@astrojs/ts-plugin": "^1.10.6",
     "@cosmicjs/sdk": "^1.7.0",
-    "astro": "^5.17.1",
+    "astro": "^5.18.0",
     "azion": "latest",
     "date-fns": "^2.30.0",
     "react-markdown": "^8.0.7",
