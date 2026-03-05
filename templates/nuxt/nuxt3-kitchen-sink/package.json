@@ -14,6 +14,6 @@
     "nuxt": "^3.21.1"
   },
   "dependencies": {
-    "@nuxt/image": "^1.11.0"
+    "@nuxt/image": "^2.0.0"
   }
 }
