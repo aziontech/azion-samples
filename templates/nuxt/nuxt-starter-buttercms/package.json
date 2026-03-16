@@ -7,7 +7,7 @@
     "heroku-postbuild": "npm run build"
   },
   "devDependencies": {
-    "nuxt": "^3.21.1"
+    "nuxt": "^3.21.2"
   },
   "dependencies": {
     "azion": "latest",
