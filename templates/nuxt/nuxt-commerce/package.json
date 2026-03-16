@@ -31,7 +31,7 @@
     "azion": "latest",
     "eslint": "9.39.1",
     "lint-staged": "^15.2.10",
-    "nuxt": "^3.21.1",
+    "nuxt": "^3.21.2",
     "nuxt-lazy-hydrate": "^1.0.0",
     "nuxt-og-image": "^5.0.2",
     "prettier": "^3.4.2",
