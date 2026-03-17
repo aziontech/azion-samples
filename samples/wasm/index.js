@@ -23,6 +23,7 @@ async function handleRequest(request) {
         "incrementing " + value + " we have " + incremented
     );
 }
+
 addEventListener("fetch", (event) => {
     event.respondWith(handleRequest(event.request));
 });
