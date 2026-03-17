@@ -1,5 +1,5 @@
 async function handleRequest(request) {
-  var html = `<!DOCTYPE html>
+    var html = `<!DOCTYPE html>
   <html>
   <head>
       <meta charset="UTF-8">
@@ -11,7 +11,8 @@ async function handleRequest(request) {
         </script>
     <body style="background-color:#333;display: flex; flex-flow:column; gap:16px; justify-content: center;align-items: center;height: 100vh;">
       <form action="" >
-          <label for="qrcode">
+          <label for="qrcode" style="color: white; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+          Enter the URL you want to convert to a QR code:
               <input required onchange="handleSubmit()" type="text" name="qrcode" id="qrcode" />
           </label>
       </form>
@@ -40,13 +41,13 @@ async function handleRequest(request) {
     </script>
   </html>`;
 
-return new Response(html, {
-  headers: {
-    "content-type": "text/html;charset=UTF-8",
-  },
-})
+    return new Response(html, {
+        headers: {
+            "content-type": "text/html;charset=UTF-8",
+        },
+    })
 }
 
 addEventListener("fetch", event => {
-event.respondWith(handleRequest(event.request))
+    event.respondWith(handleRequest(event.request))
 })
