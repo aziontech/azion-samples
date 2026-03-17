@@ -1,11 +1,11 @@
 async function handleRequest(args) {
-  const body = args.message || Azion.env.get('HELLO_WORLD_EDGE_FUNCTION') || "Hello World!";
+  const body = args.message || Azion.env.get('HELLO_WORLD_EDGE_FUNCTION') || "Default value";
 
   return new Response(body, {
     headers: {
       "content-type": "text/plain"
     },
-    status: 418
+    status: 200
   });
 }
 
