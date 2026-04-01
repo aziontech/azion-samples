@@ -16,8 +16,8 @@
     "autoprefixer": "^10.4.27",
     "azion": "latest",
     "postcss": "^8.5.8",
-    "svelte": "^5.53.12",
-    "svelte-check": "^4.4.5",
+    "svelte": "^5.55.1",
+    "svelte-check": "^4.4.6",
     "tailwindcss": "^3.4.19",
     "typescript": "^5.9.3",
     "vite": "^7.3.1"
