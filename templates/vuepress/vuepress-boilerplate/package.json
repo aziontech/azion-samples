@@ -14,8 +14,8 @@
     "@vuepress/bundler-vite": "2.0.0-rc.26",
     "@vuepress/theme-default": "2.0.0-rc.125",
     "azion": "latest",
-    "sass-embedded": "^1.98.0",
-    "vue": "^3.5.31",
+    "sass-embedded": "^1.99.0",
+    "vue": "^3.5.32",
     "vuepress": "2.0.0-rc.26"
   },
   "overrides": {
