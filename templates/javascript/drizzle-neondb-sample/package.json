@@ -21,7 +21,7 @@
     "@neondatabase/serverless": "^0.10.4",
     "azion": "latest",
     "dotenv": "^16.6.1",
-    "drizzle-orm": "^0.35.3",
+    "drizzle-orm": "^0.45.2",
     "itty-router": "4.0.23"
   }
 }
