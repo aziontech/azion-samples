@@ -9,11 +9,11 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@vitejs/plugin-vue": "^4.0.0",
+    "@vitejs/plugin-vue": "^5.2.4",
     "azion": "latest",
     "buttercms": "^3.0.3",
     "tiny-slider": "^2.9.4",
-    "vite": "^5.4.21",
+    "vite": "^6.4.2",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
   },
