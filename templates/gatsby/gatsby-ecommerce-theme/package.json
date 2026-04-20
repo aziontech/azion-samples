@@ -19,13 +19,13 @@
   "dependencies": {
     "azion": "latest",
     "gatsby": "^5.16.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
-    "react-slick": "^0.30.2"
+    "react-slick": "^0.30.3"
   },
   "devDependencies": {
     "plop": "^4.0.5",
-    "prettier": "^3.2.5"
+    "prettier": "^3.8.3"
   }
 }

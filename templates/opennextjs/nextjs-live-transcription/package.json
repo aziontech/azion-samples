@@ -9,14 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@deepgram/sdk": "^4.11.2",
+    "@deepgram/sdk": "^4.11.3",
     "classnames": "^2.5.1",
     "next": "^14.2.35",
-    "react": "^18",
+    "react": "^18.3.1",
     "react-device-detect": "^2.2.3",
-    "react-dom": "^18",
+    "react-dom": "^18.3.1",
     "react-github-btn": "^1.4.0",
-    "react-syntax-highlighter": "^16.1.0"
+    "react-syntax-highlighter": "^16.1.1"
   },
   "devDependencies": {
     "@aziontech/opennextjs-azion": "latest",
@@ -24,18 +24,18 @@
     "@commitlint/config-conventional": "^19.8.1",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10.4.22",
+    "@types/node": "^20.19.39",
+    "@types/react": "^18.3.28",
+    "@types/react-dom": "^18.3.7",
+    "autoprefixer": "^10.5.0",
     "azion": "latest",
-    "eslint": "^8",
+    "eslint": "^8.57.1",
     "eslint-config-next": "14.2.33",
     "husky": "^9.1.7",
-    "postcss": "^8",
+    "postcss": "^8.5.10",
     "pretty-quick": "^4.2.2",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5.9.3"
   },
   "overrides": {
     "glob": ">=10.5.0"
