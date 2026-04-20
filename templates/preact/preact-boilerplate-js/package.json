@@ -7,16 +7,16 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
-                "azion": "latest",
-		"preact": "^10.25.3",
-		"preact-iso": "^2.9.0",
-		"preact-render-to-string": "^6.5.13"
+		"azion": "latest",
+		"preact": "^10.29.1",
+		"preact-iso": "^2.11.1",
+		"preact-render-to-string": "^6.6.7"
 	},
 	"devDependencies": {
-		"@preact/preset-vite": "^2.9.3",
+		"@preact/preset-vite": "^2.10.5",
 		"eslint": "^8.57.1",
 		"eslint-config-preact": "^1.5.0",
-		"vite": "^6.0.4"
+		"vite": "^6.4.2"
 	},
 	"eslintConfig": {
 		"extends": "preact"
