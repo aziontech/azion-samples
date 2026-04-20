@@ -11,23 +11,23 @@
     "test": "npm run lint && npm run build"
   },
   "dependencies": {
-    "lodash": "^4.17.21",
+    "lodash": "^4.18.1",
     "lucide-react": "^0.88.0",
     "next": "^14.2.35",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-dropzone": "^14.2.2",
+    "react-dropzone": "^14.4.1",
     "react-spinners": "^0.13.8",
-    "replicate": "^1.0.1"
+    "replicate": "^1.4.0"
   },
   "devDependencies": {
-    "@aziontech/opennextjs-azion": "^1.1.0",
-    "autoprefixer": "^10.4.8",
+    "@aziontech/opennextjs-azion": "^1.1.2",
+    "autoprefixer": "^10.5.0",
     "azion": "latest",
     "eslint": "8.23.0",
     "eslint-config-next": "12.2.5",
-    "postcss": "^8.4.16",
-    "tailwindcss": "^3.1.8",
-    "tailwindcss-animate": "^1.0.5"
+    "postcss": "^8.5.10",
+    "tailwindcss": "^3.4.19",
+    "tailwindcss-animate": "^1.0.7"
   }
 }
