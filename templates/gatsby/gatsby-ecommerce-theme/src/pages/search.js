@@ -1,5 +1,5 @@
 import React from 'react';
-import { parse } from 'query-string';
+import qs from 'query-string';
 
 import Breadcrumbs from '../components/Breadcrumbs';
 import Layout from '../components/Layout/Layout';
@@ -11,7 +11,7 @@ import { generateMockProductData } from '../helpers/mock';
 import * as styles from './search.module.css';
 
 const SearchPage = (props) => {
-  const params = parse(props.location.search);
+  const params = qs.parse(props.location.search);
   const searchQuery = params.q ? params.q : '';
 
   const sampleData = generateMockProductData(3, 'woman');
