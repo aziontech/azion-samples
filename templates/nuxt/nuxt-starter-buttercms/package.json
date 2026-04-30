@@ -10,7 +10,6 @@
     "nuxt": "^3.21.2"
   },
   "dependencies": {
-    "azion": "latest",
     "buttercms": "^3.0.3",
     "tiny-slider": "^2.9.4",
     "vue": "^3.2.47"

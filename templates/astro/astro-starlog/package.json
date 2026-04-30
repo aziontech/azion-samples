@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "astro": "^5.18.0",
-    "azion": "latest",
     "sass": "^1.94.2",
     "sharp": "^0.34.5"
   }

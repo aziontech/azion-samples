@@ -23,7 +23,6 @@
     "@portabletext/types": "^2.0.2",
     "@sanity/client": "^6.0.1",
     "@sanity/image-url": "^1.0.2",
-    "azion": "latest",
     "dotenv": "^16.0.3",
     "express": "^4.15.2",
     "rxjs": "~7.8.0",

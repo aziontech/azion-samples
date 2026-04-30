@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@heroicons/react": "^1.0.6",
-    "azion": "latest",
     "gsap": "^3.13.0",
     "next": "12.3.7",
     "react": "18.2.0",

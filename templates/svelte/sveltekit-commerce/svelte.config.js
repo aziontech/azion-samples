@@ -1,4 +1,4 @@
-import adapter from 'azion/preset/sveltekit';
+import adapter from '@aziontech/presets/sveltekit';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -8,7 +8,7 @@ const config = {
       $components: 'src/components',
       $utils: 'src/utils'
     }
-  },  
+  }
 };
 
 export default config;

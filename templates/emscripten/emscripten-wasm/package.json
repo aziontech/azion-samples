@@ -8,8 +8,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "azion": "latest"
-  }
+  "license": "ISC"
 }

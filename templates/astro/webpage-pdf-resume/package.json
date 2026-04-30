@@ -17,7 +17,7 @@
     "@fontsource-variable/rubik": "^5.0.21",
     "astro": "^5.18.0",
     "astro-dev-only-routes": "^0.0.2",
-    "azion": "latest",
+    
     "typescript": "^5.4.5"
   },
   "devDependencies": {

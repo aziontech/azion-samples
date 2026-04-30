@@ -19,7 +19,6 @@
   "license": "MIT",
   "dependencies": {
     "@tidbcloud/serverless": "^0.2.0",
-    "azion": "latest",
     "dotenv": "^16.6.1",
     "drizzle-orm": "^0.45.2",
     "itty-router": "4.0.23"

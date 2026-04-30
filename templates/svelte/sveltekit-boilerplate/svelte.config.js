@@ -1,4 +1,4 @@
-import adapter from 'azion/preset/sveltekit';
+import adapter from '@aziontech/presets/sveltekit';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */

@@ -27,7 +27,6 @@
     "@mui/icons-material": "^5.15.18",
     "@mui/lab": "^5.0.0-alpha.170",
     "@mui/material": "^5.15.18",
-    "azion": "latest",
     "classnames": "^2.5.1",
     "clsx": "^2.1.1",
     "docusaurus-plugin-sass": "^0.2.5",

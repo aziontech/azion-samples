@@ -6,7 +6,7 @@
  *    npm install -D azion
  *
  * 2. Use defineConfig:
- *    import { defineConfig } from 'azion'
+ *    import { defineConfig } from '@aziontech/config'
  *
  * 3. Replace the configuration with defineConfig:
  *    export default defineConfig({
@@ -19,80 +19,80 @@
 
 export default {
   build: {
-    preset: 'typescript',
+    preset: "typescript",
     polyfills: true,
-    entry: './src/index.ts'
+    entry: "./src/index.ts",
   },
   functions: [
     {
-      name: '$FUNCTION_NAME',
-      path: './functions/index.js'
-    }
+      name: "$FUNCTION_NAME",
+      path: "./functions/index.js",
+    },
   ],
   applications: [
     {
-      name: '$APPLICATION_NAME',
+      name: "$APPLICATION_NAME",
       rules: {
         request: [
           {
-            name: 'Execute Function',
-            description: 'Execute function for all requests',
+            name: "Execute Function",
+            description: "Execute function for all requests",
             active: true,
             criteria: [
               [
                 {
-                  variable: '${uri}',
-                  conditional: 'if',
-                  operator: 'matches',
-                  argument: '^/'
-                }
-              ]
+                  variable: "${uri}",
+                  conditional: "if",
+                  operator: "matches",
+                  argument: "^/",
+                },
+              ],
             ],
             behaviors: [
               {
-                type: 'run_function',
+                type: "run_function",
                 attributes: {
-                  value: '$FUNCTION_NAME'
-                }
-              }
-            ]
-          }
-        ]
+                  value: "$FUNCTION_NAME",
+                },
+              },
+            ],
+          },
+        ],
       },
       functionsInstances: [
         {
-          name: '$FUNCTION_INSTANCE_NAME',
-          ref: '$FUNCTION_NAME'
-        }
-      ]
-    }
+          name: "$FUNCTION_INSTANCE_NAME",
+          ref: "$FUNCTION_NAME",
+        },
+      ],
+    },
   ],
   workloads: [
     {
-      name: '$WORKLOAD_NAME',
+      name: "$WORKLOAD_NAME",
       active: true,
       infrastructure: 1,
       protocols: {
         http: {
-          versions: ['http1', 'http2'],
+          versions: ["http1", "http2"],
           httpPorts: [80],
           httpsPorts: [443],
-          quicPorts: null
-        }
+          quicPorts: null,
+        },
       },
       deployments: [
         {
-          name: '$DEPLOYMENT_NAME',
+          name: "$DEPLOYMENT_NAME",
           current: true,
           active: true,
           strategy: {
-            type: 'default',
+            type: "default",
             attributes: {
-              application: '$APPLICATION_NAME'
-            }
-          }
-        }
-      ]
-    }
-  ]
-}
+              application: "$APPLICATION_NAME",
+            },
+          },
+        },
+      ],
+    },
+  ],
+};

@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@vitejs/plugin-vue": "^5.2.4",
-    "azion": "latest",
     "buttercms": "^3.0.3",
     "tiny-slider": "^2.9.4",
     "vite": "^6.4.2",

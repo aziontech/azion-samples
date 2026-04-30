@@ -23,7 +23,6 @@
   "devDependencies": {
     "@aziontech/opennextjs-azion": "^1.1.2",
     "autoprefixer": "^10.5.0",
-    "azion": "latest",
     "eslint": "8.23.0",
     "eslint-config-next": "12.2.5",
     "postcss": "^8.5.10",

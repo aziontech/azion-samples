@@ -14,7 +14,6 @@
     "@astrojs/react": "3.6.0",
     "@sanity/astro": "^3.2.10",
     "@sanity/image-url": "1.0.2",
-    "azion": "latest",
     "astro": "^5.18.0",
     "astro-portabletext": "0.10.0",
     "autoprefixer": "10.4.19",

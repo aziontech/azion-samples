@@ -6,7 +6,7 @@
  *    npm install -D azion
  *
  * 2. Use defineConfig:
- *    import { defineConfig } from 'azion'
+ *    import { defineConfig } from '@aziontech/config'
  *
  * 3. Replace the configuration with defineConfig:
  *    export default defineConfig({
@@ -19,80 +19,80 @@
 
 export default {
   build: {
-    preset: 'typescript',
-    entry: './src/index.ts',
-    polyfills: true
+    preset: "typescript",
+    entry: "./src/index.ts",
+    polyfills: true,
   },
   functions: [
     {
-      name: 'test-mcp',
-      path: './functions/index.js'
-    }
+      name: "test-mcp",
+      path: "./functions/index.js",
+    },
   ],
   applications: [
     {
-      name: 'test-mcp',
+      name: "test-mcp",
       rules: {
         request: [
           {
-            name: 'Execute Function',
-            description: 'Execute function for all requests',
+            name: "Execute Function",
+            description: "Execute function for all requests",
             active: true,
             criteria: [
               [
                 {
-                  variable: '${uri}',
-                  conditional: 'if',
-                  operator: 'matches',
-                  argument: '^/'
-                }
-              ]
+                  variable: "${uri}",
+                  conditional: "if",
+                  operator: "matches",
+                  argument: "^/",
+                },
+              ],
             ],
             behaviors: [
               {
-                type: 'run_function',
+                type: "run_function",
                 attributes: {
-                  value: 'test-mcp'
-                }
-              }
-            ]
-          }
-        ]
+                  value: "test-mcp",
+                },
+              },
+            ],
+          },
+        ],
       },
       functionsInstances: [
         {
-          name: 'test-mcp',
-          ref: 'test-mcp'
-        }
-      ]
-    }
+          name: "test-mcp",
+          ref: "test-mcp",
+        },
+      ],
+    },
   ],
   workloads: [
     {
-      name: 'test-mcp',
+      name: "test-mcp",
       active: true,
       infrastructure: 1,
       protocols: {
         http: {
-          versions: ['http1', 'http2'],
+          versions: ["http1", "http2"],
           httpPorts: [80],
           httpsPorts: [443],
-          quicPorts: null
-        }
+          quicPorts: null,
+        },
       },
       deployments: [
         {
-          name: 'test-mcp',
+          name: "test-mcp",
           current: true,
           active: true,
           strategy: {
-            type: 'default',
+            type: "default",
             attributes: {
-              application: 'test-mcp'
-            }
-          }
-        }
-      ]
-    }
-  ]
-}
+              application: "test-mcp",
+            },
+          },
+        },
+      ],
+    },
+  ],
+};

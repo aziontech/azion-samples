@@ -14,8 +14,5 @@
     "@tailwindcss/vite": "^4.1.17",
     "astro": "^5.18.0",
     "tailwindcss": "^4.1.17"
-  },
-  "dependencies": {
-    "azion": "latest"
   }
 }

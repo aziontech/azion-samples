@@ -83,7 +83,7 @@ export default defineNuxtConfig({
     sources: ["/api/__sitemap__/urls"],
   },
   nitro: {
-    preset: require.resolve("azion/preset/nuxt/ssr"),
+    preset: require.resolve("@aziontech/presets/nuxt/ssr"),
   },
   ogImage: {
     compatibility: {

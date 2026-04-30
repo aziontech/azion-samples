@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "azion": "latest",
     "next": "14.2.35",
     "next-compose-plugins": "^2.2.1",
     "next-transpile-modules": "^10.0.1",

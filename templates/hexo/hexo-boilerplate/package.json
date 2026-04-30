@@ -14,7 +14,6 @@
     "version": "8.1.1"
   },
   "dependencies": {
-    "azion": "latest",
     "hexo": "^8.1.1",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
