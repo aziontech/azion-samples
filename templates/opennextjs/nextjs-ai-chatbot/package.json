@@ -18,6 +18,7 @@
     "test": "export PLAYWRIGHT=True && pnpm exec playwright test"
   },
   "dependencies": {
+    "@aziontech/storage": "latest",
     "@ai-sdk/openai": "^2.0.102",
     "@ai-sdk/provider": "2.0.0",
     "@ai-sdk/react": "2.0.26",
@@ -37,7 +38,6 @@
     "@radix-ui/react-visually-hidden": "^1.2.4",
     "@vercel/functions": "^2.2.13",
     "ai": "~5.0.170",
-    "azion": "latest",
     "bcrypt-ts": "^5.0.3",
     "class-variance-authority": "^0.7.1",
     "classnames": "^2.5.1",
@@ -86,7 +86,6 @@
     "zod": "^3.25.76"
   },
   "devDependencies": {
-    "@aziontech/opennextjs-azion": "^1.1.2",
     "@biomejs/biome": "2.2.2",
     "@playwright/test": "^1.59.1",
     "@tailwindcss/postcss": "^4.2.2",

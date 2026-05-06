@@ -28,7 +28,6 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@aziontech/opennextjs-azion": "^1.1.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

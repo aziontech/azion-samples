@@ -1,12 +1,14 @@
 import { NextResponse } from "next/server";
-import { createObject } from "azion/storage";
+import { createObject } from "@aziontech/storage";
 import { z } from "zod";
 
 import { auth } from "@/app/(auth)/auth";
 import { isLocalhost } from "@/lib/utils";
 
-const BUCKET_NAME = process.env.AZION_BUCKET_NAME || (globalThis as any).AZION_BUCKET_NAME;
-const BUCKET_PREFIX = process.env.AZION_BUCKET_PREFIX || (globalThis as any).AZION_BUCKET_PREFIX;
+const BUCKET_NAME =
+  process.env.AZION_BUCKET_NAME || (globalThis as any).AZION_BUCKET_NAME;
+const BUCKET_PREFIX =
+  process.env.AZION_BUCKET_PREFIX || (globalThis as any).AZION_BUCKET_PREFIX;
 
 // Use Blob instead of File since File is not available in Node.js environment
 const FileSchema = z.object({
@@ -56,7 +58,7 @@ export async function POST(request: Request) {
 
     try {
       const nameFile = `${BUCKET_PREFIX}/${prefix}/${filename}`;
-      
+
       const fileArrayBuffer = await file.arrayBuffer();
 
       const result = await createObject({
@@ -73,13 +75,13 @@ export async function POST(request: Request) {
       }
 
       const url = new URL(request.url);
-      const protocol = isLocalhost(request.url) ? 'http' : 'https';
+      const protocol = isLocalhost(request.url) ? "http" : "https";
       const publicUrl = `${protocol}://${url.host}/${prefix}/${filename}`;
-      
+
       const uploadResult = {
         url: publicUrl,
         contentType: file.type,
-        pathname: nameFile
+        pathname: nameFile,
       };
       return NextResponse.json(uploadResult);
     } catch (_error) {
@@ -88,7 +90,7 @@ export async function POST(request: Request) {
   } catch (_error) {
     return NextResponse.json(
       { error: "Failed to process request" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

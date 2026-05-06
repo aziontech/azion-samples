@@ -33,8 +33,9 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@nuxtjs/i18n",
     "@nuxt/image",
+    "@nuxtjs/sitemap",
+    "@nuxtjs/robots",
   ],
-  extends: ["nuxt-seo-kit"],
   tailwindcss: {
     configPath: "./tailwind.config.js",
     cssPath: "./assets/css/styles.scss",
@@ -56,31 +57,24 @@ export default defineNuxtConfig({
   },
   colorMode: { classSuffix: "" },
   i18n: {
+    restructureDir: false,
     locales: [
       {
         code: "en",
-        file: "en.json",
+        files: ["en.json"],
       },
       {
         code: "fr",
-        file: "fr.json",
+        files: ["fr.json"],
       },
     ],
-    vueI18n: {
-      legacy: false,
-      locale: "en",
-      messages: {
-        en: {
-          welcome: "Welcome",
-        },
-        fr: {
-          welcome: "Bienvenue",
-        },
-      },
-    },
     langDir: "locales",
     lazy: true,
     defaultLocale: "en",
+    strategy: "no_prefix",
+    compilation: {
+      strictMessage: false,
+    },
   },
   runtimeConfig: {
     public: {
@@ -91,7 +85,10 @@ export default defineNuxtConfig({
       language: "en",
     },
   },
-  image: {
-    provider: "azion", // Use your own provider!
+  nitro: {
+    preset: require.resolve("@aziontech/presets/nuxt/ssr"),
+    rollupConfig: {
+      external: ["jsdom"],
+    },
   },
 });

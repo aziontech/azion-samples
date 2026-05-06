@@ -20,8 +20,5 @@
     "gulp-rename": "^1.4.0",
     "gulp-shell": "^0.6.5",
     "gulp-uglify": "^2.1.2"
-  },
-  "dependencies": {
-    "azion": "latest"
   }
 }

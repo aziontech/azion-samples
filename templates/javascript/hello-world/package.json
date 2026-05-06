@@ -13,8 +13,5 @@
     "azion"
   ],
   "author": "azion",
-  "license": "MIT",
-  "dependencies": {
-    "azion": "latest"
-  }
+  "license": "MIT"
 }

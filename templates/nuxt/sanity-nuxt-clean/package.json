@@ -11,7 +11,6 @@
   "devDependencies": {
     "@sanity/types": "^3.50.0",
     "@types/node": "^18.17.14",
-    "azion": "latest",
     "nuxt": "^3.21.1",
     "postcss": "^8.4.39",
     "postcss-nested": "^6.0.1"

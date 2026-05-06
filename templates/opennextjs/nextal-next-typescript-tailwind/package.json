@@ -45,7 +45,6 @@
   },
   "dependencies": {
     "@heroicons/react": "2.1.1",
-    "azion": "latest",
     "classnames": "2.5.1",
     "next": "^15.5.15",
     "react": "18.2.0",

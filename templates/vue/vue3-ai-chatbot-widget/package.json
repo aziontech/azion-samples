@@ -11,7 +11,6 @@
   "dependencies": {
     "@clerk/clerk-js": "^5.125.9",
     "axios": "^1.15.1",
-    "azion": "latest",
     "azion-theme": "^1.20.0",
     "highlight.js": "^11.11.1",
     "marked": "^15.0.12",

@@ -26,7 +26,6 @@
     "@vuepress/plugin-markdown-math": "2.0.0-rc.61",
     "@vuepress/plugin-shiki": "2.0.0-rc.61",
     "@vuepress/theme-default": "2.0.0-rc.61",
-    "azion": "latest",
     "github-slugger": "^2.0.0",
     "katex": "^0.16.45",
     "mermaid": "^11.14.0",
