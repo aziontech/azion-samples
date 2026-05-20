@@ -22,9 +22,8 @@
     "@webcomponents/template-shadowroot": "^0.2.1",
     "astro": "^5.18.1",
     "astro-icon": "^1.1.5",
-    
-    "date-fns": "^4.1.0",
-    "lit": "^3.3.2",
+    "date-fns": "^4.2.1",
+    "lit": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1"
   }
 }
