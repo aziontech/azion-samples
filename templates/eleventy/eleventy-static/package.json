@@ -40,8 +40,5 @@
 		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
 		"luxon": "^3.7.2",
 		"markdown-it-anchor": "^8.6.7"
-	},
-	"dependencies": {
-		"azion": "latest"
 	}
 }
