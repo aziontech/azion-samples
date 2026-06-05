@@ -1,12 +1,17 @@
 import { useEffect, useState } from 'react'
 
-export type Provider = 'openai' | 'anthropic'
+export type Provider = 'openai' | 'anthropic' | 'copilot-azion'
+
+export type AzionAuthType = 'cookie' | 'token'
 
 export interface Settings {
   provider: Provider
   model: string
   apiKey: string
+  azionAuthType: AzionAuthType
 }
+
+const AZION_MODELS = ['azion-copilot']
 
 const OPENAI_MODELS = [
   'gpt-5.5',
@@ -31,11 +36,13 @@ const ANTHROPIC_MODELS = [
 export const MODELS: Record<Provider, string[]> = {
   openai: OPENAI_MODELS,
   anthropic: ANTHROPIC_MODELS,
+  'copilot-azion': AZION_MODELS,
 }
 
 const DEFAULT_MODELS: Record<Provider, string> = {
   openai: 'gpt-5.5',
   anthropic: 'claude-sonnet-4-6',
+  'copilot-azion': 'azion-copilot',
 }
 
 function load<T>(key: string, fallback: T): T {
@@ -55,14 +62,17 @@ export function useSettings() {
   const [provider, setProviderState] = useState<Provider>('openai')
   const [model, setModelState] = useState<string>(DEFAULT_MODELS['openai'])
   const [apiKey, setApiKeyState] = useState<string>('')
+  const [azionAuthType, setAzionAuthTypeState] = useState<AzionAuthType>('cookie')
 
   useEffect(() => {
     const savedProvider = load<Provider>('ai_provider', 'openai')
     const savedModel = load<string>('ai_model', DEFAULT_MODELS[savedProvider])
     const savedApiKey = load<string>('ai_key', '')
+    const savedAzionAuthType = load<AzionAuthType>('azion_auth_type', 'cookie')
     setProviderState(savedProvider)
     setModelState(savedModel)
     setApiKeyState(savedApiKey)
+    setAzionAuthTypeState(savedAzionAuthType)
   }, [])
 
   function setProvider(p: Provider) {
@@ -83,5 +93,10 @@ export function useSettings() {
     save('ai_key', k)
   }
 
-  return { provider, model, apiKey, setProvider, setModel, setApiKey }
+  function setAzionAuthType(t: AzionAuthType) {
+    setAzionAuthTypeState(t)
+    save('azion_auth_type', t)
+  }
+
+  return { provider, model, apiKey, azionAuthType, setProvider, setModel, setApiKey, setAzionAuthType }
 }

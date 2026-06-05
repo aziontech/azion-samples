@@ -26,7 +26,7 @@
     "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {
-    "@aziontech/presets": "https://pkg.pr.new/aziontech/lib/@aziontech/presets@1cc1269",
+    "@aziontech/presets": "https://pkg.pr.new/aziontech/lib/@aziontech/presets@main",
     "@tailwindcss/vite": "^4.2.2",
     "@types/node": "^22.5.4",
     "@types/react": "^19.0.8",

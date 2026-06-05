@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import type { Provider, Settings } from '../hooks/useSettings'
+import type { Provider, AzionAuthType, Settings } from '../hooks/useSettings'
 import { MODELS } from '../hooks/useSettings'
 
 interface Props {
@@ -9,6 +9,7 @@ interface Props {
     setProvider: (p: Provider) => void
     setModel: (m: string) => void
     setApiKey: (k: string) => void
+    setAzionAuthType: (t: AzionAuthType) => void
   }
 }
 
@@ -107,9 +108,10 @@ export function SettingsDrawer({ open, onClose, settings }: Props) {
             >
               Provider
             </p>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
-              {(['openai', 'anthropic'] as Provider[]).map((p) => {
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '8px' }}>
+              {(['openai', 'anthropic', 'copilot-azion'] as Provider[]).map((p) => {
                 const active = settings.provider === p
+                const label = p === 'openai' ? 'OpenAI' : p === 'anthropic' ? 'Anthropic' : 'Azion'
                 return (
                   <button
                     key={p}
@@ -143,57 +145,118 @@ export function SettingsDrawer({ open, onClose, settings }: Props) {
                       }
                     }}
                   >
-                    {p === 'openai' ? 'OpenAI' : 'Anthropic'}
+                    {label}
                   </button>
                 )
               })}
             </div>
           </div>
 
-          {/* Model */}
-          <div>
-            <p
-              style={{
-                fontFamily: 'monospace',
-                fontSize: '10px',
-                color: '#4D4D4D',
-                letterSpacing: '0.1em',
-                textTransform: 'uppercase',
-                marginBottom: '10px',
-              }}
-            >
-              Model
-            </p>
-            <select
-              value={settings.model}
-              onChange={(e) => settings.setModel(e.target.value)}
-              style={{
-                width: '100%',
-                background: '#1A1A1A',
-                border: '0.8px solid rgba(255,255,255,0.1)',
-                borderRadius: '4px',
-                padding: '10px 12px',
-                fontSize: '13px',
-                fontFamily: "'Sora', sans-serif",
-                color: '#FCFCFC',
-                outline: 'none',
-                cursor: 'pointer',
-                appearance: 'none',
-                backgroundImage: `url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23666666' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")`,
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'right 12px center',
-                paddingRight: '32px',
-              }}
-              onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(254,96,31,0.4)' }}
-              onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)' }}
-            >
-              {MODELS[settings.provider].map((m) => (
-                <option key={m} value={m} style={{ background: '#1A1A1A' }}>
-                  {m}
-                </option>
-              ))}
-            </select>
-          </div>
+          {/* Auth Type — only for Azion Copilot */}
+          {settings.provider === 'copilot-azion' && (
+            <div>
+              <p
+                style={{
+                  fontFamily: 'monospace',
+                  fontSize: '10px',
+                  color: '#4D4D4D',
+                  letterSpacing: '0.1em',
+                  textTransform: 'uppercase',
+                  marginBottom: '10px',
+                }}
+              >
+                Auth Type
+              </p>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
+                {(['cookie', 'token'] as AzionAuthType[]).map((t) => {
+                  const active = settings.azionAuthType === t
+                  return (
+                    <button
+                      key={t}
+                      onClick={() => settings.setAzionAuthType(t)}
+                      style={{
+                        padding: '8px 12px',
+                        borderRadius: '4px',
+                        fontSize: '12px',
+                        fontFamily: 'monospace',
+                        letterSpacing: '0.04em',
+                        border: active
+                          ? '0.8px solid rgba(254,96,31,0.6)'
+                          : '0.8px solid rgba(255,255,255,0.08)',
+                        background: active
+                          ? 'rgba(254,96,31,0.12)'
+                          : 'rgba(255,255,255,0.03)',
+                        color: active ? '#FF8E4D' : '#666666',
+                        cursor: 'pointer',
+                        transition: 'all 0.15s ease',
+                      }}
+                      onMouseEnter={(e) => {
+                        if (!active) {
+                          e.currentTarget.style.borderColor = 'rgba(255,255,255,0.16)'
+                          e.currentTarget.style.color = '#B2B2B2'
+                        }
+                      }}
+                      onMouseLeave={(e) => {
+                        if (!active) {
+                          e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'
+                          e.currentTarget.style.color = '#666666'
+                        }
+                      }}
+                    >
+                      {t === 'cookie' ? 'Cookie (azsid)' : 'API Token'}
+                    </button>
+                  )
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* Model — hidden for Azion Copilot (single model, no selection needed) */}
+          {settings.provider !== 'copilot-azion' && (
+            <div>
+              <p
+                style={{
+                  fontFamily: 'monospace',
+                  fontSize: '10px',
+                  color: '#4D4D4D',
+                  letterSpacing: '0.1em',
+                  textTransform: 'uppercase',
+                  marginBottom: '10px',
+                }}
+              >
+                Model
+              </p>
+              <select
+                value={settings.model}
+                onChange={(e) => settings.setModel(e.target.value)}
+                style={{
+                  width: '100%',
+                  background: '#1A1A1A',
+                  border: '0.8px solid rgba(255,255,255,0.1)',
+                  borderRadius: '4px',
+                  padding: '10px 12px',
+                  fontSize: '13px',
+                  fontFamily: "'Sora', sans-serif",
+                  color: '#FCFCFC',
+                  outline: 'none',
+                  cursor: 'pointer',
+                  appearance: 'none',
+                  backgroundImage: `url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23666666' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")`,
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'right 12px center',
+                  paddingRight: '32px',
+                }}
+                onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(254,96,31,0.4)' }}
+                onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)' }}
+              >
+                {(MODELS[settings.provider] ?? []).map((m) => (
+                  <option key={m} value={m} style={{ background: '#1A1A1A' }}>
+                    {m}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
 
           {/* API Key */}
           <div>
@@ -207,14 +270,21 @@ export function SettingsDrawer({ open, onClose, settings }: Props) {
                 marginBottom: '10px',
               }}
             >
-              API Key
+              {settings.provider === 'copilot-azion'
+                ? settings.azionAuthType === 'cookie' ? 'Cookie (azsid)' : 'API Token'
+                : 'API Key'}
             </p>
             <div style={{ position: 'relative' }}>
               <input
                 type={showKey ? 'text' : 'password'}
                 value={settings.apiKey}
                 onChange={(e) => settings.setApiKey(e.target.value)}
-                placeholder={settings.provider === 'openai' ? 'sk-…' : 'sk-ant-…'}
+                placeholder={
+                  settings.provider === 'openai' ? 'sk-…'
+                  : settings.provider === 'anthropic' ? 'sk-ant-…'
+                  : settings.azionAuthType === 'cookie' ? 'azsid cookie value'
+                  : 'API token'
+                }
                 style={{
                   width: '100%',
                   background: '#1A1A1A',
@@ -338,8 +408,8 @@ export function SettingsDrawer({ open, onClose, settings }: Props) {
               }}
             >
               {settings.apiKey
-                ? `READY · ${settings.provider === 'openai' ? 'OPENAI' : 'ANTHROPIC'} / ${settings.model}`
-                : 'ENTER AN API KEY TO START'}
+                ? `READY · ${settings.provider === 'openai' ? 'OPENAI' : settings.provider === 'anthropic' ? 'ANTHROPIC' : 'AZION'}${settings.provider !== 'copilot-azion' ? ` / ${settings.model}` : ''}`
+                : settings.provider === 'copilot-azion' ? 'ENTER THE AZSID COOKIE TO START' : 'ENTER AN API KEY TO START'}
             </span>
           </div>
         </div>

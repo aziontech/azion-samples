@@ -8,13 +8,14 @@ import {
   useConversationHistory,
   type SavedConversation,
 } from "../hooks/useConversationHistory";
-import type { Settings, Provider } from "../hooks/useSettings";
+import type { Settings, Provider, AzionAuthType } from "../hooks/useSettings";
 
 interface Props {
   settings: Settings & {
     setProvider: (p: Provider) => void;
     setModel: (m: string) => void;
     setApiKey: (k: string) => void;
+    setAzionAuthType: (t: AzionAuthType) => void;
   };
 }
 
@@ -48,6 +49,7 @@ export function ChatPanel({ settings }: Props) {
         "X-Api-Key": settingsRef.current.apiKey,
         "X-Provider": settingsRef.current.provider,
         "X-Model": settingsRef.current.model,
+        "X-Azion-Auth-Type": settingsRef.current.azionAuthType,
       },
     })),
   ).current;
@@ -360,8 +362,8 @@ export function ChatPanel({ settings }: Props) {
                       fontFamily: "'Sora', sans-serif",
                     }}
                   >
-                    {settings.provider === "openai" ? "OpenAI" : "Anthropic"} ·{" "}
-                    {settings.model}
+                    {settings.provider === "openai" ? "OpenAI" : settings.provider === "anthropic" ? "Anthropic" : "Azion Copilot"}
+                    {settings.provider !== "copilot-azion" && ` · ${settings.model}`}
                   </span>
                 </div>
 
