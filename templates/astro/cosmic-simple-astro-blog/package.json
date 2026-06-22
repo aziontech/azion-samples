@@ -11,21 +11,21 @@
     "lint": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\" && eslint --fix \"src/**/*.{js,ts,jsx,tsx,astro}\""
   },
   "dependencies": {
-    "@astrojs/react": "^4.4.2",
-    "@astrojs/tailwind": "^6.0.2",
+    "@astrojs/react": "^6.0.0",
     "@astrojs/ts-plugin": "^1.10.9",
     "@cosmicjs/sdk": "^1.8.0",
-    "astro": "^5.18.1",
+    "@tailwindcss/vite": "^4.3.1",
+    "astro": "^6.4.8",
     "date-fns": "^2.30.0",
     "react-markdown": "^8.0.7",
     "sharp": "^0.32.6",
-    "tailwindcss": "^3.4.19"
+    "tailwindcss": "^4.3.1"
   },
   "devDependencies": {
-    "@types/node": "^18.19.130",
+    "@types/node": "^22.10.0",
     "@typescript-eslint/parser": "^8.59.4",
-    "astro-robots-txt": "^0.3.12",
-    "eslint": "^10.4.0",
+    "astro-robots-txt": "^1.0.0",
+    "eslint": "^9.39.0",
     "eslint-plugin-astro": "^1.7.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "prettier": "^2.8.8",
@@ -35,5 +35,8 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "typescript": "^5.9.3"
+  },
+  "overrides": {
+    "vite": "^7.3.2"
   }
 }
