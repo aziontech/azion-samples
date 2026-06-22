@@ -6,7 +6,7 @@ import { Image } from 'astro:assets'
 import { parseISO, format } from 'date-fns'
 import Author from '../../components/Author.astro'
 const config = await getConfig()
-const defaultMetaImage = config.metadata.og_image.imgix_url
+const defaultMetaImage = config?.metadata.og_image?.imgix_url
 import { getFeaturedPost } from '../../lib/cosmic'
 
 interface Props {
@@ -103,7 +103,7 @@ const featuredPost = await getFeaturedPost()
           alt={`Cover image for the blog ${post.title}`}
           class={'my-12 rounded-md shadow-lg'}
           transition:name={
-            post.title === featuredPost.title ? 'cover image' : 'void'
+            post.title === featuredPost?.title ? 'cover image' : 'void'
           }
           transition:persist
         />

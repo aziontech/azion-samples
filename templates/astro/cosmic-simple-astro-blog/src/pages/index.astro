@@ -63,7 +63,7 @@ export interface Post {
             title={post.title}
             href={post.slug}
             body={post.metadata.excerpt}
-            tags={post.metadata.tags.map((tag) => tag)}
+            tags={post.metadata.tags?.map((tag) => tag)}
           />
         ))
       }
