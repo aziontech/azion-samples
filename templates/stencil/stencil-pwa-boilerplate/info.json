@@ -1,7 +1,0 @@
-{
-  "name": "Stencil PWA Boilerplate",
-  "message": "Ionic PWA starter with tabs layout and routes",
-  "preset": "stencil",
-  "mode": "deliver",
-  "path": "/stencil-pwa-boilerplate"
-}

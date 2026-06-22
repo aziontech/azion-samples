@@ -1,7 +1,0 @@
-{
-  "name": "Next JS Pages + Configurations",
-  "message": "Build a new Next.js application including Pages Router format and custom configurations",
-  "preset": "next",
-  "mode": "compute",
-  "path": "/nextjs-pages-13-5-9-config"
-}

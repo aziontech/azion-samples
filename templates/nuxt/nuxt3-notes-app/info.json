@@ -1,8 +1,0 @@
-{
-  "name": "Nuxt 3 Notes App",
-  "message": "A minimal Nuxt 3 application to take notes and save them in the localstorage",
-  "preset": "nuxt",
-  "mode": "deliver",
-  "path": "/nuxt3-notes-app"
-}
-

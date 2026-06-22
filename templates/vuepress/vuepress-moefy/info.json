@@ -1,8 +1,0 @@
-{
-  "name": "VuePress Moefy",
-  "message": "Create a VuePress website with animations",
-  "preset": "vuepress",
-  "mode": "deliver",
-  "path": "/vuepress-moefy"
-}
-
