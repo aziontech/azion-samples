@@ -10,7 +10,7 @@ const allLetters = await getCollection("letters");
   <nav class={flex({ direction: "column", gap: "4" })}>
     {
       allLetters.map((p) => (
-        <a href={`/letters/${p.slug}`}>
+        <a href={`/letters/${p.id}`}>
           {p.data.company} - {p.data.title}
         </a>
       ))

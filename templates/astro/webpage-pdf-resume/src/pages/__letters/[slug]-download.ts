@@ -5,7 +5,7 @@ import puppeteer from "puppeteer";
 export async function getStaticPaths() {
   const letters = await getCollection("letters");
   return letters.map((entry) => ({
-    params: { slug: entry.slug },
+    params: { slug: entry.id },
     props: { entry },
   }));
 }
