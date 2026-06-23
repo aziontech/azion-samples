@@ -13,9 +13,9 @@
     "create-pdf-hook": "bun ./scripts/create-pdf.ts"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.10",
+    "@astrojs/check": "^0.9.9",
     "@fontsource-variable/rubik": "^5.0.21",
-    "astro": "^5.18.0",
+    "astro": "^6.4.8",
     "astro-dev-only-routes": "^0.0.2",
     
     "typescript": "^5.4.5"

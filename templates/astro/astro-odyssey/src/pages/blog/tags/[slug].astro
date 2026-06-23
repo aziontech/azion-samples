@@ -5,7 +5,11 @@ import {generateTagData} from '../../../utils/helpers.js'
 
 
 export async function getStaticPaths() {
-  const allPosts = await Astro.glob('../posts/*.mdx');
+  const postModules = import.meta.glob('../posts/*.mdx', { eager: true });
+  const allPosts = Object.entries(postModules).map(([path, { frontmatter }]) => ({
+    frontmatter,
+    url: `/blog/posts/${path.split('/').pop().replace(/\.mdx$/, '')}`,
+  }));
   const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
   const allCategoriesUnique = new Set();
   

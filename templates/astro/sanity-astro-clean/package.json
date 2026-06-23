@@ -10,11 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "0.7.0",
-    "@astrojs/react": "3.6.0",
-    "@sanity/astro": "^3.2.10",
+    "@astrojs/check": "^0.9.9",
+    "@astrojs/react": "^5.0.7",
+    "@sanity/astro": "^3.4.1",
     "@sanity/image-url": "1.0.2",
-    "astro": "^5.18.0",
+    "astro": "^6.4.8",
     "astro-portabletext": "0.10.0",
     "autoprefixer": "10.4.19",
     "groq": "3.48.1",
