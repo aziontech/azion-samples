@@ -2,6 +2,7 @@ import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
+  standalone: false,
   selector: 'app-categories',
   templateUrl: './categories.component.html'
 })

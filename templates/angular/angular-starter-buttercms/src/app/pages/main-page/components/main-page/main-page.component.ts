@@ -4,6 +4,7 @@ import {ActivatedRoute} from '@angular/router';
 import {Meta, Title} from '@angular/platform-browser';
 
 @Component({
+  standalone: false,
   selector: 'app-main-page',
   templateUrl: './main-page.component.html'
 })

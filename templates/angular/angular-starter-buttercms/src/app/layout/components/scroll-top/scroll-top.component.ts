@@ -1,6 +1,7 @@
 import {Component, HostListener} from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'app-scroll-top',
   templateUrl: './scroll-top.component.html'
 })
