@@ -3,6 +3,7 @@ import { Post } from 'src/types';
 
 @Component({
   selector: 'app-card',
+  standalone: false,
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css'],
 })

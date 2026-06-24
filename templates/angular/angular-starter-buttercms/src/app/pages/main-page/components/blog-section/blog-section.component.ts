@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
+  standalone: false,
   selector: 'app-blog-section',
   templateUrl: './blog-section.component.html'
 })

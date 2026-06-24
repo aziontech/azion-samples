@@ -3,6 +3,7 @@ import {NavigationEnd, Router} from '@angular/router';
 import {filter} from 'rxjs/operators';
 
 @Component({
+  standalone: false,
   selector: 'app-header',
   templateUrl: './header.component.html'
 })

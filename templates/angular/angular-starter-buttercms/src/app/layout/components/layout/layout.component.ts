@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ButtercmssdkService} from '../../../services/buttercmssdk.service';
 
 @Component({
+  standalone: false,
   selector: 'app-layout',
   templateUrl: './layout.component.html'
 })

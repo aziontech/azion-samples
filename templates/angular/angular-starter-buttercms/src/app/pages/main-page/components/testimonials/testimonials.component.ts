@@ -2,6 +2,7 @@ import {AfterViewInit, Component, Input} from '@angular/core';
 import {tns} from 'tiny-slider';
 
 @Component({
+  standalone: false,
   selector: 'app-testimonials',
   templateUrl: './testimonials.component.html'
 })

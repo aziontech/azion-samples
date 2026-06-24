@@ -5,6 +5,7 @@ import { Post } from 'src/types';
 
 @Component({
   selector: 'app-post',
+  standalone: false,
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.css'],
 })

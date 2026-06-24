@@ -1,6 +1,7 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'app-search',
   templateUrl: './search.component.html'
 })

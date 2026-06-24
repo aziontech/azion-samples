@@ -12,6 +12,7 @@ enum BLOG_TYPE {
 }
 
 @Component({
+  standalone: false,
   selector: 'app-blog',
   templateUrl: './blog.component.html'
 })

@@ -4,7 +4,7 @@ The **Clean Angular + Sanity application** template creates an [Angular](https:/
 
 This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [How to deploy a web application based on Clean Angular + Sanity application](https://www.azion.com//en/documentation/products/guides/clean-angular-sanity/) guide.
 
-This template uses Angular version `16.0.1`.
+This template uses Angular version `22.0.2`.
 
 ---
 
