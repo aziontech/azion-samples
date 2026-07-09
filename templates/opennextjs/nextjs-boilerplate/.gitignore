@@ -42,3 +42,7 @@ next-env.d.ts
 
 # opennextjs
 .open-next
+#Paths added by Azion CLI
+.edge/
+.vulcan
+.open-next

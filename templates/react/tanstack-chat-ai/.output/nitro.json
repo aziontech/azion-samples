@@ -1,0 +1,18 @@
+{
+  "date": "2026-06-08T15:39:42.243Z",
+  "preset": "base-worker",
+  "framework": {
+    "name": "nitro",
+    "version": "3.0.1-20260605-145636-4ab22a9d"
+  },
+  "versions": {
+    "nitro": "3.0.1-20260605-145636-4ab22a9d"
+  },
+  "serverEntry": "server/index.mjs",
+  "publicDir": "public",
+  "commands": {
+    "preview": "azion dev -p 3000",
+    "deploy": "azion deploy --local"
+  },
+  "config": {}
+}

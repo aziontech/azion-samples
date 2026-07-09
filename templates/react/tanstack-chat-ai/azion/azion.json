@@ -1,0 +1,83 @@
+{
+  "name": "insightful-aphrodite",
+  "bucket": "insightful-aphrodite",
+  "preset": "nitro",
+  "env": "production",
+  "prefix": "20260608123921",
+  "rotate-prefix": true,
+  "not-first-run": true,
+  "function": [
+    {
+      "id": 52956,
+      "name": "insightful-aphrodite",
+      "file": "",
+      "args": "./azion/args.json",
+      "instance-id": 47303,
+      "instance-name": "",
+      "cache-id": 0
+    }
+  ],
+  "application": {
+    "id": 1780938791,
+    "name": "insightful-aphrodite"
+  },
+  "domain": {
+    "id": 0,
+    "name": "__DEFAULT__",
+    "domain_name": "",
+    "url": ""
+  },
+  "rt-purge": {
+    "purge_on_publish": true
+  },
+  "origin": null,
+  "rules-engine": {
+    "created": false,
+    "rules": [
+      {
+        "id": 573746,
+        "name": "Redirect to index.html for Subpaths",
+        "phase": "request"
+      },
+      {
+        "id": 573747,
+        "name": "Redirect to index.html",
+        "phase": "request"
+      },
+      {
+        "id": 573748,
+        "name": "Deliver Static Assets and set cache policy",
+        "phase": "request"
+      },
+      {
+        "id": 573749,
+        "name": "Execute Nitro Function",
+        "phase": "request"
+      }
+    ]
+  },
+  "cache-settings": [
+    {
+      "id": 287276,
+      "name": "insightful-aphrodite"
+    }
+  ],
+  "workloads": {
+    "id": 1780933078,
+    "name": "insightful-aphrodite",
+    "domains": [],
+    "url": "https://sq5dzo6bgpe.map.azionedge.net",
+    "deployment_id": [
+      {
+        "id": 220720,
+        "name": "insightful-aphrodite"
+      }
+    ]
+  },
+  "connectors": [
+    {
+      "id": 33607,
+      "name": "insightful-aphrodite"
+    }
+  ]
+}

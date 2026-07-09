@@ -1,0 +1,78 @@
+{
+  "name": "ethereal-meishodoto",
+  "bucket": "ethereal-meishodoto",
+  "preset": "opennextjs",
+  "env": "production",
+  "prefix": "20260608141623",
+  "rotate-prefix": true,
+  "not-first-run": true,
+  "function": [
+    {
+      "id": 52959,
+      "name": "ethereal-meishodoto",
+      "file": "",
+      "args": "./azion/args.json",
+      "instance-id": 47305,
+      "instance-name": "",
+      "cache-id": 0
+    }
+  ],
+  "application": {
+    "id": 1780938795,
+    "name": "ethereal-meishodoto"
+  },
+  "domain": {
+    "id": 0,
+    "name": "__DEFAULT__",
+    "domain_name": "",
+    "url": ""
+  },
+  "rt-purge": {
+    "purge_on_publish": true
+  },
+  "origin": null,
+  "rules-engine": {
+    "created": false,
+    "rules": [
+      {
+        "id": 573764,
+        "name": "Set storage origin for all requests _next_static and set cache policy",
+        "phase": "request"
+      },
+      {
+        "id": 573765,
+        "name": "Deliver Static Assets and set cache policy",
+        "phase": "request"
+      },
+      {
+        "id": 573766,
+        "name": "Execute Function",
+        "phase": "request"
+      }
+    ]
+  },
+  "cache-settings": [
+    {
+      "id": 287280,
+      "name": "ethereal-meishodoto"
+    }
+  ],
+  "workloads": {
+    "id": 1780933090,
+    "name": "ethereal-meishodoto",
+    "domains": [],
+    "url": "https://uviloh6iatm.map.azionedge.net",
+    "deployment_id": [
+      {
+        "id": 220732,
+        "name": "ethereal-meishodoto"
+      }
+    ]
+  },
+  "connectors": [
+    {
+      "id": 33610,
+      "name": "ethereal-meishodoto"
+    }
+  ]
+}
