@@ -8,6 +8,12 @@ node_modules
 dist
 stats.html
 
+# Astro generated types
+.astro
+
+# Lockfiles (not committed in this repo)
+pnpm-lock.yaml
+
 # Favicon generation
 public/favicons
 *.generated.astro

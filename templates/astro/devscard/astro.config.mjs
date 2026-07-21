@@ -1,18 +1,12 @@
-import image from '@astrojs/image';
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from '@tailwindcss/vite';
 import compress from 'astro-compress';
 import { defineConfig } from 'astro/config';
 import { visualizer } from 'rollup-plugin-visualizer';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), image(), compress()],
+  integrations: [compress()],
   vite: {
-    plugins: [visualizer()],
-    resolve: {
-      alias: {
-        'date-fns/locale': 'date-fns/locale/index.js',
-      },
-    },
+    plugins: [tailwindcss(), visualizer()],
   },
 });
