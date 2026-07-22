@@ -17,6 +17,7 @@ interface Props {
     setApiKey: (k: string) => void;
     setAzionAuthType: (t: AzionAuthType) => void;
   };
+  apiUrl?: string;
 }
 
 function newId() {
@@ -30,7 +31,7 @@ const SUGGESTIONS = [
   "Ajude-me a criar",
 ];
 
-export function ChatPanel({ settings }: Props) {
+export function ChatPanel({ settings, apiUrl = "/api/chat" }: Props) {
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [currentConvId, setCurrentConvId] = useState("");
@@ -44,7 +45,7 @@ export function ChatPanel({ settings }: Props) {
   const history = useConversationHistory();
 
   const connection = useRef(
-    fetchServerSentEvents("/api/chat", async () => ({
+    fetchServerSentEvents(apiUrl, async () => ({
       headers: {
         "X-Api-Key": settingsRef.current.apiKey,
         "X-Provider": settingsRef.current.provider,

@@ -1,7 +1,11 @@
 import { useSettings } from '../hooks/useSettings'
 import { ChatPanel } from './ChatPanel'
 
-export function Chat() {
+interface Props {
+  apiUrl?: string
+}
+
+export function Chat({ apiUrl }: Props) {
   const settings = useSettings()
-  return <ChatPanel settings={settings} />
+  return <ChatPanel settings={settings} apiUrl={apiUrl} />
 }
