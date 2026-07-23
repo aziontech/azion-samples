@@ -189,14 +189,6 @@ const canSend = computed(() => !props.disabled && !props.isLoading)
           >
             +
           </button>
-          <button
-            class="inline-flex items-center gap-[var(--spacing-1)] text-body-sm text-[var(--text-muted)] hover:text-[var(--text-default)] bg-transparent border-0 cursor-pointer px-[var(--spacing-2)] py-[var(--spacing-1)] rounded-[var(--shape-elements)] hover:bg-[var(--bg-hover)]"
-          >
-            Auto
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="6 9 12 15 18 9" />
-            </svg>
-          </button>
         </div>
 
         <div class="flex items-center gap-[var(--spacing-1)]">
