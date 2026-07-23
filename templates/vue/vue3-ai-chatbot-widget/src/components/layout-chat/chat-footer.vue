@@ -67,7 +67,7 @@
   const chatWidget = inject('chatWidget')
 
   const chatDisclaimerText = ref(
-    `${chatWidget.title || 'Copilot'} may make mistakes. Consider verifying important information.`
+    `${chatWidget.title || 'Azion Docs Assistant'} answers only questions about Azion documentation. Verify important information.`
   )
 
   const isOverflowTextArea = ref('')

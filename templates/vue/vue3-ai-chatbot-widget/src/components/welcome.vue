@@ -2,7 +2,7 @@
   <div>
     <h1 class="font-roboto text-3xl font-medium leading-9 text-center text-color">
       <template v-if="!title">
-        Welcome to <span class="text-orange-500"> Copilot! </span>
+        Welcome to the <span class="text-orange-500"> Azion Docs Assistant </span>
       </template>
       <template v-else>
         {{ title }}
@@ -18,7 +18,7 @@
     title: String,
     subTitle: {
       type: String,
-      default: 'How can I help you today?'
+      default: 'Ask me anything about Azion documentation.'
     }
   })
 </script>
