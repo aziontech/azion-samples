@@ -7,6 +7,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.azion {
+  font-size: 14px;
+}
+
 html,
 body,
 #app {
