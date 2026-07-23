@@ -38,7 +38,7 @@ function providerLabel(p: Provider) {
 </script>
 
 <template>
-  <div class="fixed inset-0 z-50 flex pointer-events-none" :class="{ 'pointer-events-auto': open }">
+  <div class="fixed inset-0 z-50 flex" :class="open ? 'pointer-events-auto' : 'pointer-events-none'">
     <Transition name="fade">
       <div
         v-if="open"
