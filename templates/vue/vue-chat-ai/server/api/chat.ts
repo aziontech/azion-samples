@@ -51,12 +51,6 @@ function generateId(): string {
   return `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`
 }
 
-function withSystemPrompt(
-  messages: Array<{ role: string; content: string }>,
-): Array<{ role: string; content: string }> {
-  return [{ role: 'system', content: DOCS_ONLY_SYSTEM_PROMPT }, ...messages]
-}
-
 async function* anthropicStream(
   messages: Array<{ role: string; content: string }>,
   model: string,
@@ -166,7 +160,7 @@ async function* azionCopilotStream(
           ? { Cookie: `azsid=${credential}` }
           : { Authorization: `Token ${credential}` }),
       },
-      body: JSON.stringify({ messages: withSystemPrompt(messages), stream: true }),
+      body: JSON.stringify({ messages, stream: true }),
     },
   )
 
@@ -324,11 +318,8 @@ async function chatHandler(request: Request): Promise<Response> {
   const adapter = createOpenaiChatCompletions(resolvedModel as any, apiKey)
   const stream = chat({
     adapter,
-    messages: [
-      { role: 'system', content: DOCS_ONLY_SYSTEM_PROMPT },
-      ...params.messages,
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    ] as any,
+    messages: params.messages,
+    systemPrompts: [DOCS_ONLY_SYSTEM_PROMPT],
     threadId,
     runId,
   })
