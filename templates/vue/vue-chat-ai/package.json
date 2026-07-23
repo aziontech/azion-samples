@@ -1,0 +1,37 @@
+{
+  "name": "vue-chat-ai",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "npm run build:wc && nuxt build",
+    "preview": "nuxt preview",
+    "generate": "nuxt generate",
+    "postinstall": "nuxt prepare",
+    "build:wc": "vite build --config vite.config.wc.ts"
+  },
+  "dependencies": {
+    "@aziontech/icons": "^4.0.0",
+    "@aziontech/theme": "^4.0.0",
+    "@aziontech/webkit": "^4.0.0",
+    "@tanstack/ai": "^0.42.0",
+    "@tanstack/ai-openai": "^0.17.1",
+    "@tanstack/ai-vue": "^0.15.1",
+    "@tanstack/vue-query": "^5.101.4",
+    "markdown-it": "^14.1.0",
+    "nuxt": "^3.14.0",
+    "tailwind-merge": "^3.6.0",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@aziontech/presets": "^1.1.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/markdown-it": "^14.1.2",
+    "@types/node": "^22.5.4",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11"
+  }
+}

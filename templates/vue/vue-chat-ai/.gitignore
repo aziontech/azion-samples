@@ -1,0 +1,18 @@
+# Nuxt
+.nuxt
+.output
+.data
+.env
+.cache
+
+# Node
+node_modules
+*.log
+.DS_Store
+
+# Web component build output
+public/widget
+
+# IDE
+.vscode
+.idea
