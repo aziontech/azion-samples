@@ -150,9 +150,9 @@ async function* azionCopilotStream(
 
   yield { type: 'RUN_STARTED', threadId, runId, timestamp: Date.now() }
 
-  const response = await fetch(
-    'https://ai.azion.com/copilot/chat/completions',
-    {
+  let response: Response
+  try {
+    response = await fetch('https://ai.azion.com/copilot/chat/completions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -161,11 +161,23 @@ async function* azionCopilotStream(
           : { Authorization: `Token ${credential}` }),
       },
       body: JSON.stringify({ messages, stream: true }),
-    },
-  )
+    })
+  } catch (e) {
+    const message = e instanceof Error ? `${e.name}: ${e.message}` : String(e)
+    console.error('[azionCopilotStream] fetch failed', message)
+    yield {
+      type: 'RUN_ERROR',
+      threadId,
+      runId,
+      timestamp: Date.now(),
+      error: { message: `Copilot request failed: ${message}`, code: 'FETCH_FAILED' },
+    }
+    return
+  }
 
   if (!response.ok) {
-    const err = await response.text()
+    const err = await response.text().catch(() => '<unreadable body>')
+    console.error('[azionCopilotStream] non-2xx', response.status, err)
     yield {
       type: 'RUN_ERROR',
       threadId,
@@ -183,40 +195,64 @@ async function* azionCopilotStream(
     timestamp: Date.now(),
   }
 
-  const reader = response.body!.getReader()
-  const decoder = new TextDecoder()
-  let buffer = ''
+  if (!response.body) {
+    yield {
+      type: 'RUN_ERROR',
+      threadId,
+      runId,
+      timestamp: Date.now(),
+      error: { message: 'Copilot response has no body stream', code: 'NO_BODY' },
+    }
+    return
+  }
 
-  while (true) {
-    const { done, value } = await reader.read()
-    if (done) break
-    buffer += decoder.decode(value, { stream: true })
-    const lines = buffer.split('\n')
-    buffer = lines.pop() ?? ''
+  try {
+    const reader = response.body.getReader()
+    const decoder = new TextDecoder()
+    let buffer = ''
 
-    for (const line of lines) {
-      const trimmed = line.trim()
-      if (!trimmed.startsWith('data:')) continue
+    while (true) {
+      const { done, value } = await reader.read()
+      if (done) break
+      buffer += decoder.decode(value, { stream: true })
+      const lines = buffer.split('\n')
+      buffer = lines.pop() ?? ''
 
-      const raw = trimmed.slice(5).trim()
-      if (raw === '[DONE]') break
+      for (const line of lines) {
+        const trimmed = line.trim()
+        if (!trimmed.startsWith('data:')) continue
 
-      try {
-        const chunk = JSON.parse(raw)
-        const delta = chunk?.choices?.[0]?.delta?.content
-        if (delta) {
-          yield {
-            type: 'TEXT_MESSAGE_CONTENT',
-            messageId: msgId,
-            delta,
-            timestamp: Date.now(),
+        const raw = trimmed.slice(5).trim()
+        if (raw === '[DONE]') break
+
+        try {
+          const chunk = JSON.parse(raw)
+          const delta = chunk?.choices?.[0]?.delta?.content
+          if (delta) {
+            yield {
+              type: 'TEXT_MESSAGE_CONTENT',
+              messageId: msgId,
+              delta,
+              timestamp: Date.now(),
+            }
           }
+          if (chunk?.choices?.[0]?.finish_reason === 'stop') break
+        } catch {
+          /* skip malformed chunks */
         }
-        if (chunk?.choices?.[0]?.finish_reason === 'stop') break
-      } catch {
-        /* skip malformed chunks */
       }
     }
+  } catch (e) {
+    const message = e instanceof Error ? `${e.name}: ${e.message}` : String(e)
+    console.error('[azionCopilotStream] stream read failed', message)
+    yield {
+      type: 'RUN_ERROR',
+      threadId,
+      runId,
+      timestamp: Date.now(),
+      error: { message: `Stream read failed: ${message}`, code: 'STREAM_READ_FAILED' },
+    }
+    return
   }
 
   yield { type: 'TEXT_MESSAGE_END', messageId: msgId, timestamp: Date.now() }
