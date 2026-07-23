@@ -16,3 +16,9 @@ public/widget
 # IDE
 .vscode
 .idea
+# Paths added by Azion CLI
+.edge/
+.vulcan
+.open-next
+# Local Azion project state (per-deploy IDs)
+azion/
