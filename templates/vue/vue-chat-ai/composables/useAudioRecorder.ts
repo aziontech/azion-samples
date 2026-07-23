@@ -1,10 +1,18 @@
 import { onMounted, ref } from 'vue'
 
+type SpeechRecognitionEventLike = {
+  resultIndex: number
+  results: ArrayLike<{
+    isFinal: boolean
+    0: { transcript: string }
+  }>
+}
+
 type SpeechRec = {
   continuous: boolean
   interimResults: boolean
   lang: string
-  onresult: ((e: any) => void) | null
+  onresult: ((e: SpeechRecognitionEventLike) => void) | null
   onerror: (() => void) | null
   onend: (() => void) | null
   start(): void
@@ -38,12 +46,14 @@ export function useAudioRecorder(onTranscript: (text: string) => void) {
     instance.interimResults = false
     instance.lang = navigator.language || 'pt-BR'
 
-    instance.onresult = (e: any) => {
-      const transcript = Array.from(e.results as any[])
-        .map((r: any) => r[0].transcript)
-        .join(' ')
-        .trim()
-      if (transcript) onTranscript(transcript)
+    instance.onresult = (e) => {
+      let delta = ''
+      for (let i = e.resultIndex; i < e.results.length; i++) {
+        const result = e.results[i]
+        if (result.isFinal) delta += result[0].transcript
+      }
+      const trimmed = delta.trim()
+      if (trimmed) onTranscript(trimmed)
     }
     instance.onerror = () => {
       isRecording.value = false
