@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import tailwindcss from '@tailwindcss/vite'
 import { fileURLToPath, URL } from 'node:url'
 
 // Standalone build of the chat UI as a <azion-chat-widget> custom element,
@@ -9,10 +10,15 @@ import { fileURLToPath, URL } from 'node:url'
 // Run with: pnpm build:wc
 export default defineConfig({
   plugins: [
+    tailwindcss(),
     vue({
-      // Only files matching *.ce.vue are compiled as custom elements;
-      // sub-components (Chat.vue, ChatPanel.vue, ...) stay as normal SFCs.
-      customElement: /\.ce\.vue$/,
+      // Every SFC in this build is compiled in customElement mode (not just
+      // ChatCE.ce.vue) so each nested component's <style> — including the
+      // Tailwind utility classes Vue's compiler resolves for it — is
+      // collected as an inlined style string and injected into the widget's
+      // shadow root, instead of being extracted into an external stylesheet
+      // that a shadow DOM boundary would never load.
+      customElement: /\.vue$/,
     }),
   ],
   resolve: {

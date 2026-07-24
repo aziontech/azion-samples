@@ -5,7 +5,9 @@ defineProps<{ apiUrl?: string }>()
 </script>
 
 <template>
-  <div class="azion-chat-widget-root">
+  <!-- @aziontech/theme scopes its CSS vars to `:root`/[data-theme], and `:root`
+       never matches inside a shadow tree — set it here instead. -->
+  <div class="azion-chat-widget-root" data-theme="dark">
     <Chat :api-url="apiUrl" />
   </div>
 </template>
