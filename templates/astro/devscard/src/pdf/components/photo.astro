@@ -1,6 +1,6 @@
 ---
 import type { Photo } from '@/types/shared';
-import { Image } from '@astrojs/image/components';
+import { Image } from 'astro:assets';
 
 export interface Props {
   src: Photo;
@@ -10,15 +10,16 @@ export interface Props {
   height?: number;
 }
 
-const { src, ...props } = Astro.props;
+const { src, class: className, ...props } = Astro.props;
 
 const isRemoteImage = typeof src === 'string';
 ---
 
 {
   isRemoteImage ? (
-    <img src={src} {...props} />
+    <img src={src} class={className} {...props} />
   ) : (
-    <Image format="webp" fit="cover" loading="eager" src={src} {...props} />
+    // `object-cover` replaces the removed `fit="cover"` from @astrojs/image (astro:assets crops via CSS).
+    <Image format="webp" loading="eager" src={src} class:list={['object-cover', className]} {...props} />
   )
 }
