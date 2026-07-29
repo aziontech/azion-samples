@@ -1,0 +1,76 @@
+name: OSSF Scorecard
+
+on:
+  pull_request:
+    branches: ['main', 'dev']
+  schedule:
+    - cron: '0 6 * * 1' # weekly measurement on the default branch
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  scorecard:
+    name: OSSF Scorecard
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      THRESHOLD: '8'
+      MODE: 'enforce'
+      EXCLUDE_CHECKS: 'Dependency-Update-Tool,Fuzzing,Packaging,SAST'
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
+
+      - name: Run Scorecard
+        uses: ossf/scorecard-action@4eaacf0543bb3f2c246792bd56e8cdeffafb205a # v2.4.3
+        with:
+          results_file: results.json
+          results_format: json
+          publish_results: false
+
+      - name: Gate on aggregate score
+        run: |
+          # Recompute Scorecard's risk-weighted aggregate, minus EXCLUDE_CHECKS.
+          # Weights mirror upstream: Critical 10, High 7.5, Medium 5, Low 2.5.
+          # Checks scoring -1 (inconclusive) are dropped, as upstream does.
+          SCORE=$(jq -r --arg excl "$EXCLUDE_CHECKS" '
+            ($excl | split(",") | map(ascii_downcase | gsub("^\\s+|\\s+$"; ""))) as $skip
+            | {
+                "dangerous-workflow": 10, "webhooks": 10,
+                "binary-artifacts": 7.5, "branch-protection": 7.5,
+                "code-review": 7.5, "dependency-update-tool": 7.5,
+                "maintained": 7.5, "signed-releases": 7.5,
+                "token-permissions": 7.5, "vulnerabilities": 7.5,
+                "fuzzing": 5, "packaging": 5, "pinned-dependencies": 5,
+                "sast": 5, "security-policy": 5,
+                "ci-tests": 2.5, "cii-best-practices": 2.5,
+                "contributors": 2.5, "license": 2.5
+              } as $w
+            | [ .checks[]
+                | (.name | ascii_downcase) as $n
+                | select(.score >= 0)
+                | select($skip | index($n) | not)
+                | { s: .score, w: ($w[$n] // 5) } ] as $kept
+            | if ($kept | length) == 0 then -1
+              else ( ([$kept[] | .s * .w] | add) / ([$kept[] | .w] | add)
+                     * 10 | round / 10 )
+              end
+          ' results.json)
+          RAW=$(jq -r '.score' results.json)
+          echo "OSSF aggregate = ${SCORE} (upstream ${RAW}, excluding: ${EXCLUDE_CHECKS})"
+          echo "threshold ${THRESHOLD}, mode ${MODE}"
+          if [ "$SCORE" = "-1" ] || [ "$SCORE" = "null" ]; then
+            echo "::warning::Scorecard returned inconclusive score — not gating"; exit 0
+          fi
+          below=$(awk -v s="$SCORE" -v t="$THRESHOLD" 'BEGIN{print (s<t)?1:0}')
+          if [ "$below" = "1" ]; then
+            if [ "$MODE" = "enforce" ]; then
+              echo "::error::OSSF ${SCORE} < ${THRESHOLD} — blocking merge"; exit 1
+            else
+              echo "::warning::OSSF ${SCORE} < ${THRESHOLD} — warn mode, not blocking"
+            fi
+          fi
+
