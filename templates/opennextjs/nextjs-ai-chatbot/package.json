@@ -18,11 +18,11 @@
     "test": "export PLAYWRIGHT=True && pnpm exec playwright test"
   },
   "dependencies": {
-    "@aziontech/storage": "latest",
     "@ai-sdk/openai": "^2.0.102",
     "@ai-sdk/provider": "2.0.0",
     "@ai-sdk/react": "2.0.26",
     "@ai-sdk/xai": "2.0.13",
+    "@aziontech/storage": "latest",
     "@codemirror/lang-javascript": "^6.2.5",
     "@codemirror/lang-python": "^6.2.1",
     "@codemirror/state": "^6.6.0",
@@ -55,7 +55,7 @@
     "lucide-react": "^0.446.0",
     "nanoid": "^5.1.7",
     "next": "~15.5.14",
-    "next-auth": "5.0.0-beta.30",
+    "next-auth": "5.0.0-beta.32",
     "next-themes": "^0.3.0",
     "orderedmap": "^2.1.1",
     "papaparse": "^5.5.3",
@@ -86,6 +86,7 @@
     "zod": "^3.25.76"
   },
   "devDependencies": {
+    "@aziontech/opennextjs-azion": "^1.1.2",
     "@biomejs/biome": "2.2.2",
     "@playwright/test": "^1.59.1",
     "@tailwindcss/postcss": "^4.2.2",
