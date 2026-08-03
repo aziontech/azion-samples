@@ -11,7 +11,7 @@
   "dependencies": {
     "@deepgram/sdk": "^4.11.3",
     "classnames": "^2.5.1",
-    "next": "^14.2.35",
+    "next": "^15.5.22",
     "react": "^18.3.1",
     "react-device-detect": "^2.2.3",
     "react-dom": "^18.3.1",
@@ -19,6 +19,7 @@
     "react-syntax-highlighter": "^16.1.1"
   },
   "devDependencies": {
+    "@aziontech/opennextjs-azion": "^1.1.2",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@semantic-release/changelog": "^6.0.3",
@@ -28,7 +29,7 @@
     "@types/react-dom": "^18.3.7",
     "autoprefixer": "^10.5.0",
     "eslint": "^8.57.1",
-    "eslint-config-next": "14.2.33",
+    "eslint-config-next": "15.5.22",
     "husky": "^9.1.7",
     "postcss": "^8.5.10",
     "pretty-quick": "^4.2.2",

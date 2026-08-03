@@ -47,7 +47,7 @@
     "puppeteer": "24.37.5",
     "puppeteer-report": "3.1.0",
     "rollup-plugin-visualizer": "5.9.2",
-    "sharp": "0.33.3",
+    "sharp": "0.35.3",
     "tailwindcss": "4.3.3",
     "ts-node": "10.9.1",
     "type-fest": "3.13.0",
