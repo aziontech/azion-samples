@@ -86,7 +86,6 @@
     "zod": "^3.25.76"
   },
   "devDependencies": {
-    "@aziontech/opennextjs-azion": "^1.1.2",
     "@biomejs/biome": "2.2.2",
     "@playwright/test": "^1.59.1",
     "@tailwindcss/postcss": "^4.2.2",
