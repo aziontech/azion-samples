@@ -4,7 +4,7 @@
   "version": "0.3.0",
   "private": true,
   "engines": {
-    "node": ">=20"
+    "node": "^22 || ^24 || >=26"
   },
   "scripts": {
     "postinstall": "pnpm run generate-favicons",
@@ -24,7 +24,7 @@
   "dependencies": {
     "@floating-ui/dom": "1.4.4",
     "iconify-icon": "1.0.8",
-    "nanoid": "4.0.2"
+    "nanoid": "6.0.1"
   },
   "devDependencies": {
     "@percy/cli": "^1.31.11",
