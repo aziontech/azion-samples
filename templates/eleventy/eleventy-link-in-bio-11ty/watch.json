@@ -12,7 +12,7 @@
     ],
     "include": [
       "watch.json$",
-      ".eleventy.js$"
+      "eleventy.config.mjs$"
     ]
   },
   "throttle": 1000

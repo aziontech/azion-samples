@@ -4,7 +4,7 @@ The **11ty Link in Bio** template accelerates the creation of a list of links, b
 
 This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [documentation](https://www.azion.com/en/documentation/products/use-a-template-via-azion-console/).
 
-This template uses Eleventy version `0.9.0`. See [the project live](https://qk48ihj1x4.map.azionedge.net). 
+This template uses Eleventy version `3.1.6`. See [the project live](https://qk48ihj1x4.map.azionedge.net). 
 
 > **Note**: this is a community template. Third-party or external developers created it, and Azion only enables the deployment in the Azion Edge Platform. Azion doesn't provide maintenance or support for the content itself but can assist you with any queries or issues you may encounter while deploying this template or using the platform.
 >
