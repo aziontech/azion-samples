@@ -27,14 +27,14 @@
     "nanoid": "6.0.1"
   },
   "devDependencies": {
-    "@percy/cli": "^1.31.11",
+    "@percy/cli": "^1.32.9",
     "@tailwindcss/vite": "4.3.3",
     "@types/marked": "5.0.0",
-    "astro": "7.1.3",
-    "astro-compress": "^2.4.1",
+    "astro": "7.3.2",
+    "astro-compress": "^2.4.3",
     "concurrently": "8.2.0",
     "date-fns": "4.4.0",
-    "favicons": "7.1.3",
+    "favicons": "7.3.1",
     "iconify-icon-names": "1.1.0",
     "immer": "10.0.2",
     "locales-ts": "1.0.0",
