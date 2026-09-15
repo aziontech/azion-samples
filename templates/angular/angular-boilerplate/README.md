@@ -4,8 +4,6 @@ With the **Angular Boilerplate**, you can simplify and enhance the deployment of
 
 This repository is an example of the new GitHub repository created during the deployment. For a more detailed step-by-step to deploy this template through Azion's platform, check the [How to deploy edge applications with the Angular Boilerplate](https://www.azion.com/en/documentation/products/guides/angular-boilerplate/) guide.
 
-This template uses Angular CLI version `18.2.11`.
-
 ---
 
 ## Requirements
