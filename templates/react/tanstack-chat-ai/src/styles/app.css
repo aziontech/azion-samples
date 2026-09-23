@@ -1,0 +1,35 @@
+@import 'tailwindcss' source('../');
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #111111;
+}
+
+body {
+  background-color: #111111;
+  color: #FCFCFC;
+  font-family: 'Sora', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Azion scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #353040;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #524BBB;
+}
