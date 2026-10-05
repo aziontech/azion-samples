@@ -26,7 +26,7 @@ js-sys = "0.3.22"
 wasm-bindgen-futures = "0.4.34"
 base64 = "0.23.1"
 lazy_static = "1.4.0"
-yew-macro = "0.20.0"
+yew-macro = "0.23.0"
 yew = { version ="0.20.0", features = [ "ssr"] }
 
 # The `web-sys` crate allows you to interact with the various browser APIs,
