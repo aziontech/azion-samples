@@ -27,7 +27,7 @@
     "nanoid": "6.0.1"
   },
   "devDependencies": {
-    "@percy/cli": "^1.32.9",
+    "@percy/cli": "^1.32.11",
     "@tailwindcss/vite": "4.3.3",
     "@types/marked": "5.0.0",
     "astro": "7.3.2",
@@ -47,7 +47,7 @@
     "puppeteer": "24.37.5",
     "puppeteer-report": "3.1.0",
     "rollup-plugin-visualizer": "5.9.2",
-    "sharp": "0.35.3",
+    "sharp": "0.35.5",
     "tailwindcss": "4.3.3",
     "ts-node": "10.9.1",
     "type-fest": "3.13.0",
