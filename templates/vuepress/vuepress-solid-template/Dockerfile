@@ -17,7 +17,7 @@ RUN corepack enable \
     && pnpm build
 
 # Nginx Server — nginx:1.25.5-alpine3.19-slim, pinned by digest
-FROM nginx@sha256:abe47724e466aeab9a345d8e46a221c2fa8953c7848bb4a3bd9976a7199f8cf2
+FROM nginx@sha256:f9ea18bfa4fad859e1ed38259d711da7ccad2c3516e875cec3351a57c859f571
 WORKDIR /usr/share/nginx/html/
 COPY --from=builder /app/docs/.vuepress/dist/ ./
 RUN echo "<script>window.location.href = '/vuepress-solid-template/'</script>" > /usr/share/nginx/html/index.html
