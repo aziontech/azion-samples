@@ -1,0 +1,8 @@
+{
+  "name": "KV Starter Kit",
+  "message": "Create your first KV-based application",
+  "preset": "javascript",
+  "mode": "compute",
+  "path": "/kv-starter-kit",
+  "requires_additional_build": false
+}

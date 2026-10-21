@@ -1,0 +1,15 @@
+{
+  "name": "kv-starter-kit",
+  "version": "1.0.0",
+  "description": "A Starter Kit template to use Azion KV",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node main.js"
+  },
+  "author": "azion",
+  "license": "MIT",
+  "dependencies": {
+    "azion": "latest",
+    "itty-router": "5.0.22"
+  }
+}
