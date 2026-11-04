@@ -1,5 +1,4 @@
-import { ZodObject, ZodRawShape } from 'zod'
-import { ZodAny } from 'zod/v4';
+import type { ZodRawShape } from 'zod'
 
 /**
  * Interface for a MCP tool
