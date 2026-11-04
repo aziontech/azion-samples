@@ -1,76 +1,48 @@
 //@ts-ignore
 import 'dotenv/config';
-import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/streamableHttp.js';
+import { WebStandardStreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/webStandardStreamableHttp.js';
 import { getServer } from '@/core/server';
-import { Hono } from 'hono';
-import { toFetchResponse, toReqRes } from 'fetch-to-node';
+import { Hono, type Context } from 'hono';
+import { fire } from 'hono/service-worker';
 
 const app = new Hono();
 
 app.post('/mcp', async (c) => {
   try {
-
-    const { req, res } = toReqRes(c.req.raw);
-
     const server = getServer();
-
-
-    const transport: StreamableHTTPServerTransport = new StreamableHTTPServerTransport({
+    const transport = new WebStandardStreamableHTTPServerTransport({
       sessionIdGenerator: undefined,
     });
 
     await server.connect(transport);
 
-    const body = await c.req.json()
-
-    await transport.handleRequest(req, res, body)
-
-    res.on('close', () => {
-      transport.close();
-      server.close();
-    });
-
-    return toFetchResponse(res);
+    return await transport.handleRequest(c.req.raw);
   } catch (error) {
-    const { req, res } = toReqRes(c.req.raw);
     console.error('Error handling MCP request:', error);
-    if (!res.headersSent) {
-      res.writeHead(500).end(JSON.stringify({
-        jsonrpc: '2.0',
-        error: {
-          code: -32603,
-          message: 'Internal server error',
-        },
-        id: null,
-      }));
-    }
+    return c.json({
+      jsonrpc: '2.0',
+      error: {
+        code: -32603,
+        message: 'Internal server error',
+      },
+      id: null,
+    }, 500);
   }
 });
 
-app.get('/mcp', async (c) => {
-  const { req, res } = toReqRes(c.req.raw);
-  console.log('Received GET MCP request');
-  res.writeHead(405).end(JSON.stringify({
-    jsonrpc: "2.0",
+const methodNotAllowed = (c: Context) => {
+  console.log(`Received ${c.req.method} MCP request`);
+  return c.json({
+    jsonrpc: '2.0',
     error: {
       code: -32000,
-      message: "Method not allowed."
+      message: 'Method not allowed.',
     },
-    id: null
-  }));
-});
+    id: null,
+  }, 405);
+};
 
-app.delete('/mcp', async (c) => {
-  const { req, res } = toReqRes(c.req.raw);
-  console.log('Received DELETE MCP request');
-  res.writeHead(405).end(JSON.stringify({
-    jsonrpc: "2.0",
-    error: {
-      code: -32000,
-      message: "Method not allowed."
-    },
-    id: null
-  }));
-});
+app.get('/mcp', methodNotAllowed);
+app.delete('/mcp', methodNotAllowed);
 
-app.fire()
+fire(app);
