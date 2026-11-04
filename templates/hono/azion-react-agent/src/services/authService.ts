@@ -1,4 +1,4 @@
-import { sign } from 'azion/jwt';
+import { sign } from '@aziontech/jwt';
 import { AuthResponse } from "../types";
 import { AZION_TOKEN , AUTHENTICATION_TOKEN} from '../helpers/constants';
 

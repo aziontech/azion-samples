@@ -35,7 +35,7 @@ export default {
   functions: [
     {
       name: '$FUNCTION_NAME',
-      path: 'functions/main.js'
+      path: './functions/main.js'
     }
   ],
   applications: [
