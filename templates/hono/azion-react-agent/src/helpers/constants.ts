@@ -28,7 +28,7 @@ const ImageMessageSchema = z.object({
       type: z.enum(['text', 'image_url']),
       text: z.string().optional(),
       image_url: z.object({
-          url: z.string().url(),
+          url: z.url(),
       }).optional(),
   })),
 });
@@ -45,7 +45,7 @@ export const RequestChatBodySchema = z.object({
       .nullable()
       .optional(),
     frequency_penalty: z.number().nullable().optional(),
-    logit_bias: z.record(z.number()).optional(),
+    logit_bias: z.record(z.string(), z.number()).optional(),
     logprobs: z.boolean().nullable().optional(),
     top_logprobs: z.number().int().nullable().optional(),
     max_completion_tokens: z.number().int().nullable().optional(),

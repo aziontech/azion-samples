@@ -1,7 +1,7 @@
 import { EMBEDDING_MODEL, VECTOR_STORE_DB_NAME, VECTOR_STORE_TABLE_NAME } from "@/helpers/constants";
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { ChatOpenAI } from "@langchain/openai";
-import { AzionRetriever } from "@langchain/community/retrievers/azion_edgesql";
+import { AzionRetriever } from "../retrievers/azionRetriever";
 import { ToolNode } from "@langchain/langgraph/prebuilt";
 import { createRetrieverTool } from "langchain/tools/retriever";
 import { MessagesAnnotation } from "@langchain/langgraph";

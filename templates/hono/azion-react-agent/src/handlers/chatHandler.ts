@@ -2,6 +2,7 @@ import {
   validateRequestBody, 
 } from "../helpers/utils";
 import { v4 as uuidv4 } from 'uuid';
+import { z } from "zod";
 import { GraphService } from "../services/graphService";
 
 /**
@@ -22,7 +23,10 @@ export async function chatRequestHandler(
   
     if (error) {
       console.error("Error parsing body: ", error)
-      return new Response(JSON.stringify(error), { status: 400 })
+      const body = error instanceof z.ZodError
+        ? { name: error.name, issues: error.issues }
+        : error
+      return new Response(JSON.stringify(body), { status: 400 })
     }
   
     const { messages, stream, session_id } = parsedBody;

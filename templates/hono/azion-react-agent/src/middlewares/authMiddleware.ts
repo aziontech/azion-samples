@@ -1,5 +1,5 @@
 import { ClerkClient, createClerkClient } from '@clerk/backend';
-import { verify, JWTPayload } from 'azion/jwt';
+import { verify, JWTPayload } from '@aziontech/jwt';
 import { AuthResponse } from "../types";
 import { CLERK_PUBLISHABLE_KEY, CLERK_SECRET_KEY, AZION_TOKEN, AUTHENTICATION_TYPE } from '../helpers/constants';
 
