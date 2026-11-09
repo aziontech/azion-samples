@@ -17,7 +17,6 @@
     "generate-favicons": "ts-node scripts/generate-favicons.ts",
     "prettier:check": "prettier --check . --ignore-path .gitignore",
     "prettier:write": "prettier --write . --ignore-path .gitignore",
-    "astro:check": "astro check",
     "ts:check": "tsc --jsx preserve --skipLibCheck",
     "check": "concurrently pnpm:*:check"
   },
@@ -27,10 +26,11 @@
     "nanoid": "6.0.1"
   },
   "devDependencies": {
-    "@percy/cli": "^1.32.11",
+    "@astrojs/check": "^0.9.12",
+    "@percy/cli": "^1.32.12",
     "@tailwindcss/vite": "4.3.3",
     "@types/marked": "5.0.0",
-    "astro": "7.3.2",
+    "astro": "~7.4.7",
     "astro-compress": "^2.4.3",
     "concurrently": "8.2.0",
     "date-fns": "4.4.0",

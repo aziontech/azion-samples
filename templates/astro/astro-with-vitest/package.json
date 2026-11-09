@@ -12,7 +12,8 @@
     "test": "vitest"
   },
   "dependencies": {
-    "astro": "^7.3.2",
-    "vitest": "^5.0.0"
+    "@astrojs/check": "^0.9.12",
+    "astro": "~7.4.7",
+    "vitest": "^5.1.0"
   }
 }
