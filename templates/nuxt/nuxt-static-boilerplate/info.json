@@ -1,0 +1,7 @@
+{
+  "name": "Nuxt Static Boilerplate",
+  "message": "A minimal Nuxt static application",
+  "preset": "nuxt",
+  "mode": "deliver",
+  "path": "/nuxt-static-boilerplate"
+}
