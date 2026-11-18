@@ -1,0 +1,11 @@
+{
+  "name": "simple-html",
+  "version": "1.0.0",
+  "description": "A minimal template to start a new HTML project.",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "azion": "latest"
+  }
+}
