@@ -1,7 +1,7 @@
 ARG NPM_REGISTER=https://registry.npmjs.org
 
 # Builder — node:22.2.0-bookworm, pinned by digest
-FROM node@sha256:a723b54c35a76e947095a20a67d39585bb09c862e6b1adeb8a9f518f95e34fb0 AS builder
+FROM node@sha256:e18c3ccdf7d71619990b0e85639f506e2028a95410999cab24cc373cbd10e0ac AS builder
 WORKDIR /app
 ARG NPM_REGISTER
 COPY . ./
